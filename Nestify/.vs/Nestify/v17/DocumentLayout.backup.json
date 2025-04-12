@@ -1,0 +1,165 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\projects\\masterpiece\\nestify\\nestify\\views\\user\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\views\\user\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\projects\\masterpiece\\nestify\\nestify\\views\\shared\\interiordesignlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\views\\shared\\interiordesignlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\projects\\masterpiece\\nestify\\nestify\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\projects\\masterpiece\\nestify\\nestify\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\projects\\masterpiece\\nestify\\nestify\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\projects\\masterpiece\\nestify\\nestify\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\projects\\masterpiece\\nestify\\nestify\\views\\user\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\views\\user\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\projects\\masterpiece\\nestify\\nestify\\views\\user\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\views\\user\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\projects\\masterpiece\\nestify\\nestify\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Profile.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Views\\User\\Profile.cshtml",
+              "RelativeDocumentMoniker": "Nestify\\Views\\User\\Profile.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Views\\User\\Profile.cshtml",
+              "RelativeToolTip": "Nestify\\Views\\User\\Profile.cshtml",
+              "ViewState": "AgIAAK0AAAAAAAAAAAAcwNEAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-12T17:53:09.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "InteriorDesignLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Views\\Shared\\InteriorDesignLayout.cshtml",
+              "RelativeDocumentMoniker": "Nestify\\Views\\Shared\\InteriorDesignLayout.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Views\\Shared\\InteriorDesignLayout.cshtml",
+              "RelativeToolTip": "Nestify\\Views\\Shared\\InteriorDesignLayout.cshtml",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAAAHcAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-11T20:30:35.594Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Nestify\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Nestify\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAGsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-07T22:52:52.896Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Nestify\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Nestify\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAHwAAAAAAAAAAAAAAIMAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T23:01:17.987Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Program.cs",
+              "RelativeDocumentMoniker": "Nestify\\Program.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Program.cs",
+              "RelativeToolTip": "Nestify\\Program.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAABAAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T20:22:10.993Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_Layout.cshtml.css",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Views\\Shared\\_Layout.cshtml.css",
+              "RelativeDocumentMoniker": "Nestify\\Views\\Shared\\_Layout.cshtml.css",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Views\\Shared\\_Layout.cshtml.css",
+              "RelativeToolTip": "Nestify\\Views\\Shared\\_Layout.cshtml.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-04-12T16:32:53.416Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Views\\User\\Login.cshtml",
+              "RelativeDocumentMoniker": "Nestify\\Views\\User\\Login.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Views\\User\\Login.cshtml",
+              "RelativeToolTip": "Nestify\\Views\\User\\Login.cshtml",
+              "ViewState": "AgIAABAAAAAAAAAAAAAIwBkAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-07T22:56:03.183Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Views\\User\\Register.cshtml",
+              "RelativeDocumentMoniker": "Nestify\\Views\\User\\Register.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Views\\User\\Register.cshtml",
+              "RelativeToolTip": "Nestify\\Views\\User\\Register.cshtml",
+              "ViewState": "AgIAAEwAAAAAAAAAAAD4v1YAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-07T22:45:25.957Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Nestify\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Nestify\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAzwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T10:05:23.371Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

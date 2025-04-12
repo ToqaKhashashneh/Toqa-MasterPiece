@@ -1,0 +1,783 @@
+﻿    <!-- BREADCRUMB AREA START -->
+    <div class="ltn__breadcrumb-area text-left bg-overlay-white-30 bg-image "  data-bs-bg="img/bg/14.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ltn__breadcrumb-inner">
+                        <h1 class="page-title">Account</h1>
+                        <div class="ltn__breadcrumb-list">
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- BREADCRUMB AREA END -->
+    <div class="ltn__utilize-overlay"></div>
+
+
+    <!-- WISHLIST AREA START -->
+    <div class="liton__wishlist-area pb-70">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- PRODUCT TAB AREA START -->
+                    <div class="ltn__product-tab-area">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="ltn__tab-menu-list mb-50">
+                                        <div class="nav">                                            
+                                            <a class="active show" data-bs-toggle="tab" href="#ltn_tab_1_1">Dashboard <i class="fas fa-home"></i></a>
+                                            <a data-bs-toggle="tab" href="#ltn_tab_1_2">Profile <i class="fas fa-user"></i></a>
+                                            <a data-bs-toggle="tab" href="#ltn_tab_1_4">Edit Profile <i class="fas fa-user"></i></a>
+                                            <a data-bs-toggle="tab" href="#ltn_tab_1_5">My Properties <i class="fa-solid fa-list"></i></a>
+                                            <a data-bs-toggle="tab" href="#ltn_tab_1_6">Favorited Properties <i class="fa-solid fa-heart"></i></a>
+                                            <a data-bs-toggle="tab" href="#ltn_tab_1_7">Add Property <i class="fa-solid fa-map-location-dot"></i></a>
+                                            <a data-bs-toggle="tab" href="#ltn_tab_1_8">Payments <i class="fa-solid fa-money-check-dollar"></i></a>
+                                            <a data-bs-toggle="tab" href="#ltn_tab_1_9">Change Password <i class="fa-solid fa-lock"></i></a>
+                                            <a  asp-controller="User" asp-action="Logout">Logout <i class="fas fa-sign-out-alt"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="tab-content">
+                                      <div class="tab-pane fade active show" id="ltn_tab_1_1">
+                                            <div class="ltn__myaccount-tab-content-inner">
+                                                <p>Hello <strong>@ViewBag.FirstName</strong> </p>
+                                                <p>From your account dashboard you can view your <span>favourite properties</span>, add and edit your <span>properties</span>, and <span>edit your password and account details</span>.</p>
+                                            </div>
+                                        </div> 
+                                        <div class="tab-pane fade" id="ltn_tab_1_2">
+                                            <div class="ltn__myaccount-tab-content-inner">
+                                                <!-- comment-area -->
+                                                <div class="ltn__comment-area mb-50">
+                                                    <div class="ltn-author-introducing clearfix">
+                                                        <div class="author-img">
+                                                        <img src="@ViewBag.ProfileImageUrl" alt="Profile Image" style="width:150px; border-radius:50%;">
+                                                    </div>
+                                                        <div class="author-info">
+                                                        <h2 style="color: #171B2A;">@ViewBag.FullName</h2>
+                                                        <div class="footer-address">
+                                                                <ul>
+                                                                    <li>
+                                                                        <div class="footer-address-icon">
+                                                                            <i class="icon-placeholder"></i>
+                                                                        </div>
+                                                                        <div class="footer-address-info">
+                                                                        <p>@ViewBag.City, @ViewBag.Country</p>
+                                                                    </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="footer-address-icon">
+                                                                            <i class="icon-call"></i>
+                                                                        </div>
+                                                                        <div class="footer-address-info">
+                                                                        <p><a href="tel:@ViewBag.PhoneNumber">@ViewBag.PhoneNumber</a></p>
+                                                                    </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="footer-address-icon">
+                                                                            <i class="icon-mail"></i>
+                                                                        </div>
+                                                                        <div class="footer-address-info">
+                                                                        <p>@ViewBag.Email</p>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                            
+                                                </div>
+                                            </div>
+                                        </div>
+                     
+                                        <div class="tab-pane fade" id="ltn_tab_1_4">
+                                            <div class="ltn__myaccount-tab-content-inner">
+                                                <p>The following changes will be saved:</p>
+                                                <div class="ltn__form-box">
+                                                <form asp-action="EditProfile" asp-controller="User" method="post" enctype="multipart/form-data">
+                                                    <div class="row mb-50">
+                                                            <div class="col-md-6">
+                                                            <label for="firstname">First name:</label>
+                                                            <input type="text" name="firstname" value="@ViewBag.FirstName" placeholder="First Name">
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                            <label for="lastname">Last name:</label>
+                                                            <input type="text" name="lastname" value="@ViewBag.LastName" placeholder="Last Name">
+                                                            </div>
+                                                          
+                                                            <div class="col-md-6">
+                                                                <label for="email">Display Email:</label>
+                                                            <input type="email" name="email"  value=@ViewBag.Email placeholder="Email" >
+                                                            </div>
+                                                        <div class="col-md-6">
+                                                            <label for="PhoneNumber">Phone Number:</label>
+                                                            <input type="text" name="PhoneNumber" value=@ViewBag.PhoneNumber placeholder="Phone Number" >
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label for="City">City:</label>
+                                                            <input type="text" name="City" value=@ViewBag.City placeholder="City">
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label for="Country">Country:</label>
+                                                            <input type="text" name="Country" value=@ViewBag.Country placeholder="Country">
+                                                        </div>
+                                                        <div class="col-md-6 text-center">
+                                                            <label style=" position: relative; top: -9vw; left: -4vw;">Profile Picture:</label>
+
+                                                            <!-- Hidden File Input -->
+                                                            <input type="file" id="profileImageInput" name="ProfileImageFile" accept="image/*" style="display: none;" onchange="previewImage(event)">
+
+                                                            <!-- Profile Picture Preview -->
+                                                            <div style="position: relative; display: inline-block;">
+                                                                <img id="imagePreview" src=@ViewBag.ProfileImageUrl
+                                                                     style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; border: 3px solid #ccc; background-color: #f8f9fa; display: block;" />
+
+                                                                <!-- Edit Icon Overlay -->
+                                                                <button type="button" onclick="document.getElementById('profileImageInput').click();"
+                                                                        style="position: absolute; bottom: 5px; right: 5px; background: rgba(0,0,0,0.6); color: white; border: none; padding: 5px 10px; border-radius: 50%;">
+                                                                    ✎
+                                                                </button>
+                                                            </div>
+
+                                                            <!-- Action Buttons -->
+                                                            <div style="margin-top: 10px;">
+                                                             
+                                                                <button type="button" onclick="removeImage();" class="btn btn-danger">
+                                                                    Remove
+                                                                </button>
+                                                            </div>
+                                                        </div>
+
+                                                        <script>
+                                                            function previewImage(event) {
+                                                                const input = event.target;
+                                                                const preview = document.getElementById('imagePreview');
+
+                                                                if (input.files && input.files[0]) {
+                                                                    const reader = new FileReader();
+
+                                                                    reader.onload = function(e) {
+                                                                        preview.src = e.target.result;
+                                                                        preview.style.display = 'block';
+                                                                    };
+
+                                                                    reader.readAsDataURL(input.files[0]);
+                                                                }
+                                                            }
+                                                            function removeImage() {
+                                                                document.getElementById('imagePreview').src = "/img/blog/author.jpg";
+                                                                document.getElementById('profileImageInput').value = "";
+                                                            }
+
+                                                        </script>
+
+                                                       
+
+                                                       </div>
+                                                        <div class="btn-wrapper">
+                                                            <button type="submit" class="btn theme-btn-1 btn-effect-1 text-uppercase">Save Changes</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="ltn_tab_1_5">
+                                            <div class="ltn__myaccount-tab-content-inner">
+                                                <div class="ltn__my-properties-table table-responsive">
+                                                    <table class="table">
+                                                        <thead>
+                                                          <tr>
+                                                            <th scope="col">My Properties</th>
+                                                            <th scope="col"></th>
+                                                            <th scope="col">Date Added</th>
+                                                            <th scope="col">Actions</th>
+                                                            <th scope="col">Delete</th>
+                                                          </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                          <tr>
+                                                            <td class="ltn__my-properties-img">
+                                                                <a href="product-details.html"><img src="~/img/product-3/2.jpg" alt="#"></a>
+                                                            </td>
+                                                            <td>
+                                                                <div class="ltn__my-properties-info">
+                                                                    <h6 class="mb-10"><a href="product-details.html">sdfasdfdsfsdafs</a></h6>
+                                                                    <small><i class="icon-placeholder"></i> Brooklyn, New York, United States</small>
+                                                            
+                                                                </div>
+                                                            </td>
+                                                            <td>Feb 22, 2022</td>
+                                                            <td><a href="#">Edit</a></td>
+                                                            <td><a href="#"><i class="fa-solid fa-trash-can"></i></a></td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td class="ltn__my-properties-img">
+                                                                <a href="product-details.html"><img src="~/img/product-3/3.jpg" alt="#"></a>
+                                                            </td>
+                                                            <td>
+                                                                <div class="ltn__my-properties-info">
+                                                                    <h6 class="mb-10"><a href="product-details.html">sdfasdfdsfsdafs</a></h6>
+                                                                    <small><i class="icon-placeholder"></i> Brooklyn, New York, United States</small>
+                                                             
+                                                                </div>
+                                                            </td>
+                                                            <td>Feb 22, 2022</td>
+                                                            <td><a href="#">Edit</a></td>
+                                                            <td><a href="#"><i class="fa-solid fa-trash-can"></i></a></td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td class="ltn__my-properties-img">
+                                                                <a href="product-details.html"><img src="~/img/product-3/7.jpg" alt="#"></a>
+                                                            </td>
+                                                            <td>
+                                                                <div class="ltn__my-properties-info">
+                                                                    <h6 class="mb-10"><a href="product-details.html">sdfasdfdsfsdafs</a></h6>
+                                                                    <small><i class="icon-placeholder"></i> Brooklyn, New York, United States</small>
+                                                               
+                                                                </div>
+                                                            </td>
+                                                            <td>Feb 22, 2022</td>
+                                                            <td><a href="#">Edit</a></td>
+                                                            <td><a href="#"><i class="fa-solid fa-trash-can"></i></a></td>
+                                                          </tr>
+                                                        </tbody>
+                                                      </table>
+                                                </div>
+                                                <div class="ltn__pagination-area text-center">
+                                                    <div class="ltn__pagination">
+                                                        <ul>
+                                                            <li><a href="#"><i class="fas fa-angle-double-left"></i></a></li>
+                                                            <li><a href="#">1</a></li>
+                                                            <li class="active"><a href="#">2</a></li>
+                                                            <li><a href="#">3</a></li>
+                                                            <li><a href="#">...</a></li>
+                                                            <li><a href="#">10</a></li>
+                                                            <li><a href="#"><i class="fas fa-angle-double-right"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="ltn_tab_1_6">
+                                            <div class="ltn__myaccount-tab-content-inner">
+                                                <div class="ltn__my-properties-table table-responsive">
+                                                    <table class="table">
+                                                        <thead>
+                                                          <tr>
+                                                            <th scope="col">Favourite Property</th>
+                                                            <th scope="col"></th>
+                                                            <th scope="col">Status</th>
+                                                            <th scope="col">Delete</th>
+                                                          </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                          <tr>
+                                                            <td class="ltn__my-properties-img">
+                                                                <a href="product-details.html"><img src="~/img/product-3/2.jpg" alt="#"></a>
+                                                            </td>
+                                                            <td>
+                                                                <div class="ltn__my-properties-info">
+                                                                    <h6 class="mb-10"><a href="product-details.html">sdfasdfdsfsdafs</a></h6>
+                                                                    <small><i class="icon-placeholder"></i> Brooklyn, New York, United States</small>
+                                                           
+                                                                </div>
+                                                            </td>
+                                                            <td>For Sale</td>
+                                                          
+                                                            <td><a href="#"><i class="fa-solid fa-trash-can"></i></a></td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td class="ltn__my-properties-img">
+                                                                <a href="product-details.html"><img src="~/img/product-3/3.jpg" alt="#"></a>
+                                                            </td>
+                                                            <td>
+                                                                <div class="ltn__my-properties-info">
+                                                                    <h6 class="mb-10"><a href="product-details.html">sdfasdfdsfsdafs</a></h6>
+                                                                    <small><i class="icon-placeholder"></i> Brooklyn, New York, United States</small>
+                                                             
+                                                                </div>
+                                                            </td>
+                                                            <td>For Rent</td>
+                                                            <td><a href="#"><i class="fa-solid fa-trash-can"></i></a></td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td class="ltn__my-properties-img">
+                                                                <a href="product-details.html"><img src="~/img/product-3/7.jpg" alt="#"></a>
+                                                            </td>
+                                                            <td>
+                                                                <div class="ltn__my-properties-info">
+                                                                    <h6 class="mb-10"><a href="product-details.html">sdfasdfdsfsdafs</a></h6>
+                                                                    <small><i class="icon-placeholder"></i> Brooklyn, New York, United States</small>
+                                                              
+                                                                </div>
+                                                            </td>
+                                                            <td><del>Sold</del></td>
+                                                            <td><a href="#"><i class="fa-solid fa-trash-can"></i></a></td>
+                                                          </tr>
+                                                        </tbody>
+                                                      </table>
+                                                </div>
+                                                <div class="ltn__pagination-area text-center">
+                                                    <div class="ltn__pagination">
+                                                        <ul>
+                                                            <li><a href="#"><i class="fas fa-angle-double-left"></i></a></li>
+                                                            <li><a href="#">1</a></li>
+                                                            <li class="active"><a href="#">2</a></li>
+                                                            <li><a href="#">3</a></li>
+                                                            <li><a href="#">...</a></li>
+                                                            <li><a href="#">10</a></li>
+                                                            <li><a href="#"><i class="fas fa-angle-double-right"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    <div class="tab-pane fade" id="ltn_tab_1_7">
+                                        <div class="ltn__myaccount-tab-content-inner">
+                                            <h6 style="color: #171B2A;">Property Description</h6>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="input-item input-item-textarea ltn__custom-icon">
+                                                        <input type="text" name="title" placeholder="*Title (mandatory)">
+                                                    </div>
+                                                    <div class="input-item input-item-textarea ltn__custom-icon">
+                                                        <textarea name="description" placeholder="Description"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <h6>Property Price</h6>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="input-item input-item-textarea ltn__custom-icon">
+                                                        <input type="number" name="priceJOD" placeholder="Price in JOD (دينار)">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="input-item input-item-textarea ltn__custom-icon">
+                                                        <select class="nice-select" name="priceType">
+                                                            <option>Price Type</option>
+                                                            <option>Total</option>
+                                                            <option>Per Month</option>
+                                                            <option>Per Year</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <h6>Select Categories</h6>
+                                            <div class="row">
+                                                <div class="col-lg-4 col-md-6">
+                                                    <div class="input-item input-item-textarea ltn__custom-icon">
+                                                        <select class="nice-select" name="category">
+                                                            <option>None</option>
+                                                            <option>Apartments</option>
+                                                            <option>Penthouses</option>
+                                                            <option>Roof Apartments</option>
+                                                            <option>Houses</option>
+                                                            <option>Offices</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-6">
+                                                    <div class="input-item input-item-textarea ltn__custom-icon">
+                                                        <select class="nice-select" name="type">
+                                                            <option>None</option>
+                                                            <option>Rentals</option>
+                                                            <option>Sales</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-6">
+                                                    <div class="input-item input-item-textarea ltn__custom-icon">
+                                                        <select class="nice-select" name="status">
+                                                            <option>no status</option>
+                                                            <option>Active</option>
+                                                            <option>hot offer</option>
+                                                            <option>new offer</option>
+                                                            <option>open house</option>
+                                                            <option>sold</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <h6>Listing Media</h6>
+                                            <input type="file" name="mediaFiles" class="btn theme-btn-3 mb-10" multiple><br>
+                                            <p>
+                                                <small>* At least 1 image is required. Minimum size is 500x500px.</small><br>
+                                                <small>* PDF files also supported.</small>
+                                            </p>
+
+                                            <h6>Video Option</h6>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="input-item input-item-textarea ltn__custom-icon">
+                                                        <select class="nice-select" name="videoSource">
+                                                            <option>Video from</option>
+                                                            <option>Vimeo</option>
+                                                            <option>YouTube</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="input-item input-item-textarea ltn__custom-icon">
+                                                        <input type="text" name="videoId" placeholder="Embed Video ID">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <h6>Virtual Tour</h6>
+                                            <div class="input-item input-item-textarea ltn__custom-icon">
+                                                <textarea name="virtualTour" placeholder="Virtual Tour:"></textarea>
+                                            </div>
+
+                                            <h6>Listing Location</h6>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="input-item input-item-textarea ltn__custom-icon">
+                                                        <input type="text" name="address" placeholder="*Street Address">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="input-item input-item-textarea ltn__custom-icon">
+                                                        <select name="LocationId" class="nice-select">
+                                                            <option value="">Select Location (Governorate)</option>
+                                                            @* @foreach (var location in ViewBag.Locations) *@
+                                                            @* { *@
+                                                            @*     <option value="@location.Id">@location.Name</option> *@
+                                                            @* } *@
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="input-item input-item-textarea ltn__custom-icon">
+                                                        <select name="SubLocationId" class="nice-select">
+                                                            <option value="">Select Sub-location (Neighborhood)</option>
+                                                            @* @foreach (var sub in ViewBag.SubLocations) *@
+                                                            @* { *@
+                                                            @*     <option value="@sub.Id">@sub.Name</option> *@
+                                                            @* } *@
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="input-item input-item-textarea ltn__custom-icon">
+                                                        <input type="text" name="zip" placeholder="Postal Code (if available)">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="input-item input-item-textarea ltn__custom-icon">
+                                                        <input type="text" name="latitude" placeholder="Latitude">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="input-item input-item-textarea ltn__custom-icon">
+                                                        <input type="text" name="longitude" placeholder="Longitude">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <h6>Property Size</h6>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="input-item input-item-textarea ltn__custom-icon">
+                                                        <input type="number" name="size" placeholder="Size in m²">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="input-item input-item-textarea ltn__custom-icon">
+                                                        <input type="number" name="lotSize" placeholder="Lot Size in m²">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <h6>Legal Details</h6>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="input-item input-item-textarea ltn__custom-icon">
+                                                        <select class="nice-select" name="ownershipType">
+                                                            <option>Ownership Type</option>
+                                                            <option>Freehold - Full ownership of land and property</option>
+                                                            <option>Leasehold - Limited-time right to use or rent the property</option>
+                                                            <option>Government Property - Leased from the government or authorities</option>
+                                                            <option>Investment Zone - Located in a special investment area</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="input-item input-item-textarea ltn__custom-icon">
+                                                        <input type="text" name="titleDeedNumber" placeholder="Title Deed Number (رقم سند)">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="input-item input-item-textarea ltn__custom-icon">
+                                                        <select class="nice-select" name="isRegistered">
+                                                            <option>Registered in Department of Lands?</option>
+                                                            <option>Yes</option>
+                                                            <option>No</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="input-item input-item-textarea ltn__custom-icon">
+                                                        <input type="text" name="landParcelNumber" placeholder="Land Parcel Number (رقم القطعة)">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <h6>Additional Details</h6>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="input-item input-item-textarea ltn__custom-icon">
+                                                        <input type="number" name="floorNumber" placeholder="Floor Number">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="input-item input-item-textarea ltn__custom-icon">
+                                                        <input type="number" name="buildingAge" placeholder="Building Age (years)">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="input-item input-item-textarea ltn__custom-icon">
+                                                        <select name="furnishing" class="nice-select">
+                                                            <option>Furnishing</option>
+                                                            <option>Fully Furnished</option>
+                                                            <option>Semi Furnished</option>
+                                                            <option>Unfurnished</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="input-item input-item-textarea ltn__custom-icon">
+                                                        <select name="facingDirection" class="nice-select">
+                                                            <option>Facing Direction</option>
+                                                            <option>North</option>
+                                                            <option>South</option>
+                                                            <option>East</option>
+                                                            <option>West</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="btn-wrapper text-center mt-30">
+                                                <button class="btn theme-btn-1 btn-effect-1 text-uppercase" type="submit">Submit Property</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane fade" id="ltn_tab_1_8">
+                                        <div class="ltn__myaccount-tab-content-inner">
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="ltn__checkout-inner">
+                                                        <h4 style="color: #171B2A;" class="title-2">Billing Details</h4>
+                                                        <div class="ltn__checkout-single-content-info">
+                                                            <form action="#">
+                                                                <h6>Personal Information</h6>
+                                                                <div class="row">
+                                                                    <div class="col-md-6">
+                                                                        <div class="input-item input-item-name ltn__custom-icon">
+                                                                            <input type="text" name="ltn__name" placeholder="First name">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <div class="input-item input-item-name ltn__custom-icon">
+                                                                            <input type="text" name="ltn__lastname" placeholder="Last name">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <div class="input-item input-item-email ltn__custom-icon">
+                                                                            <input type="email" name="ltn__email" placeholder="email address">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <div class="input-item input-item-phone ltn__custom-icon">
+                                                                            <input type="text" name="ltn__phone" placeholder="phone number">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <div class="input-item input-item-website ltn__custom-icon">
+                                                                            <input type="text" name="ltn__company" placeholder="Company name (optional)">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <div class="input-item input-item-website ltn__custom-icon">
+                                                                            <input type="text" name="ltn__companyaddress" placeholder="Company address (optional)">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-lg-4 col-md-6">
+                                                                        <h6>Country</h6>
+                                                                        <div class="input-item">
+                                                                            <select class="nice-select">
+                                                                                <option>Select Country</option>
+                                                                                <option>Australia</option>
+                                                                                <option>Canada</option>
+                                                                                <option>China</option>
+                                                                                <option>Morocco</option>
+                                                                                <option>Saudi Arabia</option>
+                                                                                <option>United Kingdom (UK)</option>
+                                                                                <option>United States (US)</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-12 col-md-12">
+                                                                        <h6>Address</h6>
+                                                                        <div class="row">
+                                                                            <div class="col-md-6">
+                                                                                <div class="input-item">
+                                                                                    <input type="text" placeholder="House number and street name">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-6">
+                                                                                <div class="input-item">
+                                                                                    <input type="text" placeholder="Apartment, suite, unit etc. (optional)">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-4 col-md-6">
+                                                                        <h6>Town / City</h6>
+                                                                        <div class="input-item">
+                                                                            <input type="text" placeholder="City">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-4 col-md-6">
+                                                                        <h6>State </h6>
+                                                                        <div class="input-item">
+                                                                            <input type="text" placeholder="State">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-4 col-md-6">
+                                                                        <h6>Zip</h6>
+                                                                        <div class="input-item">
+                                                                            <input type="text" placeholder="Zip">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                              
+                                                               
+                                                                <h6>Select a Subscription Plan</h6>
+                                                                <div class="input-item">
+                                                                    <select id="subscription-select" name="subscriptionId" class="nice-select" required>
+                                                                        <option value="">Choose your plan</option>
+                                                                        <option value="1">Basic - 10 JOD / 2 Posts / 1 Month</option>
+                                                                        <option value="2">Standard - 25 JOD / 5 Posts / 1 Month</option>
+                                                                        <option value="3">Pro - 60 JOD / 15 Posts / 3 Months</option>
+                                                                    </select>
+                                                                </div>
+
+                                                                <h6>Payment Method</h6>
+                                                                <div class="input-item">
+                                                                    <select id="payment-method-select" class="nice-select" name="payment-method">
+                                                                        <option value="">Choose your payment method</option>
+                                                                        <option value="paypal">PayPal</option>
+                                                                        <option value="card">Credit / Debit Card</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div id="card-info" style="display: none;">
+                                                                    <div class="row mt-3">
+                                                                        <div class="col-md-6">
+                                                                            <div class="input-item input-item-textarea ltn__custom-icon">
+                                                                                <input type="text" id="cardHolderName" name="cardHolderName" placeholder="Cardholder Name">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <div class="input-item input-item-textarea ltn__custom-icon">
+                                                                                <input type="text" id="cardNumber" name="cardNumber" placeholder="Card Number">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <div class="input-item input-item-textarea ltn__custom-icon">
+                                                                                <input type="text" id="expiryDate" name="expiryDate" placeholder="Expiry Date (MM/YY)">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <div class="input-item input-item-textarea ltn__custom-icon">
+                                                                                <input type="text" id="cvv" name="cvv" placeholder="CVV Code">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <p class="mt-10 mb-0"><small>Your card information is encrypted and securely processed.</small></p>
+                                                                </div>
+                                                                <div class="ltn__payment-note mt-30 mb-30">
+                                                                    <p>Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our privacy policy.</p>
+                                                                </div>
+                                                                <button class="btn theme-btn-1 btn-effect-1 text-uppercase" type="submit">Choose Subscribtion</button>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <script>
+                                        document.addEventListener("DOMContentLoaded", function () {
+                                            const realSelect = document.getElementById("payment-method-select");
+                                            const cardInfo = document.getElementById("card-info");
+
+                                            function toggleCard(show) {
+                                                cardInfo.style.display = show ? "block" : "none";
+                                                cardInfo.querySelectorAll("input").forEach(i => i.required = show);
+                                            }
+
+                                            // Initial state
+                                            toggleCard(realSelect.value === "card");
+
+                                            // Listen to clicks on nice-select options and update real select
+                                            document.addEventListener("click", function (e) {
+                                                const option = e.target.closest(".nice-select .option");
+                                                if (option) {
+                                                    const selectedText = option.innerText.trim().toLowerCase();
+                                                    const matchedOption = Array.from(realSelect.options).find(opt =>
+                                                        opt.text.toLowerCase() === selectedText
+                                                    );
+                                                    if (matchedOption) {
+                                                        realSelect.value = matchedOption.value;
+                                                        toggleCard(matchedOption.value === "card");
+                                                    }
+                                                }
+                                            });
+                                        });
+                                    </script>
+
+
+
+                                                          
+
+
+
+                                        <div class="tab-pane fade" id="ltn_tab_1_9">
+                                            <div class="ltn__myaccount-tab-content-inner">
+                                                <div class="account-login-inner">
+                                                    <form action="#" class="ltn__form-box contact-form-box">
+                                                        <h5 style="color: #171B2A;" class="mb-30">Change Password</h5>
+                                                        <input type="password" name="password" placeholder="Current Password*">
+                                                        <input type="password" name="password" placeholder="New Password*">
+                                                        <input type="password" name="password" placeholder="Confirm New Password*">
+                                                        <div class="btn-wrapper mt-0">
+                                                            <button class="theme-btn-1 btn btn-block" type="submit">Save Changes</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- PRODUCT TAB AREA END -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- WISHLIST AREA START -->

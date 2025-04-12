@@ -1,0 +1,140 @@
+.u-section-1-hero {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+    .u-section-1-hero .hero-img {
+        width: 100%;
+        object-fit: cover;
+        filter: brightness(85%);
+        height: 50vw;
+    }
+.u-container-content {
+    position: absolute;
+    top: 40% !important;
+    left: 5% !important;
+    transform: none;
+    color: white;
+    text-align: left;
+    padding: 0 1rem;
+}
+
+
+.u-section-1 .u-text-1 {
+    font-size: 1.875rem;
+    margin: 0;
+}
+
+.u-section-1 .u-text-2 {
+    font-size: 6rem;
+    margin-top: 10px;
+    font-family: 'Nunito Sans';
+}
+
+
+/* Container spacing and background */
+.u-section-4 {
+    background-color: #f8f9fa; /* Light background */
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+    /* Section heading */
+    .u-section-4 h3 {
+        color: #171B2A;
+        font-weight: 700;
+    }
+
+    /* Circle icon container */
+    .u-section-4 .icon-circle {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background-color: #FFCC00;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+        /* Icon inside the circle */
+        .u-section-4 .icon-circle img {
+            max-width: 100% !important;
+            height: 3vw !important;
+        }
+
+    /* Icon + text group spacing */
+    .u-section-4 .icon-text-group {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    /* Text title and paragraph */
+    .u-section-4 h5 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+        color: black;
+    }
+
+    .u-section-4 p {
+        color: #6c757d;
+        font-size: 1rem;
+        margin: 0;
+    }
+
+.rounded-circle {
+    width: 80px;
+    height: 80px;
+    background-color: #FFCC00;
+}
+
+.u-section-6 img {
+    object-fit: cover;
+}
+
+@media (max-width: 426px) {
+    .u-section-6 .h-100 {
+        height: auto !important;
+    }
+    .row  {
+        margin-left: 2vw;
+        margin-right: 2vw;
+    }
+
+    .u-section-6 {
+        margin-left: 4vw;
+        margin-right: 4vw;
+    }
+
+    .u-section-4 {
+        margin-left: 2vw;
+        margin-right: 2vw;
+    }
+
+    .col-lg-6 {
+        margin-left: 3vw;
+        margin-right: 3vw;
+    }
+
+    .u-section-1-hero .hero-img {
+        width: 100%;
+        object-fit: cover;
+        filter: brightness(85%);
+        height: 99vw;
+    }
+
+    .u-section-1 .u-text-1 {
+        font-size: 1.2rem;
+        margin: 0;
+    }
+
+
+    .u-section-1 .u-text-2 {
+        font-size: 4rem;
+        margin-top: 10px;
+        font-family: 'Nunito Sans';
+    }
+}
