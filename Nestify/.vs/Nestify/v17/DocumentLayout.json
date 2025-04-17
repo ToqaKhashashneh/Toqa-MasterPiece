@@ -1,0 +1,487 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\projects\\masterpiece\\nestify\\nestify\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\projects\\masterpiece\\nestify\\nestify\\controllers\\contactuscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\controllers\\contactuscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\projects\\masterpiece\\nestify\\nestify\\views\\contactus\\contact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\views\\contactus\\contact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\projects\\masterpiece\\nestify\\nestify\\models\\contactinquiry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\models\\contactinquiry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\projects\\masterpiece\\nestify\\nestify\\views\\user\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\views\\user\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\projects\\masterpiece\\nestify\\nestify\\views\\properties\\properties.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\views\\properties\\properties.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\projects\\masterpiece\\nestify\\nestify\\models\\property.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\models\\property.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\projects\\masterpiece\\nestify\\nestify\\models\\viewmodels\\contactformviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\models\\viewmodels\\contactformviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\projects\\masterpiece\\nestify\\nestify\\models\\propertyinquiry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\models\\propertyinquiry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\projects\\masterpiece\\nestify\\nestify\\controllers\\propertiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\controllers\\propertiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\projects\\masterpiece\\nestify\\nestify\\views\\properties\\propertydetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\views\\properties\\propertydetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\projects\\masterpiece\\nestify\\nestify\\views\\home\\aboutus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\views\\home\\aboutus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\projects\\masterpiece\\nestify\\nestify\\models\\smtpsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\models\\smtpsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\projects\\masterpiece\\nestify\\nestify\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\projects\\masterpiece\\nestify\\nestify\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\projects\\masterpiece\\nestify\\nestify\\models\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\models\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\projects\\masterpiece\\nestify\\nestify\\models\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\models\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\projects\\masterpiece\\nestify\\nestify\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\projects\\masterpiece\\nestify\\nestify\\views\\shared\\interiordesignlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\views\\shared\\interiordesignlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\projects\\masterpiece\\nestify\\nestify\\views\\home\\interiordesign.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\views\\home\\interiordesign.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\projects\\masterpiece\\nestify\\nestify\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\projects\\masterpiece\\nestify\\nestify\\wwwroot\\js\\main.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\wwwroot\\js\\main.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\projects\\masterpiece\\nestify\\nestify\\views\\user\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\views\\user\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\projects\\masterpiece\\nestify\\nestify\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\projects\\masterpiece\\nestify\\nestify\\wwwroot\\js\\contact.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\wwwroot\\js\\contact.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\projects\\masterpiece\\nestify\\nestify\\wwwroot\\js\\plugins.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\wwwroot\\js\\plugins.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\projects\\masterpiece\\nestify\\nestify\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\projects\\masterpiece\\nestify\\nestify\\wwwroot\\js\\jquery.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\wwwroot\\js\\jquery.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "PropertiesController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Controllers\\PropertiesController.cs",
+              "RelativeDocumentMoniker": "Nestify\\Controllers\\PropertiesController.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Controllers\\PropertiesController.cs",
+              "RelativeToolTip": "Nestify\\Controllers\\PropertiesController.cs",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAWwHQAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T03:23:12.558Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Properties.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Views\\Properties\\Properties.cshtml",
+              "RelativeDocumentMoniker": "Nestify\\Views\\Properties\\Properties.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Views\\Properties\\Properties.cshtml",
+              "RelativeToolTip": "Nestify\\Views\\Properties\\Properties.cshtml",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAADsAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-14T03:40:44.423Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Profile.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Views\\User\\Profile.cshtml",
+              "RelativeDocumentMoniker": "Nestify\\Views\\User\\Profile.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Views\\User\\Profile.cshtml",
+              "RelativeToolTip": "Nestify\\Views\\User\\Profile.cshtml",
+              "ViewState": "AgIAAFoBAAAAAAAAAAAUwBgCAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-12T17:53:09.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ContactUsController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Controllers\\ContactUsController.cs",
+              "RelativeDocumentMoniker": "Nestify\\Controllers\\ContactUsController.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Controllers\\ContactUsController.cs",
+              "RelativeToolTip": "Nestify\\Controllers\\ContactUsController.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAowEAAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T08:16:45.053Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Property.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Models\\Property.cs",
+              "RelativeDocumentMoniker": "Nestify\\Models\\Property.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Models\\Property.cs",
+              "RelativeToolTip": "Nestify\\Models\\Property.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAIwB0AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T03:27:20.165Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Nestify\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Nestify\\Controllers\\UserController.cs",
+              "ViewState": "AgIAANsAAAAAAAAAAAAiwOgAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T23:01:17.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ContactInquiry.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Models\\ContactInquiry.cs",
+              "RelativeDocumentMoniker": "Nestify\\Models\\ContactInquiry.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Models\\ContactInquiry.cs",
+              "RelativeToolTip": "Nestify\\Models\\ContactInquiry.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwAkAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T09:15:23.74Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Contact.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Views\\ContactUs\\Contact.cshtml",
+              "RelativeDocumentMoniker": "Nestify\\Views\\ContactUs\\Contact.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Views\\ContactUs\\Contact.cshtml",
+              "RelativeToolTip": "Nestify\\Views\\ContactUs\\Contact.cshtml",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAEsAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-16T08:18:40.767Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PropertyDetails.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Views\\Properties\\PropertyDetails.cshtml",
+              "RelativeDocumentMoniker": "Nestify\\Views\\Properties\\PropertyDetails.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Views\\Properties\\PropertyDetails.cshtml",
+              "RelativeToolTip": "Nestify\\Views\\Properties\\PropertyDetails.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-15T20:18:28.151Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PropertyInquiry.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Models\\PropertyInquiry.cs",
+              "RelativeDocumentMoniker": "Nestify\\Models\\PropertyInquiry.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Models\\PropertyInquiry.cs",
+              "RelativeToolTip": "Nestify\\Models\\PropertyInquiry.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAqwB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T20:40:12.693Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ContactFormViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Models\\ViewModels\\ContactFormViewModel.cs",
+              "RelativeDocumentMoniker": "Nestify\\Models\\ViewModels\\ContactFormViewModel.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Models\\ViewModels\\ContactFormViewModel.cs",
+              "RelativeToolTip": "Nestify\\Models\\ViewModels\\ContactFormViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T12:13:55.45Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Program.cs",
+              "RelativeDocumentMoniker": "Nestify\\Program.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Program.cs",
+              "RelativeToolTip": "Nestify\\Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABoAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T18:58:19.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "SmtpSettings.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Models\\SmtpSettings.cs",
+              "RelativeDocumentMoniker": "Nestify\\Models\\SmtpSettings.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Models\\SmtpSettings.cs",
+              "RelativeToolTip": "Nestify\\Models\\SmtpSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T19:08:26.688Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AboutUS.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Views\\Home\\AboutUS.cshtml",
+              "RelativeDocumentMoniker": "Nestify\\Views\\Home\\AboutUS.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Views\\Home\\AboutUS.cshtml",
+              "RelativeToolTip": "Nestify\\Views\\Home\\AboutUS.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADgAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-16T19:56:35.87Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\appsettings.json",
+              "RelativeDocumentMoniker": "Nestify\\appsettings.json",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\appsettings.json",
+              "RelativeToolTip": "Nestify\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-16T17:35:54.391Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "RegisterViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Models\\ViewModels\\RegisterViewModel.cs",
+              "RelativeDocumentMoniker": "Nestify\\Models\\ViewModels\\RegisterViewModel.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Models\\ViewModels\\RegisterViewModel.cs",
+              "RelativeToolTip": "Nestify\\Models\\ViewModels\\RegisterViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T09:16:41.364Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Models\\ViewModels\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "Nestify\\Models\\ViewModels\\LoginViewModel.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Models\\ViewModels\\LoginViewModel.cs",
+              "RelativeToolTip": "Nestify\\Models\\ViewModels\\LoginViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T09:16:54.819Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "InteriorDesignLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Views\\Shared\\InteriorDesignLayout.cshtml",
+              "RelativeDocumentMoniker": "Nestify\\Views\\Shared\\InteriorDesignLayout.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Views\\Shared\\InteriorDesignLayout.cshtml",
+              "RelativeToolTip": "Nestify\\Views\\Shared\\InteriorDesignLayout.cshtml",
+              "ViewState": "AgIAAJAAAAAAAAAAAAAAALgAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-15T19:49:32.49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Nestify\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Nestify\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAAAsAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T13:11:36.137Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "InteriorDesign.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Views\\Home\\InteriorDesign.cshtml",
+              "RelativeDocumentMoniker": "Nestify\\Views\\Home\\InteriorDesign.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Views\\Home\\InteriorDesign.cshtml",
+              "RelativeToolTip": "Nestify\\Views\\Home\\InteriorDesign.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAQwA4AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-15T13:26:03.078Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Nestify\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Nestify\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAJUAAAAAAAAAAAAQwK0AAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-15T17:09:11.064Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "main.js",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\wwwroot\\js\\main.js",
+              "RelativeDocumentMoniker": "Nestify\\wwwroot\\js\\main.js",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\wwwroot\\js\\main.js",
+              "RelativeToolTip": "Nestify\\wwwroot\\js\\main.js",
+              "ViewState": "AgIAAEYBAAAAAAAAAAAwwAUBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-04-15T06:33:21.506Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Views\\User\\Login.cshtml",
+              "RelativeDocumentMoniker": "Nestify\\Views\\User\\Login.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\Views\\User\\Login.cshtml",
+              "RelativeToolTip": "Nestify\\Views\\User\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-15T13:25:43.655Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "site.js",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "Nestify\\wwwroot\\js\\site.js",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "Nestify\\wwwroot\\js\\site.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-04-15T06:33:26.867Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "style.css",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\wwwroot\\css\\style.css",
+              "RelativeDocumentMoniker": "Nestify\\wwwroot\\css\\style.css",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\wwwroot\\css\\style.css",
+              "RelativeToolTip": "Nestify\\wwwroot\\css\\style.css",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAAAGUAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-04-15T06:34:30.942Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "plugins.js",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\wwwroot\\js\\plugins.js",
+              "RelativeDocumentMoniker": "Nestify\\wwwroot\\js\\plugins.js",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\wwwroot\\js\\plugins.js",
+              "RelativeToolTip": "Nestify\\wwwroot\\js\\plugins.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-04-15T06:33:29.581Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "contact.js",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\wwwroot\\js\\contact.js",
+              "RelativeDocumentMoniker": "Nestify\\wwwroot\\js\\contact.js",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\wwwroot\\js\\contact.js",
+              "RelativeToolTip": "Nestify\\wwwroot\\js\\contact.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-04-15T06:33:49.146Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "jquery.js",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\wwwroot\\js\\jquery.js",
+              "RelativeDocumentMoniker": "Nestify\\wwwroot\\js\\jquery.js",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Projects\\MasterPiece\\Nestify\\Nestify\\wwwroot\\js\\jquery.js",
+              "RelativeToolTip": "Nestify\\wwwroot\\js\\jquery.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-04-13T14:12:42.153Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
