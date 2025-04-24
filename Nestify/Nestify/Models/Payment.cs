@@ -17,5 +17,13 @@ public partial class Payment
 
     public DateTime? PaymentDate { get; set; }
 
+    public int? PackageId { get; set; }
+
+    public bool IsBusinessPlan { get; set; }
+
+    public virtual Package? Package { get; set; }
+
+    public virtual ICollection<Property> Properties { get; set; } = new List<Property>();
+
     public virtual User User { get; set; } = null!;
 }

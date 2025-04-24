@@ -57,7 +57,13 @@ public partial class Property
 
     public string FacingDirection { get; set; } = null!;
 
+    public bool IsHidden { get; set; }
+
+    public int? PaymentId { get; set; }
+
     public virtual ICollection<FavoriteProperty> FavoriteProperties { get; set; } = new List<FavoriteProperty>();
+
+    public virtual Payment? Payment { get; set; }
 
     public virtual ICollection<PropertyFeature> PropertyFeatures { get; set; } = new List<PropertyFeature>();
 

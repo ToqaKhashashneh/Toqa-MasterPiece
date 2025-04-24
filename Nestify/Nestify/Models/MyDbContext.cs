@@ -23,6 +23,8 @@ public partial class MyDbContext : DbContext
 
     public virtual DbSet<Location> Locations { get; set; }
 
+    public virtual DbSet<Package> Packages { get; set; }
+
     public virtual DbSet<Payment> Payments { get; set; }
 
     public virtual DbSet<Property> Properties { get; set; }
@@ -96,18 +98,32 @@ public partial class MyDbContext : DbContext
             entity.Property(e => e.LocationName).HasMaxLength(255);
         });
 
+        modelBuilder.Entity<Package>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__Packages__3214EC2744BCF46E");
+
+            entity.Property(e => e.Id).HasColumnName("ID");
+            entity.Property(e => e.Name).HasMaxLength(50);
+            entity.Property(e => e.Price).HasColumnType("decimal(10, 2)");
+        });
+
         modelBuilder.Entity<Payment>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK__Payments__3214EC2723AD5C97");
 
             entity.Property(e => e.Id).HasColumnName("ID");
             entity.Property(e => e.Amount).HasColumnType("decimal(12, 2)");
+            entity.Property(e => e.PackageId).HasColumnName("PackageID");
             entity.Property(e => e.PaymentDate)
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime");
             entity.Property(e => e.PaymentMethod).HasMaxLength(50);
             entity.Property(e => e.Status).HasMaxLength(50);
             entity.Property(e => e.UserId).HasColumnName("UserID");
+
+            entity.HasOne(d => d.Package).WithMany(p => p.Payments)
+                .HasForeignKey(d => d.PackageId)
+                .HasConstraintName("FK_Payments_Packages");
 
             entity.HasOne(d => d.User).WithMany(p => p.Payments)
                 .HasForeignKey(d => d.UserId)
@@ -143,6 +159,7 @@ public partial class MyDbContext : DbContext
             entity.Property(e => e.Longitude).HasColumnType("decimal(9, 6)");
             entity.Property(e => e.LotArea).HasColumnType("decimal(10, 2)");
             entity.Property(e => e.LotDimensions).HasMaxLength(255);
+            entity.Property(e => e.PaymentId).HasColumnName("PaymentID");
             entity.Property(e => e.Price).HasColumnType("decimal(18, 2)");
             entity.Property(e => e.PriceType)
                 .HasMaxLength(100)
@@ -161,6 +178,10 @@ public partial class MyDbContext : DbContext
             entity.Property(e => e.VideoUrl)
                 .HasMaxLength(500)
                 .HasColumnName("VideoURL");
+
+            entity.HasOne(d => d.Payment).WithMany(p => p.Properties)
+                .HasForeignKey(d => d.PaymentId)
+                .HasConstraintName("FK_Properties_Payments");
 
             entity.HasOne(d => d.SubLocation).WithMany(p => p.Properties)
                 .HasForeignKey(d => d.SubLocationId)
@@ -232,6 +253,8 @@ public partial class MyDbContext : DbContext
             entity.HasIndex(e => e.Email, "UQ__Users__A9D1053437FE8D88").IsUnique();
 
             entity.Property(e => e.Id).HasColumnName("ID");
+            entity.Property(e => e.BusinessAddress).HasMaxLength(255);
+            entity.Property(e => e.BusinessName).HasMaxLength(255);
             entity.Property(e => e.City).HasMaxLength(100);
             entity.Property(e => e.Country).HasMaxLength(100);
             entity.Property(e => e.Email).HasMaxLength(255);

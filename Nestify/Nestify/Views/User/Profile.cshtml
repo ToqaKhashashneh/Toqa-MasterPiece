@@ -1,4 +1,4 @@
-﻿@model Nestify.Models.Property
+﻿@model Nestify.Models.ViewModels.ProfileViewModel
 @{
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -348,9 +348,10 @@
 									</div>
 
 
-
 									<div class="tab-pane fade" id="ltn_tab_1_7">
 										<div class="ltn__myaccount-tab-content-inner">
+										  @if (ViewBag.CanAddProperty != null && (bool)ViewBag.CanAddProperty){
+
 											<form asp-action="AddProperty" asp-controller="User" method="post" enctype="multipart/form-data">
 												@Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
@@ -358,12 +359,12 @@
 												<div class="row">
 													<div class="col-md-12">
 														<div class="input-item input-item-textarea ltn__custom-icon">
-															<input type="text" asp-for=PropertyName placeholder="*Title (mandatory)">
-															<span asp-validation-for="PropertyName" class="text-danger"></span>
+																<input type="text" asp-for=propertyViewModel.PropertyName required placeholder="*Title (mandatory)">
+																<span asp-validation-for="propertyViewModel.PropertyName" class="text-danger"></span>
 
 														</div>
 														<div class="input-item input-item-textarea ltn__custom-icon">
-															<textarea asp-for="Description" placeholder="Description"></textarea>
+															<textarea asp-for="propertyViewModel.Description" placeholder="Description"></textarea>
 														</div>
 													</div>
 												</div>
@@ -372,17 +373,21 @@
 												<div class="row">
 													<div class="col-md-6">
 														<div class="input-item input-item-textarea ltn__custom-icon">
-															<input type="number" asp-for="Price" placeholder="Price in JOD (دينار)">
+															<input type="number" asp-for="propertyViewModel.Price" required placeholder="Price in JOD (دينار)">
+															<span asp-validation-for="propertyViewModel.Price" class="text-danger"></span>
+
 														</div>
 													</div>
 													 <div class="col-md-6"> 
-													 	<div class="input-item input-item-textarea ltn__custom-icon"> 
-													 		<select class="nice-select" asp-for="PriceType"> 
-													 			<option>Price Type</option> 
+													 	<div class="input-item input-item-textarea ltn__custom-icon">
+															<select class="nice-select" required asp-for="propertyViewModel.PriceType">
+																<option>Price Type</option> 
 													 			<option>Total</option> 
 													 			<option>Per Month</option> 
 													 			<option>Per Year</option> 
-													 		</select> 
+													 		</select>
+																<span asp-validation-for="propertyViewModel.PriceType" class="text-danger"></span>
+
 														</div> 
 													 </div>
 												</div>
@@ -391,30 +396,33 @@
 												<div class="row">
 													<div class="col-md-6">
 														<div class="input-item input-item-textarea ltn__custom-icon">
-															<select class="nice-select" asp-for=PropertyType>
+																<select required class="nice-select" asp-for=propertyViewModel.PropertyType>
 																<option value="">Select Property Type</option>
 																<option>Villa</option>
 																<option>Apartment</option>
 																<option>Penthouse</option>
 																<option>Roof Apartment</option>
 															</select>
+															<span asp-validation-for="propertyViewModel.PropertyType" class="text-danger"></span>
+
 														</div>
 													</div>
 													<div class="col-md-6">
 														<div class="input-item input-item-textarea ltn__custom-icon">
-															<select class="nice-select" asp-for="PropertyStatus">
+															<select required class="nice-select" asp-for="propertyViewModel.PropertyStatus">
 																<option value="">Select Property Status</option>
 																<option>For Sale</option>
 																<option>For Rent</option>
 															</select>
+																<span asp-validation-for="propertyViewModel.PropertyStatus" class="text-danger"></span>
+
 														</div>
 													</div>
 												</div>
 
 												<h6>Listing Media</h6>
-												@* <input type="file" name="mediaFiles" class="btn theme-btn-3 md-12" multiple><br> *@
 												<label>Upload Images (Max 5)</label>
-												<input type="file" name="UploadedImages" class="form-control" multiple />
+												<input required type="file" name="UploadedImages" class="form-control" multiple />
 												<p>
 													<small>* At least 1 image is required. Minimum size is 500x500px.</small><br>
 													<small>* PDF files also supported.</small>
@@ -427,7 +435,7 @@
 												
 													<div class="col-md-6">
 														<div class="input-item input-item-textarea ltn__custom-icon">
-															<select name="LocationId" id="LocationId" class="nice-select">
+															<select required name="LocationId" id="LocationId" class="nice-select">
 																<option value="">Select Location (Governorate)</option>
 																@foreach (var location in ViewBag.Locations)
 																{
@@ -442,9 +450,11 @@
 													<div class="col-md-6">
 														<div class="input-item input-item-textarea ltn__custom-icon">
 
-															<select asp-for="SubLocationId" id="SubLocationId" class="nice-select">
+															<select required asp-for="propertyViewModel.SubLocationId" id="SubLocationId" class="nice-select">
 																<option value="">Select Sub-location (Neighborhood)</option>
 															</select>
+																<span asp-validation-for="propertyViewModel.SubLocationId" class="text-danger"></span>
+
 														</div>
 													</div>
 
@@ -455,43 +465,54 @@
 														</div>
 
 														 <div class="col-md-6"> 
-														 	<label>Latitude</label> 
-														 	<input asp-for="Latitude" class="form-control" id="Latitude" readonly /> 
-														 </div> 
+														 	<label>Latitude</label>
+															<input required asp-for="propertyViewModel.Latitude" class="form-control" id="Latitude" readonly />
+															<span asp-validation-for="propertyViewModel.Latitude" class="text-danger"></span>
+
+													</div> 
 														 <div class="col-md-6"> 
-														 	<label>Longitude</label> 
-														 	<input asp-for="Longitude" class="form-control" id="Longitude" readonly /> 
-														 </div>
+														 	<label>Longitude</label>
+															<input required asp-for="propertyViewModel.Longitude" class="form-control" id="Longitude" readonly />
+															<span asp-validation-for="propertyViewModel.Longitude" class="text-danger"></span>
+
+													</div>
 
 													<h6>Property Size</h6>
 													<div class="row">
 														<div class="col-md-6">
 															<div class="input-item input-item-textarea ltn__custom-icon">
-																<input type="number" asp-for="Size" class="form-control" placeholder="Size in m²" />
+																<input required type="number" asp-for="propertyViewModel.Size" class="form-control" placeholder="Size in m²" />
+																	<span asp-validation-for="propertyViewModel.Size" class="text-danger"></span>
+
 															</div>
 														</div>
 
 														<div class="col-md-6">
 															<div class="input-item input-item-textarea ltn__custom-icon">
-																<input type="number" asp-for="LotArea" class="form-control" placeholder="Lot area in m²" />
+																<input required type="number" asp-for="propertyViewModel.LotArea" class="form-control" placeholder="Lot area in m²" />
+																<span asp-validation-for="propertyViewModel.LotArea" class="text-danger"></span>
 															</div>
 														</div>
 
 														<div class="col-md-6">
 															<div class="input-item input-item-textarea ltn__custom-icon">
-																<input type="text" asp-for="LotDimensions" class="form-control" placeholder="Lot Dimensions in m²" />
+																<input required type="text" asp-for="propertyViewModel.LotDimensions" class="form-control" placeholder="Lot Dimensions in m²" />
+																<span asp-validation-for="propertyViewModel.LotDimensions" class="text-danger"></span>
+
 															</div>
 														</div>
 
 														<div class="col-md-6">
 															<div class="input-item input-item-textarea ltn__custom-icon">
-																<select asp-for="FacingDirection" class="form-control nice-select">
+																<select required asp-for="propertyViewModel.FacingDirection" class="form-control nice-select">
 																	<option value="">Facing Direction</option>
 																	<option>North</option>
 																	<option>South</option>
 																	<option>East</option>
 																	<option>West</option>
 																</select>
+																	<span asp-validation-for="propertyViewModel.FacingDirection" class="text-danger"></span>
+
 															</div>
 														</div>
 
@@ -506,219 +527,130 @@
 													
 													<div class="col-md-6">
 														<div class="input-item input-item-textarea ltn__custom-icon">
-															<input type="number" asp-for="Bedrooms" placeholder="Number of Bedrooms" class="form-control" />
+																<input required type="number" asp-for="propertyViewModel.Bedrooms" placeholder="Number of Bedrooms" class="form-control" />
+																<span asp-validation-for="propertyViewModel.Bedrooms" class="text-danger"></span>
+
 														</div>
 													</div>
 
 													<div class="col-md-6">
 														<div class="input-item input-item-textarea ltn__custom-icon">
-															<input type="number" asp-for="Bathrooms" placeholder="Number of Bathrooms" class="form-control" />
+																<input required type="number" asp-for="propertyViewModel.Bathrooms" placeholder="Number of Bathrooms" class="form-control" />
+																<span asp-validation-for="propertyViewModel.Bathrooms" class="text-danger"></span>
+
 														</div>
 													</div>
 												
 
 													<div class="col-md-6">
 														<div class="input-item input-item-textarea ltn__custom-icon">
-															<input type="number" asp-for="YearBuilt" placeholder="Building Age (years)" class="form-control" />
+																	<input required type="number" asp-for="propertyViewModel.YearBuilt" placeholder="Building Age (years)" class="form-control" />
+																<span asp-validation-for="propertyViewModel.YearBuilt" class="text-danger"></span>
+
 														</div>
 													</div>
 												</div>
+
+													<h6>Property Features</h6>
+													<div id="features-container">
+														<div class="row mb-2 feature-row">
+															<div class="col-md-6">
+																@* <input type="text" name="Features[0].FeatureName" class="form-control" placeholder="Feature Name (e.g., Kitchen)" required /> *@
+																	<input type="text" name="propertyViewModel.Features[0].FeatureName" class="form-control" placeholder="Feature Name (e.g., Kitchen)" required />
+																	<span asp-validation-for="propertyViewModel.Features[0].FeatureName" class="text-danger"></span>
+
+
+															</div>
+															<div class="col-md-4">
+																@* <input type="text" name="Features[0].Size" class="form-control" placeholder="Size (e.g., 4x5)" /> *@
+																	<input type="text" name="propertyViewModel.Features[0].Size" class="form-control" placeholder="Size (e.g., 4x5)" />
+
+																	<span asp-validation-for="propertyViewModel.Features[0].Size" class="text-danger"></span>
+
+															</div>
+															<div class="col-md-2">
+																<button type="button" class="btn btn-danger remove-feature">X</button>
+															</div>
+														</div>
+													</div>
+
+													<button type="button" id="add-feature" class="btn theme-btn-3 btn-effect-2 mt-2">+ Add Feature</button>
 
 
 												<div class="btn-wrapper text-center mt-30">
 													<button class="btn theme-btn-1 btn-effect-1 text-uppercase" type="submit">Submit Property</button>
 												</div>
 											</form>
+											}
+											else
+											{
+												<div class="alert alert-warning text-center" role="alert">
+													You cannot add a new property right now. Your subscription has either expired or you have reached your post limit.
+													<br />
+													<strong>Please renew or upgrade your package.</strong>
+												</div>
+											}
+
 
 
 
 										</div>
 									</div>
 									</div>
-								
-
-									<div class="tab-pane fade" id="ltn_tab_1_8">
-										<div class="ltn__myaccount-tab-content-inner">
-											<div class="row">
-												<div class="col-lg-12">
-													<div class="ltn__checkout-inner">
-														<h4 style="color: #171B2A;" class="title-2">Billing Details</h4>
-														<div class="ltn__checkout-single-content-info">
-															<form action="#">
-																<h6>Personal Information</h6>
-																<div class="row">
-																	<div class="col-md-6">
-																		<div class="input-item input-item-name ltn__custom-icon">
-																			<input type="text" name="ltn__name" placeholder="First name">
-																		</div>
-																	</div>
-																	<div class="col-md-6">
-																		<div class="input-item input-item-name ltn__custom-icon">
-																			<input type="text" name="ltn__lastname" placeholder="Last name">
-																		</div>
-																	</div>
-																	<div class="col-md-6">
-																		<div class="input-item input-item-email ltn__custom-icon">
-																			<input type="email" name="ltn__email" placeholder="email address">
-																		</div>
-																	</div>
-																	<div class="col-md-6">
-																		<div class="input-item input-item-phone ltn__custom-icon">
-																			<input type="text" name="ltn__phone" placeholder="phone number">
-																		</div>
-																	</div>
-																	<div class="col-md-6">
-																		<div class="input-item input-item-website ltn__custom-icon">
-																			<input type="text" name="ltn__company" placeholder="Company name (optional)">
-																		</div>
-																	</div>
-																	<div class="col-md-6">
-																		<div class="input-item input-item-website ltn__custom-icon">
-																			<input type="text" name="ltn__companyaddress" placeholder="Company address (optional)">
-																		</div>
-																	</div>
-																</div>
-																<div class="row">
-																	<div class="col-lg-4 col-md-6">
-																		<h6>Country</h6>
-																		<div class="input-item">
-																			<select class="nice-select">
-																				<option>Select Country</option>
-																				<option>Australia</option>
-																				<option>Canada</option>
-																				<option>China</option>
-																				<option>Morocco</option>
-																				<option>Saudi Arabia</option>
-																				<option>United Kingdom (UK)</option>
-																				<option>United States (US)</option>
-																			</select>
-																		</div>
-																	</div>
-																	<div class="col-lg-12 col-md-12">
-																		<h6>Address</h6>
-																		<div class="row">
-																			<div class="col-md-6">
-																				<div class="input-item">
-																					<input type="text" placeholder="House number and street name">
-																				</div>
-																			</div>
-																			<div class="col-md-6">
-																				<div class="input-item">
-																					<input type="text" placeholder="Apartment, suite, unit etc. (optional)">
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																	<div class="col-lg-4 col-md-6">
-																		<h6>Town / City</h6>
-																		<div class="input-item">
-																			<input type="text" placeholder="City">
-																		</div>
-																	</div>
-																	<div class="col-lg-4 col-md-6">
-																		<h6>State </h6>
-																		<div class="input-item">
-																			<input type="text" placeholder="State">
-																		</div>
-																	</div>
-																	<div class="col-lg-4 col-md-6">
-																		<h6>Zip</h6>
-																		<div class="input-item">
-																			<input type="text" placeholder="Zip">
-																		</div>
-																	</div>
-																</div>
 
 
-																<h6>Select a Subscription Plan</h6>
-																<div class="input-item">
-																	<select id="subscription-select" name="subscriptionId" class="nice-select" required>
-																		<option value="">Choose your plan</option>
-																		<option value="1">Basic - 10 JOD / 2 Posts / 1 Month</option>
-																		<option value="2">Standard - 25 JOD / 5 Posts / 1 Month</option>
-																		<option value="3">Pro - 60 JOD / 15 Posts / 3 Months</option>
-																	</select>
-																</div>
 
-																<h6>Payment Method</h6>
-																<div class="input-item">
-																	<select id="payment-method-select" class="nice-select" name="payment-method">
-																		<option value="">Choose your payment method</option>
-																		<option value="paypal">PayPal</option>
-																		<option value="card">Credit / Debit Card</option>
-																	</select>
-																</div>
-																<div id="card-info" style="display: none;">
-																	<div class="row mt-3">
-																		<div class="col-md-6">
-																			<div class="input-item input-item-textarea ltn__custom-icon">
-																				<input type="text" id="cardHolderName" name="cardHolderName" placeholder="Cardholder Name">
-																			</div>
-																		</div>
-																		<div class="col-md-6">
-																			<div class="input-item input-item-textarea ltn__custom-icon">
-																				<input type="text" id="cardNumber" name="cardNumber" placeholder="Card Number">
-																			</div>
-																		</div>
-																		<div class="col-md-6">
-																			<div class="input-item input-item-textarea ltn__custom-icon">
-																				<input type="text" id="expiryDate" name="expiryDate" placeholder="Expiry Date (MM/YY)">
-																			</div>
-																		</div>
-																		<div class="col-md-6">
-																			<div class="input-item input-item-textarea ltn__custom-icon">
-																				<input type="text" id="cvv" name="cvv" placeholder="CVV Code">
-																			</div>
-																		</div>
-																	</div>
-																	<p class="mt-10 mb-0"><small>Your card information is encrypted and securely processed.</small></p>
-																</div>
-																<div class="ltn__payment-note mt-30 mb-30">
-																	<p>Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our privacy policy.</p>
-																</div>
-																<button class="btn theme-btn-1 btn-effect-1 text-uppercase" type="submit">Choose Subscribtion</button>
-															</form>
-														</div>
+
+								<div class="tab-pane fade" id="ltn_tab_1_8">
+									<div class="ltn__myaccount-tab-content-inner">
+										<div class="row">
+											<div class="col-lg-12">
+												<div class="ltn__checkout-inner">
+													<h4 style="color: #171B2A;" class="title-2">Billing Details</h4>
+													<div class="ltn__checkout-single-content-info">
+
+														<form asp-action="SubmitSubscription" method="post">
+															<input asp-for="Subscription.UserId" type="hidden" value="@ViewBag.UserId" />
+
+															<input asp-for="Subscription.BusinessName" placeholder="Company name (optional)" />
+															<input asp-for="Subscription.BusinessAddress" placeholder="Company address (optional)" />
+
+															<select asp-for="Subscription.PackageId" required>
+																<option value="">Choose your plan</option>
+																<option value="1">Basic - 10 JOD / 2 Posts / 1 Month</option>
+																<option value="2">Standard - 25 JOD / 5 Posts / 1 Month</option>
+																<option value="3">Pro - 60 JOD / 15 Posts / 3 Months</option>
+															</select>
+
+															<select asp-for="Subscription.PaymentMethod" required>
+																<option value="">Choose your payment method</option>
+																<option>Credit Card</option>
+																<option>PayPal</option>
+															</select>
+
+															<input asp-for="Subscription.CardHolderName" placeholder="Cardholder Name" />
+															<input asp-for="Subscription.CardNumber" placeholder="Card Number" />
+															<input asp-for="Subscription.ExpiryDate" placeholder="Expiry Date (MM/YY)" />
+															<input asp-for="Subscription.CVV" placeholder="CVV" />
+
+															<button type="submit" class="btn btn-primary">Submit</button>
+														</form>
+
+
+
+
 													</div>
 												</div>
 											</div>
 										</div>
 									</div>
-									<script>
-										document.addEventListener("DOMContentLoaded", function () {
-											const realSelect = document.getElementById("payment-method-select");
-											const cardInfo = document.getElementById("card-info");
-
-											function toggleCard(show) {
-												cardInfo.style.display = show ? "block" : "none";
-												cardInfo.querySelectorAll("input").forEach(i => i.required = show);
-											}
-
-											// Initial state
-											toggleCard(realSelect.value === "card");
-
-											// Listen to clicks on nice-select options and update real select
-											document.addEventListener("click", function (e) {
-												const option = e.target.closest(".nice-select .option");
-												if (option) {
-													const selectedText = option.innerText.trim().toLowerCase();
-													const matchedOption = Array.from(realSelect.options).find(opt =>
-														opt.text.toLowerCase() === selectedText
-													);
-													if (matchedOption) {
-														realSelect.value = matchedOption.value;
-														toggleCard(matchedOption.value === "card");
-													}
-												}
-											});
-										});
-									</script>
+								</div>
 
 
 
 
 
-
+								
 
 									<div class="tab-pane fade" id="ltn_tab_1_9">
 										<div class="ltn__myaccount-tab-content-inner">
@@ -841,6 +773,66 @@
 			}
 		});
 	</script>
+
+	
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+
+	<script>
+		// let featureIndex = 1;
+
+		// document.getElementById("add-feature").addEventListener("click", function () {
+		// 	const container = document.getElementById("features-container");
+
+		// 	const newRow = document.createElement("div");
+		// 	newRow.className = "row mb-2 feature-row";
+
+		// 	newRow.innerHTML = `
+		// 		<div class="col-md-6">
+		// 			<input type="text" name="Features[${featureIndex}].FeatureName" class="form-control" placeholder="Feature Name" required />
+		// 		</div>
+		// 		<div class="col-md-4">
+		// 			<input type="text" name="Features[${featureIndex}].Size" class="form-control" placeholder="Size (e.g., 5x7)" />
+		// 		</div>
+		// 		<div class="col-md-2">
+		// 			<button type="button" class="btn btn-danger remove-feature">X</button>
+		// 		</div>
+		// 	`;
+
+		// 	container.appendChild(newRow);
+		// 	featureIndex++;
+				let featureIndex = 1;
+
+		document.getElementById("add-feature").addEventListener("click", function () {
+			const container = document.getElementById("features-container");
+
+			const newRow = document.createElement("div");
+			newRow.className = "row mb-2 feature-row";
+
+			newRow.innerHTML = `
+				<div class="col-md-6">
+					<input type="text" name="propertyViewModel.Features[${featureIndex}].FeatureName" class="form-control" placeholder="Feature Name" required />
+				</div>
+				<div class="col-md-4">
+					<input type="text" name="propertyViewModel.Features[${featureIndex}].Size" class="form-control" placeholder="Size (e.g., 5x7)" />
+				</div>
+				<div class="col-md-2">
+					<button type="button" class="btn btn-danger remove-feature">X</button>
+				</div>
+			`;
+
+			container.appendChild(newRow);
+			featureIndex++;
+		});
+
+		});
+
+		document.addEventListener("click", function (e) {
+			if (e.target.classList.contains("remove-feature")) {
+				e.target.closest(".feature-row").remove();
+			}
+		});
+	</script>
+
 
 
 

@@ -25,6 +25,12 @@ public partial class User
 
     public string? LastName { get; set; }
 
+    public bool IsVerifiedBusiness { get; set; }
+
+    public string? BusinessName { get; set; }
+
+    public string? BusinessAddress { get; set; }
+
     public virtual ICollection<FavoriteProperty> FavoriteProperties { get; set; } = new List<FavoriteProperty>();
 
     public virtual ICollection<Payment> Payments { get; set; } = new List<Payment>();
