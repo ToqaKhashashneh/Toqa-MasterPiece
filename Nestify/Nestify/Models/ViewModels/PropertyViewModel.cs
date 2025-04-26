@@ -16,11 +16,12 @@ namespace Nestify.Models.ViewModels
         //public List<Payment>? Payments { get; set; }
         public SubscriptionInputModel Subscription { get; set; } = new SubscriptionInputModel();
 
-
+        public List<Property>? MyProperties { get; set; }
         public bool CanAddProperty { get; set; }
     }
     public class PropertyViewModel
     {
+        public int Id { get; set; } = 0; // 0 for new property, >0 for existing property
         [Required(ErrorMessage = "Property name is required.")]
         public string PropertyName { get; set; } = null!;
 
@@ -89,16 +90,27 @@ namespace Nestify.Models.ViewModels
 
         public int? PaymentId { get; set; }
 
-
+        [Required]
+        public int LocationId { get; set; }
 
         public List<FeatureInputModel> Features { get; set; } = new List<FeatureInputModel>();
 
+        public List<string> ExistingImages { get; set; } = new List<string>();
+       
+
+        // For file upload
+        public IFormFileCollection UploadedImages { get; set; }
+        public List<string> ImagesToDelete { get; set; } = new List<string>();
 
     }
 
 
     public class FeatureInputModel
     {
+
+        public int Id { get; set; } = 0; // 0 for new feature, >0 for existing feature
+
+        public int PropertyId { get; set; } // Will be set in controller from session
 
         [Required(ErrorMessage = "Feature name is required.")]
         [StringLength(100, ErrorMessage = "Feature name can't exceed 100 characters.")]

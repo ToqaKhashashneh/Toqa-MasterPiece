@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Nestify")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+013b258074dee424376cf2884f0bec84c7eef032")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e299bc281422f1f2a8162ad3b8e2a2cd28ac4c87")]
 [assembly: System.Reflection.AssemblyProductAttribute("Nestify")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Nestify")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

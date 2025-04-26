@@ -1,0 +1,99 @@
+@model IEnumerable<Nestify.Models.PropertyInquiry>
+
+@{
+    ViewData["Title"] = "Property Inquiries";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <span>Property Inquiries Management</span>
+    </div>
+    <div class="card-body">
+    
+
+        <div class="table-responsive">
+            <table class="table table-hover" id="inquiries-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Property</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Date Submitted</th>
+                        <th>Preferred Date</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    @foreach (var inquiry in Model)
+                    {
+                        <tr>
+                            <td>@inquiry.Id</td>
+                            <td>
+                                @if (inquiry.Property != null)
+                                {
+                                    <a href="@Url.Action("PropertyDetails", "Admin", new { id = inquiry.PropertyId })" target="_blank">
+                                        @inquiry.Property.PropertyName
+                                    </a>
+                                }
+                                else
+                                {
+                                    <span>N/A</span>
+                                }
+                            </td>
+                            <td>@inquiry.Name</td>
+                            <td>@inquiry.Email</td>
+                            <td>@inquiry.Phone</td>
+                            <td>@inquiry.SubmittedAt?.ToString("dd/MM/yyyy HH:mm")</td>
+                            <td>@inquiry.PreferredDate?.ToString("dd/MM/yyyy")</td>
+                            <td>
+                                <span class="badge bg-@(inquiry.Status == "Completed" ? "success" :
+                                                  inquiry.Status == "Pending" ? "warning" :
+                                                  inquiry.Status == "Cancelled" ? "danger" : "secondary")">
+                                    @inquiry.Status
+                                </span>
+                            </td>
+                            <td>
+                                <div class="btn-group">
+                                   
+                                    <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                                        <i class="bi bi-clipboard-check"></i> Status
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <form method="post" action="@Url.Action("UpdateInquiryStatus", "Admin")">
+                                            <input type="hidden" name="id" value="@inquiry.Id" />
+                                            <input type="hidden" name="status" value="Pending" />
+                                            <button type="submit" class="dropdown-item">Pending</button>
+                                        </form>
+                                        <form method="post" action="@Url.Action("UpdateInquiryStatus", "Admin")">
+                                            <input type="hidden" name="id" value="@inquiry.Id" />
+                                            <input type="hidden" name="status" value="Confirmed" />
+                                            <button type="submit" class="dropdown-item">Confirmed</button>
+                                        </form>
+                                      
+                                        <form method="post" action="@Url.Action("UpdateInquiryStatus", "Admin")">
+                                            <input type="hidden" name="id" value="@inquiry.Id" />
+                                            <input type="hidden" name="status" value="Cancelled" />
+                                            <button type="submit" class="dropdown-item">Cancelled</button>
+                                        </form>
+                                    </div>
+                                    <form method="post" action="@Url.Action("DeletePropertyInquiry", "Admin", new { id = inquiry.Id })" onsubmit="return confirm('Are you sure you want to delete this inquiry?');">
+                                        <button type="submit" class="btn btn-sm btn-danger">
+                                            <i class="bi bi-trash"></i> Delete
+                                        </button>
+                                    </form>
+                                </div>
+                            </td>
+                        </tr>
+
+                      
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

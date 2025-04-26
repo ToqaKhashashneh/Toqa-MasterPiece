@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\css\\About_Us_toqa.css"
     },
     {
+      "Id": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\css\\AdminDashboard.css",
+      "PackagePath": "staticwebassets\\css\\AdminDashboard.css"
+    },
+    {
       "Id": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\css\\Interior Design.css",
       "PackagePath": "staticwebassets\\css\\Interior Design.css"
     },
@@ -953,6 +957,10 @@
       "PackagePath": "staticwebassets\\img\\testimonial\\4.jpg"
     },
     {
+      "Id": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\js\\JavaScript.js",
+      "PackagePath": "staticwebassets\\js\\JavaScript.js"
+    },
+    {
       "Id": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\js\\contact.js",
       "PackagePath": "staticwebassets\\js\\contact.js"
     },
@@ -1245,6 +1253,10 @@
       "PackagePath": "staticwebassets\\uploads\\properties\\470b64a1-a144-48a1-9cac-0679935703c8.jpeg"
     },
     {
+      "Id": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\uploads\\properties\\50ea1fef-9fdf-42b0-a3ac-9de9e625f545.jpg",
+      "PackagePath": "staticwebassets\\uploads\\properties\\50ea1fef-9fdf-42b0-a3ac-9de9e625f545.jpg"
+    },
+    {
       "Id": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\uploads\\properties\\65fe6504-15c8-419e-9ab7-eb1620656f85.jpeg",
       "PackagePath": "staticwebassets\\uploads\\properties\\65fe6504-15c8-419e-9ab7-eb1620656f85.jpeg"
     },
@@ -1265,12 +1277,20 @@
       "PackagePath": "staticwebassets\\uploads\\properties\\7a05fcdb-67e4-40e3-97f2-9569e4ffd0ce.jpeg"
     },
     {
+      "Id": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\uploads\\properties\\7e344b5c-2cab-4603-9c4d-d65c601c2646.jpg",
+      "PackagePath": "staticwebassets\\uploads\\properties\\7e344b5c-2cab-4603-9c4d-d65c601c2646.jpg"
+    },
+    {
       "Id": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\uploads\\properties\\8b07687f-4ca4-4888-bd35-9011faa9a458.jpeg",
       "PackagePath": "staticwebassets\\uploads\\properties\\8b07687f-4ca4-4888-bd35-9011faa9a458.jpeg"
     },
     {
       "Id": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\uploads\\properties\\8cca2a0f-4b69-4142-af2f-50e35908e50f.jpeg",
       "PackagePath": "staticwebassets\\uploads\\properties\\8cca2a0f-4b69-4142-af2f-50e35908e50f.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\uploads\\properties\\94be7511-b865-408e-a575-146972a8defe.jpg",
+      "PackagePath": "staticwebassets\\uploads\\properties\\94be7511-b865-408e-a575-146972a8defe.jpg"
     },
     {
       "Id": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\uploads\\properties\\9799a1b1-4e2b-4c23-b96a-044abb1a893e.jpeg",

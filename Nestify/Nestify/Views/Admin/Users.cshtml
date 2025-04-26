@@ -1,0 +1,227 @@
+@model IEnumerable<Nestify.Models.User>
+
+@{
+    ViewData["Title"] = "Users";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <span>Users Management</span>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-hover" id="users-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Role</th>
+                        <th>Business Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var user in Model)
+                    {
+                        <tr>
+                            <td>@user.Id</td>
+                            <td>@(string.IsNullOrEmpty(user.FirstName) && string.IsNullOrEmpty(user.LastName) ? "N/A" : $"{user.FirstName} {user.LastName}")</td>
+                            <td>@user.Email</td>
+                            <td>@(string.IsNullOrEmpty(user.PhoneNumber) ? "N/A" : user.PhoneNumber)</td>
+                            <td>@user.Role</td>
+                            <td>
+                                @if (user.Role == "Business")
+                                {
+                                    if (user.IsVerifiedBusiness)
+                                    {
+                                        <span class="badge bg-success">Verified</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-warning">Unverified</span>
+                                    }
+                                }
+                                else
+                                {
+                                    <span class="badge bg-secondary">N/A</span>
+                                }
+                            </td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-sm btn-info" onclick="viewUserDetails(@user.Id)">
+                                        <i class="bi bi-eye"></i> View
+                                    </button>
+                                    @if (user.Role == "Business" && !user.IsVerifiedBusiness)
+                                    {
+                                        <button class="btn btn-sm btn-success" onclick="verifyUser(@user.Id)">
+                                            <i class="bi bi-check-circle"></i> Verify
+                                        </button>
+                                    }
+                                    @if (user.Role == "Business" && user.IsVerifiedBusiness)
+                                    {
+                                        <button class="btn btn-sm btn-warning" onclick="unverifyUser(@user.Id)">
+                                            <i class="bi bi-x-circle"></i> Unverify
+                                        </button>
+                                    }
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- User Details Modal -->
+<div class="modal fade" id="userDetailsModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">User Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-4 text-center">
+                        <img id="userProfileImage" src="" alt="Profile Image" class="img-fluid rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+                    </div>
+                    <div class="col-md-8">
+                        <h4 id="userName">User Name</h4>
+                        <p id="userEmail">user@example.com</p>
+                        <p id="userPhone">123-456-7890</p>
+                        <p><span class="badge bg-primary" id="userRole">Role</span></p>
+                    </div>
+                </div>
+                <hr>
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <h5>Personal Information</h5>
+                        <table class="table">
+                            <tr>
+                                <th>City</th>
+                                <td id="userCity"></td>
+                            </tr>
+                            <tr>
+                                <th>Country</th>
+                                <td id="userCountry"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-md-6" id="businessInfoSection">
+                        <h5>Business Information</h5>
+                        <table class="table">
+                            <tr>
+                                <th>Business Name</th>
+                                <td id="businessName"></td>
+                            </tr>
+                            <tr>
+                                <th>Business Address</th>
+                                <td id="businessAddress"></td>
+                            </tr>
+                            <tr>
+                                <th>Verification Status</th>
+                                <td id="verificationStatus"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function() {
+            // Initialize DataTable for better user experience
+            $('#users-table').DataTable({
+                "order": [[0, "desc"]]
+            });
+        });
+        
+        function viewUserDetails(userId) {
+            // In a real application, you would fetch user details from the server
+            // For now, we'll find the user in the current page data
+            const userRow = document.querySelector(`tr td:first-child:contains(${userId})`).parentNode;
+            
+            // Get basic info from the row
+            const name = userRow.cells[1].textContent;
+            const email = userRow.cells[2].textContent;
+            const phone = userRow.cells[3].textContent;
+            const role = userRow.cells[4].textContent;
+            const isVerified = userRow.cells[5].querySelector('.badge').textContent === 'Verified';
+            
+            // Set values in the modal
+            document.getElementById('userName').textContent = name;
+            document.getElementById('userEmail').textContent = email;
+            document.getElementById('userPhone').textContent = phone;
+            document.getElementById('userRole').textContent = role;
+            
+            // Set a placeholder image if no profile image is available
+            document.getElementById('userProfileImage').src = '/images/placeholder.jpg';
+            
+            // Show business section only for business users
+            if (role === 'Business') {
+                document.getElementById('businessInfoSection').style.display = 'block';
+                document.getElementById('verificationStatus').innerHTML = isVerified ? 
+                    '<span class="badge bg-success">Verified</span>' : 
+                    '<span class="badge bg-warning">Unverified</span>';
+            } else {
+                document.getElementById('businessInfoSection').style.display = 'none';
+            }
+            
+            // Show the modal
+            var modal = new bootstrap.Modal(document.getElementById('userDetailsModal'));
+            modal.show();
+        }
+        
+        function verifyUser(userId) {
+            if (confirm('Are you sure you want to verify this user?')) {
+                $.ajax({
+                    url: '@Url.Action("VerifyUser", "Admin")',
+                    type: 'POST',
+                    data: { id: userId },
+                    success: function(response) {
+                        if (response.success) {
+                            alert('User verified successfully');
+                            location.reload();
+                        } else {
+                            alert('Error: ' + response.message);
+                        }
+                    },
+                    error: function() {
+                        alert('An error occurred while verifying the user');
+                    }
+                });
+            }
+        }
+        
+        function unverifyUser(userId) {
+            if (confirm('Are you sure you want to unverify this user?')) {
+                $.ajax({
+                    url: '@Url.Action("UnverifyUser", "Admin")',
+                    type: 'POST',
+                    data: { id: userId },
+                    success: function(response) {
+                        if (response.success) {
+                            alert('User unverified successfully');
+                            location.reload();
+                        } else {
+                            alert('Error: ' + response.message);
+                        }
+                    },
+                    error: function() {
+                        alert('An error occurred while unverifying the user');
+                    }
+                });
+            }
+        }
+    </script>
+} 

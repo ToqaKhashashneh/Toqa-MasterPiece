@@ -1,0 +1,645 @@
+﻿@* @model Nestify.Models.ViewModels.PropertyViewModel *@
+@* @{ *@
+@*     ViewData["Title"] = "Edit Property"; *@
+@* } *@
+
+@* <!-- BREADCRUMB AREA START --> *@
+@* <div class="ltn__breadcrumb-area text-left bg-overlay-white-30 bg-image" data-bs-bg="img/bg/14.jpg"> *@
+@*     <div class="container"> *@
+@*         <div class="row"> *@
+@*             <div class="col-lg-12"> *@
+@*                 <div class="ltn__breadcrumb-inner"> *@
+@*                     <h1 class="page-title">Edit Property</h1> *@
+@*                 </div> *@
+@*             </div> *@
+@*         </div> *@
+@*     </div> *@
+@* </div> *@
+@* <!-- BREADCRUMB AREA END --> *@
+
+@* <div class="container mt-5"> *@
+@*     <h2>Edit Property</h2> *@
+
+@*     <form asp-action="EditProperty" asp-controller="User" method="post" enctype="multipart/form-data"> *@
+@*         @Html.AntiForgeryToken() *@
+@*         <input type="hidden" name="id" value="@ViewContext.RouteData.Values["id"]" /> *@
+
+@*         <h6 style="color: #171B2A;">Property Description</h6> *@
+@*         <div class="row"> *@
+@*             <div class="col-md-12"> *@
+@*                 <input asp-for="PropertyName" class="form-control mb-2" placeholder="*Title (mandatory)" required /> *@
+@*                 <span asp-validation-for="PropertyName" class="text-danger"></span> *@
+
+@*                 <textarea asp-for="Description" class="form-control mb-2" placeholder="Description"></textarea> *@
+@*             </div> *@
+@*         </div> *@
+
+@*         <h6>Property Price</h6> *@
+@*         <div class="row"> *@
+@*             <div class="col-md-6"> *@
+@*                 <input asp-for="Price" type="number" class="form-control mb-2" placeholder="Price in JOD (دينار)" required /> *@
+@*             </div> *@
+@*             <div class="col-md-6"> *@
+@*                 <select asp-for="PriceType" class="form-control nice-select mb-2" required> *@
+@*                     <option value="">Price Type</option> *@
+@*                     <option>Total</option> *@
+@*                     <option>Per Month</option> *@
+@*                     <option>Per Year</option> *@
+@*                 </select> *@
+@*             </div> *@
+@*         </div> *@
+
+@*         <h6>Categories</h6> *@
+@*         <div class="row"> *@
+@*             <div class="col-md-6"> *@
+@*                 <select asp-for="PropertyType" class="form-control nice-select mb-2" required> *@
+@*                     <option value="">Select Property Type</option> *@
+@*                     <option>Villa</option> *@
+@*                     <option>Apartment</option> *@
+@*                     <option>Penthouse</option> *@
+@*                     <option>Roof Apartment</option> *@
+@*                 </select> *@
+@*             </div> *@
+@*             <div class="col-md-6"> *@
+@*                 <select asp-for="PropertyStatus" class="form-control nice-select mb-2" required> *@
+@*                     <option value="">Select Property Status</option> *@
+@*                     <option>For Sale</option> *@
+@*                     <option>For Rent</option> *@
+@*                 </select> *@
+@*             </div> *@
+@*         </div> *@
+
+@*         <h6>Upload Images</h6> *@
+@*         <input type="file" name="UploadedImages" class="form-control mb-2" multiple /> *@
+@*         <small>* Upload at least 1 image. Existing images will remain unless replaced.</small> *@
+
+@*         <h6>Listing Location</h6> *@
+@*         <div class="row"> *@
+@*             <div class="col-md-6"> *@
+@*                 <input asp-for="Latitude" id="Latitude" class="form-control mb-2" placeholder="Latitude" readonly /> *@
+@*             </div> *@
+@*             <div class="col-md-6"> *@
+@*                 <input asp-for="Longitude" id="Longitude" class="form-control mb-2" placeholder="Longitude" readonly /> *@
+@*             </div> *@
+
+@*             <div class="col-md-12"> *@
+@*                 <label>📍 Select Location on Map:</label> *@
+@*                 <div id="map" style="height: 300px; border: 1px solid #ccc;" class="mb-3"></div> *@
+@*             </div> *@
+@*         </div> *@
+@*         <h6>Location Details</h6> *@
+@* <div class="row"> *@
+@*     <div class="col-md-6"> *@
+@*         <label>Governorate (Location)</label> *@
+@*         <select class="form-control nice-select" required> *@
+@*             <option value="">Select Location</option> *@
+@*             @foreach (var loc in ViewBag.Locations ) *@
+@*             { *@
+@*                 <option value="@loc.Id">@loc.LocationName</option> *@
+@*             } *@
+@*         </select> *@
+@*     </div> *@
+
+@*     <div class="col-md-6"> *@
+@*         <label>Neighborhood (SubLocation)</label> *@
+@*         <select asp-for="SubLocationId" id="SubLocationId" class="form-control nice-select" required> *@
+@*             <option value="">Select Sub-location</option> *@
+@*             @foreach (var sub in ViewBag.Sublocations ) *@
+@*             { *@
+@*                 { *@
+@*                     <option value="@sub.Id" >@sub.SublocationName</option> *@
+@*                 } *@
+@*             } *@
+@*         </select> *@
+@*         <span asp-validation-for="SubLocationId" class="text-danger"></span> *@
+@*     </div> *@
+@* </div> *@
+
+@*         <h6>Property Size</h6> *@
+@*         <div class="row"> *@
+@*             <div class="col-md-6"> *@
+@*                 <input asp-for="Size" type="number" class="form-control mb-2" placeholder="Size (m²)" /> *@
+@*             </div> *@
+@*             <div class="col-md-6"> *@
+@*                 <input asp-for="LotArea" type="number" class="form-control mb-2" placeholder="Lot Area (m²)" /> *@
+@*             </div> *@
+@*             <div class="col-md-6"> *@
+@*                 <input asp-for="LotDimensions" type="text" class="form-control mb-2" placeholder="Lot Dimensions" /> *@
+@*             </div> *@
+@*             <div class="col-md-6"> *@
+@*                 <select asp-for="FacingDirection" class="form-control nice-select mb-2"> *@
+@*                     <option value="">Facing Direction</option> *@
+@*                     <option>North</option> *@
+@*                     <option>South</option> *@
+@*                     <option>East</option> *@
+@*                     <option>West</option> *@
+@*                 </select> *@
+@*             </div> *@
+@*         </div> *@
+
+@*         <h6>Property Specifications</h6> *@
+@*         <div class="row"> *@
+@*             <div class="col-md-4"> *@
+@*                 <input asp-for="Bedrooms" type="number" class="form-control mb-2" placeholder="Bedrooms" /> *@
+@*             </div> *@
+@*             <div class="col-md-4"> *@
+@*                 <input asp-for="Bathrooms" type="number" class="form-control mb-2" placeholder="Bathrooms" /> *@
+@*             </div> *@
+@*             <div class="col-md-4"> *@
+@*                 <input asp-for="YearBuilt" type="number" class="form-control mb-2" placeholder="Year Built" /> *@
+@*             </div> *@
+@*         </div> *@
+
+@*         <h6>Features</h6> *@
+@*         <div id="features-container"> *@
+@*             @for (var i = 0; i < Model.Features.Count; i++) *@
+@*             { *@
+@*                 <div class="row mb-2 feature-row"> *@
+@*                     <div class="col-md-6"> *@
+@*                         <input type="text" name="Features[@i].FeatureName" value="@Model.Features[i].FeatureName" class="form-control" placeholder="Feature Name" required /> *@
+@*                     </div> *@
+@*                     <div class="col-md-4"> *@
+@*                         <input type="text" name="Features[@i].Size" value="@Model.Features[i].Size" class="form-control" placeholder="Size (e.g., 5x7)" /> *@
+@*                     </div> *@
+@*                     <div class="col-md-2"> *@
+@*                         <button type="button" class="btn btn-danger remove-feature">X</button> *@
+@*                     </div> *@
+@*                 </div> *@
+@*             } *@
+@*         </div> *@
+@*         <button type="button" id="add-feature" class="btn btn-secondary mt-2">+ Add Feature</button> *@
+
+@*         <h6>Other Options</h6> *@
+@*         <div class="form-check mt-3"> *@
+@*             <input class="form-check-input" type="checkbox" asp-for="IsHidden" /> *@
+@*             <label class="form-check-label">Hide this property (Private)</label> *@
+@*         </div> *@
+
+@*         <br /> *@
+@*         <button type="submit" class="btn btn-primary mt-3">Save Changes</button> *@
+@*     </form> *@
+@* </div> *@
+
+@* @section Scripts { *@
+@*     <script> *@
+@*         let featureIndex = @Model.Features.Count; *@
+
+@*         document.getElementById("add-feature").addEventListener("click", function () { *@
+@*             const container = document.getElementById("features-container"); *@
+@*             const newRow = document.createElement("div"); *@
+@*             newRow.className = "row mb-2 feature-row"; *@
+
+@*             newRow.innerHTML = ` *@
+@*                 <div class="col-md-6"> *@
+@*                     <input type="text" name="Features[${featureIndex}].FeatureName" class="form-control" placeholder="Feature Name" required /> *@
+@*                 </div> *@
+@*                 <div class="col-md-4"> *@
+@*                     <input type="text" name="Features[${featureIndex}].Size" class="form-control" placeholder="Size (e.g., 5x7)" /> *@
+@*                 </div> *@
+@*                 <div class="col-md-2"> *@
+@*                     <button type="button" class="btn btn-danger remove-feature">X</button> *@
+@*                 </div> *@
+@*             `; *@
+@*             container.appendChild(newRow); *@
+@*             featureIndex++; *@
+@*         }); *@
+
+@*         document.addEventListener("click", function (e) { *@
+@*             if (e.target.classList.contains("remove-feature")) { *@
+@*                 e.target.closest(".feature-row").remove(); *@
+@*             } *@
+@*         }); *@
+@*     </script> *@
+
+@*     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script> *@
+@*     <script> *@
+@*         document.addEventListener("DOMContentLoaded", function () { *@
+@*             var map = L.map('map').setView([@Model.Latitude ?? 31.9632, @Model.Longitude ?? 35.9304], 8); *@
+@*             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { *@
+@*                 attribution: '&copy; OpenStreetMap contributors' *@
+@*             }).addTo(map); *@
+
+@*             var marker = L.marker([@Model.Latitude ?? 31.9632, @Model.Longitude ?? 35.9304]).addTo(map); *@
+
+@*             map.on('click', function (e) { *@
+@*                 var lat = e.latlng.lat.toFixed(6); *@
+@*                 var lng = e.latlng.lng.toFixed(6); *@
+
+@*                 document.getElementById("Latitude").value = lat; *@
+@*                 document.getElementById("Longitude").value = lng; *@
+
+@*                 if (marker) map.removeLayer(marker); *@
+@*                 marker = L.marker([lat, lng]).addTo(map); *@
+@*             }); *@
+@*         }); *@
+@*     </script> *@
+@* } *@
+
+@model Nestify.Models.ViewModels.PropertyViewModel
+@{
+    ViewData["Title"] = "Edit Property";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- BREADCRUMB AREA START -->
+<div class="ltn__breadcrumb-area text-left bg-overlay-white-30 bg-image" data-bs-bg="img/bg/14.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ltn__breadcrumb-inner">
+                    <h1 class="page-title">Edit Property</h1>
+                    <div class="ltn__breadcrumb-list">
+                        <ul>
+                            <li><a asp-controller="Home" asp-action="Index"><span class="ltn__secondary-color"><i class="fas fa-home"></i></span> Home</a></li>
+                            <li><a asp-controller="User" asp-action="Index">My Account</a></li>
+                            <li>Edit Property</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- BREADCRUMB AREA END -->
+
+<div class="ltn__utilize-overlay"></div>
+
+<!-- EDIT PROPERTY AREA START -->
+<div class="liton__wishlist-area pb-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ltn__form-box">
+                    <form asp-action="EditProperty" asp-controller="User" method="post" enctype="multipart/form-data">
+                        <input type="hidden" asp-for="Id" />
+
+                        <h6>Property Description</h6>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="input-item input-item-textarea ltn__custom-icon">
+                                    <input type="text" asp-for="PropertyName" required placeholder="*Property Title">
+                                    <span asp-validation-for="PropertyName" class="text-danger"></span>
+                                </div>
+                                <div class="input-item input-item-textarea ltn__custom-icon">
+                                    <textarea asp-for="Description" placeholder="Detailed Description"></textarea>
+                                    <span asp-validation-for="Description" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h6>Property Price</h6>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="input-item input-item-textarea ltn__custom-icon">
+                                    <input type="number" asp-for="Price" required placeholder="Price in JOD">
+                                    <span asp-validation-for="Price" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-item input-item-textarea ltn__custom-icon">
+                                    <select class="nice-select" required asp-for="PriceType">
+                                        <option value="">Price Type</option>
+                                        <option value="Total">Total</option>
+                                        <option value="Per Month">Per Month</option>
+                                        <option value="Per Year">Per Year</option>
+                                    </select>
+                                    <span asp-validation-for="PriceType" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h6>Property Type & Status</h6>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="input-item input-item-textarea ltn__custom-icon">
+                                    <select class="nice-select" required asp-for="PropertyType">
+                                        <option value="">Property Type</option>
+                                        <option value="Villa">Villa</option>
+                                        <option value="Apartment">Apartment</option>
+                                        <option value="Penthouse">Penthouse</option>
+                                        <option value="Roof Apartment">Roof Apartment</option>
+                                        <option value="Land">Land</option>
+                                        <option value="Commercial">Commercial</option>
+                                    </select>
+                                    <span asp-validation-for="PropertyType" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-item input-item-textarea ltn__custom-icon">
+                                    <select class="nice-select" required asp-for="PropertyStatus">
+                                        <option value="">Property Status</option>
+                                        <option value="For Sale">For Sale</option>
+                                        <option value="For Rent">For Rent</option>
+                                        <option value="Sold">Sold</option>
+                                        <option value="Rented">Rented</option>
+                                    </select>
+                                    <span asp-validation-for="PropertyStatus" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h6>Listing Media</h6>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label>Update Images (Max 5)</label>
+                                <input type="file" name="UploadedImages" class="form-control" multiple accept="image/*" />
+                                <p class="text-muted">
+                                    <small>Leave empty to keep existing images. New images will replace old ones.</small>
+                                </p>
+
+                                <!-- Display existing images -->
+                                @if (Model.ExistingImages != null && Model.ExistingImages.Any())
+                                {
+                                    <div class="row mt-3">
+                                        @foreach (var image in Model.ExistingImages)
+                                        {
+                                            <div class="col-md-2 mb-3">
+                                                <img src="@image" class="img-thumbnail" style="height:100px; width:100%; object-fit:cover;">
+                                                <div class="form-check mt-2">
+                                                    <input class="form-check-input" type="checkbox" name="ImagesToDelete" value="@image" id="delete-@image">
+                                                    <label class="form-check-label" for="delete-@image">
+                                                        Delete
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        }
+                                    </div>
+                                }
+                            </div>
+                        </div>
+
+                        <h6>Property Location</h6>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="input-item input-item-textarea ltn__custom-icon">
+                                    <select required asp-for="LocationId" id="LocationId" class="nice-select">
+                                        <option value="">Select Location (Governorate)</option>
+                                        @foreach (var location in ViewBag.Locations)
+                                        {
+                                            <option value="@location.Id">@location.LocationName</option>
+                                        }
+                                    </select>
+                                    <span asp-validation-for="LocationId" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-item input-item-textarea ltn__custom-icon">
+                                    <select required asp-for="SubLocationId" id="SubLocationId" class="nice-select">
+                                        <option value="">Select Sub-location (Neighborhood)</option>
+                                    </select>
+                                    <span asp-validation-for="SubLocationId" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-12 mt-3">
+                                <label>📍 Select Location on Map</label>
+                                <div id="map" style="height: 300px; border: 1px solid #ccc;"></div>
+                            </div>
+                            <div class="col-md-6 mt-3">
+                                <label>Latitude</label>
+                                <input required asp-for="Latitude" class="form-control" id="Latitude" readonly />
+                                <span asp-validation-for="Latitude" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6 mt-3">
+                                <label>Longitude</label>
+                                <input required asp-for="Longitude" class="form-control" id="Longitude" readonly />
+                                <span asp-validation-for="Longitude" class="text-danger"></span>
+                            </div>
+                            @* <div class="col-md-12 mt-3"> *@
+                            @*     <div class="input-item input-item-textarea ltn__custom-icon"> *@
+                            @*         <input type="text" asp-for="Address" class="form-control" placeholder="Full Address" /> *@
+                            @*         <span asp-validation-for="Address" class="text-danger"></span> *@
+                            @*     </div> *@
+                            @* </div> *@
+                        </div>
+
+                        <h6>Property Size</h6>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="input-item input-item-textarea ltn__custom-icon">
+                                    <input type="number" asp-for="Size" class="form-control" placeholder="Size in m²" />
+                                    <span asp-validation-for="Size" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="input-item input-item-textarea ltn__custom-icon">
+                                    <input type="number" asp-for="LotArea" class="form-control" placeholder="Lot area in m²" />
+                                    <span asp-validation-for="LotArea" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="input-item input-item-textarea ltn__custom-icon">
+                                    <input type="text" asp-for="LotDimensions" class="form-control" placeholder="Lot Dimensions (e.g., 20x30)" />
+                                    <span asp-validation-for="LotDimensions" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mt-3">
+                                <div class="input-item input-item-textarea ltn__custom-icon">
+                                    <select asp-for="FacingDirection" class="form-control nice-select">
+                                        <option value="">Facing Direction</option>
+                                        <option value="North">North</option>
+                                        <option value="South">South</option>
+                                        <option value="East">East</option>
+                                        <option value="West">West</option>
+                                        <option value="North-East">North-East</option>
+                                        <option value="North-West">North-West</option>
+                                        <option value="South-East">South-East</option>
+                                        <option value="South-West">South-West</option>
+                                    </select>
+                                    <span asp-validation-for="FacingDirection" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mt-3">
+                                <div class="input-item input-item-textarea ltn__custom-icon">
+                                    <input type="number" asp-for="YearBuilt" class="form-control" placeholder="Year Built" />
+                                    <span asp-validation-for="YearBuilt" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h6>Property Specifications</h6>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="input-item input-item-textarea ltn__custom-icon">
+                                    <input type="number" asp-for="Bedrooms" class="form-control" placeholder="Bedrooms" />
+                                    <span asp-validation-for="Bedrooms" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="input-item input-item-textarea ltn__custom-icon">
+                                    <input type="number" asp-for="Bathrooms" class="form-control" placeholder="Bathrooms" />
+                                    <span asp-validation-for="Bathrooms" class="text-danger"></span>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <h6>Property Features</h6>
+                        <div id="features-container">
+                            @for (int i = 0; i < Model.Features.Count; i++)
+                            {
+                                <div class="row mb-2 feature-row">
+                                    <div class="col-md-6">
+                                        <input type="text" asp-for="Features[i].FeatureName" class="form-control" placeholder="Feature Name" required />
+                                        <span asp-validation-for="Features[i].FeatureName" class="text-danger"></span>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <input type="text" asp-for="Features[i].Size" class="form-control" placeholder="Size (e.g., 5x7)" />
+                                        <span asp-validation-for="Features[i].Size" class="text-danger"></span>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <button type="button" class="btn btn-danger remove-feature">X</button>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                        <button type="button" id="add-feature" class="btn theme-btn-3 btn-effect-2 mt-2">+ Add Feature</button>
+
+                        <div class="btn-wrapper text-center mt-30">
+                            <button class="btn theme-btn-1 btn-effect-1 text-uppercase" type="submit">Update Property</button>
+                            <a asp-controller="User" asp-action="Profile" class="btn theme-btn-2 btn-effect-2 text-uppercase">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- EDIT PROPERTY AREA END -->
+@section Scripts {
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        // Initialize map with existing coordinates
+        document.addEventListener("DOMContentLoaded", function () {
+            var map = L.map('map').setView([
+        @(Model.Latitude ),
+        @(Model.Longitude )
+            ], 15);
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; OpenStreetMap contributors'
+            }).addTo(map);
+
+        @if (Model.Latitude != null && Model.Longitude != null)
+        {
+            <text>
+                    var marker = L.marker([
+                @Model.Latitude,
+                @Model.Longitude
+                    ]).addTo(map);
+            </text>
+        }
+
+            map.on('click', function(e) {
+                var lat = e.latlng.lat.toFixed(6);
+                var lng = e.latlng.lng.toFixed(6);
+
+                document.getElementById("Latitude").value = lat;
+                document.getElementById("Longitude").value = lng;
+
+                if (marker) {
+                    map.removeLayer(marker);
+                }
+
+                marker = L.marker([lat, lng]).addTo(map);
+            });
+        });
+
+        // Location and Sublocation dropdown handling
+        const locationSelect = document.getElementById("LocationId");
+        const sublocationSelect = document.getElementById("SubLocationId");
+
+        locationSelect.addEventListener("change", function () {
+            const locationId = this.value;
+
+            if (!locationId) {
+                sublocationSelect.innerHTML = '<option value="">Select Sub-location</option>';
+                return;
+            }
+
+            fetch('@Url.Action("GetSublocationsByLocation", "User")' + '?locationId=' + locationId)
+                .then(response => response.json())
+                .then(data => {
+                    sublocationSelect.innerHTML = '<option value="">Select Sub-location</option>';
+                    data.forEach(sub => {
+                        const option = document.createElement("option");
+                        option.value = sub.id;
+                        option.textContent = sub.sublocationName;
+                        option.selected = sub.id == '@Model.SubLocationId';
+                        sublocationSelect.appendChild(option);
+                    });
+                });
+        });
+
+        // Trigger change event if location is already selected
+        @if (Model.LocationId != null)
+        {
+            <text>
+                document.addEventListener("DOMContentLoaded", function() {
+                    document.getElementById("LocationId").value = '@Model.LocationId';
+                    document.getElementById("LocationId").dispatchEvent(new Event('change'));
+                });
+            </text>
+        }
+
+        // Features management
+        let featureIndex = @(Model.Features?.Count ?? 0);
+
+        document.getElementById("add-feature").addEventListener("click", function () {
+            const container = document.getElementById("features-container");
+
+            const newRow = document.createElement("div");
+            newRow.className = "row mb-2 feature-row";
+
+            newRow.innerHTML = `
+                <div class="col-md-6">
+                    <input type="text" name="Features[${featureIndex}].FeatureName" class="form-control" placeholder="Feature Name" required />
+                </div>
+                <div class="col-md-4">
+                    <input type="text" name="Features[${featureIndex}].Size" class="form-control" placeholder="Size (e.g., 5x7)" />
+                </div>
+                <div class="col-md-2">
+                    <button type="button" class="btn btn-danger remove-feature">X</button>
+                </div>
+            `;
+
+            container.appendChild(newRow);
+            featureIndex++;
+        });
+
+        document.addEventListener("click", function (e) {
+            if (e.target.classList.contains("remove-feature")) {
+                e.target.closest(".feature-row").remove();
+            }
+        });
+
+        // Show success/error messages
+        @if (TempData["Success"] != null)
+        {
+            <text>
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success!',
+                    text: '@TempData["Success"]',
+                    confirmButtonColor: '#171B2A'
+                });
+            </text>
+        }
+
+        @if (TempData["Error"] != null)
+        {
+            <text>
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error!',
+                    text: '@TempData["Error"]',
+                    confirmButtonColor: '#E72463'
+                });
+            </text>
+        }
+    </script>
+
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

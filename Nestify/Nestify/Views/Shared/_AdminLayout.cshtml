@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Nestify Admin</title>
+    @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> *@
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="~/css/AdminDashboard.css" asp-append-version="true" />
+
+    @* <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" /> *@
+    @* <link rel="stylesheet" href="~/Nestify.styles.css" asp-append-version="true" /> *@
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
+
+
+</head>
+<body>
+
+    <nav class="mobile-navbar navbar navbar-dark d-lg-none">
+        <button class="navbar-toggler" type="button" id="sidebarToggle">
+            <i class="bi bi-list"></i>
+        </button>
+        <span class="navbar-brand mx-auto">Real Estate Admin</span>
+    </nav>
+    <div class="col-lg-2 sidebar" id="sidebar">
+        <div class="text-center mb-4">
+            <h4>Nestify Admin</h4>
+        </div>
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link @(ViewContext.RouteData.Values["Action"].ToString() == "Dashboard" ? "active" : "")" asp-controller="Admin" asp-action="Dashboard">
+                    <i class="bi bi-house-door"></i> Dashboard
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link @(ViewContext.RouteData.Values["Action"].ToString() == "Properties" ? "active" : "")" asp-controller="Admin" asp-action="Properties">
+                    <i class="bi bi-building"></i> Properties
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link @(ViewContext.RouteData.Values["Action"].ToString() == "Users" ? "active" : "")" asp-controller="Admin" asp-action="Users">
+                    <i class="bi bi-people"></i> Users
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link @(ViewContext.RouteData.Values["Action"].ToString() == "Payments" ? "active" : "")" asp-controller="Admin" asp-action="Payments">
+                    <i class="bi bi-credit-card"></i> Payments
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link @(ViewContext.RouteData.Values["Action"].ToString() == "Packages" ? "active" : "")" asp-controller="Admin" asp-action="Packages">
+                    <i class="bi bi-box"></i> Packages
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link @(ViewContext.RouteData.Values["Action"].ToString() == "PropertyInquiries" ? "active" : "")" asp-controller="Admin" asp-action="PropertyInquiries">
+                    <i class="bi bi-chat"></i> Property Inquiries
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link @(ViewContext.RouteData.Values["Action"].ToString() == "InteriorDesign" ? "active" : "")" asp-controller="Admin" asp-action="InteriorDesign">
+                    <i class="bi bi-palette"></i> Interior Design
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link @(ViewContext.RouteData.Values["Action"].ToString() == "ContactInquiries" ? "active" : "")" asp-controller="Admin" asp-action="ContactInquiries">
+                    <i class="bi bi-envelope"></i> Contact Inquiries
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link @(ViewContext.RouteData.Values["Action"].ToString() == "Locations" ? "active" : "")" asp-controller="Admin" asp-action="Locations">
+                    <i class="bi bi-geo-alt"></i> Locations
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link @(ViewContext.RouteData.Values["Action"].ToString() == "Sublocations" ? "active" : "")" asp-controller="Admin" asp-action="Sublocations">
+                    <i class="bi bi-geo"></i> Sublocations
+                </a>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="main-content">
+
+           
+
+        <div class="container-fluid">
+            @RenderBody()
+        </div>
+    </div>
+
+    <script src="~/js/JavaScript.js"></script>
+    <script>
+
+        // Mobile sidebar toggle
+            document.getElementById('sidebarToggle').addEventListener('click', function() {
+                document.getElementById('sidebar').classList.toggle('show');
+            });
+
+
+
+    </script>
+    @* <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script> *@
+    @* <script src="~/js/site.js" asp-append-version="true"></script> *@
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html> 

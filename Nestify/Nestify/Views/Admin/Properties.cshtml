@@ -1,0 +1,95 @@
+@model IEnumerable<Nestify.Models.Property>
+
+@{
+    ViewData["Title"] = "Properties";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <span>Properties Management</span>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-hover" id="properties-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        @* <th>Type</th> *@
+                        @* <th>Price</th> *@
+                        <th>Location</th>
+                        @* <th>Owner</th> *@
+                        <th>Status</th>
+                        <th>Featured</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var property in Model)
+                    {
+                        <tr>
+                            <td>@property.Id</td>
+                            <td>@property.PropertyName</td>
+                            @* <td>@property.PropertyType</td> *@
+                            @* <td>@property.Price.ToString("C2", new System.Globalization.CultureInfo("en-JO"))</td> *@
+                            <td>
+                                @if (property.SubLocation != null && property.SubLocation.Location != null)
+                                {
+                                    @($"{property.SubLocation.SublocationName}, {property.SubLocation.Location.LocationName}")
+                                }
+                                else
+                                {
+                                    <span>N/A</span>
+                                }
+                            </td>
+                            @* <td> *@
+                            @*     @if (property.User != null) *@
+                            @*     { *@
+                            @*         @(string.IsNullOrEmpty(property.User.BusinessName) ?  *@
+                            @*             (string.IsNullOrEmpty(property.User.FirstName) && string.IsNullOrEmpty(property.User.LastName) ?  *@
+                            @*             property.User.Email : $"{property.User.FirstName} {property.User.LastName}") :  *@
+                            @*             property.User.BusinessName) *@
+                            @*     } *@
+                            @*     else *@
+                            @*     { *@
+                            @*         <span>N/A</span> *@
+                            @*     } *@
+                            @* </td> *@
+                            <td>
+                                <span class="badge bg-@(property.PropertyStatus == "For Sale" ? "primary" : 
+                                                    property.PropertyStatus == "For Rent" ? "info" : 
+                                                    property.PropertyStatus == "Sold" ? "success" : 
+                                                    property.PropertyStatus == "Rented" ? "warning" : "secondary")">
+                                    @property.PropertyStatus
+                                </span>
+                            </td>
+                            <td>
+                                @if (property.IsFeatured.HasValue && property.IsFeatured.Value)
+                                {
+                                    <span class="badge bg-success">Featured</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-secondary">Not Featured</span>
+                                }
+                            </td>
+                     
+                            <td>
+                                <div class="btn-group">
+                                    <a href="@Url.Action("PropertyDetails", "Admin", new { id = property.Id })" class="btn btn-sm btn-info">
+                                        <i class="bi bi-eye"></i> View
+                                    </a>
+
+                                
+                                </div>
+                            </td>
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

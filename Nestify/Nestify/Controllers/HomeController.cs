@@ -6,7 +6,7 @@ namespace Nestify.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        //private readonly ILogger<HomeController> _logger;
 
         private readonly MyDbContext _context;
         public HomeController(MyDbContext context)
@@ -44,10 +44,7 @@ namespace Nestify.Controllers
             return View();
         }
 
-        public IActionResult InteriorDesign()
-        {
-            return View();
-        }
+      
 
 
 

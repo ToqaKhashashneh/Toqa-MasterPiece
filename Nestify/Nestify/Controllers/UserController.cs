@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.EntityFrameworkCore;
 
 namespace Nestify.Controllers
 {
@@ -20,6 +21,7 @@ namespace Nestify.Controllers
             _env = env;
         }
 
+        //..........................Register and Login..........................//
         public IActionResult Register()
         {
             return View();
@@ -68,6 +70,8 @@ namespace Nestify.Controllers
             return View();
         }
 
+
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(LoginViewModel model)
@@ -95,7 +99,7 @@ namespace Nestify.Controllers
 
             await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
 
-            return RedirectToAction(user.Role == "Admin" ? "AdminPanel" : "Profile", "User");
+            return RedirectToAction(user.Role == "Admin" ? "Dashboard" : "Profile", "User");
         }
 
         public async Task<IActionResult> Logout()
@@ -103,6 +107,14 @@ namespace Nestify.Controllers
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return RedirectToAction("Login", "User");
         }
+
+
+
+
+
+
+
+
 
         [Authorize]
         public IActionResult Profile()
@@ -148,7 +160,20 @@ namespace Nestify.Controllers
             ViewBag.ProfileImageUrl = string.IsNullOrEmpty(user.ProfileImageUrl) ? "/img/profile/DefaultUser.jpeg" : user.ProfileImageUrl;
             ViewBag.Locations = _context.Locations.ToList();
             ViewBag.SubLocations = _context.Sublocations.ToList();
+          
+            ViewBag.userProperties =  _context.Properties
+            .Where(p => p.UserId == userId)
+            .Include(p => p.SubLocation)
+            .ToList();
 
+            //var viewModel = new ProfileViewModel
+            //{
+            //    User = user,
+            //    Subscription = new SubscriptionInputModel(),
+            //    propertyViewModel = new PropertyViewModel(),
+            //    CanAddProperty = canAddProperty,
+            //    MyProperties = userProperties
+            //};
             return View();
         }
 
@@ -186,6 +211,9 @@ namespace Nestify.Controllers
             return RedirectToAction("Profile");
         }
 
+
+        //..........................Load Sublocation..........................//
+
         [HttpGet]
         public JsonResult GetSublocationsByLocation(int locationId)
         {
@@ -197,11 +225,10 @@ namespace Nestify.Controllers
             return Json(sublocations);
         }
 
-        [Authorize(Roles = "Admin")]
-        public IActionResult AdminPanel()
-        {
-            return View();
-        }
+
+
+
+        //..........................Add Property..........................//
 
         [HttpPost]
         public IActionResult AddProperty(PropertyViewModel propertyViewModel, List<IFormFile> UploadedImages)
@@ -216,15 +243,7 @@ namespace Nestify.Controllers
             //    return RedirectToAction("Profile", "User");
             //}
 
-            //var userIdClaim = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
-            //if (string.IsNullOrEmpty(userIdClaim))
-            //{
-            //    TempData["Error"] = "You must be logged in to add a property.";
-            //    return RedirectToAction("Login", "User");
-            //}
-
-            //int userId = int.Parse(userIdClaim);
-
+            
             var activePayment = _context.Payments
                 .Where(p => p.UserId == userId && p.Status == "Completed" && p.PackageId != null)
                 .OrderByDescending(p => p.PaymentDate)
@@ -318,6 +337,10 @@ namespace Nestify.Controllers
             return RedirectToAction("Profile", "User");
         }
 
+
+
+        //..........................Subscription(Payment)..........................//
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult SubmitSubscription(ProfileViewModel model)
@@ -342,7 +365,8 @@ namespace Nestify.Controllers
                 Amount = package.Price,
                 PaymentMethod = sub.PaymentMethod,
                 PaymentDate = DateTime.Now,
-                Status = isBusinessPlan ? "Completed" : "Pending",
+                Status =  "Completed",
+
                 IsBusinessPlan = isBusinessPlan
             };
 
@@ -352,5 +376,171 @@ namespace Nestify.Controllers
             TempData["Success"] = "Subscription created successfully.";
             return RedirectToAction("Profile");
         }
+
+        [HttpGet]
+        public async Task<IActionResult> EditProperty(int id)
+        {
+            var property = await _context.Properties
+                .Include(p => p.PropertyFeatures)
+                .Include(p => p.SubLocation)
+                .ThenInclude(s => s.Location)
+                .FirstOrDefaultAsync(p => p.Id == id);
+
+            if (property == null)
+            {
+                return NotFound();
+            }
+
+            var viewModel = new PropertyViewModel
+            {
+                Id = property.Id,
+                PropertyName = property.PropertyName,
+                Description = property.Description,
+                Price = property.Price,
+                PriceType = property.PriceType,
+                PropertyType = property.PropertyType,
+                PropertyStatus = property.PropertyStatus,
+                SubLocationId = property.SubLocationId,
+                Latitude = property.Latitude,
+                Longitude = property.Longitude,
+                Size = property.Size,
+                LotArea = property.LotArea,
+                LotDimensions = property.LotDimensions,
+                FacingDirection = property.FacingDirection,
+                YearBuilt = property.YearBuilt,
+                Bedrooms = property.Bedrooms,
+                Bathrooms = property.Bathrooms,
+              
+                Features = property.PropertyFeatures.Select(f => new FeatureInputModel
+                {
+                    Id = f.Id,
+                    FeatureName = f.FeatureName,
+                    Size = f.Size
+                }).ToList(),
+            };
+
+            ViewBag.Locations = await _context.Locations.ToListAsync();
+            return View(viewModel);
+        }
+        [HttpPost]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> EditProperty(int id, PropertyViewModel model)
+        {
+            if (id != model.Id)
+            {
+                return NotFound();
+            }
+
+            if (!ModelState.IsValid)
+            {
+                // If invalid, collect errors and show in TempData
+                var errors = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage).ToList();
+                TempData["Error"] = string.Join("\n", errors);
+                ViewBag.Locations = await _context.Locations.ToListAsync();
+                return View(model);
+            }
+
+            var property = await _context.Properties
+                .Include(p => p.PropertyFeatures)
+                .FirstOrDefaultAsync(p => p.Id == id);
+
+            if (property == null)
+            {
+                return NotFound();
+            }
+
+            // Update basic property fields
+            property.PropertyName = model.PropertyName;
+            property.Description = model.Description;
+            property.Price = model.Price;
+            property.PriceType = model.PriceType;
+            property.PropertyType = model.PropertyType;
+            property.PropertyStatus = model.PropertyStatus;
+            property.SubLocationId = model.SubLocationId;
+            property.Latitude = model.Latitude;
+            property.Longitude = model.Longitude;
+            property.Size = model.Size;
+            property.LotArea = model.LotArea;
+            property.LotDimensions = model.LotDimensions;
+            property.FacingDirection = model.FacingDirection;
+            property.YearBuilt = model.YearBuilt;
+            property.Bedrooms = model.Bedrooms;
+            property.Bathrooms = model.Bathrooms;
+            property.IsHidden = model.IsHidden;
+            property.PublishDate = DateTime.Now;
+
+            // ------------------------
+            // Handle Property Features
+            // ------------------------
+            // Clear old features
+            _context.PropertyFeatures.RemoveRange(property.PropertyFeatures);
+
+            // Add updated features
+            if (model.Features != null && model.Features.Any())
+            {
+                property.PropertyFeatures = model.Features.Select(f => new PropertyFeature
+                {
+                    FeatureName = f.FeatureName,
+                    Size = f.Size,
+                    PropertyId = property.Id
+                }).ToList();
+            }
+            else
+            {
+                property.PropertyFeatures = new List<PropertyFeature>();
+            }
+
+            // ------------------------
+            // Handle Images Upload
+            // ------------------------
+            if (model.UploadedImages != null && model.UploadedImages.Count > 0)
+            {
+                var uploadPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads/properties");
+
+                // Optional: delete old images if you want (depends on your logic)
+
+                var savedImages = new List<string>();
+
+                foreach (var file in model.UploadedImages.Take(5))
+                {
+                    var uniqueFileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
+                    var filePath = Path.Combine(uploadPath, uniqueFileName);
+
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await file.CopyToAsync(stream);
+                    }
+
+                    savedImages.Add("/uploads/properties/" + uniqueFileName);
+                }
+
+                // Update image fields
+                property.ImageUrl1 = savedImages.ElementAtOrDefault(0);
+                property.ImageUrl2 = savedImages.ElementAtOrDefault(1);
+                property.ImageUrl3 = savedImages.ElementAtOrDefault(2);
+                property.ImageUrl4 = savedImages.ElementAtOrDefault(3);
+                property.ImageUrl5 = savedImages.ElementAtOrDefault(4);
+            }
+
+            try
+            {
+                await _context.SaveChangesAsync();
+                TempData["Success"] = "Property updated successfully!";
+                return RedirectToAction("Profile", "User");
+            }
+            catch (Exception ex)
+            {
+                TempData["Error"] = "An error occurred while updating the property: " + ex.Message;
+                ViewBag.Locations = await _context.Locations.ToListAsync();
+                return View(model);
+            }
+        }
+
+        private bool PropertyExists(int id)
+        {
+            return _context.Properties.Any(e => e.Id == id);
+        }
+
     }
 }

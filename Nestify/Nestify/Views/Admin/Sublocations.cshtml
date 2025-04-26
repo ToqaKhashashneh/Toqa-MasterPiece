@@ -1,0 +1,171 @@
+@model IEnumerable<Nestify.Models.Sublocation>
+
+@{
+    ViewData["Title"] = "Sublocations";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <span>Sublocations Management</span>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sublocationModal" onclick="resetForm()">
+                    <i class="bi bi-plus"></i> Add New Sublocation
+                </button>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover" id="sublocations-table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Sublocation Name</th>
+                                <th>Parent Location</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{
+                                int counter = 1;
+                            }
+                            @foreach (var sublocation in Model)
+                            {
+                                <tr>
+                                    <td>@counter</td>
+                                    <td>@sublocation.SublocationName</td>
+                                    <td>@(sublocation.Location?.LocationName ?? "N/A")</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <button class="btn btn-sm btn-primary"
+                                                    onclick="editSublocation(@sublocation.Id, '@sublocation.SublocationName', @sublocation.LocationId)"
+                                                    data-bs-toggle="modal" data-bs-target="#sublocationModal">
+                                                <i class="bi bi-pencil"></i> Edit
+                                            </button>
+
+                                            <form asp-action="DeleteSublocation" asp-controller="Admin" method="post" onsubmit="return confirmDelete(this);" style="display:inline;">
+                                                <input type="hidden" name="id" value="@sublocation.Id" />
+                                                <button type="submit" class="btn btn-sm btn-danger">
+                                                    <i class="bi bi-trash"></i> Delete
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </td>
+                                </tr>
+                                counter++;
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Sublocation Modal -->
+<div class="modal fade" id="sublocationModal" tabindex="-1" aria-labelledby="sublocationModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form asp-action="SaveSublocation" asp-controller="Admin" method="post" id="sublocationForm">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="sublocationModalLabel">Add New Sublocation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <input type="hidden" name="Id" id="sublocationId" value="0" />
+        
+
+                    <div class="mb-3">
+                        <label for="modalLocationId" class="form-label">Parent Location</label>
+                        <select class="form-select" id="modalLocationId" name="LocationId" required>
+                            <option value="">Select a location</option>
+                            @foreach (var location in ViewBag.Locations)
+                            {
+                                <option value="@location.Id">@location.LocationName</option>
+                            }
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="modalSublocationName" class="form-label">Sublocation Name</label>
+                        <input type="text" class="form-control" id="modalSublocationName" name="SublocationName" required>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary" id="saveSublocationBtn">Save Sublocation</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+                  function editSublocation(id, name, locationId) {
+            document.getElementById('sublocationId').value = id;
+            document.getElementById('modalSublocationName').value = name;
+            document.getElementById('modalLocationId').value = locationId;
+            document.getElementById('sublocationModalLabel').textContent = 'Edit Sublocation';
+            document.getElementById('saveSublocationBtn').textContent = 'Update Sublocation';
+        }
+
+        function resetForm() {
+            document.getElementById('sublocationId').value = 0;
+            document.getElementById('modalSublocationName').value = '';
+            document.getElementById('modalLocationId').value = '';
+            document.getElementById('sublocationModalLabel').textContent = 'Add New Sublocation';
+            document.getElementById('saveSublocationBtn').textContent = 'Save Sublocation';
+        }
+
+        </script>
+         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const successMessage = '@TempData["Success"]';
+            const errorMessage = '@TempData["Error"]';
+
+            if (successMessage) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success!',
+                    text: successMessage,
+                    confirmButtonColor: '#171B2A'
+                });
+            }
+
+            if (errorMessage) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error!',
+                    text: errorMessage,
+                    confirmButtonColor: '#d33'
+                });
+            }
+        });
+
+          function confirmDelete(form) {
+            event.preventDefault();
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "This action cannot be undone!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#6c757d',
+                confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    form.submit();
+                }
+            });
+            return false;
+        }
+    </script>
+
+}

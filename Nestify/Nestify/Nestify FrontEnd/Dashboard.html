@@ -1,0 +1,2063 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Admin Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary-color: #171B2A;
+            --secondary-color: #ff5a3c;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            overflow-x: hidden;
+        }
+        
+        .sidebar {
+            background-color: var(--primary-color);
+            color: white;
+            height: 100vh;
+            position: fixed;
+            padding-top: 20px;
+            width: 250px;
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+        
+        .sidebar.collapsed {
+            transform: translateX(-250px);
+        }
+        
+        .sidebar .nav-link {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 5px;
+            border-radius: 5px;
+            padding: 10px 15px;
+            white-space: nowrap;
+        }
+        
+        .sidebar .nav-link:hover, .sidebar .nav-link.active {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+        
+        .sidebar .nav-link i {
+            margin-right: 10px;
+        }
+        
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+            transition: all 0.3s;
+            min-height: 100vh;
+        }
+        
+        .main-content.expanded {
+            margin-left: 0;
+        }
+        
+        .card {
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            border: none;
+        }
+        
+        .btn-primary {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: #e04a2d;
+            border-color: #e04a2d;
+        }
+        
+        .table th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .badge-pending {
+            background-color: #ffc107;
+            color: #212529;
+        }
+        
+        .badge-completed {
+            background-color: #28a745;
+            color: white;
+        }
+        
+        .badge-failed {
+            background-color: #dc3545;
+            color: white;
+        }
+        
+        .dashboard-card {
+            transition: transform 0.3s;
+        }
+        
+        .dashboard-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .tab-content {
+            padding: 20px 0;
+        }
+        
+        .modal-content {
+            border-radius: 10px;
+        }
+        
+        .form-control, .form-select {
+            border-radius: 5px;
+        }
+        
+        .navbar-toggler {
+            color: white;
+            border: none;
+            font-size: 1.5rem;
+            padding: 0.5rem;
+        }
+        
+        .mobile-navbar {
+            display: none;
+            background-color: var(--primary-color);
+            padding: 10px 15px;
+            position: fixed;
+            width: 100%;
+            z-index: 999;
+        }
+        
+        .mobile-navbar .navbar-brand {
+            color: white;
+        }
+        
+        @media (max-width: 992px) {
+            .sidebar {
+                transform: translateX(-250px);
+            }
+            
+            .sidebar.show {
+                transform: translateX(0);
+            }
+            
+            .main-content {
+                margin-left: 0;
+            }
+            
+            .mobile-navbar {
+                display: flex;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .dashboard-card {
+                margin-bottom: 15px;
+            }
+            
+            .table-responsive {
+                overflow-x: auto;
+            }
+            
+            .btn {
+                padding: 0.25rem 0.5rem;
+                font-size: 0.875rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .main-content {
+                padding: 15px;
+            }
+            
+            .card-header h5 {
+                font-size: 1.1rem;
+            }
+            
+            .modal-dialog {
+                margin: 0.5rem auto;
+            }
+        }
+
+        /* Custom styles for property features */
+        .property-features {
+            display: none;
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        
+        .property-features.show {
+            display: block;
+        }
+        
+        .feature-badge {
+            margin-right: 5px;
+            margin-bottom: 5px;
+            font-size: 0.85rem;
+        }
+        
+        /* Filter controls */
+        .filter-controls {
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        /* Feature preview modal */
+        .feature-preview {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 10px;
+        }
+        
+        /* Edit features modal */
+        .feature-edit {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .feature-edit-item {
+            display: flex;
+            align-items: center;
+            background: #f0f0f0;
+            padding: 5px 10px;
+            border-radius: 20px;
+        }
+        
+        .feature-edit-item input[type="checkbox"] {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Mobile Navbar -->
+    <nav class="mobile-navbar navbar navbar-dark d-lg-none">
+        <button class="navbar-toggler" type="button" id="sidebarToggle">
+            <i class="bi bi-list"></i>
+        </button>
+        <span class="navbar-brand mx-auto">Real Estate Admin</span>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-lg-2 sidebar" id="sidebar">
+                <div class="text-center mb-4 d-none d-lg-block">
+                    <h4>Real Estate Admin</h4>
+                </div>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#dashboard" data-bs-toggle="tab">
+                            <i class="bi bi-speedometer2"></i> Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#users" data-bs-toggle="tab">
+                            <i class="bi bi-people"></i> Users
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#payments" data-bs-toggle="tab">
+                            <i class="bi bi-credit-card"></i> Payments
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#packages" data-bs-toggle="tab">
+                            <i class="bi bi-box-seam"></i> Packages
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#properties" data-bs-toggle="tab">
+                            <i class="bi bi-house"></i> Properties
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inquiries" data-bs-toggle="tab">
+                            <i class="bi bi-envelope"></i> Property Inquiries
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#interior" data-bs-toggle="tab">
+                            <i class="bi bi-palette"></i> Interior Design
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact" data-bs-toggle="tab">
+                            <i class="bi bi-telephone"></i> Contact Inquiries
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#locations" data-bs-toggle="tab">
+                            <i class="bi bi-geo-alt"></i> Locations
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sublocations" data-bs-toggle="tab">
+                            <i class="bi bi-geo"></i> Sublocations
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Main Content -->
+            <div class="col-lg-10 main-content" id="mainContent">
+                <div class="tab-content">
+                    <!-- Dashboard Tab -->
+                    <div class="tab-pane fade show active" id="dashboard">
+                        <h2 class="mb-4">Dashboard Overview</h2>
+                        <div class="row">
+                            <div class="col-md-6 col-lg-3">
+                                <div class="card text-white bg-primary mb-3 dashboard-card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Total Users</h5>
+                                        <h2 class="card-text" id="total-users">0</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="card text-white bg-success mb-3 dashboard-card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Total Properties</h5>
+                                        <h2 class="card-text" id="total-properties">0</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="card text-white bg-warning mb-3 dashboard-card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Pending Payments</h5>
+                                        <h2 class="card-text" id="pending-payments">0</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="card text-white bg-danger mb-3 dashboard-card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">New Inquiries</h5>
+                                        <h2 class="card-text" id="new-inquiries">0</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row mt-4">
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5>Recent Properties</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Name</th>
+                                                        <th>Price</th>
+                                                        <th>Status</th>
+                                                        <th>Date</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="recent-properties">
+                                                    <!-- Will be populated by JavaScript -->
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5>Recent Payments</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>User</th>
+                                                        <th>Amount</th>
+                                                        <th>Status</th>
+                                                        <th>Date</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="recent-payments">
+                                                    <!-- Will be populated by JavaScript -->
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Users Tab -->
+                    <div class="tab-pane fade" id="users">
+                        <h2 class="mb-4">User Management</h2>
+                        <div class="filter-controls">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" id="userSearch" placeholder="Search users...">
+                                        <button class="btn btn-primary" type="button" id="searchUsersBtn">
+                                            <i class="bi bi-search"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <select class="form-select" id="userRoleFilter">
+                                                <option value="">All Roles</option>
+                                                <option value="User">User</option>
+                                                <option value="Admin">Admin</option>
+                                                <option value="Agent">Agent</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <select class="form-select" id="userVerificationFilter">
+                                                <option value="">All Verification</option>
+                                                <option value="verified">Verified Only</option>
+                                                <option value="unverified">Unverified Only</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-hover" id="users-table">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Name</th>
+                                                <th>Email</th>
+                                                <th>Phone</th>
+                                                <th>Role</th>
+                                                <th>Business</th>
+                                                <th>Verified</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- Will be populated by JavaScript -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Payments Tab -->
+                    <div class="tab-pane fade" id="payments">
+                        <h2 class="mb-4">Payment Management</h2>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-hover" id="payments-table">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>User</th>
+                                                <th>Amount</th>
+                                                <th>Method</th>
+                                                <th>Package</th>
+                                                <th>Status</th>
+                                                <th>Date</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- Will be populated by JavaScript -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Packages Tab -->
+                    <div class="tab-pane fade" id="packages">
+                        <h2 class="mb-4">Package Management</h2>
+                        <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#addPackageModal">
+                            <i class="bi bi-plus"></i> Add New Package
+                        </button>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-hover" id="packages-table">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Name</th>
+                                                <th>Price</th>
+                                                <th>Post Limit</th>
+                                                <th>Duration (Days)</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- Will be populated by JavaScript -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Properties Tab -->
+                    <div class="tab-pane fade" id="properties">
+                        <h2 class="mb-4">Property Management</h2>
+                        <div class="filter-controls">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <select class="form-select" id="propertyStatusFilter">
+                                        <option value="">All Statuses</option>
+                                        <option value="For Sale">For Sale</option>
+                                        <option value="For Rent">For Rent</option>
+                                        <option value="Sold">Sold</option>
+                                        <option value="Rented">Rented</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <select class="form-select" id="propertyFeaturedFilter">
+                                        <option value="">All Featured</option>
+                                        <option value="featured">Featured Only</option>
+                                        <option value="not-featured">Not Featured</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <select class="form-select" id="propertyVisibilityFilter">
+                                        <option value="">All Visibility</option>
+                                        <option value="visible">Visible Only</option>
+                                        <option value="hidden">Hidden</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="propertySearch" placeholder="Search properties...">
+                                        <button class="btn btn-primary" type="button" id="searchPropertiesBtn">
+                                            <i class="bi bi-search"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#addPropertyModal">
+                            <i class="bi bi-plus"></i> Add New Property
+                        </button>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-hover" id="properties-table">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Name</th>
+                                                <th>Owner</th>
+                                                <th>Location</th>
+                                                <th>Price</th>
+                                                <th>Status</th>
+                                                <th>Featured</th>
+                                                <th>Visible</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- Will be populated by JavaScript -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Property Inquiries Tab -->
+                    <div class="tab-pane fade" id="inquiries">
+                        <h2 class="mb-4">Property Inquiries</h2>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-hover" id="inquiries-table">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Property</th>
+                                                <th>Name</th>
+                                                <th>Email</th>
+                                                <th>Message</th>
+                                                <th>Status</th>
+                                                <th>Date</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- Will be populated by JavaScript -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Interior Design Tab -->
+                    <div class="tab-pane fade" id="interior">
+                        <h2 class="mb-4">Interior Design Inquiries</h2>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-hover" id="interior-table">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Name</th>
+                                                <th>Email</th>
+                                                <th>Phone</th>
+                                                <th>Message</th>
+                                                <th>Date</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- Will be populated by JavaScript -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Inquiries Tab -->
+                    <div class="tab-pane fade" id="contact">
+                        <h2 class="mb-4">Contact Inquiries</h2>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-hover" id="contact-table">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Name</th>
+                                                <th>Email</th>
+                                                <th>Phone</th>
+                                                <th>Message</th>
+                                                <th>Date</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- Will be populated by JavaScript -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Locations Tab -->
+                    <div class="tab-pane fade" id="locations">
+                        <h2 class="mb-4">Location Management</h2>
+                        <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#addLocationModal">
+                            <i class="bi bi-plus"></i> Add New Location
+                        </button>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-hover" id="locations-table">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Name</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- Will be populated by JavaScript -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Sublocations Tab -->
+                    <div class="tab-pane fade" id="sublocations">
+                        <h2 class="mb-4">Sublocation Management</h2>
+                        <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#addSublocationModal">
+                            <i class="bi bi-plus"></i> Add New Sublocation
+                        </button>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-hover" id="sublocations-table">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Name</th>
+                                                <th>Location</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- Will be populated by JavaScript -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <!-- Add Package Modal -->
+    <div class="modal fade" id="addPackageModal" tabindex="-1" aria-labelledby="addPackageModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addPackageModalLabel">Add New Package</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="packageForm">
+                        <div class="mb-3">
+                            <label for="packageName" class="form-label">Package Name</label>
+                            <input type="text" class="form-control" id="packageName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="packagePrice" class="form-label">Price</label>
+                            <input type="number" step="0.01" class="form-control" id="packagePrice" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="postLimit" class="form-label">Post Limit</label>
+                            <input type="number" class="form-control" id="postLimit" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="durationDays" class="form-label">Duration (Days)</label>
+                            <input type="number" class="form-control" id="durationDays" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="savePackage">Save Package</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Package Modal -->
+    <div class="modal fade" id="editPackageModal" tabindex="-1" aria-labelledby="editPackageModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editPackageModalLabel">Edit Package</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editPackageForm">
+                        <input type="hidden" id="editPackageId">
+                        <div class="mb-3">
+                            <label for="editPackageName" class="form-label">Package Name</label>
+                            <input type="text" class="form-control" id="editPackageName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editPackagePrice" class="form-label">Price</label>
+                            <input type="number" step="0.01" class="form-control" id="editPackagePrice" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editPostLimit" class="form-label">Post Limit</label>
+                            <input type="number" class="form-control" id="editPostLimit" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editDurationDays" class="form-label">Duration (Days)</label>
+                            <input type="number" class="form-control" id="editDurationDays" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="updatePackage">Update Package</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Property Modal -->
+    <div class="modal fade" id="addPropertyModal" tabindex="-1" aria-labelledby="addPropertyModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addPropertyModalLabel">Add New Property</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="propertyForm">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="propertyName" class="form-label">Property Name</label>
+                                    <input type="text" class="form-control" id="propertyName" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="propertyOwner" class="form-label">Owner</label>
+                                    <select class="form-select" id="propertyOwner" required>
+                                        <option value="1">John Doe</option>
+                                        <option value="2">Jane Smith</option>
+                                        <option value="3">Robert Johnson</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="propertyLocation" class="form-label">Location</label>
+                                    <select class="form-select" id="propertyLocation" required>
+                                        <option value="1">Downtown</option>
+                                        <option value="2">Uptown</option>
+                                        <option value="3">Suburbs</option>
+                                        <option value="4">Coastal</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="propertySublocation" class="form-label">Sublocation</label>
+                                    <select class="form-select" id="propertySublocation" required>
+                                        <option value="1">Financial District</option>
+                                        <option value="2">Arts Quarter</option>
+                                        <option value="3">Green Valley</option>
+                                        <option value="4">Ocean View</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="propertyBedrooms" class="form-label">Bedrooms</label>
+                                    <input type="number" class="form-control" id="propertyBedrooms" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="propertyBathrooms" class="form-label">Bathrooms</label>
+                                    <input type="number" class="form-control" id="propertyBathrooms" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="propertySize" class="form-label">Size (sq ft)</label>
+                                    <input type="number" step="0.01" class="form-control" id="propertySize" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="propertyPrice" class="form-label">Price</label>
+                                    <input type="number" step="0.01" class="form-control" id="propertyPrice" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="propertyStatus" class="form-label">Status</label>
+                                    <select class="form-select" id="propertyStatus" required>
+                                        <option value="For Sale">For Sale</option>
+                                        <option value="For Rent">For Rent</option>
+                                        <option value="Sold">Sold</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="propertyYearBuilt" class="form-label">Year Built</label>
+                                    <input type="number" class="form-control" id="propertyYearBuilt">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="propertyLotArea" class="form-label">Lot Area</label>
+                                    <input type="number" step="0.01" class="form-control" id="propertyLotArea">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="propertyLotDimensions" class="form-label">Lot Dimensions</label>
+                                    <input type="text" class="form-control" id="propertyLotDimensions">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="propertyDescription" class="form-label">Description</label>
+                            <textarea class="form-control" id="propertyDescription" rows="3"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="propertyVideoURL" class="form-label">Video URL</label>
+                            <input type="url" class="form-control" id="propertyVideoURL">
+                        </div>
+                        <div class="mb-3">
+                            <label for="propertyImages" class="form-label">Images (Up to 5)</label>
+                            <input type="file" class="form-control" id="propertyImages" multiple accept="image/*">
+                        </div>
+                        <div class="mb-3">
+                            <label for="propertyLatitude" class="form-label">Latitude</label>
+                            <input type="number" step="0.000001" class="form-control" id="propertyLatitude">
+                        </div>
+                        <div class="mb-3">
+                            <label for="propertyLongitude" class="form-label">Longitude</label>
+                            <input type="number" step="0.000001" class="form-control" id="propertyLongitude">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="propertyFeatured">
+                            <label class="form-check-label" for="propertyFeatured">Featured Property</label>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="propertyVisible" checked>
+                            <label class="form-check-label" for="propertyVisible">Visible to Public</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="saveProperty">Save Property</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Property Features Preview Modal -->
+    <div class="modal fade" id="propertyFeaturesPreviewModal" tabindex="-1" aria-labelledby="propertyFeaturesPreviewModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="propertyFeaturesPreviewModalLabel">Property Features</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="featuresPreviewContent">
+                        <div class="feature-preview" id="featuresPreviewList">
+                            <!-- Features will be added here dynamically -->
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="showEditFeaturesModal()">Edit Features</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Property Features Edit Modal -->
+    <div class="modal fade" id="propertyFeaturesEditModal" tabindex="-1" aria-labelledby="propertyFeaturesEditModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="propertyFeaturesEditModalLabel">Edit Property Features</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="feature-edit" id="featuresEditList">
+                        <!-- Feature checkboxes will be added here dynamically -->
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" onclick="savePropertyFeatures()">Save Changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Location Modal -->
+    <div class="modal fade" id="addLocationModal" tabindex="-1" aria-labelledby="addLocationModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addLocationModalLabel">Add New Location</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="locationForm">
+                        <div class="mb-3">
+                            <label for="locationName" class="form-label">Location Name</label>
+                            <input type="text" class="form-control" id="locationName" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="saveLocation">Save Location</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Sublocation Modal -->
+    <div class="modal fade" id="addSublocationModal" tabindex="-1" aria-labelledby="addSublocationModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addSublocationModalLabel">Add New Sublocation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="sublocationForm">
+                        <div class="mb-3">
+                            <label for="sublocationName" class="form-label">Sublocation Name</label>
+                            <input type="text" class="form-control" id="sublocationName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="sublocationParent" class="form-label">Parent Location</label>
+                            <select class="form-select" id="sublocationParent" required>
+                                <option value="1">Downtown</option>
+                                <option value="2">Uptown</option>
+                                <option value="3">Suburbs</option>
+                                <option value="4">Coastal</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="saveSublocation">Save Sublocation</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmationModalLabel">Confirm Action</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="confirmationMessage">Are you sure you want to perform this action?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-danger" id="confirmAction">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // This would be replaced with actual API calls in a real implementation
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize dashboard stats
+            updateDashboardStats();
+            
+            // Initialize all tables
+            initializeUsersTable();
+            initializePaymentsTable();
+            initializePackagesTable();
+            initializePropertiesTable();
+            initializeInquiriesTable();
+            initializeInteriorTable();
+            initializeContactTable();
+            initializeLocationsTable();
+            initializeSublocationsTable();
+            
+            // Set up event listeners
+            setupEventListeners();
+            
+            // Mobile sidebar toggle
+            document.getElementById('sidebarToggle').addEventListener('click', function() {
+                document.getElementById('sidebar').classList.toggle('show');
+            });
+            
+            // Close sidebar when clicking outside on mobile
+            document.addEventListener('click', function(event) {
+                const sidebar = document.getElementById('sidebar');
+                const sidebarToggle = document.getElementById('sidebarToggle');
+                
+                if (window.innerWidth <= 992 && 
+                    !sidebar.contains(event.target) && 
+                    event.target !== sidebarToggle &&
+                    !sidebarToggle.contains(event.target)) {
+                    sidebar.classList.remove('show');
+                }
+            });
+        });
+        
+        function updateDashboardStats() {
+            // Simulate API calls to get stats
+            document.getElementById('total-users').textContent = '125';
+            document.getElementById('total-properties').textContent = '87';
+            document.getElementById('pending-payments').textContent = '5';
+            document.getElementById('new-inquiries').textContent = '12';
+            
+            // Populate recent properties table
+            const recentProperties = [
+                { id: 1, name: 'Luxury Villa', price: '$1,250,000', status: 'For Sale', date: '2023-06-15' },
+                { id: 2, name: 'Downtown Apartment', price: '$2,500/mo', status: 'For Rent', date: '2023-06-14' },
+                { id: 3, name: 'Countryside House', price: '$850,000', status: 'Sold', date: '2023-06-12' },
+                { id: 4, name: 'Beachfront Condo', price: '$1,750,000', status: 'For Sale', date: '2023-06-10' }
+            ];
+            
+            const recentPropertiesTable = document.getElementById('recent-properties');
+            recentPropertiesTable.innerHTML = '';
+            recentProperties.forEach(property => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${property.name}</td>
+                    <td>${property.price}</td>
+                    <td>${property.status}</td>
+                    <td>${property.date}</td>
+                `;
+                recentPropertiesTable.appendChild(row);
+            });
+            
+            // Populate recent payments table
+            const recentPayments = [
+                { id: 1, user: 'John Doe', amount: '$25.00', status: 'Completed', date: '2023-06-15' },
+                { id: 2, user: 'Jane Smith', amount: '$60.00', status: 'Completed', date: '2023-06-14' },
+                { id: 3, user: 'Robert Johnson', amount: '$10.00', status: 'Pending', date: '2023-06-12' },
+                { id: 4, user: 'Emily Davis', amount: '$25.00', status: 'Failed', date: '2023-06-10' }
+            ];
+            
+            const recentPaymentsTable = document.getElementById('recent-payments');
+            recentPaymentsTable.innerHTML = '';
+            recentPayments.forEach(payment => {
+                const statusClass = payment.status === 'Completed' ? 'badge-completed' : 
+                                  payment.status === 'Pending' ? 'badge-pending' : 'badge-failed';
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${payment.user}</td>
+                    <td>${payment.amount}</td>
+                    <td><span class="badge ${statusClass}">${payment.status}</span></td>
+                    <td>${payment.date}</td>
+                `;
+                recentPaymentsTable.appendChild(row);
+            });
+        }
+        
+        function initializeUsersTable() {
+            // Simulate API call to get users
+            const users = [
+                { id: 1, name: 'John Doe', email: 'john@example.com', phone: '123-456-7890', role: 'User', business: 'Yes', verified: 'No' },
+                { id: 2, name: 'Jane Smith', email: 'jane@example.com', phone: '987-654-3210', role: 'Admin', business: 'No', verified: 'Yes' },
+                { id: 3, name: 'Robert Johnson', email: 'robert@example.com', phone: '555-123-4567', role: 'User', business: 'Yes', verified: 'Yes' },
+                { id: 4, name: 'Emily Davis', email: 'emily@example.com', phone: '444-555-6666', role: 'User', business: 'No', verified: 'No' },
+                { id: 5, name: 'Michael Brown', email: 'michael@example.com', phone: '111-222-3333', role: 'Agent', business: 'Yes', verified: 'Yes' },
+                { id: 6, name: 'Sarah Wilson', email: 'sarah@example.com', phone: '777-888-9999', role: 'User', business: 'No', verified: 'No' }
+            ];
+            
+            const usersTable = document.getElementById('users-table').getElementsByTagName('tbody')[0];
+            usersTable.innerHTML = '';
+            users.forEach(user => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${user.id}</td>
+                    <td>${user.name}</td>
+                    <td>${user.email}</td>
+                    <td>${user.phone}</td>
+                    <td>${user.role}</td>
+                    <td>${user.business}</td>
+                    <td>${user.verified}</td>
+                    <td>
+                        <button class="btn btn-sm ${user.verified === 'Yes' ? 'btn-outline-secondary' : 'btn-outline-primary'}" 
+                                onclick="toggleUserVerification(${user.id}, ${user.verified === 'Yes'})">
+                            ${user.verified === 'Yes' ? 'Unverify' : 'Verify'}
+                        </button>
+                        <button class="btn btn-sm btn-info" onclick="viewUserDetails(${user.id})">
+                            <i class="bi bi-eye"></i>
+                        </button>
+                    </td>
+                `;
+                usersTable.appendChild(row);
+            });
+            
+            // Set up filter event listeners
+            document.getElementById('userSearch').addEventListener('input', filterUsers);
+            document.getElementById('userRoleFilter').addEventListener('change', filterUsers);
+            document.getElementById('userVerificationFilter').addEventListener('change', filterUsers);
+            document.getElementById('searchUsersBtn').addEventListener('click', filterUsers);
+        }
+        
+        function filterUsers() {
+            const searchTerm = document.getElementById('userSearch').value.toLowerCase();
+            const roleFilter = document.getElementById('userRoleFilter').value;
+            const verificationFilter = document.getElementById('userVerificationFilter').value;
+            
+            const rows = document.querySelectorAll('#users-table tbody tr');
+            
+            rows.forEach(row => {
+                const name = row.cells[1].textContent.toLowerCase();
+                const email = row.cells[2].textContent.toLowerCase();
+                const role = row.cells[4].textContent;
+                const verified = row.cells[6].textContent;
+                
+                const matchesSearch = name.includes(searchTerm) || email.includes(searchTerm);
+                const matchesRole = !roleFilter || role === roleFilter;
+                const matchesVerification = 
+                    !verificationFilter || 
+                    (verificationFilter === 'verified' && verified === 'Yes') || 
+                    (verificationFilter === 'unverified' && verified === 'No');
+                
+                if (matchesSearch && matchesRole && matchesVerification) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        }
+        
+        function initializePaymentsTable() {
+            // Simulate API call to get payments
+            const payments = [
+                { id: 1, user: 'John Doe', amount: '$25.00', method: 'PayPal', package: 'Standard', status: 'Completed', date: '2023-06-15' },
+                { id: 2, user: 'Jane Smith', amount: '$60.00', method: 'Credit Card', package: 'Pro', status: 'Completed', date: '2023-06-14' },
+                { id: 3, user: 'Robert Johnson', amount: '$10.00', method: 'Bank Transfer', package: 'Basic', status: 'Pending', date: '2023-06-12' },
+                { id: 4, user: 'Emily Davis', amount: '$25.00', method: 'PayPal', package: 'Standard', status: 'Failed', date: '2023-06-10' }
+            ];
+            
+            const paymentsTable = document.getElementById('payments-table').getElementsByTagName('tbody')[0];
+            paymentsTable.innerHTML = '';
+            payments.forEach(payment => {
+                const statusClass = payment.status === 'Completed' ? 'badge-completed' : 
+                                  payment.status === 'Pending' ? 'badge-pending' : 'badge-failed';
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${payment.id}</td>
+                    <td>${payment.user}</td>
+                    <td>${payment.amount}</td>
+                    <td>${payment.method}</td>
+                    <td>${payment.package}</td>
+                    <td><span class="badge ${statusClass}">${payment.status}</span></td>
+                    <td>${payment.date}</td>
+                    <td>
+                        ${payment.status === 'Pending' ? `
+                        <button class="btn btn-sm btn-success" onclick="updatePaymentStatus(${payment.id}, 'Completed')">Approve</button>
+                        <button class="btn btn-sm btn-danger" onclick="updatePaymentStatus(${payment.id}, 'Failed')">Reject</button>
+                        ` : ''}
+                    </td>
+                `;
+                paymentsTable.appendChild(row);
+            });
+        }
+        
+        function initializePackagesTable() {
+            // Simulate API call to get packages
+            const packages = [
+                { id: 1, name: 'Basic', price: '$10.00', postLimit: '2', duration: '30' },
+                { id: 2, name: 'Standard', price: '$25.00', postLimit: '5', duration: '30' },
+                { id: 3, name: 'Pro', price: '$60.00', postLimit: '15', duration: '90' }
+            ];
+            
+            const packagesTable = document.getElementById('packages-table').getElementsByTagName('tbody')[0];
+            packagesTable.innerHTML = '';
+            packages.forEach(pkg => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${pkg.id}</td>
+                    <td>${pkg.name}</td>
+                    <td>${pkg.price}</td>
+                    <td>${pkg.postLimit}</td>
+                    <td>${pkg.duration}</td>
+                    <td>
+                        <button class="btn btn-sm btn-primary" onclick="editPackage(${pkg.id})">
+                            <i class="bi bi-pencil"></i> Edit
+                        </button>
+                        <button class="btn btn-sm btn-danger" onclick="confirmDeletePackage(${pkg.id})">
+                            <i class="bi bi-trash"></i> Delete
+                        </button>
+                    </td>
+                `;
+                packagesTable.appendChild(row);
+            });
+        }
+        
+        function initializePropertiesTable() {
+            // Simulate API call to get properties with additional data
+            const properties = [
+                { 
+                    id: 1, 
+                    name: 'Luxury Villa', 
+                    owner: 'John Doe', 
+                    location: 'Downtown', 
+                    price: '$1,250,000', 
+                    status: 'For Sale', 
+                    featured: 'Yes', 
+                    visible: 'Yes',
+                    features: ['Air Conditioning', 'Swimming Pool', 'Garden', 'Security']
+                },
+                { 
+                    id: 2, 
+                    name: 'Modern Apartment', 
+                    owner: 'Jane Smith', 
+                    location: 'Uptown', 
+                    price: '$2,500/mo', 
+                    status: 'For Rent', 
+                    featured: 'No', 
+                    visible: 'Yes',
+                    features: ['Elevator', 'Gym', 'Parking']
+                },
+                { 
+                    id: 3, 
+                    name: 'Countryside House', 
+                    owner: 'Robert Johnson', 
+                    location: 'Suburbs', 
+                    price: '$850,000', 
+                    status: 'Sold', 
+                    featured: 'No', 
+                    visible: 'No',
+                    features: ['Fireplace', 'Garden']
+                },
+                { 
+                    id: 4, 
+                    name: 'Beachfront Condo', 
+                    owner: 'Emily Davis', 
+                    location: 'Coastal', 
+                    price: '$1,750,000', 
+                    status: 'For Sale', 
+                    featured: 'Yes', 
+                    visible: 'Yes',
+                    features: ['Balcony', 'Air Conditioning', 'Parking']
+                }
+            ];
+            
+            const propertiesTable = document.getElementById('properties-table').getElementsByTagName('tbody')[0];
+            propertiesTable.innerHTML = '';
+            properties.forEach(property => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${property.id}</td>
+                    <td>${property.name}</td>
+                    <td>${property.owner}</td>
+                    <td>${property.location}</td>
+                    <td>${property.price}</td>
+                    <td>${property.status}</td>
+                    <td>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" ${property.featured === 'Yes' ? 'checked' : ''} 
+                                   onchange="togglePropertyFeatured(${property.id}, this.checked)">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" ${property.visible === 'Yes' ? 'checked' : ''} 
+                                   onchange="togglePropertyVisibility(${property.id}, this.checked)">
+                        </div>
+                    </td>
+                    <td>
+                        <button class="btn btn-sm btn-primary" onclick="editProperty(${property.id})">
+                            <i class="bi bi-pencil"></i> Edit
+                        </button>
+                        <button class="btn btn-sm btn-info" onclick="showPropertyFeatures(${property.id}, 'preview')">
+                            <i class="bi bi-list-check"></i> Features
+                        </button>
+                        <button class="btn btn-sm btn-danger" onclick="confirmDeleteProperty(${property.id})">
+                            <i class="bi bi-trash"></i> Delete
+                        </button>
+                    </td>
+                `;
+                propertiesTable.appendChild(row);
+            });
+            
+            // Set up filter event listeners
+            document.getElementById('propertyStatusFilter').addEventListener('change', filterProperties);
+            document.getElementById('propertyFeaturedFilter').addEventListener('change', filterProperties);
+            document.getElementById('propertyVisibilityFilter').addEventListener('change', filterProperties);
+            document.getElementById('propertySearch').addEventListener('input', filterProperties);
+            document.getElementById('searchPropertiesBtn').addEventListener('click', filterProperties);
+        }
+        
+        function filterProperties() {
+            const statusFilter = document.getElementById('propertyStatusFilter').value;
+            const featuredFilter = document.getElementById('propertyFeaturedFilter').value;
+            const visibilityFilter = document.getElementById('propertyVisibilityFilter').value;
+            const searchTerm = document.getElementById('propertySearch').value.toLowerCase();
+            
+            const rows = document.querySelectorAll('#properties-table tbody tr');
+            
+            rows.forEach(row => {
+                const name = row.cells[1].textContent.toLowerCase();
+                const owner = row.cells[2].textContent.toLowerCase();
+                const location = row.cells[3].textContent.toLowerCase();
+                const status = row.cells[5].textContent;
+                const featured = row.cells[6].querySelector('input').checked;
+                const visible = row.cells[7].querySelector('input').checked;
+                
+                const matchesSearch = name.includes(searchTerm) || owner.includes(searchTerm) || location.includes(searchTerm);
+                const matchesStatus = !statusFilter || status === statusFilter;
+                const matchesFeatured = 
+                    !featuredFilter || 
+                    (featuredFilter === 'featured' && featured) || 
+                    (featuredFilter === 'not-featured' && !featured);
+                const matchesVisibility = 
+                    !visibilityFilter || 
+                    (visibilityFilter === 'visible' && visible) || 
+                    (visibilityFilter === 'hidden' && !visible);
+                
+                if (matchesSearch && matchesStatus && matchesFeatured && matchesVisibility) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        }
+        
+        // List of all possible property features
+        const allPropertyFeatures = [
+            'Air Conditioning', 'Heating', 'Parking', 'Balcony', 'Garden',
+            'Swimming Pool', 'Gym', 'Security', 'Fireplace', 'Elevator',
+            'WiFi', 'Cable TV', 'Laundry', 'Dishwasher', 'Microwave',
+            'Refrigerator', 'Oven', 'Furnished', 'Pet Friendly', 'Wheelchair Access'
+        ];
+        
+        // Currently selected property ID for features editing
+        let currentPropertyIdForFeatures = null;
+        
+        function showPropertyFeatures(propertyId, mode = 'preview') {
+            // In a real app, you would fetch the property features from your API
+            const properties = [
+                { 
+                    id: 1, 
+                    features: ['Air Conditioning', 'Swimming Pool', 'Garden', 'Security']
+                },
+                { 
+                    id: 2, 
+                    features: ['Elevator', 'Gym', 'Parking']
+                },
+                { 
+                    id: 3, 
+                    features: ['Fireplace', 'Garden']
+                },
+                { 
+                    id: 4, 
+                    features: ['Balcony', 'Air Conditioning', 'Parking']
+                }
+            ];
+            
+            const property = properties.find(p => p.id === propertyId);
+            if (property) {
+                currentPropertyIdForFeatures = propertyId;
+                
+                if (mode === 'preview') {
+                    // Show preview modal
+                    showFeaturesPreviewModal(property.features);
+                } else {
+                    // Show edit modal
+                    showFeaturesEditModal(property.features);
+                }
+            }
+        }
+        
+        function showFeaturesPreviewModal(features) {
+            const featuresList = document.getElementById('featuresPreviewList');
+            featuresList.innerHTML = '';
+            
+            if (features.length === 0) {
+                featuresList.innerHTML = '<p>No features added for this property.</p>';
+            } else {
+                features.forEach(feature => {
+                    const badge = document.createElement('span');
+                    badge.className = 'badge bg-primary feature-badge';
+                    badge.textContent = feature;
+                    featuresList.appendChild(badge);
+                });
+            }
+            
+            // Show the preview modal
+            const previewModal = new bootstrap.Modal(document.getElementById('propertyFeaturesPreviewModal'));
+            previewModal.show();
+        }
+        
+        function showEditFeaturesModal() {
+            // Close the preview modal first
+            bootstrap.Modal.getInstance(document.getElementById('propertyFeaturesPreviewModal')).hide();
+            
+            // Get the current property's features
+            const properties = [
+                { 
+                    id: 1, 
+                    features: ['Air Conditioning', 'Swimming Pool', 'Garden', 'Security']
+                },
+                { 
+                    id: 2, 
+                    features: ['Elevator', 'Gym', 'Parking']
+                },
+                { 
+                    id: 3, 
+                    features: ['Fireplace', 'Garden']
+                },
+                { 
+                    id: 4, 
+                    features: ['Balcony', 'Air Conditioning', 'Parking']
+                }
+            ];
+            
+            const property = properties.find(p => p.id === currentPropertyIdForFeatures);
+            if (property) {
+                showFeaturesEditModal(property.features);
+            }
+        }
+        
+        function showFeaturesEditModal(currentFeatures) {
+            const featuresEditList = document.getElementById('featuresEditList');
+            featuresEditList.innerHTML = '';
+            
+            allPropertyFeatures.forEach(feature => {
+                const isChecked = currentFeatures.includes(feature);
+                
+                const featureItem = document.createElement('div');
+                featureItem.className = 'feature-edit-item';
+                
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.id = `editFeature_${feature.replace(/\s+/g, '_')}`;
+                checkbox.checked = isChecked;
+                checkbox.value = feature;
+                
+                const label = document.createElement('label');
+                label.htmlFor = `editFeature_${feature.replace(/\s+/g, '_')}`;
+                label.textContent = feature;
+                
+                featureItem.appendChild(checkbox);
+                featureItem.appendChild(label);
+                featuresEditList.appendChild(featureItem);
+            });
+            
+            // Show the edit modal
+            const editModal = new bootstrap.Modal(document.getElementById('propertyFeaturesEditModal'));
+            editModal.show();
+        }
+        
+        function savePropertyFeatures() {
+            const checkboxes = document.querySelectorAll('#featuresEditList input[type="checkbox"]:checked');
+            const selectedFeatures = Array.from(checkboxes).map(checkbox => checkbox.value);
+            
+            console.log(`Saving features for property ${currentPropertyIdForFeatures}:`, selectedFeatures);
+            
+            // Here you would make an API call to save the features
+            // For now, we'll just show a success message
+            alert('Property features updated successfully!');
+            
+            // Close the edit modal
+            bootstrap.Modal.getInstance(document.getElementById('propertyFeaturesEditModal')).hide();
+            
+            // Update the preview in case they want to see it again
+            showPropertyFeatures(currentPropertyIdForFeatures, 'preview');
+        }
+        
+        function initializeInquiriesTable() {
+            // Simulate API call to get inquiries
+            const inquiries = [
+                { id: 1, property: 'Luxury Villa', name: 'Michael Brown', email: 'michael@example.com', message: 'I\'m interested in this property...', status: 'Pending', date: '2023-06-15' },
+                { id: 2, property: 'Modern Apartment', name: 'Sarah Wilson', email: 'sarah@example.com', message: 'Can I schedule a viewing?', status: 'Confirmed', date: '2023-06-14' },
+                { id: 3, property: 'Countryside House', name: 'David Miller', email: 'david@example.com', message: 'Is this still available?', status: 'Completed', date: '2023-06-12' },
+                { id: 4, property: 'Beachfront Condo', name: 'Lisa Taylor', email: 'lisa@example.com', message: 'Please send more details', status: 'Pending', date: '2023-06-10' }
+            ];
+            
+            const inquiriesTable = document.getElementById('inquiries-table').getElementsByTagName('tbody')[0];
+            inquiriesTable.innerHTML = '';
+            inquiries.forEach(inquiry => {
+                const statusClass = inquiry.status === 'Pending' ? 'badge-pending' : 
+                                  inquiry.status === 'Confirmed' ? 'badge-primary' : 'badge-completed';
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${inquiry.id}</td>
+                    <td>${inquiry.property}</td>
+                    <td>${inquiry.name}</td>
+                    <td>${inquiry.email}</td>
+                    <td>${inquiry.message.substring(0, 30)}...</td>
+                    <td><span class="badge ${statusClass}">${inquiry.status}</span></td>
+                    <td>${inquiry.date}</td>
+                    <td>
+                        ${inquiry.status === 'Pending' ? `
+                        <button class="btn btn-sm btn-success" onclick="updateInquiryStatus(${inquiry.id}, 'Confirmed')">Accept</button>
+                        <button class="btn btn-sm btn-danger" onclick="updateInquiryStatus(${inquiry.id}, 'Cancelled')">Reject</button>
+                        ` : ''}
+                        <button class="btn btn-sm btn-info" onclick="viewInquiryDetails(${inquiry.id})">
+                            <i class="bi bi-eye"></i>
+                        </button>
+                    </td>
+                `;
+                inquiriesTable.appendChild(row);
+            });
+        }
+        
+        function initializeInteriorTable() {
+            // Simulate API call to get interior design inquiries
+            const interiorInquiries = [
+                { id: 1, name: 'Michael Brown', email: 'michael@example.com', phone: '123-456-7890', message: 'I need help with my living room design...', date: '2023-06-15' },
+                { id: 2, name: 'Sarah Wilson', email: 'sarah@example.com', phone: '987-654-3210', message: 'Looking for a full home redesign', date: '2023-06-14' },
+                { id: 3, name: 'David Miller', email: 'david@example.com', phone: '555-123-4567', message: 'Consultation for office space', date: '2023-06-12' },
+                { id: 4, name: 'Lisa Taylor', email: 'lisa@example.com', phone: '444-555-6666', message: 'Kitchen remodeling inquiry', date: '2023-06-10' }
+            ];
+            
+            const interiorTable = document.getElementById('interior-table').getElementsByTagName('tbody')[0];
+            interiorTable.innerHTML = '';
+            interiorInquiries.forEach(inquiry => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${inquiry.id}</td>
+                    <td>${inquiry.name}</td>
+                    <td>${inquiry.email}</td>
+                    <td>${inquiry.phone}</td>
+                    <td>${inquiry.message.substring(0, 30)}...</td>
+                    <td>${inquiry.date}</td>
+                    <td>
+                        <button class="btn btn-sm btn-info" onclick="viewInteriorInquiry(${inquiry.id})">
+                            <i class="bi bi-eye"></i> View
+                        </button>
+                        <button class="btn btn-sm btn-danger" onclick="deleteInteriorInquiry(${inquiry.id})">
+                            <i class="bi bi-trash"></i> Delete
+                        </button>
+                    </td>
+                `;
+                interiorTable.appendChild(row);
+            });
+        }
+        
+        function initializeContactTable() {
+            // Simulate API call to get contact inquiries
+            const contactInquiries = [
+                { id: 1, name: 'Michael Brown', email: 'michael@example.com', phone: '123-456-7890', message: 'General question about your services...', date: '2023-06-15' },
+                { id: 2, name: 'Sarah Wilson', email: 'sarah@example.com', phone: '987-654-3210', message: 'Looking for partnership opportunities', date: '2023-06-14' },
+                { id: 3, name: 'David Miller', email: 'david@example.com', phone: '555-123-4567', message: 'Feedback about your website', date: '2023-06-12' },
+                { id: 4, name: 'Lisa Taylor', email: 'lisa@example.com', phone: '444-555-6666', message: 'Press inquiry', date: '2023-06-10' }
+            ];
+            
+            const contactTable = document.getElementById('contact-table').getElementsByTagName('tbody')[0];
+            contactTable.innerHTML = '';
+            contactInquiries.forEach(inquiry => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${inquiry.id}</td>
+                    <td>${inquiry.name}</td>
+                    <td>${inquiry.email}</td>
+                    <td>${inquiry.phone}</td>
+                    <td>${inquiry.message.substring(0, 30)}...</td>
+                    <td>${inquiry.date}</td>
+                    <td>
+                        <button class="btn btn-sm btn-primary" onclick="addToTestimonials(${inquiry.id})">
+                            <i class="bi bi-chat-square-quote"></i> Testimonial
+                        </button>
+                        <button class="btn btn-sm btn-info" onclick="viewContactInquiry(${inquiry.id})">
+                            <i class="bi bi-eye"></i> View
+                        </button>
+                        <button class="btn btn-sm btn-danger" onclick="deleteContactInquiry(${inquiry.id})">
+                            <i class="bi bi-trash"></i> Delete
+                        </button>
+                    </td>
+                `;
+                contactTable.appendChild(row);
+            });
+        }
+        
+        function initializeLocationsTable() {
+            // Simulate API call to get locations
+            const locations = [
+                { id: 1, name: 'Downtown' },
+                { id: 2, name: 'Uptown' },
+                { id: 3, name: 'Suburbs' },
+                { id: 4, name: 'Coastal' }
+            ];
+            
+            const locationsTable = document.getElementById('locations-table').getElementsByTagName('tbody')[0];
+            locationsTable.innerHTML = '';
+            locations.forEach(location => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${location.id}</td>
+                    <td>${location.name}</td>
+                    <td>
+                        <button class="btn btn-sm btn-primary" onclick="editLocation(${location.id})">
+                            <i class="bi bi-pencil"></i> Edit
+                        </button>
+                        <button class="btn btn-sm btn-danger" onclick="confirmDeleteLocation(${location.id})">
+                            <i class="bi bi-trash"></i> Delete
+                        </button>
+                    </td>
+                `;
+                locationsTable.appendChild(row);
+            });
+        }
+        
+        function initializeSublocationsTable() {
+            // Simulate API call to get sublocations
+            const sublocations = [
+                { id: 1, name: 'Financial District', location: 'Downtown' },
+                { id: 2, name: 'Arts Quarter', location: 'Uptown' },
+                { id: 3, name: 'Green Valley', location: 'Suburbs' },
+                { id: 4, name: 'Ocean View', location: 'Coastal' }
+            ];
+            
+            const sublocationsTable = document.getElementById('sublocations-table').getElementsByTagName('tbody')[0];
+            sublocationsTable.innerHTML = '';
+            sublocations.forEach(sublocation => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${sublocation.id}</td>
+                    <td>${sublocation.name}</td>
+                    <td>${sublocation.location}</td>
+                    <td>
+                        <button class="btn btn-sm btn-primary" onclick="editSublocation(${sublocation.id})">
+                            <i class="bi bi-pencil"></i> Edit
+                        </button>
+                        <button class="btn btn-sm btn-danger" onclick="confirmDeleteSublocation(${sublocation.id})">
+                            <i class="bi bi-trash"></i> Delete
+                        </button>
+                    </td>
+                `;
+                sublocationsTable.appendChild(row);
+            });
+        }
+        
+        function setupEventListeners() {
+            // Package form submission
+            document.getElementById('savePackage').addEventListener('click', function() {
+                const name = document.getElementById('packageName').value;
+                const price = document.getElementById('packagePrice').value;
+                const postLimit = document.getElementById('postLimit').value;
+                const durationDays = document.getElementById('durationDays').value;
+                
+                // Here you would make an API call to save the package
+                console.log('Saving package:', { name, price, postLimit, durationDays });
+                
+                // Close modal and refresh table
+                bootstrap.Modal.getInstance(document.getElementById('addPackageModal')).hide();
+                initializePackagesTable();
+            });
+            
+            // Update package form submission
+            document.getElementById('updatePackage').addEventListener('click', function() {
+                const id = document.getElementById('editPackageId').value;
+                const name = document.getElementById('editPackageName').value;
+                const price = document.getElementById('editPackagePrice').value;
+                const postLimit = document.getElementById('editPostLimit').value;
+                const durationDays = document.getElementById('editDurationDays').value;
+                
+                // Here you would make an API call to update the package
+                console.log('Updating package:', { id, name, price, postLimit, durationDays });
+                
+                // Close modal and refresh table
+                bootstrap.Modal.getInstance(document.getElementById('editPackageModal')).hide();
+                initializePackagesTable();
+            });
+            
+            // Property form submission
+            document.getElementById('saveProperty').addEventListener('click', function() {
+                // Collect all property data from the form
+                const propertyData = {
+                    name: document.getElementById('propertyName').value,
+                    owner: document.getElementById('propertyOwner').value,
+                    location: document.getElementById('propertyLocation').value,
+                    sublocation: document.getElementById('propertySublocation').value,
+                    bedrooms: document.getElementById('propertyBedrooms').value,
+                    bathrooms: document.getElementById('propertyBathrooms').value,
+                    size: document.getElementById('propertySize').value,
+                    price: document.getElementById('propertyPrice').value,
+                    status: document.getElementById('propertyStatus').value,
+                    yearBuilt: document.getElementById('propertyYearBuilt').value,
+                    lotArea: document.getElementById('propertyLotArea').value,
+                    lotDimensions: document.getElementById('propertyLotDimensions').value,
+                    description: document.getElementById('propertyDescription').value,
+                    videoURL: document.getElementById('propertyVideoURL').value,
+                    featured: document.getElementById('propertyFeatured').checked,
+                    visible: document.getElementById('propertyVisible').checked
+                };
+                
+                console.log('Saving property:', propertyData);
+                
+                // Here you would make an API call to save the property
+                // For now, we'll just close the modal and refresh the table
+                bootstrap.Modal.getInstance(document.getElementById('addPropertyModal')).hide();
+                initializePropertiesTable();
+            });
+            
+            // Location form submission
+            document.getElementById('saveLocation').addEventListener('click', function() {
+                const name = document.getElementById('locationName').value;
+                
+                // Here you would make an API call to save the location
+                console.log('Saving location:', { name });
+                
+                // Close modal and refresh table
+                bootstrap.Modal.getInstance(document.getElementById('addLocationModal')).hide();
+                initializeLocationsTable();
+            });
+            
+            // Sublocation form submission
+            document.getElementById('saveSublocation').addEventListener('click', function() {
+                const name = document.getElementById('sublocationName').value;
+                const parentId = document.getElementById('sublocationParent').value;
+                
+                // Here you would make an API call to save the sublocation
+                console.log('Saving sublocation:', { name, parentId });
+                
+                // Close modal and refresh table
+                bootstrap.Modal.getInstance(document.getElementById('addSublocationModal')).hide();
+                initializeSublocationsTable();
+            });
+        }
+        
+        // Package edit function
+        function editPackage(packageId) {
+            // In a real app, you would fetch the package data from your API
+            const packages = [
+                { id: 1, name: 'Basic', price: '10.00', postLimit: '2', duration: '30' },
+                { id: 2, name: 'Standard', price: '25.00', postLimit: '5', duration: '30' },
+                { id: 3, name: 'Pro', price: '60.00', postLimit: '15', duration: '90' }
+            ];
+            
+            const pkg = packages.find(p => p.id === packageId);
+            if (pkg) {
+                document.getElementById('editPackageId').value = pkg.id;
+                document.getElementById('editPackageName').value = pkg.name;
+                document.getElementById('editPackagePrice').value = pkg.price;
+                document.getElementById('editPostLimit').value = pkg.postLimit;
+                document.getElementById('editDurationDays').value = pkg.duration;
+                
+                // Show the edit modal
+                const editModal = new bootstrap.Modal(document.getElementById('editPackageModal'));
+                editModal.show();
+            }
+        }
+        
+        // Location edit function
+        function editLocation(locationId) {
+            // In a real app, you would fetch the location data from your API
+            const locations = [
+                { id: 1, name: 'Downtown' },
+                { id: 2, name: 'Uptown' },
+                { id: 3, name: 'Suburbs' },
+                { id: 4, name: 'Coastal' }
+            ];
+            
+            const location = locations.find(l => l.id === locationId);
+            if (location) {
+                // For simplicity, we're reusing the add modal as an edit modal
+                document.getElementById('locationName').value = location.name;
+                
+                // Change the modal title and save button text
+                document.getElementById('addLocationModalLabel').textContent = 'Edit Location';
+                document.getElementById('saveLocation').textContent = 'Update Location';
+                
+                // Show the modal
+                const locationModal = new bootstrap.Modal(document.getElementById('addLocationModal'));
+                locationModal.show();
+            }
+        }
+        
+        // Sublocation edit function
+        function editSublocation(sublocationId) {
+            // In a real app, you would fetch the sublocation data from your API
+            const sublocations = [
+                { id: 1, name: 'Financial District', locationId: 1 },
+                { id: 2, name: 'Arts Quarter', locationId: 2 },
+                { id: 3, name: 'Green Valley', locationId: 3 },
+                { id: 4, name: 'Ocean View', locationId: 4 }
+            ];
+            
+            const sublocation = sublocations.find(s => s.id === sublocationId);
+            if (sublocation) {
+                // For simplicity, we're reusing the add modal as an edit modal
+                document.getElementById('sublocationName').value = sublocation.name;
+                document.getElementById('sublocationParent').value = sublocation.locationId;
+                
+                // Change the modal title and save button text
+                document.getElementById('addSublocationModalLabel').textContent = 'Edit Sublocation';
+                document.getElementById('saveSublocation').textContent = 'Update Sublocation';
+                
+                // Show the modal
+                const sublocationModal = new bootstrap.Modal(document.getElementById('addSublocationModal'));
+                sublocationModal.show();
+            }
+        }
+        
+        // Property edit function
+        function editProperty(propertyId) {
+            // In a real app, you would fetch the property data from your API
+            const properties = [
+                { 
+                    id: 1, 
+                    name: 'Luxury Villa', 
+                    ownerId: 1, 
+                    locationId: 1, 
+                    sublocationId: 1,
+                    bedrooms: 4,
+                    bathrooms: 3,
+                    size: 2500,
+                    price: 1250000,
+                    status: 'For Sale',
+                    yearBuilt: 2015,
+                    lotArea: 0.5,
+                    lotDimensions: '100x200',
+                    description: 'A beautiful luxury villa with modern amenities',
+                    videoURL: '',
+                    featured: true,
+                    visible: true
+                },
+                // Add other properties as needed
+            ];
+            
+            const property = properties.find(p => p.id === propertyId);
+            if (property) {
+                // For simplicity, we're reusing the add modal as an edit modal
+                document.getElementById('propertyName').value = property.name;
+                document.getElementById('propertyOwner').value = property.ownerId;
+                document.getElementById('propertyLocation').value = property.locationId;
+                document.getElementById('propertySublocation').value = property.sublocationId;
+                document.getElementById('propertyBedrooms').value = property.bedrooms;
+                document.getElementById('propertyBathrooms').value = property.bathrooms;
+                document.getElementById('propertySize').value = property.size;
+                document.getElementById('propertyPrice').value = property.price;
+                document.getElementById('propertyStatus').value = property.status;
+                document.getElementById('propertyYearBuilt').value = property.yearBuilt;
+                document.getElementById('propertyLotArea').value = property.lotArea;
+                document.getElementById('propertyLotDimensions').value = property.lotDimensions;
+                document.getElementById('propertyDescription').value = property.description;
+                document.getElementById('propertyVideoURL').value = property.videoURL;
+                document.getElementById('propertyFeatured').checked = property.featured;
+                document.getElementById('propertyVisible').checked = property.visible;
+                
+                // Change the modal title and save button text
+                document.getElementById('addPropertyModalLabel').textContent = 'Edit Property';
+                document.getElementById('saveProperty').textContent = 'Update Property';
+                
+                // Show the modal
+                const propertyModal = new bootstrap.Modal(document.getElementById('addPropertyModal'));
+                propertyModal.show();
+            }
+        }
+        
+        // Confirmation functions
+        function confirmDeletePackage(packageId) {
+            document.getElementById('confirmationMessage').textContent = `Are you sure you want to delete package #${packageId}?`;
+            document.getElementById('confirmAction').onclick = function() {
+                deletePackage(packageId);
+                bootstrap.Modal.getInstance(document.getElementById('confirmationModal')).hide();
+            };
+            bootstrap.Modal.getInstance(document.getElementById('confirmationModal')).show();
+        }
+        
+        function confirmDeleteProperty(propertyId) {
+            document.getElementById('confirmationMessage').textContent = `Are you sure you want to delete property #${propertyId}?`;
+            document.getElementById('confirmAction').onclick = function() {
+                deleteProperty(propertyId);
+                bootstrap.Modal.getInstance(document.getElementById('confirmationModal')).hide();
+            };
+            bootstrap.Modal.getInstance(document.getElementById('confirmationModal')).show();
+        }
+        
+        function confirmDeleteLocation(locationId) {
+            document.getElementById('confirmationMessage').textContent = `Are you sure you want to delete location #${locationId}?`;
+            document.getElementById('confirmAction').onclick = function() {
+                deleteLocation(locationId);
+                bootstrap.Modal.getInstance(document.getElementById('confirmationModal')).hide();
+            };
+            bootstrap.Modal.getInstance(document.getElementById('confirmationModal')).show();
+        }
+        
+        function confirmDeleteSublocation(sublocationId) {
+            document.getElementById('confirmationMessage').textContent = `Are you sure you want to delete sublocation #${sublocationId}?`;
+            document.getElementById('confirmAction').onclick = function() {
+                deleteSublocation(sublocationId);
+                bootstrap.Modal.getInstance(document.getElementById('confirmationModal')).hide();
+            };
+            bootstrap.Modal.getInstance(document.getElementById('confirmationModal')).show();
+        }
+        
+        // Delete functions (would be connected to API calls in a real app)
+        function deletePackage(packageId) {
+            console.log(`Deleting package ${packageId}`);
+            // API call to delete package
+            initializePackagesTable(); // Refresh table
+        }
+        
+        function deleteProperty(propertyId) {
+            console.log(`Deleting property ${propertyId}`);
+            // API call to delete property
+            initializePropertiesTable(); // Refresh table
+        }
+        
+        function deleteLocation(locationId) {
+            console.log(`Deleting location ${locationId}`);
+            // API call to delete location
+            initializeLocationsTable(); // Refresh table
+        }
+        
+        function deleteSublocation(sublocationId) {
+            console.log(`Deleting sublocation ${sublocationId}`);
+            // API call to delete sublocation
+            initializeSublocationsTable(); // Refresh table
+        }
+        
+        // Other functions
+        function toggleUserVerification(userId, isVerified) {
+            console.log(`Toggling verification for user ${userId} to ${!isVerified}`);
+            // API call to update verification status
+            initializeUsersTable(); // Refresh table
+        }
+        
+        function viewUserDetails(userId) {
+            console.log(`Viewing details for user ${userId}`);
+            // In a real app, you would show a modal or navigate to a user details page
+            alert(`Viewing details for user ${userId}`);
+        }
+        
+        function updatePaymentStatus(paymentId, status) {
+            console.log(`Updating payment ${paymentId} to status ${status}`);
+            // API call to update payment status
+            initializePaymentsTable(); // Refresh table
+        }
+        
+        function togglePropertyFeatured(propertyId, isFeatured) {
+            console.log(`Setting property ${propertyId} featured status to ${isFeatured}`);
+            // API call to update featured status
+        }
+        
+        function togglePropertyVisibility(propertyId, isVisible) {
+            console.log(`Setting property ${propertyId} visibility to ${isVisible}`);
+            // API call to update visibility status
+        }
+        
+        function updateInquiryStatus(inquiryId, status) {
+            console.log(`Updating inquiry ${inquiryId} to status ${status}`);
+            // API call to update inquiry status
+            initializeInquiriesTable(); // Refresh table
+        }
+        
+        function viewInquiryDetails(inquiryId) {
+            console.log(`Viewing details for inquiry ${inquiryId}`);
+            // In a real app, you would show a modal with the full inquiry details
+            alert(`Viewing details for inquiry ${inquiryId}`);
+        }
+        
+        function viewInteriorInquiry(inquiryId) {
+            console.log(`Viewing interior design inquiry ${inquiryId}`);
+            // In a real app, you would show a modal with the full inquiry details
+            alert(`Viewing interior design inquiry ${inquiryId}`);
+        }
+        
+        function deleteInteriorInquiry(inquiryId) {
+            console.log(`Deleting interior design inquiry ${inquiryId}`);
+            // API call to delete inquiry
+            initializeInteriorTable(); // Refresh table
+        }
+        
+        function addToTestimonials(inquiryId) {
+            console.log(`Adding inquiry ${inquiryId} to testimonials`);
+            // API call to add to testimonials
+            alert(`Added inquiry ${inquiryId} to testimonials`);
+        }
+        
+        function viewContactInquiry(inquiryId) {
+            console.log(`Viewing contact inquiry ${inquiryId}`);
+            // In a real app, you would show a modal with the full inquiry details
+            alert(`Viewing contact inquiry ${inquiryId}`);
+        }
+        
+        function deleteContactInquiry(inquiryId) {
+            console.log(`Deleting contact inquiry ${inquiryId}`);
+            // API call to delete inquiry
+            initializeContactTable(); // Refresh table
+        }
+    </script>
+</body>
+</html>

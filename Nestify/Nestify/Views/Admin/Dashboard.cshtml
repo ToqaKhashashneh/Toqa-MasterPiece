@@ -1,0 +1,170 @@
+@{
+    ViewData["Title"] = "Dashboard";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row mb-4">
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-body position-relative dashboard-stat dashboard-stat-primary">
+                <h3>@ViewBag.PropertiesCount</h3>
+                <p>Properties</p>
+                <i class="bi bi-building"></i>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-body position-relative dashboard-stat dashboard-stat-success">
+                <h3>@ViewBag.UsersCount</h3>
+                <p>Users</p>
+                <i class="bi bi-people"></i>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-body position-relative dashboard-stat dashboard-stat-warning">
+                <h3>@ViewBag.PropertyInquiriesCount</h3>
+                <p>Property Inquiries</p>
+                <i class="bi bi-chat"></i>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-body position-relative dashboard-stat dashboard-stat-danger">
+                <h3>@ViewBag.ContactInquiriesCount</h3>
+                <p>Contact Inquiries</p>
+                <i class="bi bi-envelope"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <span>Recent Properties</span>
+                <a href="@Url.Action("Properties", "Admin")" class="btn btn-sm btn-primary">View All</a>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Type</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var property in ViewBag.RecentProperties)
+                            {
+                                <tr>
+                                    <td>@property.Id</td>
+                                    <td>@property.PropertyName</td>
+                                    <td>@property.Price.ToString("C2", new System.Globalization.CultureInfo("en-JO"))</td>
+                                    <td>@property.PropertyType</td>
+                                    <td>@property.PublishDate.ToString("dd/MM/yyyy")</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <span>Recent Property Inquiries</span>
+                <a href="@Url.Action("PropertyInquiries", "Admin")" class="btn btn-sm btn-primary">View All</a>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Property</th>
+                                <th>Status</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var inquiry in ViewBag.RecentPropertyInquiries)
+                            {
+                                <tr>
+                                    <td>@inquiry.Id</td>
+                                    <td>@inquiry.Name</td>
+                                    <td>@(inquiry.Property?.PropertyName ?? "N/A")</td>
+                                    <td>
+                                        <span class="badge bg-@(inquiry.Status == "Pending" ? "warning" : 
+                                                              inquiry.Status == "Contacted" ? "info" : 
+                                                              inquiry.Status == "Completed" ? "success" : "secondary")">
+                                            @inquiry.Status
+                                        </span>
+                                    </td>
+                                    <td>@inquiry.SubmittedAt.ToString("dd/MM/yyyy")</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <span>Recent Contact Inquiries</span>
+                <a href="@Url.Action("ContactInquiries", "Admin")" class="btn btn-sm btn-primary">View All</a>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Message</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var inquiry in ViewBag.RecentContactInquiries)
+                            {
+                                <tr>
+                                    <td>@inquiry.Id</td>
+                                    <td>@inquiry.Name</td>
+                                    <td>@inquiry.Email</td>
+                                    <td>@inquiry.PhoneNumber</td>
+                                    <td>@(inquiry.Message.Length > 30 ? inquiry.Message.Substring(0, 30) + "..." : inquiry.Message)</td>
+                                    <td>@inquiry.SubmittedAt.ToString("dd/MM/yyyy")</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@* @section Scripts { *@
+@*     <script> *@
+@*         $(document).ready(function() { *@
+@*             // Any dashboard-specific JavaScript can go here *@
+@*         }); *@
+@*     </script> *@
+@* }  *@
