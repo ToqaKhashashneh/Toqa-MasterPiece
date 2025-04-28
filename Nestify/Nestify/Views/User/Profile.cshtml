@@ -215,7 +215,6 @@
 															{
 																<tr>
 																	<td class="ltn__my-properties-img">
-																		<a href="@Url.Action("EditProperty", "User", new { id = property.Id })">Edit</a>
 																		<img src="@(property.ImageUrl1 ?? "~/img/default-property.jpg")" alt="Property Image" />
 																		
 																	</td>
@@ -230,7 +229,7 @@
 																		</div>
 																	</td>
 																	<td>@property.PublishDate?.ToString("dd, MM, yyyy")</td>
-																	<td><a href="@Url.Action("EditProperty", "Properties", new { id = property.Id })">Edit</a></td>
+																	<td>	<a href="@Url.Action("EditProperty", "User", new { id = property.Id })">Edit</a></td>
 																	<td><a href="@Url.Action("DeleteProperty", "Properties", new { id = property.Id })" onclick="return confirm('Are you sure you want to delete this property?');"><i class="fa-solid fa-trash-can"></i></a></td>
 																</tr>
 															}

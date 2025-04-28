@@ -98,8 +98,12 @@ namespace Nestify.Controllers
             var principal = new ClaimsPrincipal(identity);
 
             await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
+            if (user.Role=="Admin")
+                return RedirectToAction("Dashboard", "Admin");
+            else
+                return RedirectToAction("Profile", "User");
 
-            return RedirectToAction(user.Role == "Admin" ? "Dashboard" : "Profile", "User");
+            //return RedirectToAction(user.Role == "Admin" ? "Dashboard" : "Profile", "User");
         }
 
         public async Task<IActionResult> Logout()

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jGSZzDDHmPmpNJ8rJyLWbiALYU3CDjHBfNux3vXD5tE=",
+  "Hash": "CwFNhvGIzxqecR2VYInB4tfEKNRzQE05eU3C2SC8+Lc=",
   "Source": "Nestify",
   "BasePath": "_content/Nestify",
   "Mode": "Default",
@@ -6506,6 +6506,27 @@
       "OriginalItemSpec": "wwwroot\\uploads\\properties\\099fc9d0-f27f-40c8-810e-652c37530c85.jpeg"
     },
     {
+      "Identity": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\uploads\\properties\\1006489d-5c07-4a07-82fe-f40c44d11354.jpg",
+      "SourceId": "Nestify",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\",
+      "BasePath": "_content/Nestify",
+      "RelativePath": "uploads/properties/1006489d-5c07-4a07-82fe-f40c44d11354#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "tsq29nzagl",
+      "Integrity": "0/bAurjxCjj4/zI3kr4N/eYdMCMoWMlxActMUnLe7yA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\properties\\1006489d-5c07-4a07-82fe-f40c44d11354.jpg"
+    },
+    {
       "Identity": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\uploads\\properties\\10c69eaa-d9ee-4e4e-8ea7-59132221deca.png",
       "SourceId": "Nestify",
       "SourceType": "Discovered",
@@ -6546,6 +6567,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\properties\\239896c2-62ef-4acc-99fb-d1b581017ed4.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\uploads\\properties\\2704790a-1e05-4e42-8b3e-20cde013480b.jpg",
+      "SourceId": "Nestify",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\",
+      "BasePath": "_content/Nestify",
+      "RelativePath": "uploads/properties/2704790a-1e05-4e42-8b3e-20cde013480b#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "jz8vedfz90",
+      "Integrity": "PxFVUSpy8GBt3c9w25mgoWsEKGtm/3b+O0qwq2k1XD8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\properties\\2704790a-1e05-4e42-8b3e-20cde013480b.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\uploads\\properties\\2de96731-df47-4d30-94b6-4eb00d6f3b35.jpg",
+      "SourceId": "Nestify",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\",
+      "BasePath": "_content/Nestify",
+      "RelativePath": "uploads/properties/2de96731-df47-4d30-94b6-4eb00d6f3b35#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "tsq29nzagl",
+      "Integrity": "0/bAurjxCjj4/zI3kr4N/eYdMCMoWMlxActMUnLe7yA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\properties\\2de96731-df47-4d30-94b6-4eb00d6f3b35.jpg"
     },
     {
       "Identity": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\uploads\\properties\\30377fe3-8418-46ac-aef3-87d9f0afc0bd.jpg",
@@ -6630,6 +6693,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\properties\\50ea1fef-9fdf-42b0-a3ac-9de9e625f545.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\uploads\\properties\\639d2230-03bc-4a41-bc8e-743d7d49dc71.jpeg",
+      "SourceId": "Nestify",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\",
+      "BasePath": "_content/Nestify",
+      "RelativePath": "uploads/properties/639d2230-03bc-4a41-bc8e-743d7d49dc71#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "aeqxsxftxa",
+      "Integrity": "Hgyzqk4rPnKSErO03FwET03GAd/Lix4iCbNGyuKkZds=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\properties\\639d2230-03bc-4a41-bc8e-743d7d49dc71.jpeg"
     },
     {
       "Identity": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\uploads\\properties\\65fe6504-15c8-419e-9ab7-eb1620656f85.jpeg",
@@ -6863,6 +6947,69 @@
       "OriginalItemSpec": "wwwroot\\uploads\\properties\\9b6e6fdf-a70e-40a4-9c46-6246e98bdca3.jpeg"
     },
     {
+      "Identity": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\uploads\\properties\\a0b25a3e-33e6-428a-98dc-9683cea70462.jpeg",
+      "SourceId": "Nestify",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\",
+      "BasePath": "_content/Nestify",
+      "RelativePath": "uploads/properties/a0b25a3e-33e6-428a-98dc-9683cea70462#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "73hk2inaz0",
+      "Integrity": "g00dE92ehZEAbKYGc+rwX9wMJJIExoR5js8Zjg/hQOM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\properties\\a0b25a3e-33e6-428a-98dc-9683cea70462.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\uploads\\properties\\a8c9e6d0-1162-4b42-b435-fd29112afd3c.jpeg",
+      "SourceId": "Nestify",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\",
+      "BasePath": "_content/Nestify",
+      "RelativePath": "uploads/properties/a8c9e6d0-1162-4b42-b435-fd29112afd3c#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "aeqxsxftxa",
+      "Integrity": "Hgyzqk4rPnKSErO03FwET03GAd/Lix4iCbNGyuKkZds=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\properties\\a8c9e6d0-1162-4b42-b435-fd29112afd3c.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\uploads\\properties\\ca979c4e-8324-4aee-8bbb-c7c9f99955e4.jpeg",
+      "SourceId": "Nestify",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\",
+      "BasePath": "_content/Nestify",
+      "RelativePath": "uploads/properties/ca979c4e-8324-4aee-8bbb-c7c9f99955e4#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "73hk2inaz0",
+      "Integrity": "g00dE92ehZEAbKYGc+rwX9wMJJIExoR5js8Zjg/hQOM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\properties\\ca979c4e-8324-4aee-8bbb-c7c9f99955e4.jpeg"
+    },
+    {
       "Identity": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\uploads\\properties\\ce621dbd-3185-4dd7-975a-9d28f1712396.jpeg",
       "SourceId": "Nestify",
       "SourceType": "Discovered",
@@ -6882,6 +7029,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\properties\\ce621dbd-3185-4dd7-975a-9d28f1712396.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\uploads\\properties\\f1c4f15b-98ce-4be6-9851-5e30ce23428d.jpeg",
+      "SourceId": "Nestify",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\",
+      "BasePath": "_content/Nestify",
+      "RelativePath": "uploads/properties/f1c4f15b-98ce-4be6-9851-5e30ce23428d#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "73hk2inaz0",
+      "Integrity": "g00dE92ehZEAbKYGc+rwX9wMJJIExoR5js8Zjg/hQOM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\properties\\f1c4f15b-98ce-4be6-9851-5e30ce23428d.jpeg"
     },
     {
       "Identity": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\uploads\\properties\\fdcdd72e-4e1e-4844-a433-7748ccaa68f1.png",
@@ -32413,6 +32581,88 @@
       ]
     },
     {
+      "Route": "uploads/properties/1006489d-5c07-4a07-82fe-f40c44d11354.jpg",
+      "AssetFile": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\uploads\\properties\\1006489d-5c07-4a07-82fe-f40c44d11354.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "57544"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0/bAurjxCjj4/zI3kr4N/eYdMCMoWMlxActMUnLe7yA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 26 Apr 2025 21:24:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-0/bAurjxCjj4/zI3kr4N/eYdMCMoWMlxActMUnLe7yA="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/properties/1006489d-5c07-4a07-82fe-f40c44d11354.tsq29nzagl.jpg",
+      "AssetFile": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\uploads\\properties\\1006489d-5c07-4a07-82fe-f40c44d11354.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "57544"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0/bAurjxCjj4/zI3kr4N/eYdMCMoWMlxActMUnLe7yA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 26 Apr 2025 21:24:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "tsq29nzagl"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/properties/1006489d-5c07-4a07-82fe-f40c44d11354.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-0/bAurjxCjj4/zI3kr4N/eYdMCMoWMlxActMUnLe7yA="
+        }
+      ]
+    },
+    {
       "Route": "uploads/properties/10c69eaa-d9ee-4e4e-8ea7-59132221deca.mnefpcpoy0.png",
       "AssetFile": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\uploads\\properties\\10c69eaa-d9ee-4e4e-8ea7-59132221deca.png",
       "Selectors": [],
@@ -32573,6 +32823,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-Hgyzqk4rPnKSErO03FwET03GAd/Lix4iCbNGyuKkZds="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/properties/2704790a-1e05-4e42-8b3e-20cde013480b.jpg",
+      "AssetFile": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\uploads\\properties\\2704790a-1e05-4e42-8b3e-20cde013480b.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19910"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PxFVUSpy8GBt3c9w25mgoWsEKGtm/3b+O0qwq2k1XD8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 26 Apr 2025 21:26:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-PxFVUSpy8GBt3c9w25mgoWsEKGtm/3b+O0qwq2k1XD8="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/properties/2704790a-1e05-4e42-8b3e-20cde013480b.jz8vedfz90.jpg",
+      "AssetFile": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\uploads\\properties\\2704790a-1e05-4e42-8b3e-20cde013480b.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19910"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PxFVUSpy8GBt3c9w25mgoWsEKGtm/3b+O0qwq2k1XD8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 26 Apr 2025 21:26:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "jz8vedfz90"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/properties/2704790a-1e05-4e42-8b3e-20cde013480b.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-PxFVUSpy8GBt3c9w25mgoWsEKGtm/3b+O0qwq2k1XD8="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/properties/2de96731-df47-4d30-94b6-4eb00d6f3b35.jpg",
+      "AssetFile": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\uploads\\properties\\2de96731-df47-4d30-94b6-4eb00d6f3b35.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "57544"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0/bAurjxCjj4/zI3kr4N/eYdMCMoWMlxActMUnLe7yA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 26 Apr 2025 21:22:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-0/bAurjxCjj4/zI3kr4N/eYdMCMoWMlxActMUnLe7yA="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/properties/2de96731-df47-4d30-94b6-4eb00d6f3b35.tsq29nzagl.jpg",
+      "AssetFile": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\uploads\\properties\\2de96731-df47-4d30-94b6-4eb00d6f3b35.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "57544"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0/bAurjxCjj4/zI3kr4N/eYdMCMoWMlxActMUnLe7yA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 26 Apr 2025 21:22:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "tsq29nzagl"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/properties/2de96731-df47-4d30-94b6-4eb00d6f3b35.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-0/bAurjxCjj4/zI3kr4N/eYdMCMoWMlxActMUnLe7yA="
         }
       ]
     },
@@ -32901,6 +33315,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-0/bAurjxCjj4/zI3kr4N/eYdMCMoWMlxActMUnLe7yA="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/properties/639d2230-03bc-4a41-bc8e-743d7d49dc71.aeqxsxftxa.jpeg",
+      "AssetFile": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\uploads\\properties\\639d2230-03bc-4a41-bc8e-743d7d49dc71.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "171058"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Hgyzqk4rPnKSErO03FwET03GAd/Lix4iCbNGyuKkZds=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 26 Apr 2025 21:22:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "aeqxsxftxa"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/properties/639d2230-03bc-4a41-bc8e-743d7d49dc71.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Hgyzqk4rPnKSErO03FwET03GAd/Lix4iCbNGyuKkZds="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/properties/639d2230-03bc-4a41-bc8e-743d7d49dc71.jpeg",
+      "AssetFile": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\uploads\\properties\\639d2230-03bc-4a41-bc8e-743d7d49dc71.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "171058"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Hgyzqk4rPnKSErO03FwET03GAd/Lix4iCbNGyuKkZds=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 26 Apr 2025 21:22:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Hgyzqk4rPnKSErO03FwET03GAd/Lix4iCbNGyuKkZds="
         }
       ]
     },
@@ -33807,6 +34303,252 @@
       ]
     },
     {
+      "Route": "uploads/properties/a0b25a3e-33e6-428a-98dc-9683cea70462.73hk2inaz0.jpeg",
+      "AssetFile": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\uploads\\properties\\a0b25a3e-33e6-428a-98dc-9683cea70462.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "128089"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"g00dE92ehZEAbKYGc+rwX9wMJJIExoR5js8Zjg/hQOM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 26 Apr 2025 21:21:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "73hk2inaz0"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/properties/a0b25a3e-33e6-428a-98dc-9683cea70462.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-g00dE92ehZEAbKYGc+rwX9wMJJIExoR5js8Zjg/hQOM="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/properties/a0b25a3e-33e6-428a-98dc-9683cea70462.jpeg",
+      "AssetFile": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\uploads\\properties\\a0b25a3e-33e6-428a-98dc-9683cea70462.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "128089"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"g00dE92ehZEAbKYGc+rwX9wMJJIExoR5js8Zjg/hQOM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 26 Apr 2025 21:21:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-g00dE92ehZEAbKYGc+rwX9wMJJIExoR5js8Zjg/hQOM="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/properties/a8c9e6d0-1162-4b42-b435-fd29112afd3c.aeqxsxftxa.jpeg",
+      "AssetFile": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\uploads\\properties\\a8c9e6d0-1162-4b42-b435-fd29112afd3c.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "171058"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Hgyzqk4rPnKSErO03FwET03GAd/Lix4iCbNGyuKkZds=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 26 Apr 2025 21:22:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "aeqxsxftxa"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/properties/a8c9e6d0-1162-4b42-b435-fd29112afd3c.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Hgyzqk4rPnKSErO03FwET03GAd/Lix4iCbNGyuKkZds="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/properties/a8c9e6d0-1162-4b42-b435-fd29112afd3c.jpeg",
+      "AssetFile": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\uploads\\properties\\a8c9e6d0-1162-4b42-b435-fd29112afd3c.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "171058"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Hgyzqk4rPnKSErO03FwET03GAd/Lix4iCbNGyuKkZds=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 26 Apr 2025 21:22:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Hgyzqk4rPnKSErO03FwET03GAd/Lix4iCbNGyuKkZds="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/properties/ca979c4e-8324-4aee-8bbb-c7c9f99955e4.73hk2inaz0.jpeg",
+      "AssetFile": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\uploads\\properties\\ca979c4e-8324-4aee-8bbb-c7c9f99955e4.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "128089"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"g00dE92ehZEAbKYGc+rwX9wMJJIExoR5js8Zjg/hQOM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 06:22:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "73hk2inaz0"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/properties/ca979c4e-8324-4aee-8bbb-c7c9f99955e4.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-g00dE92ehZEAbKYGc+rwX9wMJJIExoR5js8Zjg/hQOM="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/properties/ca979c4e-8324-4aee-8bbb-c7c9f99955e4.jpeg",
+      "AssetFile": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\uploads\\properties\\ca979c4e-8324-4aee-8bbb-c7c9f99955e4.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "128089"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"g00dE92ehZEAbKYGc+rwX9wMJJIExoR5js8Zjg/hQOM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 06:22:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-g00dE92ehZEAbKYGc+rwX9wMJJIExoR5js8Zjg/hQOM="
+        }
+      ]
+    },
+    {
       "Route": "uploads/properties/ce621dbd-3185-4dd7-975a-9d28f1712396.fd30d2yh20.jpeg",
       "AssetFile": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\uploads\\properties\\ce621dbd-3185-4dd7-975a-9d28f1712396.jpeg",
       "Selectors": [],
@@ -33885,6 +34627,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-E+ZWFnnv5AkAo7V53nID9cqfY+De/XP3yjRwWqGrLnQ="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/properties/f1c4f15b-98ce-4be6-9851-5e30ce23428d.73hk2inaz0.jpeg",
+      "AssetFile": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\uploads\\properties\\f1c4f15b-98ce-4be6-9851-5e30ce23428d.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "128089"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"g00dE92ehZEAbKYGc+rwX9wMJJIExoR5js8Zjg/hQOM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 26 Apr 2025 21:21:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "73hk2inaz0"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/properties/f1c4f15b-98ce-4be6-9851-5e30ce23428d.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-g00dE92ehZEAbKYGc+rwX9wMJJIExoR5js8Zjg/hQOM="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/properties/f1c4f15b-98ce-4be6-9851-5e30ce23428d.jpeg",
+      "AssetFile": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\uploads\\properties\\f1c4f15b-98ce-4be6-9851-5e30ce23428d.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "128089"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"g00dE92ehZEAbKYGc+rwX9wMJJIExoR5js8Zjg/hQOM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 26 Apr 2025 21:21:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-g00dE92ehZEAbKYGc+rwX9wMJJIExoR5js8Zjg/hQOM="
         }
       ]
     },

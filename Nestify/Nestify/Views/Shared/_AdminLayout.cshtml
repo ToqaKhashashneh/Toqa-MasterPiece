@@ -80,6 +80,11 @@
                     <i class="bi bi-geo"></i> Sublocations
                 </a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link @(ViewContext.RouteData.Values["Action"].ToString() == "Logout" ? "active" : "")" asp-controller="Admin" asp-action="Logout">
+                    <i class="bi bi-box-arrow-left"></i> Logout
+                </a>
+            </li>
         </ul>
     </div>
 

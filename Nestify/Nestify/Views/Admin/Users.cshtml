@@ -18,9 +18,9 @@
                         <th>Name</th>
                         <th>Email</th>
                         <th>Phone</th>
-                        <th>Role</th>
-                        <th>Business Status</th>
-                        <th>Actions</th>
+                        @* <th>Role</th> *@
+                        @* <th>Business Status</th> *@
+                     
                     </tr>
                 </thead>
                 <tbody>
@@ -31,43 +31,43 @@
                             <td>@(string.IsNullOrEmpty(user.FirstName) && string.IsNullOrEmpty(user.LastName) ? "N/A" : $"{user.FirstName} {user.LastName}")</td>
                             <td>@user.Email</td>
                             <td>@(string.IsNullOrEmpty(user.PhoneNumber) ? "N/A" : user.PhoneNumber)</td>
-                            <td>@user.Role</td>
-                            <td>
-                                @if (user.Role == "Business")
-                                {
-                                    if (user.IsVerifiedBusiness)
-                                    {
-                                        <span class="badge bg-success">Verified</span>
-                                    }
-                                    else
-                                    {
-                                        <span class="badge bg-warning">Unverified</span>
-                                    }
-                                }
-                                else
-                                {
-                                    <span class="badge bg-secondary">N/A</span>
-                                }
-                            </td>
-                            <td>
-                                <div class="btn-group">
-                                    <button class="btn btn-sm btn-info" onclick="viewUserDetails(@user.Id)">
-                                        <i class="bi bi-eye"></i> View
-                                    </button>
-                                    @if (user.Role == "Business" && !user.IsVerifiedBusiness)
-                                    {
-                                        <button class="btn btn-sm btn-success" onclick="verifyUser(@user.Id)">
-                                            <i class="bi bi-check-circle"></i> Verify
-                                        </button>
-                                    }
-                                    @if (user.Role == "Business" && user.IsVerifiedBusiness)
-                                    {
-                                        <button class="btn btn-sm btn-warning" onclick="unverifyUser(@user.Id)">
-                                            <i class="bi bi-x-circle"></i> Unverify
-                                        </button>
-                                    }
-                                </div>
-                            </td>
+                            @* <td>@user.Role</td> *@
+                            @* <td> *@
+                            @*     @if (user.Role == "Business") *@
+                            @*     { *@
+                            @*         if (user.IsVerifiedBusiness) *@
+                            @*         { *@
+                            @*             <span class="badge bg-success">Verified</span> *@
+                            @*         } *@
+                            @*         else *@
+                            @*         { *@
+                            @*             <span class="badge bg-warning">Unverified</span> *@
+                            @*         } *@
+                            @*     } *@
+                            @*     else *@
+                            @*     { *@
+                            @*         <span class="badge bg-secondary">N/A</span> *@
+                            @*     } *@
+                            @* </td> *@
+                            @* <td> *@
+                            @*     <div class="btn-group"> *@
+                            @*         <button class="btn btn-sm btn-info" onclick="viewUserDetails(@user.Id)"> *@
+                            @*             <i class="bi bi-eye"></i> View *@
+                            @*         </button> *@
+                            @*         @if (user.Role == "Business" && !user.IsVerifiedBusiness) *@
+                            @*         { *@
+                            @*             <button class="btn btn-sm btn-success" onclick="verifyUser(@user.Id)"> *@
+                            @*                 <i class="bi bi-check-circle"></i> Verify *@
+                            @*             </button> *@
+                            @*         } *@
+                            @*         @if (user.Role == "Business" && user.IsVerifiedBusiness) *@
+                            @*         { *@
+                            @*             <button class="btn btn-sm btn-warning" onclick="unverifyUser(@user.Id)"> *@
+                            @*                 <i class="bi bi-x-circle"></i> Unverify *@
+                            @*             </button> *@
+                            @*         } *@
+                            @*     </div> *@
+                            @* </td> *@
                         </tr>
                     }
                 </tbody>
