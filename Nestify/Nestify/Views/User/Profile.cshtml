@@ -5,7 +5,7 @@
 
 
 
-	<!-- BREADCRUMB AREA START -->
+<!-- BREADCRUMB AREA START -->
 <div class="ltn__breadcrumb-area text-left bg-overlay-white-30 bg-image " data-bs-bg="img/bg/14.jpg">
 	<div class="container">
 		<div class="row">
@@ -40,6 +40,8 @@
 										<a data-bs-toggle="tab" href="#ltn_tab_1_4">Edit Profile <i class="fas fa-user"></i></a>
 										<a data-bs-toggle="tab" href="#ltn_tab_1_5">My Properties <i class="fa-solid fa-list"></i></a>
 										<a data-bs-toggle="tab" href="#ltn_tab_1_6">Favorited Properties <i class="fa-solid fa-heart"></i></a>
+										<a data-bs-toggle="tab" href="#ltn_tab_1_10">Visit Requests <i class="fa-solid fa-map-pin"></i></a>
+
 										<a data-bs-toggle="tab" href="#ltn_tab_1_7">Add Property <i class="fa-solid fa-map-location-dot"></i></a>
 										<a data-bs-toggle="tab" href="#ltn_tab_1_8">Payments <i class="fa-solid fa-money-check-dollar"></i></a>
 										<a data-bs-toggle="tab" href="#ltn_tab_1_9">Change Password <i class="fa-solid fa-lock"></i></a>
@@ -53,6 +55,8 @@
 										<div class="ltn__myaccount-tab-content-inner">
 											<p>Hello <strong>@ViewBag.FirstName</strong> </p>
 											<p>From your account dashboard you can view your <span>favourite properties</span>, add and edit your <span>properties</span>, and <span>edit your password and account details</span>.</p>
+
+										
 										</div>
 									</div>
 									<div class="tab-pane fade" id="ltn_tab_1_2">
@@ -142,44 +146,34 @@
 															<!-- Profile Picture Preview -->
 															<div style="position: relative; display: inline-block;">
 																<img id="imagePreview" src="@ViewBag.ProfileImageUrl"
-																	 style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; border: 3px solid #ccc; background-color: #f8f9fa; display: block;" />
+																style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; border: 3px solid #ccc; background-color: #f8f9fa; display: block;" />
 
 																<!-- Edit Icon Overlay -->
 																<button type="button" onclick="document.getElementById('profileImageInput').click();"
-																		style="position: absolute; bottom: 5px; right: 5px; background: rgba(0,0,0,0.6); color: white; border: none; padding: 5px 10px; border-radius: 50%;">
+																style="position: absolute; bottom: 5px; right: 5px; background: rgba(0,0,0,0.6); color: white; border: none; padding: 5px 10px; border-radius: 50%;">
 																	✎
 																</button>
 															</div>
 
-															<!-- Action Buttons -->
-															@* <div style="margin-top: 10px;"> *@
-
-															@*     <button type="button" onclick="removeImage();" class="btn" style="padding: 8px;margin-right: -91px; color:white; background-color: #171B2A;border: white;"> *@
-															@*         Remove *@
-															@*     </button> *@
-															@* </div> *@
 														</div>
 
 														<script>
 															function previewImage(event) {
-																const input = event.target;
-																const preview = document.getElementById('imagePreview');
+															const input = event.target;
+															const preview = document.getElementById('imagePreview');
 
-																if (input.files && input.files[0]) {
-																	const reader = new FileReader();
+															if (input.files && input.files[0]) {
+															const reader = new FileReader();
 
-																	reader.onload = function(e) {
-																		preview.src = e.target.result;
-																		preview.style.display = 'block';
-																	};
+															reader.onload = function(e) {
+															preview.src = e.target.result;
+															preview.style.display = 'block';
+															};
 
-																	reader.readAsDataURL(input.files[0]);
-																}
+															reader.readAsDataURL(input.files[0]);
 															}
-															// function removeImage() {
-															//     document.getElementById('imagePreview').src = "/img/profile/DefaultUser.jpeg";
-															//     document.getElementById('profileImageInput').value = "";
-															// }
+															}
+															
 
 														</script>
 
@@ -197,40 +191,53 @@
 									</div>
 									<div class="tab-pane fade" id="ltn_tab_1_5">
 										<div class="ltn__myaccount-tab-content-inner">
-											<div class="ltn__my-properties-table table-responsive">
-												<table class="table">
-													<thead>
+											<div class="table-responsive">
+												<table class="table align-middle">
+													<thead class="table-light">
 														<tr>
-															<th scope="col">My Properties</th>
-															<th scope="col"></th>
+															<th scope="col">Image</th>
+															<th scope="col">Property Info</th>
 															<th scope="col">Date Added</th>
 															<th scope="col">Actions</th>
 															<th scope="col">Delete</th>
 														</tr>
 													</thead>
 													<tbody>
-														@if (ViewBag.userProperties != null )
+														@if (ViewBag.userProperties != null)
 														{
 															foreach (var property in ViewBag.userProperties)
 															{
 																<tr>
-																	<td class="ltn__my-properties-img">
-																		<img src="@(property.ImageUrl1 ?? "~/img/default-property.jpg")" alt="Property Image" />
-																		
+																	<td style="width: 100px;">
+																		<img src="@(property.ImageUrl1 ?? "~/img/default-property.jpg")"
+																			 alt="Property Image"
+																			 class="img-fluid rounded"
+																			 style="max-height: 80px;" />
 																	</td>
 																	<td>
-																		<div class="ltn__my-properties-info">
-																			<h6 class="mb-10">
-																				<a style="    color: black;" href="@Url.Action("PropertyDetails", "Properties", new { id = property.Id })">
-																					@property.PropertyName
-																				</a>
-																			</h6>
-																			<small><i class="icon-placeholder"></i> @property.SubLocation?.SublocationName</small>
-																		</div>
+																		<strong>
+																			<a href="@Url.Action("PropertyDetails", "Properties", new { id = property.Id })"
+																			   style="color: black;">
+																				@property.PropertyName
+																			</a>
+																		</strong><br />
+																		<small><i class="icon-placeholder"></i> @property.SubLocation?.SublocationName</small>
 																	</td>
 																	<td>@property.PublishDate?.ToString("dd, MM, yyyy")</td>
-																	<td>	<a href="@Url.Action("EditProperty", "User", new { id = property.Id })">Edit</a></td>
-																	<td><a href="@Url.Action("DeleteProperty", "Properties", new { id = property.Id })" onclick="return confirm('Are you sure you want to delete this property?');"><i class="fa-solid fa-trash-can"></i></a></td>
+																	<td>
+																		<a href="@Url.Action("EditProperty", "User", new { id = property.Id })"
+																		   class="btn btn-sm btn-outline-primary">
+																			Edit
+																		</a>
+																	</td>
+																	<td>
+																		<form asp-action="DeleteProperty" asp-controller="User" method="post" class="delete-form d-inline">
+																			<input type="hidden" name="id" value="@property.Id" />
+																			<button type="button" class="btn btn-sm btn-outline-danger confirm-delete-btn">
+																				<i class="bi bi-trash"></i> Delete
+																			</button>
+																		</form>
+																	</td>
 																</tr>
 															}
 														}
@@ -241,96 +248,128 @@
 															</tr>
 														}
 													</tbody>
-
 												</table>
-											</div>
-											<div class="ltn__pagination-area text-center">
-												<div class="ltn__pagination">
-													<ul>
-														<li><a href="#"><i class="fas fa-angle-double-left"></i></a></li>
-														<li><a href="#">1</a></li>
-														<li class="active"><a href="#">2</a></li>
-														<li><a href="#">3</a></li>
-														<li><a href="#">...</a></li>
-														<li><a href="#">10</a></li>
-														<li><a href="#"><i class="fas fa-angle-double-right"></i></a></li>
-													</ul>
-												</div>
 											</div>
 										</div>
 									</div>
 
+
 									<div class="tab-pane fade" id="ltn_tab_1_6">
 										<div class="ltn__myaccount-tab-content-inner">
-											<div class="ltn__my-properties-table table-responsive">
-												<table class="table">
-													<thead>
+											<div class="table-responsive">
+												<table class="table align-middle">
+													<thead class="table-light">
 														<tr>
-															<th scope="col">Favourite Property</th>
-															<th scope="col"></th>
+															<th scope="col">Image</th>
+															<th scope="col">Property Info</th>
 															<th scope="col">Status</th>
-															<th scope="col">Delete</th>
+															<th scope="col">Remove</th>
 														</tr>
 													</thead>
 													<tbody>
-														<tr>
-															<td class="ltn__my-properties-img">
-																<a href="product-details.html"><img src="~/img/product-3/2.jpg" alt="#"></a>
-															</td>
-															<td>
-																<div class="ltn__my-properties-info">
-																	<h6 class="mb-10"><a href="product-details.html">sdfasdfdsfsdafs</a></h6>
-																	<small><i class="icon-placeholder"></i> Brooklyn, New York, United States</small>
-
-																</div>
-															</td>
-															<td>For Sale</td>
-
-															<td><a href="#"><i class="fa-solid fa-trash-can"></i></a></td>
-														</tr>
-														<tr>
-															<td class="ltn__my-properties-img">
-																<a href="product-details.html"><img src="~/img/product-3/3.jpg" alt="#"></a>
-															</td>
-															<td>
-																<div class="ltn__my-properties-info">
-																	<h6 class="mb-10"><a href="product-details.html">sdfasdfdsfsdafs</a></h6>
-																	<small><i class="icon-placeholder"></i> Brooklyn, New York, United States</small>
-
-																</div>
-															</td>
-															<td>For Rent</td>
-															<td><a href="#"><i class="fa-solid fa-trash-can"></i></a></td>
-														</tr>
-														<tr>
-															<td class="ltn__my-properties-img">
-																<a href="product-details.html"><img src="~/img/product-3/7.jpg" alt="#"></a>
-															</td>
-															<td>
-																<div class="ltn__my-properties-info">
-																	<h6 class="mb-10"><a href="product-details.html">sdfasdfdsfsdafs</a></h6>
-																	<small><i class="icon-placeholder"></i> Brooklyn, New York, United States</small>
-
-																</div>
-															</td>
-															<td><del>Sold</del></td>
-															<td><a href="#"><i class="fa-solid fa-trash-can"></i></a></td>
-														</tr>
+														@if (ViewBag.FavoriteProperties != null)
+														{
+															foreach (var property in ViewBag.FavoriteProperties)
+															{
+																<tr>
+																	<td style="width: 100px;">
+																		<a href="@Url.Action("PropertyDetails", "Properties", new { id = property.Id })">
+																			<img src="@property.ImageUrl1" alt="Property" class="img-fluid rounded" style="max-height: 80px;" />
+																		</a>
+																	</td>
+																	<td>
+																		<div class="ltn__my-properties-info">
+																			<h6 class="mb-1">
+																				<a href="@Url.Action("PropertyDetails", "Properties", new { id = property.Id })" style="color: black;">
+																					@property.PropertyName
+																				</a>
+																			</h6>
+																			<small class="text-muted"><i class="icon-placeholder"></i> @property.SubLocation?.SublocationName</small>
+																		</div>
+																	</td>
+																	<td>@property.PropertyStatus</td>
+																	<td>
+																		<a href="@Url.Action("RemoveFavorite", "User", new { id = property.Id })" class="btn btn-sm btn-outline-danger">
+																			<i class="fa-solid fa-trash-can"></i> Remove
+																		</a>
+																	</td>
+																</tr>
+															}
+														}
+														else
+														{
+															<tr>
+																<td colspan="4" class="text-center">No favorite properties found.</td>
+															</tr>
+														}
 													</tbody>
 												</table>
 											</div>
-											<div class="ltn__pagination-area text-center">
-												<div class="ltn__pagination">
-													<ul>
-														<li><a href="#"><i class="fas fa-angle-double-left"></i></a></li>
-														<li><a href="#">1</a></li>
-														<li class="active"><a href="#">2</a></li>
-														<li><a href="#">3</a></li>
-														<li><a href="#">...</a></li>
-														<li><a href="#">10</a></li>
-														<li><a href="#"><i class="fas fa-angle-double-right"></i></a></li>
-													</ul>
-												</div>
+										</div>
+									</div>
+
+
+									<div class="tab-pane fade" id="ltn_tab_1_10">
+										<div class="ltn__myaccount-tab-content-inner">
+											<div class="table-responsive">
+												<table class="table align-middle">
+													<thead class="table-light">
+														<tr>
+															<th scope="col">Image</th>
+															<th scope="col">Property Info</th>
+															<th scope="col">Visit Date</th>
+															<th scope="col">Status</th>
+														</tr>
+													</thead>
+													<tbody>
+														@if (ViewBag.VisitRequests != null && (ViewBag.VisitRequests as List<PropertyInquiry>).Any())
+														{
+															var visitRequests = ViewBag.VisitRequests as List<PropertyInquiry>;
+															<tr>
+																<td colspan="4" class="text-muted ps-3 pb-2">
+																	<strong>@visitRequests.Count</strong> requests found.
+																</td>
+															</tr>
+
+															foreach (var request in visitRequests)
+															{
+																<tr>
+																	<td style="width: 100px;">
+																		<a href="@Url.Action("PropertyDetails", "Properties", new { id = request.Property.Id })">
+																			<img src="@request.Property.ImageUrl1" alt="Property" class="img-fluid rounded" style="max-height: 80px;" />
+																		</a>
+																	</td>
+																	<td>
+																		<h6 class="mb-1">
+																			<a href="@Url.Action("PropertyDetails", "Properties", new { id = request.Property.Id })" style="color: black;">
+																				@request.Property.PropertyName
+																			</a>
+																		</h6>
+																		<small class="text-muted">
+																			<i class="icon-placeholder"></i> @request.Property.SubLocation?.SublocationName
+																		</small>
+																	</td>
+																	<td>@request.PreferredDate?.ToString("dd, MM, yyyy")</td>
+																	<td>
+																		<span class="badge bg-@(
+																			request.Status == "Pending" ? "warning" :
+																			request.Status == "Accepted" ? "success" :
+																			"secondary"
+																		)">
+																			@request.Status
+																		</span>
+																	</td>
+																</tr>
+															}
+														}
+														else
+														{
+															<tr>
+																<td colspan="4" class="text-center">No visit requests have been made.</td>
+															</tr>
+														}
+													</tbody>
+												</table>
 											</div>
 										</div>
 									</div>
@@ -338,113 +377,113 @@
 
 									<div class="tab-pane fade" id="ltn_tab_1_7">
 										<div class="ltn__myaccount-tab-content-inner">
-										  @if (ViewBag.CanAddProperty != null && (bool)ViewBag.CanAddProperty){
+											@if (ViewBag.CanAddProperty != null && (bool)ViewBag.CanAddProperty){
 
-											<form asp-action="AddProperty" asp-controller="User" method="post" enctype="multipart/form-data">
-												@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+												<form asp-action="AddProperty" asp-controller="User" method="post" enctype="multipart/form-data">
+													@Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
-												<h6 style="color: #171B2A;">Property Description</h6>
-												<div class="row">
-													<div class="col-md-12">
-														<div class="input-item input-item-textarea ltn__custom-icon">
+													<h6 style="color: #171B2A;">Property Description</h6>
+													<div class="row">
+														<div class="col-md-12">
+															<div class="input-item input-item-textarea ltn__custom-icon">
 																<input type="text" asp-for=propertyViewModel.PropertyName required placeholder="*Title (mandatory)">
 																<span asp-validation-for="propertyViewModel.PropertyName" class="text-danger"></span>
 
-														</div>
-														<div class="input-item input-item-textarea ltn__custom-icon">
-															<textarea asp-for="propertyViewModel.Description" placeholder="Description"></textarea>
-														</div>
-													</div>
-												</div>
-
-												<h6>Property Price</h6>
-												<div class="row">
-													<div class="col-md-6">
-														<div class="input-item input-item-textarea ltn__custom-icon">
-															<input type="number" asp-for="propertyViewModel.Price" required placeholder="Price in JOD (دينار)">
-															<span asp-validation-for="propertyViewModel.Price" class="text-danger"></span>
-
+															</div>
+															<div class="input-item input-item-textarea ltn__custom-icon">
+																<textarea asp-for="propertyViewModel.Description" placeholder="Description"></textarea>
+															</div>
 														</div>
 													</div>
-													 <div class="col-md-6"> 
-													 	<div class="input-item input-item-textarea ltn__custom-icon">
-															<select class="nice-select" required asp-for="propertyViewModel.PriceType">
-																<option>Price Type</option> 
-													 			<option>Total</option> 
-													 			<option>Per Month</option> 
-													 			<option>Per Year</option> 
-													 		</select>
+
+													<h6>Property Price</h6>
+													<div class="row">
+														<div class="col-md-6">
+															<div class="input-item input-item-textarea ltn__custom-icon">
+																<input type="number" asp-for="propertyViewModel.Price" required placeholder="Price in JOD (دينار)">
+																<span asp-validation-for="propertyViewModel.Price" class="text-danger"></span>
+
+															</div>
+														</div>
+														<div class="col-md-6"> 
+															<div class="input-item input-item-textarea ltn__custom-icon">
+																<select class="nice-select" required asp-for="propertyViewModel.PriceType">
+																	<option>Price Type</option> 
+																	<option>Total</option> 
+																	<option>Per Month</option> 
+																	<option>Per Year</option> 
+																</select>
 																<span asp-validation-for="propertyViewModel.PriceType" class="text-danger"></span>
 
-														</div> 
-													 </div>
-												</div>
-
-												<h6>Select Categories</h6>
-												<div class="row">
-													<div class="col-md-6">
-														<div class="input-item input-item-textarea ltn__custom-icon">
-																<select required class="nice-select" asp-for=propertyViewModel.PropertyType>
-																<option value="">Select Property Type</option>
-																<option>Villa</option>
-																<option>Apartment</option>
-																<option>Penthouse</option>
-																<option>Roof Apartment</option>
-															</select>
-															<span asp-validation-for="propertyViewModel.PropertyType" class="text-danger"></span>
-
+															</div> 
 														</div>
 													</div>
-													<div class="col-md-6">
-														<div class="input-item input-item-textarea ltn__custom-icon">
-															<select required class="nice-select" asp-for="propertyViewModel.PropertyStatus">
-																<option value="">Select Property Status</option>
-																<option>For Sale</option>
-																<option>For Rent</option>
-															</select>
+
+													<h6>Select Categories</h6>
+													<div class="row">
+														<div class="col-md-6">
+															<div class="input-item input-item-textarea ltn__custom-icon">
+																<select required class="nice-select" asp-for=propertyViewModel.PropertyType>
+																	<option value="">Select Property Type</option>
+																	<option>Villa</option>
+																	<option>Apartment</option>
+																	<option>Penthouse</option>
+																	<option>Roof Apartment</option>
+																</select>
+																<span asp-validation-for="propertyViewModel.PropertyType" class="text-danger"></span>
+
+															</div>
+														</div>
+														<div class="col-md-6">
+															<div class="input-item input-item-textarea ltn__custom-icon">
+																<select required class="nice-select" asp-for="propertyViewModel.PropertyStatus">
+																	<option value="">Select Property Status</option>
+																	<option>For Sale</option>
+																	<option>For Rent</option>
+																</select>
 																<span asp-validation-for="propertyViewModel.PropertyStatus" class="text-danger"></span>
 
+															</div>
 														</div>
 													</div>
-												</div>
 
-												<h6>Listing Media</h6>
-												<label>Upload Images (Max 5)</label>
-												<input required type="file" name="UploadedImages" class="form-control" multiple />
-												<p>
-													<small>* At least 1 image is required. Minimum size is 500x500px.</small><br>
-													<small>* PDF files also supported.</small>
-												</p>
-
+													<h6>Listing Media</h6>
+													<label>Upload Images (Max 5)</label>
+													<input required type="file" name="UploadedImages" class="form-control" multiple />
+													<p>
+														<small>* At least 1 image is required. 5 Images Maximum.</small><br>
 												
-												<h6>Listing Location</h6>
-
-												<div class="row">
-												
-													<div class="col-md-6">
-														<div class="input-item input-item-textarea ltn__custom-icon">
-															<select required name="LocationId" id="LocationId" class="nice-select">
-																<option value="">Select Location (Governorate)</option>
-																@foreach (var location in ViewBag.Locations)
-																{
-																	<option value="@location.Id">@location.LocationName</option>
-																}
-															</select>
+													</p>
 
 
+													<h6>Listing Location</h6>
 
+													<div class="row">
+
+														<div class="col-md-6">
+															<div class="input-item input-item-textarea ltn__custom-icon">
+																<select required name="LocationId" id="LocationId" class="nice-select">
+																	<option value="">Select Location (Governorate)</option>
+																	@foreach (var location in ViewBag.Locations)
+																	{
+																		<option value="@location.Id">@location.LocationName</option>
+																	}
+																</select>
+
+
+
+															</div>
 														</div>
-													</div>
-													<div class="col-md-6">
-														<div class="input-item input-item-textarea ltn__custom-icon">
+														<div class="col-md-6">
+															<div class="input-item input-item-textarea ltn__custom-icon">
 
-															<select required asp-for="propertyViewModel.SubLocationId" id="SubLocationId" class="nice-select">
-																<option value="">Select Sub-location (Neighborhood)</option>
-															</select>
+																<select required asp-for="propertyViewModel.SubLocationId" id="SubLocationId" class="nice-select">
+																	<option value="">Select Sub-location (Neighborhood)</option>
+																</select>
 																<span asp-validation-for="propertyViewModel.SubLocationId" class="text-danger"></span>
 
+															</div>
 														</div>
-													</div>
 
 
 														<div class="col-md-12">
@@ -452,115 +491,142 @@
 															<div id="map" style="height: 300px; border: 1px solid #ccc;"></div>
 														</div>
 
-														 <div class="col-md-6"> 
-														 	<label>Latitude</label>
+														<div class="col-md-6"> 
+															<label>Latitude</label>
 															<input required asp-for="propertyViewModel.Latitude" class="form-control" id="Latitude" readonly />
 															<span asp-validation-for="propertyViewModel.Latitude" class="text-danger"></span>
 
-													</div> 
-														 <div class="col-md-6"> 
-														 	<label>Longitude</label>
+														</div> 
+														<div class="col-md-6"> 
+															<label>Longitude</label>
 															<input required asp-for="propertyViewModel.Longitude" class="form-control" id="Longitude" readonly />
 															<span asp-validation-for="propertyViewModel.Longitude" class="text-danger"></span>
 
-													</div>
+														</div>
+														</div>
 
-													<h6>Property Size</h6>
-													<div class="row">
-														<div class="col-md-6">
-															<div class="input-item input-item-textarea ltn__custom-icon">
-																<input required type="number" asp-for="propertyViewModel.Size" class="form-control" placeholder="Size in m²" />
+														<h6>Property Size</h6>
+														<div class="row">
+															<div class="col-md-6">
+																<div class="input-item input-item-textarea ltn__custom-icon">
+																	<input required type="number" asp-for="propertyViewModel.Size" class="form-control" placeholder="Size in m²" />
 																	<span asp-validation-for="propertyViewModel.Size" class="text-danger"></span>
 
+																</div>
 															</div>
-														</div>
 
-														<div class="col-md-6">
-															<div class="input-item input-item-textarea ltn__custom-icon">
-																<input required type="number" asp-for="propertyViewModel.LotArea" class="form-control" placeholder="Lot area in m²" />
-																<span asp-validation-for="propertyViewModel.LotArea" class="text-danger"></span>
+															<div class="col-md-6">
+																<div class="input-item input-item-textarea ltn__custom-icon">
+																	<input required type="number" asp-for="propertyViewModel.LotArea" class="form-control" placeholder="Lot area in m²" />
+																	<span asp-validation-for="propertyViewModel.LotArea" class="text-danger"></span>
+																</div>
 															</div>
-														</div>
 
-														<div class="col-md-6">
-															<div class="input-item input-item-textarea ltn__custom-icon">
-																<input required type="text" asp-for="propertyViewModel.LotDimensions" class="form-control" placeholder="Lot Dimensions in m²" />
-																<span asp-validation-for="propertyViewModel.LotDimensions" class="text-danger"></span>
+															<div class="col-md-6">
+																<div class="input-item input-item-textarea ltn__custom-icon">
+																	<input required type="text" asp-for="propertyViewModel.LotDimensions" class="form-control" placeholder="Lot Dimensions in m²" />
+																	<span asp-validation-for="propertyViewModel.LotDimensions" class="text-danger"></span>
 
+																</div>
 															</div>
-														</div>
 
-														<div class="col-md-6">
-															<div class="input-item input-item-textarea ltn__custom-icon">
-																<select required asp-for="propertyViewModel.FacingDirection" class="form-control nice-select">
-																	<option value="">Facing Direction</option>
-																	<option>North</option>
-																	<option>South</option>
-																	<option>East</option>
-																	<option>West</option>
-																</select>
+															<div class="col-md-6">
+																<div class="input-item input-item-textarea ltn__custom-icon">
+																	<select required asp-for="propertyViewModel.FacingDirection" class="form-control nice-select">
+																		<option value="">Facing Direction</option>
+																		<option>North</option>
+																		<option>South</option>
+																		<option>East</option>
+																		<option>West</option>
+																	</select>
 																	<span asp-validation-for="propertyViewModel.FacingDirection" class="text-danger"></span>
 
+																</div>
+															</div>
+
+														</div>
+
+
+
+														<h6>Property Specifications</h6>
+														<div class="row">
+
+
+
+															<div class="col-md-6">
+																<div class="input-item input-item-textarea ltn__custom-icon">
+																	<input required type="number" asp-for="propertyViewModel.Bedrooms" placeholder="Number of Bedrooms" class="form-control" />
+																	<span asp-validation-for="propertyViewModel.Bedrooms" class="text-danger"></span>
+
+																</div>
+															</div>
+
+															<div class="col-md-6">
+																<div class="input-item input-item-textarea ltn__custom-icon">
+																	<input required type="number" asp-for="propertyViewModel.Bathrooms" placeholder="Number of Bathrooms" class="form-control" />
+																	<span asp-validation-for="propertyViewModel.Bathrooms" class="text-danger"></span>
+
+																</div>
+															</div>
+
+
+															<div class="col-md-6">
+																<div class="input-item input-item-textarea ltn__custom-icon">
+																	<input required type="number" asp-for="propertyViewModel.YearBuilt" placeholder="Building Age (years)" class="form-control" />
+																	<span asp-validation-for="propertyViewModel.YearBuilt" class="text-danger"></span>
+
+																</div>
 															</div>
 														</div>
 
-														</div>
-														
-
-
-												<h6>Property Specifications</h6>
-												<div class="row">
-												
-												
-													
-													<div class="col-md-6">
-														<div class="input-item input-item-textarea ltn__custom-icon">
-																<input required type="number" asp-for="propertyViewModel.Bedrooms" placeholder="Number of Bedrooms" class="form-control" />
-																<span asp-validation-for="propertyViewModel.Bedrooms" class="text-danger"></span>
-
-														</div>
-													</div>
-
-													<div class="col-md-6">
-														<div class="input-item input-item-textarea ltn__custom-icon">
-																<input required type="number" asp-for="propertyViewModel.Bathrooms" placeholder="Number of Bathrooms" class="form-control" />
-																<span asp-validation-for="propertyViewModel.Bathrooms" class="text-danger"></span>
-
-														</div>
-													</div>
-												
-
-													<div class="col-md-6">
-														<div class="input-item input-item-textarea ltn__custom-icon">
-																	<input required type="number" asp-for="propertyViewModel.YearBuilt" placeholder="Building Age (years)" class="form-control" />
-																<span asp-validation-for="propertyViewModel.YearBuilt" class="text-danger"></span>
-
-														</div>
-													</div>
-												</div>
-
-													<h6>Property Features</h6>
-													<div id="features-container">
-														<div class="row mb-2 feature-row">
-															<div class="col-md-6">
+														<h6>Property Features</h6>
+														<div id="features-container">
+															<div class="row mb-2 feature-row">
+																<div class="col-md-6">
 																	<input type="text" name="propertyViewModel.Features[0].FeatureName" class="form-control" placeholder="Feature Name (e.g., Kitchen)" required />
 																	<span asp-validation-for="propertyViewModel.Features[0].FeatureName" class="text-danger"></span>
 
 
-															</div>
-															<div class="col-md-4">
+																</div>
+																<div class="col-md-4">
 																	<input type="text" name="propertyViewModel.Features[0].Size" class="form-control" placeholder="Size (e.g., 4x5)" />
 
 																	<span asp-validation-for="propertyViewModel.Features[0].Size" class="text-danger"></span>
 
-															</div>
-															<div class="col-md-2">
-																<button type="button" class="btn btn-danger remove-feature">X</button>
+																</div>
+																<div class="col-md-2">
+																	<button type="button" class="btn btn-danger remove-feature">X</button>
+																</div>
 															</div>
 														</div>
-													</div>
 
-													<button type="button" id="add-feature" class="btn theme-btn-3 btn-effect-2 mt-2">+ Add Feature</button>
+														<button type="button" id="add-feature" class="btn theme-btn-3 btn-effect-2 mt-2">+ Add Feature</button>
+
+
+														<h6>Feature Property</h6>
+														<div class="form-check mt-2">
+															@{
+																bool isDisabled = ViewBag.UsedFeaturedPosts >= ViewBag.FeaturedPostLimit;
+															}
+
+															@if (isDisabled)
+															{
+																<input type="checkbox" class="form-check-input" asp-for="propertyViewModel.IsFeatured" disabled />
+																<div id="featured-warning" class="text-danger mt-2" >
+																	⚠ You’ve reached your featured properties limit for this subscription.
+																</div>
+															}
+															else
+															{
+																<input type="checkbox" class="form-check-input" asp-for="propertyViewModel.IsFeatured" />
+
+
+																<label class="form-check-label" for="propertyViewModel_IsFeatured">
+																	Feature this property
+																</label>
+															}
+															
+														</div>
 
 
 												<div class="btn-wrapper text-center mt-30">
@@ -571,19 +637,19 @@
 											else
 											{
 												<div class="alert alert-warning text-center" role="alert">
-													You cannot add a new property right now. Your subscription has either expired or you have reached your post limit.
+													You cannot add a new property right now. Your subscription has either expired or you have reached your post limit or you have no subscription yet.
 													<br />
 													<strong>Please renew or upgrade your package.</strong>
 												</div>
 											}
 
 
-
+										
 
 										</div>
 									</div>
 
-
+									
 
 								<div class="tab-pane fade" id="ltn_tab_1_8">
 									<div class="ltn__myaccount-tab-content-inner">
@@ -598,26 +664,34 @@
 
 															<input asp-for="Subscription.BusinessName" placeholder="Company name (optional)" />
 															<input asp-for="Subscription.BusinessAddress" placeholder="Company address (optional)" />
+															<div class="input-item input-item-textarea ltn__custom-icon">
 
-															<select asp-for="Subscription.PackageId" required>
+															<select asp-for="Subscription.PackageId" class="nice-select" required>
 																<option value="">Choose your plan</option>
 																<option value="1">Basic - 10 JOD / 2 Posts / 1 Month</option>
-																<option value="2">Standard - 25 JOD / 5 Posts / 1 Month</option>
-																<option value="3">Pro - 60 JOD / 15 Posts / 3 Months</option>
+																<option value="2">Standard - 25 JOD / 3 Posts / 2 Featured / 1 Month</option>
+																<option value="3">Pro - 60 JOD / 10Posts / 5 Featured / 3 Months</option>
 															</select>
+															</div>
+															<div class="input-item input-item-textarea ltn__custom-icon">
 
-															<select asp-for="Subscription.PaymentMethod" required>
+															<select asp-for="Subscription.PaymentMethod" class=" nice-select" required>
 																<option value="">Choose your payment method</option>
 																<option>Credit Card</option>
-																<option>PayPal</option>
 															</select>
+															</div>
 
 															<input asp-for="Subscription.CardHolderName" placeholder="Cardholder Name" />
 															<input asp-for="Subscription.CardNumber" placeholder="Card Number" />
-															<input asp-for="Subscription.ExpiryDate" placeholder="Expiry Date (MM/YY)" />
-															<input asp-for="Subscription.CVV" placeholder="CVV" />
 
-															<button type="submit" class="btn btn-primary">Submit</button>
+															<span asp-validation-for="Subscription.CardNumber" class="text-danger"></span>
+
+															<input asp-for="Subscription.ExpiryDate" placeholder="Expiry Date (MM/YY)" />
+															<span asp-validation-for="Subscription.ExpiryDate" class="text-danger"></span>
+															<input asp-for="Subscription.CVV" placeholder="CVV" />
+															<span asp-validation-for="Subscription.CVV" class="text-danger"></span>
+
+															<button type="submit" style="background-color:#ff5a3c; color:white;" class="btn ">Submit</button>
 														</form>
 
 
@@ -634,25 +708,39 @@
 
 
 
-								
+								<div class="tab-pane fade" id="ltn_tab_1_9">
+									<div class="ltn__myaccount-tab-content-inner">
+										<div class="account-login-inner">
+											<form asp-action="ChangePassword" asp-controller="User" method="post" class="ltn__form-box contact-form-box">
+												@Html.AntiForgeryToken()
+												<h5 style="color: #171B2A;" class="mb-30">Change Password</h5>
 
-									<div class="tab-pane fade" id="ltn_tab_1_9">
-										<div class="ltn__myaccount-tab-content-inner">
-											<div class="account-login-inner">
-												<form action="#" class="ltn__form-box contact-form-box">
-													<h5 style="color: #171B2A;" class="mb-30">Change Password</h5>
-													<input type="password" name="password" placeholder="Current Password*">
-													<input type="password" name="password" placeholder="New Password*">
-													<input type="password" name="password" placeholder="Confirm New Password*">
-													<div class="btn-wrapper mt-0">
-														<button class="theme-btn-1 btn btn-block" type="submit">Save Changes</button>
-													</div>
-												</form>
-											</div>
+												<div class="form-group">
+													<input asp-for="ChangePassword.CurrentPassword" type="password" class="form-control" placeholder="Current Password*" />
+													<span asp-validation-for="ChangePassword.CurrentPassword" class="text-danger"></span>
+												</div>
+
+												<div class="form-group">
+													<input asp-for="ChangePassword.NewPassword" type="password" class="form-control" placeholder="New Password*" />
+													<span asp-validation-for="ChangePassword.NewPassword" class="text-danger"></span>
+												</div>
+
+												<div class="form-group">
+													<input asp-for="ChangePassword.ConfirmPassword" type="password" class="form-control" placeholder="Confirm New Password*" />
+													<span asp-validation-for="ChangePassword.ConfirmPassword" class="text-danger"></span>
+												</div>
+
+												<div class="btn-wrapper mt-0">
+													<button class="theme-btn-1 btn btn-block" type="submit">Save Changes</button>
+												</div>
+											</form>
 										</div>
 									</div>
 								</div>
+
+								</div>
 							</div>
+
 						</div>
 					</div>
 				</div>
@@ -704,7 +792,7 @@
 		const sublocationSelect = document.getElementById("SubLocationId");
 
 		locationSelect.addEventListener("change", function () {
-			debugger
+			
 			const locationId = this.value;
 
 			if (!locationId) {
@@ -756,6 +844,27 @@
 				});
 			}
 		});
+
+		 document.querySelectorAll('.confirm-delete-btn').forEach(function (button) {
+            button.addEventListener('click', function () {
+                const form = button.closest('form');
+
+                Swal.fire({
+                    title: 'Are you sure?',
+                    text: "This action cannot be undone!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#d33',
+                    cancelButtonColor: '#6c757d',
+                    confirmButtonText: 'Yes, delete it!',
+                    cancelButtonText: 'Cancel'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        form.submit();
+                    }
+                });
+            });
+        });
 	</script>
 
 	
@@ -795,6 +904,7 @@
 			}
 		});
 	</script>
+
 
 
 

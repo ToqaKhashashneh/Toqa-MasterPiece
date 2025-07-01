@@ -21,6 +21,8 @@ public partial class MyDbContext : DbContext
 
     public virtual DbSet<InteriorDesignInquiry> InteriorDesignInquiries { get; set; }
 
+    public virtual DbSet<InteriorGallery> InteriorGalleries { get; set; }
+
     public virtual DbSet<Location> Locations { get; set; }
 
     public virtual DbSet<Package> Packages { get; set; }
@@ -88,6 +90,16 @@ public partial class MyDbContext : DbContext
                 .HasColumnType("datetime");
         });
 
+        modelBuilder.Entity<InteriorGallery>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__Interior__3214EC07B16ADE36");
+
+            entity.ToTable("InteriorGallery");
+
+            entity.Property(e => e.Style).HasMaxLength(50);
+            entity.Property(e => e.Title).HasMaxLength(100);
+        });
+
         modelBuilder.Entity<Location>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK__Location__3214EC27768A7733");
@@ -103,6 +115,7 @@ public partial class MyDbContext : DbContext
             entity.HasKey(e => e.Id).HasName("PK__Packages__3214EC2744BCF46E");
 
             entity.Property(e => e.Id).HasColumnName("ID");
+            entity.Property(e => e.FeaturedPostLimit).HasDefaultValue(0);
             entity.Property(e => e.Name).HasMaxLength(50);
             entity.Property(e => e.Price).HasColumnType("decimal(10, 2)");
         });

@@ -66,6 +66,11 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a class="nav-link @(ViewContext.RouteData.Values["Action"].ToString() == "InteriorGallery" ? "active" : "")" asp-controller="Admin" asp-action="InteriorGallery">
+                    <i class="bi bi-palette"></i> Interior Design Gallery
+                </a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link @(ViewContext.RouteData.Values["Action"].ToString() == "ContactInquiries" ? "active" : "")" asp-controller="Admin" asp-action="ContactInquiries">
                     <i class="bi bi-envelope"></i> Contact Inquiries
                 </a>

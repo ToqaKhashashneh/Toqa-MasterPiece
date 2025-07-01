@@ -1,0 +1,151 @@
+﻿@model IEnumerable<Nestify.Models.InteriorGallery>
+
+@{
+    ViewData["Title"] = "Interior Gallery Management";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <span>Interior Designs</span>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#interiorModal" onclick="resetForm()">
+                    <i class="bi bi-plus"></i> Add New
+                </button>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Title</th>
+                                <th>Style</th>
+                                <th>Image</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{
+                                int counter = 1;
+                            }
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@counter</td>
+                                    <td>@item.Title</td>
+                                    <td>@item.Style</td>
+                                    <td><img src="@item.ImageUrl" width="100" /></td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <button class="btn btn-sm btn-primary"
+                                                    data-bs-toggle="modal" data-bs-target="#interiorModal"
+                                                    onclick="editInterior(@item.Id, '@Html.Raw(System.Web.HttpUtility.JavaScriptStringEncode(item.Title))', '@item.Style')">
+                                                <i class="bi bi-pencil"></i> Edit
+                                            </button>
+                                            <form asp-action="DeleteInterior" asp-controller="Admin" method="post" style="display:inline;">
+                                                <input type="hidden" name="id" value="@item.Id" />
+                                                <button type="submit" class="btn btn-sm btn-danger">
+                                                    <i class="bi bi-trash"></i> Delete
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </td>
+                                </tr>
+                                counter++;
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="interiorModal" tabindex="-1" aria-labelledby="interiorModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form asp-action="AddInterior" asp-controller="Admin" method="post" enctype="multipart/form-data">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="interiorModalLabel">Add New Interior</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" id="interiorId" name="Id" value="0" />
+                    <div class="mb-3">
+                        <label class="form-label">Title</label>
+                        <input type="text" class="form-control" id="interiorTitle" name="Title" required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Style</label>
+                        <select class="form-control" id="interiorStyle" name="Style" required>
+                            <option value="">-- Select Style --</option>
+                            <option>Modern</option>
+                            <option>Boho</option>
+                            <option>Classic</option>
+                            <option>Minimalist</option>
+                            <option>Industrial</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Upload Image</label>
+                        <input type="file" class="form-control" name="imageFile" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary" id="saveButton">Save Interior</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function editInterior(id, title, style) {
+            document.getElementById('interiorId').value = id;
+            document.getElementById('interiorTitle').value = title;
+            document.getElementById('interiorStyle').value = style;
+            document.getElementById('interiorModalLabel').textContent = 'Edit Interior';
+            document.getElementById('saveButton').textContent = 'Update Interior';
+        }
+
+        function resetForm() {
+            document.getElementById('interiorId').value = 0;
+            document.getElementById('interiorTitle').value = '';
+            document.getElementById('interiorStyle').value = '';
+            document.getElementById('interiorModalLabel').textContent = 'Add New Interior';
+            document.getElementById('saveButton').textContent = 'Save Interior';
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const successMessage = '@TempData["Success"]';
+            const errorMessage = '@TempData["Error"]';
+
+            if (successMessage) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success!',
+                    text: successMessage,
+                    confirmButtonColor: '#171B2A'
+                });
+            }
+
+            if (errorMessage) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error!',
+                    text: errorMessage,
+                    confirmButtonColor: '#d33'
+                });
+            }
+        });
+    </script>
+}

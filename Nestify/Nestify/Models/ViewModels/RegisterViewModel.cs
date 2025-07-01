@@ -19,6 +19,9 @@ namespace Nestify.Models.ViewModels
 
         [Required]
         [DataType(DataType.Password)]
+        //[StringLength(100, MinimumLength = 8, ErrorMessage = "Password must be at least 8 characters.")]
+        [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$",
+            ErrorMessage = "Password must contain at least one uppercase letter, one lowercase letter, one digit, and one special character and at least 8 digits.")]
         public string Password { get; set; } = string.Empty;
 
         [Required]

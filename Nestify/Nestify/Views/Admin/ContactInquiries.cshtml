@@ -24,10 +24,13 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @{
+                        int counter = 1;
+                    }
                     @foreach (var inquiry in Model)
                     {
                         <tr>
-                            <td>@inquiry.Id</td>
+                            <td>@counter</td>
                             <td>@inquiry.Name</td>
                             <td>@inquiry.Email</td>
                             <td>@(string.IsNullOrEmpty(inquiry.PhoneNumber) ? "N/A" : inquiry.PhoneNumber)</td>
@@ -47,7 +50,9 @@
 
                           
                         </tr>
+                        counter++;
                     }
+                   
                 </tbody>
             </table>
         </div>
@@ -81,5 +86,32 @@
             });
         });
     </script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const successMessage = '@TempData["Success"]';
+            const errorMessage = '@TempData["Error"]';
+
+            if (successMessage) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success!',
+                    text: successMessage,
+                    confirmButtonColor: '#171B2A'
+                });
+            }
+
+            if (errorMessage) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error!',
+                    text: errorMessage,
+                    confirmButtonColor: '#d33'
+                });
+            }
+        });
+    </script>
+
 
 } 

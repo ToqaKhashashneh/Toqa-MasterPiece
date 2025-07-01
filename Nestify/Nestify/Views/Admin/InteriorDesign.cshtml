@@ -1,5 +1,115 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model IEnumerable<Nestify.Models.InteriorDesignInquiry>
+
 @{
+    ViewData["Title"] = "Interior Design Inquiry";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
+
+<div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <span>Interior Design Inquiries Management</span>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-hover" id="contact-inquiries-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Message</th>
+                        <th>Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        int counter = 1;
+                    }
+                    @foreach (var inquiry in Model)
+                    {
+                        <tr>
+                            <td>@counter</td>
+                            <td>@inquiry.Name</td>
+                            <td>@inquiry.Email</td>
+                            <td>@(string.IsNullOrEmpty(inquiry.PhoneNumber) ? "N/A" : inquiry.PhoneNumber)</td>
+                            <td>@(inquiry.Message)</td>
+
+                            <td>@inquiry.SubmittedAt?.ToString("dd/MM/yyyy HH:mm")</td>
+
+                            <td>
+                                <form asp-action="DeleteInteriorInquiry" asp-controller="Admin" method="post" class="delete-form" style="display:inline;">
+                                    <input type="hidden" name="id" value="@inquiry.Id" />
+                                    <button type="button" class="btn btn-sm btn-danger confirm-delete-btn">
+                                        <i class="bi bi-trash"></i> Delete
+                                    </button>
+                                </form>
+                            </td>
+
+
+
+                        </tr>
+                        counter++;
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        // Delete SweetAlert confirmation
+        document.querySelectorAll('.confirm-delete-btn').forEach(function (button) {
+            button.addEventListener('click', function () {
+                const form = button.closest('form');
+
+                Swal.fire({
+                    title: 'Are you sure?',
+                    text: "This action cannot be undone!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#d33',
+                    cancelButtonColor: '#6c757d',
+                    confirmButtonText: 'Yes, delete it!',
+                    cancelButtonText: 'Cancel'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        form.submit();
+                    }
+                });
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const successMessage = '@TempData["Success"]';
+            const errorMessage = '@TempData["Error"]';
+
+            if (successMessage) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success!',
+                    text: successMessage,
+                    confirmButtonColor: '#171B2A'
+                });
+            }
+
+            if (errorMessage) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error!',
+                    text: errorMessage,
+                    confirmButtonColor: '#d33'
+                });
+            }
+        });
+    </script>
+
+
+} 

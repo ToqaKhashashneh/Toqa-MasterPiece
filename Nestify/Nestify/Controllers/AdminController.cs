@@ -8,17 +8,21 @@ using Nestify.Models;
 
 namespace Nestify.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class AdminController : Controller
     {
         private readonly MyDbContext _context;
 
-        public AdminController(MyDbContext context)
+        private readonly IWebHostEnvironment _env;
+
+        public AdminController(MyDbContext context, IWebHostEnvironment env)
         {
             _context = context;
+            _env = env;
         }
 
         // Dashboard
-        //[Authorize(Roles = "Admin")]
+
 
         public async Task<IActionResult> Dashboard()
         {
@@ -89,39 +93,7 @@ namespace Nestify.Controllers
                 
             return View(users);
         }
-        
-        // Verify User
-        [HttpPost]
-        public async Task<IActionResult> VerifyUser(int id)
-        {
-            var user = await _context.Users.FindAsync(id);
-            if (user == null)
-            {
-                return Json(new { success = false, message = "User not found" });
-            }
-            
-            user.IsVerifiedBusiness = true;
-            await _context.SaveChangesAsync();
-            
-            return Json(new { success = true });
-        }
-        
-        // Unverify User
-        [HttpPost]
-        public async Task<IActionResult> UnverifyUser(int id)
-        {
-            var user = await _context.Users.FindAsync(id);
-            if (user == null)
-            {
-                return Json(new { success = false, message = "User not found" });
-            }
-            
-            user.IsVerifiedBusiness = false;
-            await _context.SaveChangesAsync();
-            
-            return Json(new { success = true });
-        }
-        
+       
         // Payments
         public async Task<IActionResult> Payments()
         {
@@ -186,6 +158,7 @@ namespace Nestify.Controllers
                     existingPackage.Name = package.Name;
                     existingPackage.Price = package.Price;
                     existingPackage.PostLimit = package.PostLimit;
+                    existingPackage.FeaturedPostLimit = package.FeaturedPostLimit;
                     existingPackage.DurationInDays = package.DurationInDays;
                     TempData["Success"] = "Package updated successfully.";
                 }
@@ -272,6 +245,23 @@ namespace Nestify.Controllers
             return View(inquiries);
         }
 
+        //...............................................Delete Interior Design Inquiry............................
+        [HttpPost]
+        public async Task<IActionResult> DeleteInteriorInquiry(int id)
+        {
+            var inquiry = await _context.InteriorDesignInquiries.FindAsync(id);
+            if (inquiry == null)
+            {
+                TempData["Error"] = "Inquiry not found.";
+                return RedirectToAction("ContactInquiries");
+            }
+
+            _context.InteriorDesignInquiries.Remove(inquiry);
+            await _context.SaveChangesAsync();
+
+            TempData["Success"] = "Inquiry deleted successfully.";
+            return RedirectToAction("InteriorDesign");
+        }
 
 
 
@@ -485,13 +475,103 @@ namespace Nestify.Controllers
         }
 
 
+        public IActionResult InteriorGallery()
+        {
+            var items = _context.InteriorGalleries.ToList();
+            return View(items);
+        }
 
+
+
+        // Handle both Add and Edit
+        [HttpPost]
+        public IActionResult AddInterior(InteriorGallery model, IFormFile imageFile)
+        {
+            try
+            {
+                // Image upload
+                if (imageFile != null && imageFile.Length > 0)
+                {
+                    var uploadsFolder = Path.Combine(_env.WebRootPath, "uploads/interiors");
+                    if (!Directory.Exists(uploadsFolder))
+                        Directory.CreateDirectory(uploadsFolder);
+
+                    var uniqueFileName = Guid.NewGuid().ToString() + Path.GetExtension(imageFile.FileName);
+                    var filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        imageFile.CopyTo(stream);
+                    }
+
+                    model.ImageUrl = "/uploads/interiors/" + uniqueFileName;
+                }
+
+                if (model.Id == 0)
+                {
+                    _context.InteriorGalleries.Add(model);
+                    TempData["Success"] = "Interior design added successfully.";
+                }
+                else
+                {
+                    var existing = _context.InteriorGalleries.Find(model.Id);
+                    if (existing == null)
+                    {
+                        TempData["Error"] = "Interior not found.";
+                        return RedirectToAction("InteriorGallery");
+                    }
+
+                    existing.Title = model.Title;
+                    existing.Style = model.Style;
+
+                    if (!string.IsNullOrEmpty(model.ImageUrl))
+                    {
+                        existing.ImageUrl = model.ImageUrl;
+                    }
+
+                    TempData["Success"] = "Interior design updated successfully.";
+                }
+
+                _context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                TempData["Error"] = "An error occurred: " + ex.Message;
+            }
+
+            return RedirectToAction("InteriorGallery");
+        }
+
+        // Delete interior design
+        [HttpPost]
+        public IActionResult DeleteInterior(int id)
+        {
+            try
+            {
+                var item = _context.InteriorGalleries.Find(id);
+                if (item == null)
+                {
+                    TempData["Error"] = "Interior not found.";
+                    return RedirectToAction("InteriorGallery");
+                }
+
+                _context.InteriorGalleries.Remove(item);
+                _context.SaveChanges();
+
+                TempData["Success"] = "Interior design deleted successfully.";
+            }
+            catch (Exception ex)
+            {
+                TempData["Error"] = "An error occurred: " + ex.Message;
+            }
+
+            return RedirectToAction("InteriorGallery");
+        }
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return RedirectToAction("Login", "User");
         }
-
 
 
 

@@ -28,7 +28,9 @@
 
 
      @* <script class="u-script" type="text/javascript" src="~/js/jquery.js" defer=""></script>  *@
-     <script class="u-script" type="text/javascript" src="~/js/nicepage.js" defer=""></script>   
+ @*    <script class="u-script" type="text/javascript" src="~/js/nicepage-cleaned.js" defer="" asp-append-version="true"></script>
+    <script src="~/js/nicepage-cleaned-fixed.js" asp-append-version="true"></script> *@
+
     <meta name="generator" content="Nicepage 7.3.1, nicepage.com">
     <meta name="referrer" content="origin">
 
@@ -107,11 +109,9 @@
                                         <ul class="navbar-menu">
                                             <li><a asp-controller="Home" asp-action="Index">Home</a></li>
                                             <li><a asp-controller="Properties" asp-action="Properties">Properties</a></li>
-                                            <li><a asp-controller="InteriorDesignController" asp-action="InteriorDesign">Interior Design</a></li>
-                                            @* <li><a asp-controller="Home" asp-action="LegalMatters">Legal Matters</a></li> *@
+                                            <li><a asp-controller="InteriorDesign" asp-action="interiorDesign">Interior Design</a></li>
                                             <li><a asp-controller="Home" asp-action="AboutUS">About Us </a></li>
                                             <li><a asp-controller="ContactUs" asp-action="Contact"> Contact </a></li>
-                                            @* <li><a asp-controller="User" asp-action="Login"> Login</a></li> *@
                                             @if (User.Identity?.IsAuthenticated ?? false)
                                             {
                                                 <li><a asp-controller="User" asp-action="Profile">Profile</a></li>
@@ -180,10 +180,8 @@
                     <li><a asp-controller="Home" asp-action="Index">Home</a></li>
                     <li><a asp-controller="Properties" asp-action="Properties">Properties</a></li>
                     <li><a asp-controller="InteriorDesignController" asp-action="InteriorDesign">Interior Design</a></li>
-                    @* <li><a asp-controller="Home" asp-action="LegalMatters">Legal Matters</a></li> *@
                     <li><a asp-controller="Home" asp-action="AboutUS">About Us </a></li>
                     <li><a asp-controller="ContactUs" asp-action="Contact"> Contact </a></li>
-                    @* <li><a asp-controller="User" asp-action="Login"> Login</a></li> *@
                     @if (User.Identity?.IsAuthenticated ?? false)
                     {
                         <li><a asp-controller="User" asp-action="Profile">Profile</a></li>
@@ -195,28 +193,7 @@
                     }
                 </ul>
             </div>
-            <div class="ltn__utilize-buttons ltn__utilize-buttons-2">
-                <ul>
-                    <li>
-                        <a href="account.html" title="My Account">
-                            <span class="utilize-btn-icon">
-                                <i class="far fa-user"></i>
-                            </span>
-                            My Account
-                        </a>
-                    </li>
-                    <li>
-                        <a href="wishlist.html" title="Wishlist">
-                            <span class="utilize-btn-icon">
-                                <i class="far fa-heart"></i>
-                                <sup>3</sup>
-                            </span>
-                            Wishlist
-                        </a>
-                    </li>
 
-                </ul>
-            </div>
             <div class="ltn__social-media-2">
                 <ul>
                     <li><a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
@@ -250,7 +227,7 @@
                             <p>We can help you realize your dream of a new home</p>
                         </div>
                         <div class="btn-wrapper">
-                            <a class="btn btn-effect-3 btn-white" href="Properties.html">Explore Properties <i class="icon-next"></i></a>
+                            <a asp-controller="Properties" asp-action="Properties" class="btn btn-effect-3 btn-white">Explore Properties <i class="icon-next"></i></a>
                         </div>
                     </div>
                 </div>
@@ -263,14 +240,10 @@
         <div class="footer-top-area section-bg-2 plr--5">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-xl-3 col-md-6 col-sm-6 col-12">
+                    <!-- Contact Info -->
+                    <div class="col-xl-4 col-md-6 col-sm-6 col-12">
                         <div class="footer-widget footer-about-widget">
-                            <!-- <div class="footer-logo">
-                                <div class="site-logo">
-                                    <img src="img/logo-2.png" alt="Logo">
-                                </div>
-                            </div> -->
-                            <p>Transforming houses into <strong> dream homes.</strong>  Nestify simplifies real estate and interior design like never before.</p>
+                            <p>Transforming houses into <strong>dream homes.</strong> Nestify simplifies real estate and interior design like never before.</p>
                             <div class="footer-address">
                                 <ul>
                                     <li>
@@ -286,7 +259,7 @@
                                             <i class="icon-call"></i>
                                         </div>
                                         <div class="footer-address-info">
-                                            <p><a href="tel:+0123-456789">+962-789676209</a></p>
+                                            <p><a href="tel:+962789676209">+962-789676209</a></p>
                                         </div>
                                     </li>
                                     <li>
@@ -294,78 +267,63 @@
                                             <i class="icon-mail"></i>
                                         </div>
                                         <div class="footer-address-info">
-                                            <p><a href="mailto:example@example.com">Nestify@gmail.com</a></p>
+                                            <p><a href="mailto:Nestify@gmail.com">Nestify@gmail.com</a></p>
                                         </div>
                                     </li>
                                 </ul>
                             </div>
                             <div class="ltn__social-media mt-20">
                                 <ul>
-                                    <li><a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#" title="Twitter"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#" title="Linkedin"><i class="fab fa-linkedin"></i></a></li>
-                                    <li><a href="#" title="Youtube"><i class="fab fa-youtube"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-2 col-md-6 col-sm-6 col-12">
+
+                    <!-- Quick Links -->
+                    <div class="col-xl-4 col-md-6 col-sm-6 col-12">
                         <div class="footer-widget footer-menu-widget clearfix">
-                            <h4 class="footer-title">Company</h4>
+                            <h4 class="footer-title">Quick Links</h4>
                             <div class="footer-menu">
                                 <ul>
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="properties.html">Properties</a></li>
-                                    <li><a href="interior-design.html">Interior Design</a></li>
-                                    <li><a href="legal-matters.html">Legal Matters</a></li>
-                                    <li><a href="about.html">About Us</a></li>
-                                    <li><a href="account.html">Account</a></li>
-                                    <li><a href="Favourite.html"> Favourites</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-2 col-md-6 col-sm-6 col-12">
-                        <div class="footer-widget footer-menu-widget clearfix">
-                            <h4 class="footer-title">Services</h4>
-                            <div class="footer-menu">
-                                <ul>
-                                    <li><a href="blog.html">Blog</a></li>
-                                    <li><a href="login.html">Login</a></li>
-                                    <li><a href="register.html">Register</a></li>
-                                    <li><a href="contact.html">Contact Us</a></li>
-                                    <li><a href="checkout.html">Billing</a></li>
+                                    <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                                    <li><a asp-controller="Properties" asp-action="Properties">Properties</a></li>
+                                    <li><a asp-controller="InteriorDesign" asp-action="interiorDesign">Interior Design</a></li>
 
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-md-6 col-sm-12 col-12">
-                        <div class="footer-widget footer-newsletter-widget">
-                            <h4 class="footer-title">Newsletter</h4>
-                            <p>Subscribe to our weekly Newsletter and receive updates via email.</p>
-                            <div class="footer-newsletter">
-                                <form action="#">
-                                    <input type="email" name="email" placeholder="Email*">
-                                    <div class="btn-wrapper">
-                                        <button class="theme-btn-1 btn" type="submit"><i class="fas fa-location-arrow"></i></button>
-                                    </div>
-                                </form>
-                            </div>
-                            <h5 class="mt-30">We Accept</h5>
-                            <div class="payment-icons">
-                                <i class="fab fa-cc-paypal"></i>
-                                <i class="fab fa-cc-visa"></i>
-                                <i class="fab fa-cc-mastercard"></i>
-                                <i class="fab fa-cc-amex"></i>
-                                <i class="fab fa-cc-discover"></i>
-                            </div>
+                    <div class="col-xl-4 col-md-6 col-sm-6 col-12">
+                        <div class="footer-widget footer-menu-widget clearfix">
+                            <h4 class="footer-title"></h4>
+                            <br />
+                            <div class="footer-menu">
+                                <ul>
+                                    <li><a asp-controller="ContactUs" asp-action="Contact">Contact Us</a></li>
+                                    <li><a asp-controller="Home" asp-action="AboutUS">About Us</a></li>
+                                    @if (User.Identity?.IsAuthenticated ?? false)
+                                    {
+                                        <li><a asp-controller="User" asp-action="Profile">Profile</a></li>
 
+                                    }
+                                    else
+                                    {
+                                        <li><a asp-controller="User" asp-action="Register"> Register</a></li>
+                                    }
+                                </ul>
+                            </div>
                         </div>
                     </div>
+
+
                 </div>
             </div>
         </div>
+
         <div class="ltn__copyright-area ltn__copyright-2 section-bg-7 plr--5">
             <div class="container-fluid ltn__border-top-2">
                 <div class="row">

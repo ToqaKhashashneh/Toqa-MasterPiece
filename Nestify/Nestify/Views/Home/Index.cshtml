@@ -1,4 +1,6 @@
-﻿@{
+﻿@model Nestify.Models.ViewModels.HomeViewModel
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -17,75 +19,75 @@
                                     <div class="tab-content">
                                         <div class="tab-pane fade active show" id="ltn__form_tab_1_1">
                                             <div class="car-dealer-form-inner">
-                                                <form action="#" class="ltn__car-dealer-form-box row">
+                                                <form asp-action="Properties" asp-controller="Properties" method="get" class="ltn__car-dealer-form-box row">
                                                     <div class="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-calendar col-lg-4 col-md-6">
-                                                        <select class="nice-select">
+                                                        <select class="nice-select" name="PropertyType">
                                                             <option>Property Type</option>
                                                             <option>Villa</option>
                                                             <option>Apartment</option>
-                                                            <option>Penthouse</option>
-                                                            <option>Office</option>
+                                                            <option>Roof Apartment</option>
 
                                                         </select>
                                                     </div>
                                                     <div class="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-car col-lg-4 col-md-6">
-                                                        <select class="nice-select">
+                                                        <select required name="LocationId" id="LocationId" class="nice-select">
                                                             <option>Location</option>
-                                                            <option>Amman</option>
-                                                            <option>Irbid</option>
-                                                            <option>Ajloun</option>
-                                                            <option>Zarqa</option>
-                                                            <option>Aqaba</option>
-                                                            <option>Al-Salt</option>
-                                                            <option>Jerash</option>
-                                                            <option>Al-Husun</option>
+                                                            @foreach (var location in ViewBag.locations)
+                                                            {
+                                                                <option value="@location.Id">@location.LocationName</option>
+                                                            }
 
                                                         </select>
                                                     </div>
                                                     <div class="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-meter col-lg-4 col-md-6">
-                                                        <select class="nice-select">
-                                                            <option>Sub Location</option>
-                                                            <option>Abdoun</option>
-                                                            <option>Swefiyeh</option>
-                                                            <option>Deir Ghbar</option>
-                                                            <option>Um Uthaina</option>
-                                                            <option>Jabal Amman</option>
-                                                            <option>Al Shmesani</option>
-                                                            <option>7th Circle</option>
+                                                        <select class="nice-select" name="SubLocationId" id="SubLocationId">
+                                                            <option value="">Sub Location</option>
+                                                          
                                                         </select>
                                                     </div>
                                                     <div class="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-ring col-lg-4 col-md-6">
-                                                        <select class="nice-select">
+                                                        <select name="Bedrooms" class="nice-select">
                                                             <option>Bedrooms</option>
                                                             <option>1</option>
                                                             <option>2</option>
                                                             <option>3</option>
                                                             <option>4</option>
+                                                            <option>5</option>
+                                                            <option>6</option>
+                                                            <option>7</option>
+                                                            <option>8</option>
+                                                            <option>9</option>
+                                                            <option>10</option>
                                                         </select>
                                                     </div>
                                                     <div class="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-cog col-lg-4 col-md-6">
                                                         <div class="input-item input-item-name ltn__custom-icon">
-                                                            <input type="text" name="name" placeholder="Min size (in sqm)">
+                                                            <input type="text" name="MinSize" placeholder="Min size (in sqm)">
                                                         </div>
                                                     </div>
                                                     <div class="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-cog col-lg-4 col-md-6">
                                                         <div class="input-item input-item-name ltn__custom-icon">
-                                                            <input type="text" name="name" placeholder="Max size (in sqm)">
+                                                            <input type="text" name="MaxSize" placeholder="Max size (in sqm)">
                                                         </div>
                                                     </div>
-                                                    <div class="car-price-filter-range col-lg-12">
-                                                        <div class="price_filter">
-                                                            <div class="price_slider_amount">
-                                                                <input type="submit" value="Your range:" />
-                                                                <input type="text" class="amount" name="price" placeholder="Add Your Price" />
-                                                            </div>
-                                                            <div class="slider-range"></div>
-                                                        </div>
+
+                                                 
+
+                                                    <div class="ltn__car-dealer-form-item col-lg-12">
+                                                        <label for="maxPriceSlider" class="form-label" style="font-weight: bold; color: #333;">
+                                                            Max Price (JOD): <span id="priceValue">1,000,000</span>
+                                                        </label>
+                                                        <input type="range" name="MaxPrice" id="maxPriceSlider" min="50" max="2000000" step="1000" value="1000000" class="custom-slider" />
+                                                    </div>
+
+
+
+                                              
                                                         <div class="btn-wrapper text-center">
-                                                            <!-- <button type="submit" class="btn theme-btn-1 btn-effect-1 text-uppercase">Search Inventory</button> -->
-                                                            <a href="shop-right-sidebar.html" class="btn theme-btn-1 btn-effect-1 text-uppercase">Search </a>
+                                                            <button type="submit" style="margin-right:15vw;" class="btn theme-btn-1 btn-effect-1 text-uppercase">Search</button>
+                                                            
                                                         </div>
-                                                    </div>
+                                                   
                                                 </form>
                                             </div>
                                         </div>
@@ -110,708 +112,214 @@
                     </div>
                 </div>
                 <div class="row ltn__product-slider-item-three-active--- slick-arrow-1">
-                    <!-- ltn__product-item -->
-                    <div class="col-lg-4 col-sm-6 col-12">
-                        <div class="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
-                            <div class="product-img">
-                                <a href="product-details.html"><img src="/images/villa4.jpg" alt="#"></a>
+                    @foreach (var property in Model.LatestProperties)
+                    {
 
+                        var favoriteIds = ViewBag.FavoriteIds as List<int> ?? new List<int>();
+                        var isFavorited = favoriteIds.Contains(property.Id);
+
+
+                        <!-- ltn__product-item -->
+                        <div class="col-lg-4 col-sm-6 col-12">
+                            <div class="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
+                                <div class="product-img">
+                                    <a href="/Properties/PropertyDetails/@property.Id"><img src="@property.ImageUrl1" style="width: 100%; height: 250px; object-fit: cover;" alt="#"></a>
+
+                                </div>
+                                <div class="product-info">
+                                    <div class="product-badge">
+                                        <ul>
+                                            <li class="sale-badg">@property.PropertyStatus</li>
+                                        </ul>
+                                    </div>
+                                    <h2 style="color: #ff5a3c;" class="product-title">@property.PropertyName</h2>
+                                    <div class="product-img-location">
+                                        <ul>
+                                            <li>
+                                                <i class="flaticon-pin"></i> @property.SubLocation.SublocationName
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <ul class="ltn__list-item-2--- ltn__list-item-2-before--- ltn__plot-brief">
+                                        <li>
+                                            <span>@property.Bedrooms </span>
+                                            Bedrooms
+                                        </li>
+                                        <li>
+                                            <span>@property.Bathrooms </span>
+                                            Bathrooms
+                                        </li>
+                                        <li>
+                                            <span>@property.Size </span>
+                                            square m
+                                        </li>
+                                    </ul>
+                                    <div class="product-hover-action">
+                                        <ul>
+
+                                            <li>
+                                              
+                                                <form asp-controller="Home" asp-action="ToggleFavorite" method="post" class="d-inline">
+                                                    @Html.AntiForgeryToken()
+                                                    <input type="hidden" name="propertyId" value="@property.Id" />
+                                                    <button type="submit" title="Toggle favorite"
+                                                    style="border: none; background: none; font-size: 20px;">
+                                                        <i class="@(isFavorited ? "fas fa-heart text-danger" : "far fa-heart text-secondary")"></i>
+                                                    </button>
+                                                </form>
+
+
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="product-info-bottom">
+                                    <div class="product-price">
+                                        <span>@property.Price JD</span>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="product-info">
-                                <div class="product-badge">
-                                    <ul>
-                                        <li class="sale-badg">For Sale</li>
-                                    </ul>
-                                </div>
-                                <h2 style="color: #ff5a3c;" class="product-title"><a href="product-details.html"> Family Home</a></h2>
-                                <div class="product-img-location">
-                                    <ul>
-                                        <li>
-                                            <a href="locations.html"><i class="flaticon-pin"></i> Amman, Jordan</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <ul class="ltn__list-item-2--- ltn__list-item-2-before--- ltn__plot-brief">
-                                    <li>
-                                        <span>4 </span>
-                                        Bedrooms
-                                    </li>
-                                    <li>
-                                        <span>3 </span>
-                                        Bathrooms
-                                    </li>
-                                    <li>
-                                        <span>800 </span>
-                                        square m
-                                    </li>
-                                </ul>
-                                <div class="product-hover-action">
-                                    <ul>
-                                        <!-- <li>
-                                            <a href="#" title="Quick View" data-bs-toggle="modal" data-bs-target="#quick_view_modal">
-                                                <i class="flaticon-expand"></i>
-                                            </a>
-                                        </li> -->
-                                        <li>
-                                            <a href="#" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal">
-                                                <i class="flaticon-heart-1"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="Property-details.html" title="Product Details">
-                                                <i class="flaticon-add"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
+                        </div>
+                    }
+                </div>
+                <!-- PRODUCT SLIDER AREA END -->
+                <!-- FEATURE AREA START ( Feature - 6) -->
+                <div class="ltn__feature-area section-bg-1 pt-120 pb-90 mb-120---">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="section-title-area ltn__section-title-2--- text-center">
+                                    <h6 class="section-subtitle section-subtitle-2 ltn__secondary-color">Our Services</h6>
+                                    <h1 class="section-title">Our Main Focus</h1>
                                 </div>
                             </div>
-                            <div class="product-info-bottom">
-                                <div class="product-price">
-                                    <span>$550,000JD</span>
+                        </div>
+                        <div class="row ltn__custom-gutter--- justify-content-center">
+                            <div class="col-lg-4 col-sm-6 col-12">
+                                <div class="ltn__feature-item ltn__feature-item-6 text-center bg-white  box-shadow-1">
+                                    <div class="ltn__feature-icon">
+                                        <!-- <span><i class="flaticon-house"></i></span> -->
+                                        <img src="img/icons/icon-img/21.png" alt="#">
+                                    </div>
+                                    <div class="ltn__feature-info">
+                                        <h3 style="color: #ff5a3c;"><a href="Properties.html">Looking for a <br /> tailored nest?</a></h3>
+                                        <p>
+                                            Explore a wide range of listings tailored to your needs.
+                                        </p>
+                                        <a class="ltn__service-btn" href="Properties/Properties">Find A Home <i class="flaticon-right-arrow"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-4 col-sm-6 col-12">
+                                <div class="ltn__feature-item ltn__feature-item-6 text-center bg-white  box-shadow-1">
+                                    <div class="ltn__feature-icon">
+                                        <!-- <span><i class="flaticon-deal-1"></i></span> -->
+                                        <img src="img/icons/icon-img/23.png" alt="#">
+                                    </div>
+                                    <div class="ltn__feature-info">
+                                        <h3 style="color: #ff5a3c;"><a href="InteriorDesign/interiorDesign">Professional interior designers!</a></h3>
+                                        <p>
+                                            Our designers help you to transform your space into a dream home. 
+                                        </p>
+                                        <a class="ltn__service-btn" href="InteriorDesign/interiorDesign">Design Your Home <i class="flaticon-right-arrow"></i></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- ltn__product-item -->
-                    <div class="col-lg-4 col-sm-6 col-12">
-                        <div class="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
-                            <div class="product-img">
-                                <a href="product-details.html"><img src="images/villa5.jpg" alt="#"></a>
 
-                            </div>
-                            <div class="product-info">
-                                <div class="product-badge">
-                                    <ul>
-                                        <li class="sale-badg">For Sale</li>
-                                    </ul>
-                                </div>
-                                <h2 style="color: #ff5a3c;" class="product-title"><a href="product-details.html">Modren House</a></h2>
-                                <div class="product-img-location">
-                                    <ul>
-                                        <li>
-                                            <a href="locations.html"><i class="flaticon-pin"></i> Jarash, Jordan</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <ul class="ltn__list-item-2--- ltn__list-item-2-before--- ltn__plot-brief">
-                                    <li>
-                                        <span>3 </span>
-                                        Bedrooms
-                                    </li>
-                                    <li>
-                                        <span>2 </span>
-                                        Bathrooms
-                                    </li>
-                                    <li>
-                                        <span>600 </span>
-                                        square m
-                                    </li>
-                                </ul>
-                                <div class="product-hover-action">
-                                    <ul>
-                                        <!-- <li>
-                                            <a href="#" title="Quick View" data-bs-toggle="modal" data-bs-target="#quick_view_modal">
-                                                <i class="flaticon-expand"></i>
-                                            </a>
-                                        </li> -->
-                                        <li>
-                                            <a href="Favourite.html" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal">
-                                                <i class="flaticon-heart-1"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="product-details.html" title="Product Details">
-                                                <i class="flaticon-add"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="product-info-bottom">
-                                <div class="product-price">
-                                    <span>400,000JD</span>
+
+                <!-- FEATURE AREA END -->
+                <!-- PRODUCT SLIDER AREA START -->
+                <div class="ltn__product-slider-area ltn__product-gutter pt-115 pb-90 plr--7">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="section-title-area ltn__section-title-2--- text-center">
+                                    <h6 class="section-subtitle section-subtitle-2 ltn__secondary-color">Properties</h6>
+                                    <h1 class="section-title">Featured Listings</h1>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- ltn__product-item -->
-                    <div class="col-lg-4 col-sm-6 col-12">
-                        <div class="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
-                            <div class="product-img">
-                                <a href="product-details.html"><img src="/images/Penthouse.jpg" alt="#"></a>
+                        <div class="row ltn__product-slider-item-four-active-full-width slick-arrow-1">
+                            <!-- ltn__product-item -->
+                            @foreach (var property in Model.FeaturedProperties)
+                            {
 
-                            </div>
-                            <div class="product-info">
-                                <div class="product-badge">
-                                    <ul>
-                                        <li class="sale-badg">For Sale</li>
-                                    </ul>
-                                </div>
-                                <h2 style="color: #ff5a3c;" class="product-title"><a href="product-details.html">Penthouse </a></h2>
-                                <div class="product-img-location">
-                                    <ul>
-                                        <li>
-                                            <a href="locations.html"><i class="flaticon-pin"></i>  Amman, Jordan</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <ul class="ltn__list-item-2--- ltn__list-item-2-before--- ltn__plot-brief">
-                                    <li>
-                                        <span>2 </span>
-                                        Bedrooms
-                                    </li>
-                                    <li>
-                                        <span>2 </span>
-                                        Bathrooms
-                                    </li>
-                                    <li>
-                                        <span>280 </span>
-                                        square m
-                                    </li>
-                                </ul>
-                                <div class="product-hover-action">
-                                    <ul>
-                                        <!-- <li>
-                                            <a href="#" title="Quick View" data-bs-toggle="modal" data-bs-target="#quick_view_modal">
-                                                <i class="flaticon-expand"></i>
-                                            </a>
-                                        </li> -->
-                                        <li>
-                                            <a href="#" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal">
-                                                <i class="flaticon-heart-1"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="product-details.html" title="Product Details">
-                                                <i class="flaticon-add"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="product-info-bottom">
-                                <div class="product-price">
-                                    <span>130,000JD</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- ltn__product-item -->
-                    <div class="col-lg-4 col-sm-6 col-12">
-                        <div class="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
-                            <div class="product-img">
-                                <a href="Property-details.html"><img src="images/villa1.jpg" alt="p"></a>
+                                    var favoriteIds = ViewBag.FavoriteIds as List<int> ?? new List<int>();
+                                    var isFavorited = favoriteIds.Contains(property.Id);
 
-                            </div>
-                            <div class="product-info">
-                                <div class="product-badge">
-                                    <ul>
-                                        <li class="sale-badg">For Sale</li>
-                                    </ul>
-                                </div>
-                                <h2 style="color: #ff5a3c;" class="product-title"><a href="product-details.html">Rose Villa </a></h2>
-                                <div class="product-img-location">
-                                    <ul>
-                                        <li>
-                                            <a href="locations.html"><i class="flaticon-pin"></i> Amman, Jordan</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <ul class="ltn__list-item-2--- ltn__list-item-2-before--- ltn__plot-brief">
-                                    <li>
-                                        <span>4 </span>
-                                        Bedrooms
-                                    </li>
-                                    <li>
-                                        <span>2 </span>
-                                        Bathrooms
-                                    </li>
-                                    <li>
-                                        <span>850 </span>
-                                        square m
-                                    </li>
-                                </ul>
-                                <div class="product-hover-action">
-                                    <ul>
-                                        <!-- <li>
-                                            <a href="#" title="Quick View" data-bs-toggle="modal" data-bs-target="#quick_view_modal">
-                                                <i class="flaticon-expand"></i>
-                                            </a>
-                                        </li> -->
-                                        <li>
-                                            <a href="Favourite.html" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal">
-                                                <i class="flaticon-heart-1"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="Property-details.html" title="Product Details">
-                                                <i class="flaticon-add"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="product-info-bottom">
-                                <div class="product-price">
-                                    <span>450,000JD</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- ltn__product-item -->
-                    <div class="col-lg-4 col-sm-6 col-12">
-                        <div class="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
-                            <div class="product-img">
-                                <a href="product-details.html"><img src="images/villa2.jpg" alt="#"></a>
+                                <div class="col-lg-4 col-sm-6 col-12">
+                                    <div class="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
+                                        <div class="product-img">
+                                            <a href="Properties/PropertyDetails/@property.Id"><img src="@property.ImageUrl1" alt="#"></a>
 
-                            </div>
-                            <div class="product-info">
-                                <div class="product-badge">
-                                    <ul>
-                                        <li class="sale-badg">For Sale</li>
-                                    </ul>
+                                        </div>
+                                        <div class="product-info">
+                                            <div class="product-badge">
+                                                <ul>
+                                                    <li class="sale-badg">@property.PropertyStatus</li>
+                                                </ul>
+                                            </div>
+                                            <h2 style="color: #ff5a3c;" class="product-title">@property.PropertyName</h2>
+                                            <div class="product-img-location">
+                                                <ul>
+                                                    <li>
+                                                        <i class="flaticon-pin"></i> @property.SubLocation.SublocationName
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <ul class="ltn__list-item-2--- ltn__list-item-2-before--- ltn__plot-brief">
+                                                <li>
+                                                    <span>@property.Bedrooms </span>
+                                                    Bedrooms
+                                                </li>
+                                                <li>
+                                                    <span>@property.Bathrooms </span>
+                                                    Bathrooms
+                                                </li>
+                                                <li>
+                                                    <span>@property.Size </span>
+                                                    square m
+                                                </li>
+                                            </ul>
+                                            <div class="product-hover-action">
+                                                <ul>
+                                                  
+                                                    <li>
+                                                      
+                                                            <form asp-controller="Home" asp-action="ToggleFavorite" method="post" class="d-inline">
+                                                                @Html.AntiForgeryToken()
+                                                                <input type="hidden" name="propertyId" value="@property.Id" />
+                                                                <button type="submit" title="Toggle favorite"
+                                                                        style="border: none; background: none; font-size: 20px;">
+                                                                    <i class="@(isFavorited ? "fas fa-heart text-danger" : "far fa-heart text-secondary")"></i>
+                                                                </button>
+                                                            </form>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="product-info-bottom">
+                                            <div class="product-price">
+                                                <span>@property.Price JD</span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <h2 style="color: #ff5a3c;" class="product-title"><a href="product-details.html"> Cece Villa</a></h2>
-                                <div class="product-img-location">
-                                    <ul>
-                                        <li>
-                                            <a href="locations.html"><i class="flaticon-pin"></i> Irbid, Jordan</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <ul class="ltn__list-item-2--- ltn__list-item-2-before--- ltn__plot-brief">
-                                    <li>
-                                        <span>4 </span>
-                                        Bedrooms
-                                    </li>
-                                    <li>
-                                        <span>3 </span>
-                                        Bathrooms
-                                    </li>
-                                    <li>
-                                        <span>650 </span>
-                                        square m
-                                    </li>
-                                </ul>
-                                <div class="product-hover-action">
-                                    <ul>
-                                        <!-- <li>
-                                            <a href="#" title="Quick View" data-bs-toggle="modal" data-bs-target="#quick_view_modal">
-                                                <i class="flaticon-expand"></i>
-                                            </a>
-                                        </li> -->
-                                        <li>
-                                            <a href="#" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal">
-                                                <i class="flaticon-heart-1"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="product-details.html" title="Product Details">
-                                                <i class="flaticon-add"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="product-info-bottom">
-                                <div class="product-price">
-                                    <span>320,000JD</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- ltn__product-item -->
-                    <div class="col-xl-4 col-sm-6 col-12">
-                        <div class="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
-                            <div class="product-img">
-                                <a href="product-details.html"><img src="images/L-villa.jpg" alt="#"></a>
 
-                            </div>
-                            <div class="product-info">
-                                <div class="product-badge">
-                                    <ul>
-                                        <li class="sale-badg">For Sale</li>
-                                    </ul>
-                                </div>
-                                <h2 style="color: #ff5a3c;" class="product-title"><a href="product-details.html">L-Villa</a></h2>
-                                <div class="product-img-location">
-                                    <ul>
-                                        <li>
-                                            <a href="locations.html"><i class="flaticon-pin"></i> Amman, Jordan</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <ul class="ltn__list-item-2--- ltn__list-item-2-before--- ltn__plot-brief">
-                                    <li>
-                                        <span>3 </span>
-                                        Bed
-                                    </li>
-                                    <li>
-                                        <span>2 </span>
-                                        Bath
-                                    </li>
-                                    <li>
-                                        <span>250 </span>
-                                        Square m
-                                    </li>
-                                </ul>
-                                <div class="product-hover-action">
-                                    <ul>
-                                        <!-- <li>
-                                            <a href="#" title="Quick View" data-bs-toggle="modal" data-bs-target="#quick_view_modal">
-                                                <i class="flaticon-expand"></i>
-                                            </a>
-                                        </li> -->
-                                        <li>
-                                            <a href="#" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal">
-                                                <i class="flaticon-heart-1"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="product-details.html" title="Product Details">
-                                                <i class="flaticon-add"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="product-info-bottom">
-                                <div class="product-price">
-                                    <span>150,000JD</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--  -->
+                            }
+
                 </div>
             </div>
         </div>
-        <!-- PRODUCT SLIDER AREA END -->
-        <!-- FEATURE AREA START ( Feature - 6) -->
-        <div class="ltn__feature-area section-bg-1 pt-120 pb-90 mb-120---">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="section-title-area ltn__section-title-2--- text-center">
-                            <h6 class="section-subtitle section-subtitle-2 ltn__secondary-color">Our Services</h6>
-                            <h1 class="section-title">Our Main Focus</h1>
-                        </div>
-                    </div>
-                </div>
-                <div class="row ltn__custom-gutter--- justify-content-center">
-                    <div class="col-lg-4 col-sm-6 col-12">
-                        <div class="ltn__feature-item ltn__feature-item-6 text-center bg-white  box-shadow-1">
-                            <div class="ltn__feature-icon">
-                                <!-- <span><i class="flaticon-house"></i></span> -->
-                                <img src="img/icons/icon-img/21.png" alt="#">
-                            </div>
-                            <div class="ltn__feature-info">
-                                <h3 style="color: #ff5a3c;"><a href="Properties.html">Looking for a tailored nest?</a></h3>
-                                <p>
-                                    Explore a wide range of listings tailored to your needs. We offer the best villas, apartments, offices, or penthouses.
-                                </p>
-                                <a class="ltn__service-btn" href="Properties.html">Find A Home <i class="flaticon-right-arrow"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 col-12">
-                        <div class="ltn__feature-item ltn__feature-item-6 text-center bg-white  box-shadow-1 active">
-                            <div class="ltn__feature-icon">
-                                <!-- <span><i class="flaticon-house-3"></i></span> -->
-                                <img src="img/icons/icon-img/22.png" alt="#">
-                            </div>
-                            <div class="ltn__feature-info">
-                                <h3 style="color: #ff5a3c;"><a href="Legal Matters.html">Want a 100% secured process?</a></h3>
-                                <p>– Our in-house lawyers guide you through contracts, paperwork, and real estate regulations.</p>
-                                <a class="ltn__service-btn" href="Legal Matters.html">Find Out More <i class="flaticon-right-arrow"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 col-12">
-                        <div class="ltn__feature-item ltn__feature-item-6 text-center bg-white  box-shadow-1">
-                            <div class="ltn__feature-icon">
-                                <!-- <span><i class="flaticon-deal-1"></i></span> -->
-                                <img src="img/icons/icon-img/23.png" alt="#">
-                            </div>
-                            <div class="ltn__feature-info">
-                                <h3 style="color: #ff5a3c;"><a href="InteriorDesign.html">Professional interior designers!</a></h3>
-                                <p>
-                                    Our designers help you to transform your space into a dream home. You can create a unique
-                                    layout that reflects your personality and style.
 
-                                </p>
-                                <a class="ltn__service-btn" href="InteriorDesign.html">Design Your Home <i class="flaticon-right-arrow"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- FEATURE AREA END -->
-        <!-- PRODUCT SLIDER AREA START -->
-        <div class="ltn__product-slider-area ltn__product-gutter pt-115 pb-90 plr--7">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="section-title-area ltn__section-title-2--- text-center">
-                            <h6 class="section-subtitle section-subtitle-2 ltn__secondary-color">Properties</h6>
-                            <h1 class="section-title">Featured Listings</h1>
-                        </div>
-                    </div>
-                </div>
-                <div class="row ltn__product-slider-item-four-active-full-width slick-arrow-1">
-                    <!-- ltn__product-item -->
-                    <div class="col-lg-4 col-sm-6 col-12">
-                        <div class="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
-                            <div class="product-img">
-                                <a href="product-details.html"><img src="images/villa6.jpg" alt="#"></a>
 
-                            </div>
-                            <div class="product-info">
-                                <div class="product-badge">
-                                    <ul>
-                                        <li class="sale-badg">For Sale</li>
-                                    </ul>
-                                </div>
-                                <h2 style="color: #ff5a3c;" class="product-title"><a href="product-details.html">Classic Villa</a></h2>
-                                <div class="product-img-location">
-                                    <ul>
-                                        <li>
-                                            <a href="locations.html"><i class="flaticon-pin"></i> Irbid, Jordan</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <ul class="ltn__list-item-2--- ltn__list-item-2-before--- ltn__plot-brief">
-                                    <li>
-                                        <span>4 </span>
-                                        Bedrooms
-                                    </li>
-                                    <li>
-                                        <span>3 </span>
-                                        Bathrooms
-                                    </li>
-                                    <li>
-                                        <span>650 </span>
-                                        square m
-                                    </li>
-                                </ul>
-                                <div class="product-hover-action">
-                                    <ul>
-                                        <!-- <li>
-                                            <a href="#" title="Quick View" data-bs-toggle="modal" data-bs-target="#quick_view_modal">
-                                                <i class="flaticon-expand"></i>
-                                            </a>
-                                        </li> -->
-                                        <li>
-                                            <a href="#" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal">
-                                                <i class="flaticon-heart-1"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="product-details.html" title="Product Details">
-                                                <i class="flaticon-add"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="product-info-bottom">
-                                <div class="product-price">
-                                    <span>320,000JD</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- ltn__product-item -->
-                    <div class="col-lg-4 col-sm-6 col-12">
-                        <div class="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
-                            <div class="product-img">
-                                <a href="Property-details.html"><img src="images/Classic Villa.jpg" alt="p"></a>
 
-                            </div>
-                            <div class="product-info">
-                                <div class="product-badge">
-                                    <ul>
-                                        <li class="sale-badg">For Sale</li>
-                                    </ul>
-                                </div>
-                                <h2 style="color: #ff5a3c;" class="product-title"><a href="product-details.html"> Vanila Villa </a></h2>
-                                <div class="product-img-location">
-                                    <ul>
-                                        <li>
-                                            <a href="locations.html"><i class="flaticon-pin"></i> Amman, Jordan</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <ul class="ltn__list-item-2--- ltn__list-item-2-before--- ltn__plot-brief">
-                                    <li>
-                                        <span>4 </span>
-                                        Bedrooms
-                                    </li>
-                                    <li>
-                                        <span>2 </span>
-                                        Bathrooms
-                                    </li>
-                                    <li>
-                                        <span>850 </span>
-                                        square m
-                                    </li>
-                                </ul>
-                                <div class="product-hover-action">
-                                    <ul>
-                                        <!-- <li>
-                                            <a href="#" title="Quick View" data-bs-toggle="modal" data-bs-target="#quick_view_modal">
-                                                <i class="flaticon-expand"></i>
-                                            </a>
-                                        </li> -->
-                                        <li>
-                                            <a href="Favourite.html" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal">
-                                                <i class="flaticon-heart-1"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="Property-details.html" title="Product Details">
-                                                <i class="flaticon-add"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="product-info-bottom">
-                                <div class="product-price">
-                                    <span>450,000JD</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- ltn__product-item -->
-                    <div class="col-lg-4 col-sm-6 col-12">
-                        <div class="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
-                            <div class="product-img">
-                                <a href="Property-details.html"><img src="images/villa8.jpg" alt="p"></a>
 
-                            </div>
-                            <div class="product-info">
-                                <div class="product-badge">
-                                    <ul>
-                                        <li class="sale-badg">For Sale</li>
-                                    </ul>
-                                </div>
-                                <h2 style="color: #ff5a3c;" class="product-title"><a href="product-details.html"> Dome Villa </a></h2>
-                                <div class="product-img-location">
-                                    <ul>
-                                        <li>
-                                            <a href="locations.html"><i class="flaticon-pin"></i> Amman, Jordan</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <ul class="ltn__list-item-2--- ltn__list-item-2-before--- ltn__plot-brief">
-                                    <li>
-                                        <span>4 </span>
-                                        Bedrooms
-                                    </li>
-                                    <li>
-                                        <span>2 </span>
-                                        Bathrooms
-                                    </li>
-                                    <li>
-                                        <span>850 </span>
-                                        square m
-                                    </li>
-                                </ul>
-                                <div class="product-hover-action">
-                                    <ul>
-                                        <!-- <li>
-                                            <a href="#" title="Quick View" data-bs-toggle="modal" data-bs-target="#quick_view_modal">
-                                                <i class="flaticon-expand"></i>
-                                            </a>
-                                        </li> -->
-                                        <li>
-                                            <a href="Favourite.html" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal">
-                                                <i class="flaticon-heart-1"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="Property-details.html" title="Product Details">
-                                                <i class="flaticon-add"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="product-info-bottom">
-                                <div class="product-price">
-                                    <span>450,000JD</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- ltn__product-item -->
-                    <div class="col-xl-4 col-sm-6 col-12">
-                        <div class="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
-                            <div class="product-img">
-                                <a href="product-details.html"><img src="images/Sahara Villa.jpg" alt="#"></a>
 
-                            </div>
-                            <div class="product-info">
-                                <div class="product-badge">
-                                    <ul>
-                                        <li class="sale-badg">For Sale</li>
-                                    </ul>
-                                </div>
-                                <h2 style="color: #ff5a3c;" class="product-title"><a href="product-details.html">Sahara-Villa</a></h2>
-                                <div class="product-img-location">
-                                    <ul>
-                                        <li>
-                                            <a href="locations.html"><i class="flaticon-pin"></i> Amman, Jordan</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <ul class="ltn__list-item-2--- ltn__list-item-2-before--- ltn__plot-brief">
-                                    <li>
-                                        <span>3 </span>
-                                        Bed
-                                    </li>
-                                    <li>
-                                        <span>2 </span>
-                                        Bath
-                                    </li>
-                                    <li>
-                                        <span>400 </span>
-                                        Square m
-                                    </li>
-                                </ul>
-                                <div class="product-hover-action">
-                                    <ul>
-                                        <!-- <li>
-                                            <a href="#" title="Quick View" data-bs-toggle="modal" data-bs-target="#quick_view_modal">
-                                                <i class="flaticon-expand"></i>
-                                            </a>
-                                        </li> -->
-                                        <li>
-                                            <a href="#" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal">
-                                                <i class="flaticon-heart-1"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="product-details.html" title="Product Details">
-                                                <i class="flaticon-add"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="product-info-bottom">
-                                <div class="product-price">
-                                    <span>400,000JD</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--  -->
-                </div>
-            </div>
-        </div>
         <!-- PRODUCT SLIDER AREA END -->
         <div class="row">
             <div class="col-lg-12">
@@ -956,5 +464,79 @@
             </div>
         </div>
         <!-- TESTIMONIAL AREA END -->
-      
+                @section Scripts {
 
+                        <script>
+
+                            const locationSelect = document.getElementById("LocationId");
+                            const sublocationSelect = document.getElementById("SubLocationId");
+
+                            locationSelect.addEventListener("change", function () {
+
+                                const locationId = this.value;
+
+                                if (!locationId) {
+                                    sublocationSelect.innerHTML = '<option value="">Select Sub-location</option>';
+                                    return;
+                                }
+
+                                fetch('@Url.Action("GetSublocationsByLocation", "User")' + '?locationId=' + locationId)
+                                    .then(response => response.json())
+                                    .then(data => {
+                                        sublocationSelect.innerHTML = '<option value="">Select Sub-location</option>';
+                                        data.forEach(sub => {
+                                            const option = document.createElement("option");
+                                            option.value = sub.id;
+                                            option.textContent = sub.sublocationName;
+                                            sublocationSelect.appendChild(option);
+                                        });
+                                    })
+                                    .catch(error => {
+                                        console.error("Error fetching sublocations:", error);
+                                        sublocationSelect.innerHTML = '<option value="">Failed to load sublocations</option>';
+                                    });
+                            });
+                        </script>
+
+
+
+
+
+
+
+                    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+                    <script>
+                        @if (TempData["Success"] != null)
+                        {
+                            <text>
+                                    Swal.fire("Success", "@TempData["Success"]", "success");
+                            </text>
+                        }
+                        else if (TempData["Info"] != null)
+                        {
+                            <text>
+                                    Swal.fire("Notice", "@TempData["Info"]", "info");
+                            </text>
+                        }
+                        else if (TempData["Error"] != null)
+                        {
+                            <text>
+                                    Swal.fire("Oops!", "@TempData["Error"]", "error");
+                            </text>
+                        }
+                    </script>
+
+                        <script>
+                            const priceSlider = document.getElementById("maxPriceSlider");
+                            const priceValue = document.getElementById("priceValue");
+
+
+                       
+
+                            priceSlider.addEventListener("input", function () {
+                                priceValue.textContent = parseInt(this.value).toLocaleString();
+                            });
+                        </script>
+
+
+                }

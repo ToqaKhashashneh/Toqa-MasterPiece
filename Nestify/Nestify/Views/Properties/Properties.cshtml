@@ -59,6 +59,9 @@
                                 <div class="row">
                                     @foreach (var property in Model)
                                     {
+                                        var favoriteIds = ViewBag.FavoriteIds as List<int> ?? new List<int>();
+                                        var isFavorited = favoriteIds.Contains(property.Id);
+
                                         <div class="col-lg-4 col-sm-6 col-12">
                                             <div class="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
                                                 <div class="product-img">
@@ -73,14 +76,14 @@
                                                         </ul>
                                                     </div>
                                                     <h2 style="color: #ff5a3c;" class="product-title">
-                                                        <a href="/Property/Details/@property.Id">@property.PropertyName</a>
+                                                        @property.PropertyName
                                                     </h2>
                                                     <div class="product-img-location">
-                                                        @* <ul> *@
-                                                        @*     <li> *@
-                                                        @*         <a href="#"><i class="flaticon-pin"></i> @property.User?.LocationName</a> <!-- Optional --> *@
-                                                        @*     </li> *@
-                                                        @* </ul> *@
+                                                         <ul> 
+                                                             <li>
+                                                                <i class="flaticon-pin"></i>  @property.SubLocation?.SublocationName
+                                                            </li> 
+                                                         </ul> 
                                                     </div>
                                                     <ul class="ltn__list-item-2--- ltn__list-item-2-before--- ltn__plot-brief">
                                                         <li><span>@property.Bedrooms</span> Bedrooms</li>
@@ -89,15 +92,16 @@
                                                     </ul>
                                                     <div class="product-hover-action">
                                                         <ul>
+                                                       
                                                             <li>
-                                                                <a href="#" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal">
-                                                                    <i class="flaticon-heart-1"></i>
-                                                                </a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="/Property/Details/@property.Id" title="Property Details">
-                                                                    <i class="flaticon-add"></i>
-                                                                </a>
+                                                                <form asp-controller="Properties" asp-action="ToggleFavorite" method="post" class="d-inline">
+                                                                    @Html.AntiForgeryToken()
+                                                                    <input type="hidden" name="propertyId" value="@property.Id" />
+                                                                    <button type="submit" title="Toggle favorite"
+                                                                            style="border: none; background: none; font-size: 20px;">
+                                                                        <i class="@(isFavorited ? "fas fa-heart text-danger" : "far fa-heart text-secondary")"></i>
+                                                                    </button>
+                                                                </form>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -112,7 +116,6 @@
                                     }
                                 </div>
 
-                                <!-- ltn__product-item -->
 
 
                         </div>
@@ -122,19 +125,7 @@
             </div>
         </div>
     </div>
-    <div class="ltn__pagination-area text-center">
-        <div class="ltn__pagination">
-            <ul>
-                <li><a href="#"><i class="fas fa-angle-double-left"></i></a></li>
-                <li><a href="#">1</a></li>
-                <li class="active"><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">...</a></li>
-                <li><a href="#">10</a></li>
-                <li><a href="#"><i class="fas fa-angle-double-right"></i></a></li>
-            </ul>
-        </div>
-    </div>
+
 </div>
 
 
@@ -144,3 +135,33 @@
         </div>
     </div>
 <!-- PRODUCT DETAILS AREA END -->
+@section Scripts{
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    @if (TempData["Success"] != null)
+    {
+        <text>
+                    Swal.fire("Success", "@TempData["Success"]", "success");
+        </text>
+    }
+    else if (TempData["Info"] != null)
+    {
+        <text>
+                    Swal.fire("Notice", "@TempData["Info"]", "info");
+        </text>
+    }
+    else if (TempData["Error"] != null)
+    {
+        <text>
+                    Swal.fire("Oops!", "@TempData["Error"]", "error");
+        </text>
+    }
+</script>
+
+
+
+
+
+}

@@ -19,31 +19,34 @@
                         <th>Amount</th>
                         <th>Payment Method</th>
                         <th>Package</th>
-                        <th>Business Plan</th>
+
                         <th>Date</th>
                         <th>Status</th>
-                        <th>Actions</th>
+
                     </tr>
                 </thead>
                 <tbody>
+                    @{
+                        int counter = 1;
+                    }
                     @foreach (var payment in Model)
                     {
                         <tr>
-                            <td>@payment.Id</td>
+                            <td>@counter</td>
                             <td>
                                 @if (payment.User != null)
                                 {
                                     @(string.IsNullOrEmpty(payment.User.BusinessName) ?
-                                        (string.IsNullOrEmpty(payment.User.FirstName) && string.IsNullOrEmpty(payment.User.LastName) ?
-                                        payment.User.Email : $"{payment.User.FirstName} {payment.User.LastName}") :
-                                        payment.User.BusinessName)
+                                            (string.IsNullOrEmpty(payment.User.FirstName) && string.IsNullOrEmpty(payment.User.LastName) ?
+                                            payment.User.Email : $"{payment.User.FirstName} {payment.User.LastName}") :
+                                            payment.User.BusinessName)
                                 }
                                 else
                                 {
                                     <span>N/A</span>
                                 }
                             </td>
-                            <td>@payment.Amount.ToString("C2")</td>
+                            <td>@payment.Amount.ToString("C2", new System.Globalization.CultureInfo("en-JO"))</td>
                             <td>@payment.PaymentMethod</td>
                             <td>
                                 @if (payment.Package != null)
@@ -55,16 +58,7 @@
                                     <span>N/A</span>
                                 }
                             </td>
-                            <td>
-                                @if (payment.IsBusinessPlan)
-                                {
-                                    <span class="badge bg-primary">Yes</span>
-                                }
-                                else
-                                {
-                                    <span class="badge bg-secondary">No</span>
-                                }
-                            </td>
+
                             <td>@payment.PaymentDate?.ToString("dd/MM/yyyy HH:mm")</td>
                             <td>
                                 <span class="badge bg-@(payment.Status == "Completed" ? "success" :
@@ -73,21 +67,10 @@
                                     @payment.Status
                                 </span>
                             </td>
-                            <td>
-                                <div class="btn-group">
-                                   
-                                    @if (payment.Status == "Pending")
-                                    {
-                                        <form asp-action="CompletePayment" asp-controller="Admin" method="post" style="display:inline;">
-                                            <input type="hidden" name="id" value="@payment.Id" />
-                                            <button type="submit" class="btn btn-sm btn-success">
-                                                <i class="bi bi-check-circle"></i> Complete
-                                            </button>
-                                        </form>
-                                    }
-                                </div>
-                            </td>
+
                         </tr>
+
+                        counter++;
                     }
                 </tbody>
             </table>

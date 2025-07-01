@@ -17,133 +17,141 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Nestify
 build_property.RootNamespace = Nestify
-build_property.ProjectDir = C:\Users\user\source\repos\Toqa-MasterPiece\Nestify\Nestify\
+build_property.ProjectDir = C:\Users\user\Desktop\Toqa Backup\Toqa-MasterPiece\Nestify\Nestify\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\user\source\repos\Toqa-MasterPiece\Nestify\Nestify
+build_property.MSBuildProjectDirectory = C:\Users\user\Desktop\Toqa Backup\Toqa-MasterPiece\Nestify\Nestify
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/user/source/repos/Toqa-MasterPiece/Nestify/Nestify/Views/Admin/ContactInquiries.cshtml]
+[C:/Users/user/Desktop/Toqa Backup/Toqa-MasterPiece/Nestify/Nestify/Views/Admin/AddInterior.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkSW50ZXJpb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/Toqa Backup/Toqa-MasterPiece/Nestify/Nestify/Views/Admin/ContactInquiries.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ29udGFjdElucXVpcmllcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Toqa-MasterPiece/Nestify/Nestify/Views/Admin/Dashboard.cshtml]
+[C:/Users/user/Desktop/Toqa Backup/Toqa-MasterPiece/Nestify/Nestify/Views/Admin/Dashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGFzaGJvYXJkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Toqa-MasterPiece/Nestify/Nestify/Views/Admin/InteriorDesign.cshtml]
+[C:/Users/user/Desktop/Toqa Backup/Toqa-MasterPiece/Nestify/Nestify/Views/Admin/InteriorDesign.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW50ZXJpb3JEZXNpZ24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Toqa-MasterPiece/Nestify/Nestify/Views/Admin/Locations.cshtml]
+[C:/Users/user/Desktop/Toqa Backup/Toqa-MasterPiece/Nestify/Nestify/Views/Admin/InteriorGallery.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW50ZXJpb3JHYWxsZXJ5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/Toqa Backup/Toqa-MasterPiece/Nestify/Nestify/Views/Admin/Locations.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTG9jYXRpb25zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Toqa-MasterPiece/Nestify/Nestify/Views/Admin/Packages.cshtml]
+[C:/Users/user/Desktop/Toqa Backup/Toqa-MasterPiece/Nestify/Nestify/Views/Admin/Packages.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUGFja2FnZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Toqa-MasterPiece/Nestify/Nestify/Views/Admin/Payments.cshtml]
+[C:/Users/user/Desktop/Toqa Backup/Toqa-MasterPiece/Nestify/Nestify/Views/Admin/Payments.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUGF5bWVudHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Toqa-MasterPiece/Nestify/Nestify/Views/Admin/Properties.cshtml]
+[C:/Users/user/Desktop/Toqa Backup/Toqa-MasterPiece/Nestify/Nestify/Views/Admin/Properties.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUHJvcGVydGllcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Toqa-MasterPiece/Nestify/Nestify/Views/Admin/PropertyDetails.cshtml]
+[C:/Users/user/Desktop/Toqa Backup/Toqa-MasterPiece/Nestify/Nestify/Views/Admin/PropertyDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUHJvcGVydHlEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Toqa-MasterPiece/Nestify/Nestify/Views/Admin/PropertyInquiries.cshtml]
+[C:/Users/user/Desktop/Toqa Backup/Toqa-MasterPiece/Nestify/Nestify/Views/Admin/PropertyInquiries.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUHJvcGVydHlJbnF1aXJpZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Toqa-MasterPiece/Nestify/Nestify/Views/Admin/Sublocations.cshtml]
+[C:/Users/user/Desktop/Toqa Backup/Toqa-MasterPiece/Nestify/Nestify/Views/Admin/Sublocations.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU3VibG9jYXRpb25zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Toqa-MasterPiece/Nestify/Nestify/Views/Admin/Users.cshtml]
+[C:/Users/user/Desktop/Toqa Backup/Toqa-MasterPiece/Nestify/Nestify/Views/Admin/Users.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVXNlcnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Toqa-MasterPiece/Nestify/Nestify/Views/ContactUs/Contact.cshtml]
+[C:/Users/user/Desktop/Toqa Backup/Toqa-MasterPiece/Nestify/Nestify/Views/ContactUs/Contact.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFVzXENvbnRhY3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Toqa-MasterPiece/Nestify/Nestify/Views/Home/AboutUS.cshtml]
+[C:/Users/user/Desktop/Toqa Backup/Toqa-MasterPiece/Nestify/Nestify/Views/Home/AboutUS.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dFVTLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Toqa-MasterPiece/Nestify/Nestify/Views/Home/Index.cshtml]
+[C:/Users/user/Desktop/Toqa Backup/Toqa-MasterPiece/Nestify/Nestify/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Toqa-MasterPiece/Nestify/Nestify/Views/Home/LegalMatters.cshtml]
+[C:/Users/user/Desktop/Toqa Backup/Toqa-MasterPiece/Nestify/Nestify/Views/Home/LegalMatters.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMZWdhbE1hdHRlcnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Toqa-MasterPiece/Nestify/Nestify/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[C:/Users/user/Desktop/Toqa Backup/Toqa-MasterPiece/Nestify/Nestify/Views/InteriorDesign/Gallery.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW50ZXJpb3JEZXNpZ25cR2FsbGVyeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Toqa-MasterPiece/Nestify/Nestify/Views/InteriorDesign/interiorDesign.cshtml]
+[C:/Users/user/Desktop/Toqa Backup/Toqa-MasterPiece/Nestify/Nestify/Views/InteriorDesign/interiorDesign.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW50ZXJpb3JEZXNpZ25caW50ZXJpb3JEZXNpZ24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Toqa-MasterPiece/Nestify/Nestify/Views/Properties/Properties.cshtml]
+[C:/Users/user/Desktop/Toqa Backup/Toqa-MasterPiece/Nestify/Nestify/Views/Properties/Properties.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvcGVydGllc1xQcm9wZXJ0aWVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Toqa-MasterPiece/Nestify/Nestify/Views/Properties/PropertyDetails.cshtml]
+[C:/Users/user/Desktop/Toqa Backup/Toqa-MasterPiece/Nestify/Nestify/Views/Properties/PropertyDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvcGVydGllc1xQcm9wZXJ0eURldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Toqa-MasterPiece/Nestify/Nestify/Views/Shared/Error.cshtml]
+[C:/Users/user/Desktop/Toqa Backup/Toqa-MasterPiece/Nestify/Nestify/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Toqa-MasterPiece/Nestify/Nestify/Views/Shared/_AdminLayout.cshtml]
+[C:/Users/user/Desktop/Toqa Backup/Toqa-MasterPiece/Nestify/Nestify/Views/Shared/_AdminLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Toqa-MasterPiece/Nestify/Nestify/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/user/Desktop/Toqa Backup/Toqa-MasterPiece/Nestify/Nestify/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Toqa-MasterPiece/Nestify/Nestify/Views/User/EditProperty.cshtml]
+[C:/Users/user/Desktop/Toqa Backup/Toqa-MasterPiece/Nestify/Nestify/Views/User/EditProperty.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxFZGl0UHJvcGVydHkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Toqa-MasterPiece/Nestify/Nestify/Views/User/Login.cshtml]
+[C:/Users/user/Desktop/Toqa Backup/Toqa-MasterPiece/Nestify/Nestify/Views/User/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Toqa-MasterPiece/Nestify/Nestify/Views/User/Profile.cshtml]
+[C:/Users/user/Desktop/Toqa Backup/Toqa-MasterPiece/Nestify/Nestify/Views/User/Profile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxQcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Toqa-MasterPiece/Nestify/Nestify/Views/User/Register.cshtml]
+[C:/Users/user/Desktop/Toqa Backup/Toqa-MasterPiece/Nestify/Nestify/Views/User/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Toqa-MasterPiece/Nestify/Nestify/Views/_ViewImports.cshtml]
+[C:/Users/user/Desktop/Toqa Backup/Toqa-MasterPiece/Nestify/Nestify/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Toqa-MasterPiece/Nestify/Nestify/Views/_ViewStart.cshtml]
+[C:/Users/user/Desktop/Toqa Backup/Toqa-MasterPiece/Nestify/Nestify/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Toqa-MasterPiece/Nestify/Nestify/Views/Shared/InteriorDesignLayout.cshtml]
+[C:/Users/user/Desktop/Toqa Backup/Toqa-MasterPiece/Nestify/Nestify/Views/Shared/InteriorDesignLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEludGVyaW9yRGVzaWduTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = b-8efgza28l8
 
-[C:/Users/user/source/repos/Toqa-MasterPiece/Nestify/Nestify/Views/Shared/_Layout.cshtml]
+[C:/Users/user/Desktop/Toqa Backup/Toqa-MasterPiece/Nestify/Nestify/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-alzo6lxt5y

@@ -48,29 +48,34 @@
                 @* </label> *@
 
                 <!-- DESCRIPTION -->
-              
+
 
                 <h4 class="title-2" style="color: #171B2A;">From Our Gallery</h4>
 
                 @if (!string.IsNullOrEmpty(Model.ImageUrl1) || !string.IsNullOrEmpty(Model.ImageUrl2) || !string.IsNullOrEmpty(Model.ImageUrl3) || !string.IsNullOrEmpty(Model.ImageUrl4) || !string.IsNullOrEmpty(Model.ImageUrl5))
                 {
-                    <div id="propertyCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+    
+
+
+                    <div id="carouselExampleFade" class="carousel slide carousel-fade">
                         <div class="carousel-inner">
                             @foreach (var img in new[] { Model.ImageUrl1, Model.ImageUrl2, Model.ImageUrl3, Model.ImageUrl4, Model.ImageUrl5 }.Select((url, index) => new { url, index }))
                             {
                                 if (!string.IsNullOrEmpty(img.url))
                                 {
                                     <div class="carousel-item @(img.index == 0 ? "active" : "")">
-                                        <img src="@img.url" class="d-block w-100 rounded" style="height: 550px; object-fit: contain;" alt="Property Image @(img.index + 1)">
+                                        <img src="@img.url" class="d-block w-100" alt="...">
                                     </div>
                                 }
                             }
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#propertyCarousel" style=" background-color: black" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true" ></span>
+
+                        <!-- Navigation buttons -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#propertyCarousel" style=" background-color: black" data-bs-slide="next">
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
                         </button>
@@ -116,7 +121,7 @@
                                 <i class="flaticon-house" style="font-size: 24px;"></i>
                                 <div>
                                     <h6 style="color: #171B2A;">@feature.FeatureName</h6>
-                                    <small>@feature.Size sq m</small>
+                                    <small>@feature.Size </small>
                                 </div>
                             </div>
                         </div>

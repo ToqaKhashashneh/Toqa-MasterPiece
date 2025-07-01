@@ -30,7 +30,7 @@
                             <table class="table table-bordered">
                                 <tr>
                                     <th>Price</th>
-                                    <td>@Model.Price.ToString("C0")</td>
+                                    <td>@Model.Price.ToString("C0", new System.Globalization.CultureInfo("en-JO"))</td>
                                 </tr>
                                 <tr>
                                     <th>Status</th>

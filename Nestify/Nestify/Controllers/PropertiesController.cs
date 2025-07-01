@@ -1,4 +1,5 @@
-﻿using System.Security.Claims;
+﻿using System.Reflection.Metadata.Ecma335;
+using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -19,53 +20,94 @@ namespace Nestify.Controllers
 
         //............................................Filter and Sort Properties................................
 
-
-
-
-
-        //..............................Fetch Properties from SQL.......................
-        public IActionResult Properties(string search, string sort, int page = 1, int pageSize = 9)
+        public IActionResult Properties(
+                string search,
+                string sort,
+                string PropertyType = null,
+                int? LocationId = null,
+                int? SubLocationId = null,
+                int? Bedrooms = null,
+                decimal? MinSize = null,
+                decimal? MaxSize = null,
+                decimal? MaxPrice = null)
         {
-
-            var query = _context.Properties.AsQueryable();
+            var query = _context.Properties
+                .Include(p => p.SubLocation)
+                .AsQueryable();
 
             // Search
             if (!string.IsNullOrWhiteSpace(search))
-            {
                 query = query.Where(p => p.PropertyName.Contains(search));
-            }
+
+            // Filters
+            if (!string.IsNullOrEmpty(PropertyType))
+                query = query.Where(p => p.PropertyType == PropertyType);
+
+            if (LocationId.HasValue)
+                query = query.Where(p => p.SubLocation.LocationId == LocationId);
+
+            if (SubLocationId.HasValue)
+                query = query.Where(p => p.SubLocationId == SubLocationId);
+
+            if (Bedrooms.HasValue)
+                query = query.Where(p => p.Bedrooms == Bedrooms);
+
+            if (MinSize.HasValue)
+                query = query.Where(p => p.Size >= MinSize);
+
+            if (MaxSize.HasValue)
+                query = query.Where(p => p.Size <= MaxSize);
+
+            if (MaxPrice.HasValue)
+                query = query.Where(p => p.Price <= MaxPrice);
 
             // Sorting
-            switch (sort)
+            //switch (sort)
+            //{
+            //    case "priceLow": query = query.OrderBy(p => p.Price); break;
+            //    case "priceHigh": query = query.OrderByDescending(p => p.Price); break;
+            //    case "new": query = query.OrderByDescending(p => p.PublishDate); break;
+            //    default: query = query.OrderByDescending(p => p.Id); break;
+            //}
+            query = sort switch
             {
-                case "priceLow":
-                    query = query.OrderBy(p => p.Price);
-                    break;
-                case "priceHigh":
-                    query = query.OrderByDescending(p => p.Price);
-                    break;
-                case "new":
-                    query = query.OrderByDescending(p => p.PublishDate);
-                    break;
-                default:
-                    query = query.OrderByDescending(p => p.Id); // default sorting
-                    break;
-            }
+                "priceLow" => query.OrderBy(p => p.Price),
+                "priceHigh" => query.OrderByDescending(p => p.Price),
+                "new" => query.OrderByDescending(p => p.PublishDate),
+                _ => query.OrderByDescending(p => p.Id)
+            };
 
-            // Count
-            ViewBag.TotalCount = query.Count();
+            // Return all (no pagination)
+            var properties = query.ToList();
 
-            // Pagination
-            var paginatedList = query.Skip((page - 1) * pageSize).Take(pageSize).ToList();
-
-            // Pass filters to ViewBag for persistence
-            ViewBag.CurrentPage = page;
+            // Optional ViewBag filters (for keeping selections)
             ViewBag.Search = search;
             ViewBag.Sort = sort;
-            ViewBag.PageSize = pageSize;
+            ViewBag.PropertyType = PropertyType;
+            ViewBag.LocationId = LocationId;
+            ViewBag.SubLocationId = SubLocationId;
+            ViewBag.Bedrooms = Bedrooms;
+            ViewBag.MinSize = MinSize;
+            ViewBag.MaxSize = MaxSize;
+            ViewBag.MaxPrice = MaxPrice;
 
-            return View(paginatedList);
-         
+
+            // Check if user is logged in and fetch favorite property IDs
+            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            if (userId != null)
+            {
+                int uid = int.Parse(userId);
+                ViewBag.FavoriteIds = _context.FavoriteProperties
+                    .Where(f => f.UserId == uid)
+                    .Select(f => f.PropertyId)
+                    .ToList();
+            }
+            else
+            {
+                ViewBag.FavoriteIds = new List<int>(); // prevent null exception
+            }
+
+            return View(properties);
         }
 
 
@@ -121,6 +163,43 @@ namespace Nestify.Controllers
             return RedirectToAction("PropertyDetails", new { id = model.PropertyId });
         }
 
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult ToggleFavorite(int propertyId)
+        {
+            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            if (userId == null)
+            {
+                TempData["Error"] = "Please log in to manage favorites.";
+                return RedirectToAction("Properties", "Properties");
+            }
+
+            int uid = int.Parse(userId);
+            var fav = _context.FavoriteProperties
+                .FirstOrDefault(f => f.UserId == uid && f.PropertyId == propertyId);
+
+            if (fav != null)
+            {
+                _context.FavoriteProperties.Remove(fav);
+                TempData["Info"] = "Removed from favorites.";
+            }
+            else
+            {
+                var Newfav = new FavoriteProperty
+                {
+                    UserId = uid,
+                    PropertyId = propertyId
+                };
+                _context.FavoriteProperties.Add(Newfav);
+
+                TempData["Success"] = "Added to favorites!";
+            }
+
+            _context.SaveChanges();
+            return RedirectToAction("Properties", "Properties");
+        }
 
 
 

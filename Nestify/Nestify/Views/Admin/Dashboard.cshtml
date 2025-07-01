@@ -62,16 +62,21 @@
                             </tr>
                         </thead>
                         <tbody>
+                            @{
+                                int counter = 1;
+                            }
                             @foreach (var property in ViewBag.RecentProperties)
                             {
                                 <tr>
-                                    <td>@property.Id</td>
+                                    <td>@counter</td>
                                     <td>@property.PropertyName</td>
                                     <td>@property.Price.ToString("C2", new System.Globalization.CultureInfo("en-JO"))</td>
                                     <td>@property.PropertyType</td>
                                     <td>@property.PublishDate.ToString("dd/MM/yyyy")</td>
                                 </tr>
+                                counter++;
                             }
+
                         </tbody>
                     </table>
                 </div>
@@ -97,10 +102,13 @@
                             </tr>
                         </thead>
                         <tbody>
+                            @{
+                                int counter2 = 1;
+                            }
                             @foreach (var inquiry in ViewBag.RecentPropertyInquiries)
                             {
                                 <tr>
-                                    <td>@inquiry.Id</td>
+                                    <td>@counter2</td>
                                     <td>@inquiry.Name</td>
                                     <td>@(inquiry.Property?.PropertyName ?? "N/A")</td>
                                     <td>
@@ -112,6 +120,7 @@
                                     </td>
                                     <td>@inquiry.SubmittedAt.ToString("dd/MM/yyyy")</td>
                                 </tr>
+								counter2++;
                             }
                         </tbody>
                     </table>
@@ -142,16 +151,19 @@
                             </tr>
                         </thead>
                         <tbody>
+                            @{ int counter3 =1;
+                            }
                             @foreach (var inquiry in ViewBag.RecentContactInquiries)
                             {
                                 <tr>
-                                    <td>@inquiry.Id</td>
+                                    <td>@counter3</td>
                                     <td>@inquiry.Name</td>
                                     <td>@inquiry.Email</td>
                                     <td>@inquiry.PhoneNumber</td>
                                     <td>@(inquiry.Message.Length > 30 ? inquiry.Message.Substring(0, 30) + "..." : inquiry.Message)</td>
                                     <td>@inquiry.SubmittedAt.ToString("dd/MM/yyyy")</td>
                                 </tr>
+								counter3++;
                             }
                         </tbody>
                     </table>
@@ -161,10 +173,3 @@
     </div>
 </div>
 
-@* @section Scripts { *@
-@*     <script> *@
-@*         $(document).ready(function() { *@
-@*             // Any dashboard-specific JavaScript can go here *@
-@*         }); *@
-@*     </script> *@
-@* }  *@

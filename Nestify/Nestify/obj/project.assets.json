@@ -4785,11 +4785,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\Nestify.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Nestify.csproj",
       "projectName": "Nestify",
-      "projectPath": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\Nestify.csproj",
+      "projectPath": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Nestify.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\obj\\",
+      "outputPath": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

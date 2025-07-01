@@ -28,11 +28,13 @@
                     </tr>
                 </thead>
                 <tbody>
-                    
+                    @{
+                        int counter = 1;
+                    }
                     @foreach (var inquiry in Model)
                     {
                         <tr>
-                            <td>@inquiry.Id</td>
+                            <td>@counter</td>
                             <td>
                                 @if (inquiry.Property != null)
                                 {
@@ -90,10 +92,41 @@
                             </td>
                         </tr>
 
-                      
+                        counter++;
                     }
                 </tbody>
             </table>
         </div>
     </div>
 </div>
+
+ @section Scripts{
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const successMessage = '@TempData["Success"]';
+            const errorMessage = '@TempData["Error"]';
+
+            if (successMessage) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success!',
+                    text: successMessage,
+                    confirmButtonColor: '#171B2A'
+                });
+            }
+
+            if (errorMessage) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error!',
+                    text: errorMessage,
+                    confirmButtonColor: '#d33'
+                });
+            }
+        });
+    </script>
+
+ }

@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Authentication;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
+using System.Text.RegularExpressions;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Nestify.Controllers
 {
@@ -21,7 +23,7 @@ namespace Nestify.Controllers
             _env = env;
         }
 
-        //..........................Register and Login..........................//
+        //..........................Register ..........................//
         public IActionResult Register()
         {
             return View();
@@ -64,6 +66,7 @@ namespace Nestify.Controllers
             return View();
         }
 
+        //..........................Login..........................//
         [HttpGet]
         public IActionResult Login()
         {
@@ -82,10 +85,10 @@ namespace Nestify.Controllers
 
             if (user == null || !BCrypt.Net.BCrypt.Verify(model.Password, user.PasswordHash))
             {
-                ViewBag.LoginError = "Invalid email or password.";
+                TempData["Error"] = "Invalid email or password.";
                 return View(model);
             }
-
+           //info about user (key,value)
             var claims = new List<Claim>
             {
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
@@ -93,7 +96,7 @@ namespace Nestify.Controllers
                 new Claim(ClaimTypes.Name, user.FirstName ?? "User"),
                 new Claim(ClaimTypes.Role, user.Role)
             };
-
+            
             var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
             var principal = new ClaimsPrincipal(identity);
 
@@ -103,9 +106,10 @@ namespace Nestify.Controllers
             else
                 return RedirectToAction("Profile", "User");
 
-            //return RedirectToAction(user.Role == "Admin" ? "Dashboard" : "Profile", "User");
+         
         }
 
+        //..........................Logout..........................//
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
@@ -114,12 +118,59 @@ namespace Nestify.Controllers
 
 
 
+        //..........................Change Password..........................//
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult ChangePassword(ProfileViewModel model)
+        {
+            var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            if (string.IsNullOrEmpty(userIdClaim))
+                return RedirectToAction("Login");
+
+            int userId = int.Parse(userIdClaim);
+
+            var user = _context.Users.FirstOrDefault(u => u.Id == userId);
+            if (user == null)
+            {
+                TempData["Error"] = "User not found.";
+                return RedirectToAction("Profile");
+            }
+
+            var cp = model.ChangePassword;
+
+            if (!BCrypt.Net.BCrypt.Verify(cp.CurrentPassword, user.PasswordHash))
+            {
+                TempData["Error"] = "Current password is incorrect.";
+                return RedirectToAction("Profile");
+            }
+
+            if (cp.NewPassword != cp.ConfirmPassword)
+            {
+                TempData["Error"] = "New password and confirmation do not match.";
+                return RedirectToAction("Profile");
+            }
+
+            if (!Regex.IsMatch(cp.NewPassword, @"^(?=.*[a-z])(?=.*[A-Z]).{8,}$"))
+            {
+                TempData["Error"] = "Password must be at least 8 characters long and include both uppercase and lowercase letters.";
+                return RedirectToAction("Profile");
+            }
+
+            // Update password
+            user.PasswordHash = BCrypt.Net.BCrypt.HashPassword(cp.NewPassword);
+            _context.SaveChanges();
+
+            TempData["Success"] = "Password updated successfully.";
+            return RedirectToAction("Profile");
+        }
 
 
 
 
 
 
+
+        //..........................Profile..........................//
         [Authorize]
         public IActionResult Profile()
         {
@@ -147,6 +198,13 @@ namespace Nestify.Controllers
                     if (DateTime.Now <= expiryDate && usedPosts < package.PostLimit)
                     {
                         canAddProperty = true;
+                        var usedFeatured = _context.Properties.Count(p => p.PaymentId == activePayment.Id && p.IsFeatured == true);
+                        ViewBag.UsedFeaturedPosts = usedFeatured;
+                        ViewBag.FeaturedPostLimit = package.FeaturedPostLimit;
+
+             
+
+              
                     }
                 }
             }
@@ -170,17 +228,31 @@ namespace Nestify.Controllers
             .Include(p => p.SubLocation)
             .ToList();
 
-            //var viewModel = new ProfileViewModel
-            //{
-            //    User = user,
-            //    Subscription = new SubscriptionInputModel(),
-            //    propertyViewModel = new PropertyViewModel(),
-            //    CanAddProperty = canAddProperty,
-            //    MyProperties = userProperties
-            //};
+
+            var favoriteProperties = _context.FavoriteProperties
+            .Where(f => f.UserId == userId)
+            .Include(f => f.Property)
+                .ThenInclude(p => p.SubLocation)
+            .Select(f => f.Property)
+            .ToList();
+
+             ViewBag.FavoriteProperties = favoriteProperties;
+
+
+            var visitRequests = _context.PropertyInquiries
+            .Where(i => i.UserId.HasValue && i.UserId.Value == userId)
+            .Include(i => i.Property)
+                .ThenInclude(p => p.SubLocation)
+            .ToList();
+
+            ViewBag.VisitRequests = visitRequests;
+
+
             return View();
         }
 
+
+        //..........................Edit Profile..........................//
         [Authorize]
         [HttpPost]
         public async Task<IActionResult> EditProfile(User user, IFormFile ProfileImageFile)
@@ -216,6 +288,24 @@ namespace Nestify.Controllers
         }
 
 
+        //..........................Remove From Favorite..........................//
+        [HttpGet]
+       public IActionResult RemoveFavorite(int id)
+        {
+            var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            if (string.IsNullOrEmpty(userIdClaim)) return RedirectToAction("Login");
+            int userId = int.Parse(userIdClaim);
+            var favoriteProperty = _context.FavoriteProperties.FirstOrDefault(f => f.UserId == userId && f.PropertyId == id);
+            if (favoriteProperty != null)
+            {
+                _context.FavoriteProperties.Remove(favoriteProperty);
+                _context.SaveChanges();
+                TempData["Success"] = "Property removed from favorites successfully!";
+
+            }
+            return RedirectToAction("Profile");
+        }
+
         //..........................Load Sublocation..........................//
 
         [HttpGet]
@@ -241,12 +331,7 @@ namespace Nestify.Controllers
             if (string.IsNullOrEmpty(userIdClaim)) return RedirectToAction("Login");
             int userId = int.Parse(userIdClaim);
 
-            //if (!ModelState.IsValid)
-            //{
-            //    TempData["Error"] = "All fields are required!";
-            //    return RedirectToAction("Profile", "User");
-            //}
-
+         
             
             var activePayment = _context.Payments
                 .Where(p => p.UserId == userId && p.Status == "Completed" && p.PackageId != null)
@@ -334,6 +419,10 @@ namespace Nestify.Controllers
                 property.ImageUrl5 = imagePaths.ElementAtOrDefault(4);
             }
 
+
+
+
+
             _context.Properties.Add(property);
             _context.SaveChanges();
 
@@ -381,6 +470,8 @@ namespace Nestify.Controllers
             return RedirectToAction("Profile");
         }
 
+
+        //..........................Edit Property..........................//
         [HttpGet]
         public async Task<IActionResult> EditProperty(int id)
         {
@@ -414,47 +505,38 @@ namespace Nestify.Controllers
                 YearBuilt = property.YearBuilt,
                 Bedrooms = property.Bedrooms,
                 Bathrooms = property.Bathrooms,
-              
+                LocationId = property.SubLocation?.LocationId ?? 0,
+                ExistingImages = new List<string>
+        {
+            property.ImageUrl1,
+            property.ImageUrl2,
+            property.ImageUrl3,
+            property.ImageUrl4,
+            property.ImageUrl5
+        }.Where(i => !string.IsNullOrEmpty(i)).ToList(),
                 Features = property.PropertyFeatures.Select(f => new FeatureInputModel
                 {
                     Id = f.Id,
                     FeatureName = f.FeatureName,
                     Size = f.Size
-                }).ToList(),
+                }).ToList()
             };
 
             ViewBag.Locations = await _context.Locations.ToListAsync();
             return View(viewModel);
         }
-        [HttpPost]
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> EditProperty(int id, PropertyViewModel model)
+        public async Task<IActionResult> EditProperty(PropertyViewModel model)
         {
-            if (id != model.Id)
-            {
-                return NotFound();
-            }
-
-            if (!ModelState.IsValid)
-            {
-                // If invalid, collect errors and show in TempData
-                var errors = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage).ToList();
-                TempData["Error"] = string.Join("\n", errors);
-                ViewBag.Locations = await _context.Locations.ToListAsync();
-                return View(model);
-            }
-
             var property = await _context.Properties
                 .Include(p => p.PropertyFeatures)
-                .FirstOrDefaultAsync(p => p.Id == id);
+                .FirstOrDefaultAsync(p => p.Id == model.Id);
 
-            if (property == null)
-            {
-                return NotFound();
-            }
+            if (property == null) return NotFound();
 
-            // Update basic property fields
+            // Basic fields
             property.PropertyName = model.PropertyName;
             property.Description = model.Description;
             property.Price = model.Price;
@@ -471,80 +553,85 @@ namespace Nestify.Controllers
             property.YearBuilt = model.YearBuilt;
             property.Bedrooms = model.Bedrooms;
             property.Bathrooms = model.Bathrooms;
-            property.IsHidden = model.IsHidden;
-            property.PublishDate = DateTime.Now;
 
-            // ------------------------
-            // Handle Property Features
-            // ------------------------
-            // Clear old features
+            // Features
             _context.PropertyFeatures.RemoveRange(property.PropertyFeatures);
-
-            // Add updated features
-            if (model.Features != null && model.Features.Any())
+            property.PropertyFeatures = model.Features.Select(f => new PropertyFeature
             {
-                property.PropertyFeatures = model.Features.Select(f => new PropertyFeature
-                {
-                    FeatureName = f.FeatureName,
-                    Size = f.Size,
-                    PropertyId = property.Id
-                }).ToList();
-            }
-            else
+                FeatureName = f.FeatureName,
+                Size = f.Size,
+                PropertyId = model.Id
+            }).ToList();
+
+            // Images
+            if (model.UploadedImages?.Any() == true)
             {
-                property.PropertyFeatures = new List<PropertyFeature>();
-            }
+                var uploadsDir = Path.Combine("wwwroot", "uploads", "properties");
+                Directory.CreateDirectory(uploadsDir);
 
-            // ------------------------
-            // Handle Images Upload
-            // ------------------------
-            if (model.UploadedImages != null && model.UploadedImages.Count > 0)
-            {
-                var uploadPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads/properties");
-
-                // Optional: delete old images if you want (depends on your logic)
-
-                var savedImages = new List<string>();
+                var imageUrls = new List<string>();
 
                 foreach (var file in model.UploadedImages.Take(5))
                 {
-                    var uniqueFileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
-                    var filePath = Path.Combine(uploadPath, uniqueFileName);
+                    var fileName = Guid.NewGuid() + Path.GetExtension(file.FileName);
+                    var path = Path.Combine(uploadsDir, fileName);
 
-                    using (var stream = new FileStream(filePath, FileMode.Create))
-                    {
-                        await file.CopyToAsync(stream);
-                    }
-
-                    savedImages.Add("/uploads/properties/" + uniqueFileName);
+                    using var stream = new FileStream(path, FileMode.Create);
+                    await file.CopyToAsync(stream);
+                    imageUrls.Add("/uploads/properties/" + fileName);
                 }
 
-                // Update image fields
-                property.ImageUrl1 = savedImages.ElementAtOrDefault(0);
-                property.ImageUrl2 = savedImages.ElementAtOrDefault(1);
-                property.ImageUrl3 = savedImages.ElementAtOrDefault(2);
-                property.ImageUrl4 = savedImages.ElementAtOrDefault(3);
-                property.ImageUrl5 = savedImages.ElementAtOrDefault(4);
+                property.ImageUrl1 = imageUrls.ElementAtOrDefault(0);
+                property.ImageUrl2 = imageUrls.ElementAtOrDefault(1);
+                property.ImageUrl3 = imageUrls.ElementAtOrDefault(2);
+                property.ImageUrl4 = imageUrls.ElementAtOrDefault(3);
+                property.ImageUrl5 = imageUrls.ElementAtOrDefault(4);
             }
 
-            try
-            {
-                await _context.SaveChangesAsync();
-                TempData["Success"] = "Property updated successfully!";
-                return RedirectToAction("Profile", "User");
-            }
-            catch (Exception ex)
-            {
-                TempData["Error"] = "An error occurred while updating the property: " + ex.Message;
-                ViewBag.Locations = await _context.Locations.ToListAsync();
-                return View(model);
-            }
+            await _context.SaveChangesAsync();
+            TempData["Success"] = "Property updated successfully!";
+            return RedirectToAction("Profile", "User");
         }
+
+
+
 
         private bool PropertyExists(int id)
         {
             return _context.Properties.Any(e => e.Id == id);
         }
+
+
+
+
+        // Delete Property
+        [HttpPost]
+        public async Task<IActionResult> DeleteProperty(int id)
+        {
+            var property = await _context.Properties
+                .Include(p => p.PropertyFeatures)
+                .Include(p => p.PropertyInquiries)
+                .Include(p => p.FavoriteProperties)
+                .FirstOrDefaultAsync(p => p.Id == id);
+
+            if (property == null)
+            {
+                TempData["Error"] = "Property not found.";
+                return RedirectToAction("Profile");
+            }
+
+            // Remove related entities first
+            _context.PropertyFeatures.RemoveRange(property.PropertyFeatures);
+            _context.PropertyInquiries.RemoveRange(property.PropertyInquiries);
+            _context.FavoriteProperties.RemoveRange(property.FavoriteProperties);
+
+            _context.Properties.Remove(property);
+            await _context.SaveChangesAsync();
+            TempData["Success"] = "Property has been deleted.";
+         
+            return RedirectToAction("Profile");
+        }
+
 
     }
 }

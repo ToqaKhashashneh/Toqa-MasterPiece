@@ -16,23 +16,25 @@
                     <tr>
                         <th>ID</th>
                         <th>Name</th>
-                        @* <th>Type</th> *@
-                        @* <th>Price</th> *@
+
                         <th>Location</th>
-                        @* <th>Owner</th> *@
+
                         <th>Status</th>
                         <th>Featured</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
+                    @{
+                        int counter = 1;
+                    }
                     @foreach (var property in Model)
                     {
+                       
                         <tr>
-                            <td>@property.Id</td>
+                            <td>@counter</td>
                             <td>@property.PropertyName</td>
-                            @* <td>@property.PropertyType</td> *@
-                            @* <td>@property.Price.ToString("C2", new System.Globalization.CultureInfo("en-JO"))</td> *@
+
                             <td>
                                 @if (property.SubLocation != null && property.SubLocation.Location != null)
                                 {
@@ -43,19 +45,7 @@
                                     <span>N/A</span>
                                 }
                             </td>
-                            @* <td> *@
-                            @*     @if (property.User != null) *@
-                            @*     { *@
-                            @*         @(string.IsNullOrEmpty(property.User.BusinessName) ?  *@
-                            @*             (string.IsNullOrEmpty(property.User.FirstName) && string.IsNullOrEmpty(property.User.LastName) ?  *@
-                            @*             property.User.Email : $"{property.User.FirstName} {property.User.LastName}") :  *@
-                            @*             property.User.BusinessName) *@
-                            @*     } *@
-                            @*     else *@
-                            @*     { *@
-                            @*         <span>N/A</span> *@
-                            @*     } *@
-                            @* </td> *@
+
                             <td>
                                 <span class="badge bg-@(property.PropertyStatus == "For Sale" ? "primary" : 
                                                     property.PropertyStatus == "For Rent" ? "info" : 
@@ -74,18 +64,19 @@
                                     <span class="badge bg-secondary">Not Featured</span>
                                 }
                             </td>
-                     
+
                             <td>
                                 <div class="btn-group">
                                     <a href="@Url.Action("PropertyDetails", "Admin", new { id = property.Id })" class="btn btn-sm btn-info">
                                         <i class="bi bi-eye"></i> View
                                     </a>
 
-                                
+
                                 </div>
                             </td>
 
                         </tr>
+                        counter++;
                     }
                 </tbody>
             </table>

@@ -60,4 +60,35 @@
 <!-- LOGIN AREA END -->
 
 
+@section Scripts {
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const successMessage = '@TempData["Success"]';
+            const errorMessage = '@TempData["Error"]';
+
+            if (successMessage) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success!',
+                    text: successMessage,
+                    confirmButtonColor: '#171B2A'
+                });
+            }
+
+            if (errorMessage) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops!',
+                    text: errorMessage,
+                    confirmButtonColor: '#E72463'
+                });
+            }
+        });
+    </script>
+
+
+
+}

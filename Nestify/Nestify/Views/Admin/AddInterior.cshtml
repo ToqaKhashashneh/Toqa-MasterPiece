@@ -1,0 +1,43 @@
+﻿@model InteriorGallery
+@{
+    ViewData["Title"] = Model.Id == 0 ? "Add Interior" : "Edit Interior";
+    Layout = "_AdminLayout";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="AddInterior" asp-controller="Admin" method="post" enctype="multipart/form-data">
+    <input type="hidden" asp-for="Id" />
+
+    <div class="form-group">
+        <label>Title</label>
+        <input asp-for="Title" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Style</label>
+        <select asp-for="Style" class="form-control">
+            <option value="">-- Select Style --</option>
+            <option>Modern</option>
+            <option>Boho</option>
+            <option>Classic</option>
+            <option>Minimalist</option>
+            <option>Industrial</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Upload Image</label>
+        <input type="file" name="imageFile" class="form-control" />
+    </div>
+
+    @if (!string.IsNullOrEmpty(Model.ImageUrl))
+    {
+        <div class="form-group">
+            <label>Current Image:</label><br />
+            <img src="@Model.ImageUrl" width="200" />
+        </div>
+    }
+
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>

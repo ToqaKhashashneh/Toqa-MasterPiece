@@ -54,6 +54,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\font-icons.css'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\Gallery.css'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>css/Gallery.css</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>wlxemtzhmc</Fingerprint>
+      <Integrity>pHt64rgdiqo0a3VZKCjS5bl/MlgPvdLDJHuFhtZs0aU=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\Gallery.css'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\Interior Design.css'))">
       <SourceType>Package</SourceType>
       <SourceId>Nestify</SourceId>
@@ -174,8 +192,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ou4ryu3ixd</Fingerprint>
-      <Integrity>UJscRk3P0hVGf84hHGGQO7OsQqvgMakqBsPS1cacCZA=</Integrity>
+      <Fingerprint>3yw30qvd3n</Fingerprint>
+      <Integrity>dV4NLzBVfYv+G5PSqNUDFx/6OCx1bM5bdlVloPwpfCs=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\style.css'))</OriginalItemSpec>
@@ -4386,11 +4404,29 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>honvvo725n</Fingerprint>
-      <Integrity>oVjn61MmnZ51MD64zQOGsp/64C86K92LAsQu+KjKpU0=</Integrity>
+      <Fingerprint>eic0rjncky</Fingerprint>
+      <Integrity>qilwEX+XXp+pLyu/3TiaFoiOvwZJ6g+fqTyGAyhEv/s=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\nicepage.js'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\nicepage-cleaned-fixed.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>js/nicepage-cleaned-fixed.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>1birkkhxxz</Fingerprint>
+      <Integrity>bUncE50LR98bzhVwVWqgkOdQWntAUU8Fkb8d0aNyMXU=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\nicepage-cleaned-fixed.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\plugins.js'))">
       <SourceType>Package</SourceType>
@@ -5508,6 +5544,474 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Nestify.yni6u1oazo.bundle.scp.css'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\03e2d0d9-e146-4f48-bab1-361e61bb3be2.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/interiors/03e2d0d9-e146-4f48-bab1-361e61bb3be2.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>wazrelo20y</Fingerprint>
+      <Integrity>eC1oK4fqYk09cDjl+nRQFfii10XRV07MeBMhmsU+6uY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\03e2d0d9-e146-4f48-bab1-361e61bb3be2.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\03f0f059-f9ce-4d7a-8601-07c2f1fe6b7c.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/interiors/03f0f059-f9ce-4d7a-8601-07c2f1fe6b7c.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>vxv8f2d4hd</Fingerprint>
+      <Integrity>TSVyCcBCOOr3rXrERX04KS411me0CNbFZ+yn8cIZuY8=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\03f0f059-f9ce-4d7a-8601-07c2f1fe6b7c.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\05dc932a-c51b-432e-8b4e-5d63a3b8a35b.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/interiors/05dc932a-c51b-432e-8b4e-5d63a3b8a35b.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ukt4dtc1yf</Fingerprint>
+      <Integrity>vi/2lbhTB/EItMpf2+5CgHSj0Q0D07DAjA3BQG432cQ=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\05dc932a-c51b-432e-8b4e-5d63a3b8a35b.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\2c41d204-a492-409b-b696-baac56db2637.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/interiors/2c41d204-a492-409b-b696-baac56db2637.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>a0kvwrf7e2</Fingerprint>
+      <Integrity>CpMFZ/Zhn6FCTYM2CI5rXpBGBF1BAv7+zqvPi3iqPqc=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\2c41d204-a492-409b-b696-baac56db2637.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\374a67d6-0ebb-47ad-bf89-39efcbd60772.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/interiors/374a67d6-0ebb-47ad-bf89-39efcbd60772.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>juwjw9gj76</Fingerprint>
+      <Integrity>9S4PIyt9zsemRoKfLbJAFAex8SaAANaiZFrTQs5ZSpc=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\374a67d6-0ebb-47ad-bf89-39efcbd60772.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\3faa1987-8fd0-4b04-a390-2104aac90ed6.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/interiors/3faa1987-8fd0-4b04-a390-2104aac90ed6.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>f0az568di6</Fingerprint>
+      <Integrity>kSVbl6Qh1pWjkobYZTflpH9rR7KZQN1i1d4U3hpiCY4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\3faa1987-8fd0-4b04-a390-2104aac90ed6.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\62937e42-6f49-480e-9dd9-b9528cbcd7c5.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/interiors/62937e42-6f49-480e-9dd9-b9528cbcd7c5.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>a2vy7orh9w</Fingerprint>
+      <Integrity>wohdMderfX8Qayo1pmOD3o6sCClads9JzZJp468CVJc=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\62937e42-6f49-480e-9dd9-b9528cbcd7c5.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\62ae23ba-c133-486e-8f8e-b4971180b844.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/interiors/62ae23ba-c133-486e-8f8e-b4971180b844.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>h25vpy9epk</Fingerprint>
+      <Integrity>l0Mn+Y+5yImCvQ9hLUQU7mdtPhpnX6Ks2pABMWZ/vzo=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\62ae23ba-c133-486e-8f8e-b4971180b844.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\8b1e5034-65fd-4434-8b84-835bccba54fc.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/interiors/8b1e5034-65fd-4434-8b84-835bccba54fc.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>v8ne43ksae</Fingerprint>
+      <Integrity>0eKwnfziE8jdpR4FEGdJ7tnskVuN83KSxGy1b99GmZ0=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\8b1e5034-65fd-4434-8b84-835bccba54fc.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\9212f11c-6599-47e6-be1e-14f3c032c65f.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/interiors/9212f11c-6599-47e6-be1e-14f3c032c65f.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>n23fwacmxj</Fingerprint>
+      <Integrity>T4UUdHw7qvBOvuR2YeWJTtlO8UeLZcxO0mtoSoMi+7g=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\9212f11c-6599-47e6-be1e-14f3c032c65f.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\99e52ea7-708f-4567-9c3d-bdee09df0a8f.crdownload'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/interiors/99e52ea7-708f-4567-9c3d-bdee09df0a8f.crdownload</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>8mguq6zwgk</Fingerprint>
+      <Integrity>oBGHV88CMX1L+qDkC9N6T1c0Kd1r/8L6WM8JV4+Bhww=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\99e52ea7-708f-4567-9c3d-bdee09df0a8f.crdownload'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\a05b2e62-bccd-44c2-9af7-5da2aa8daec3.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/interiors/a05b2e62-bccd-44c2-9af7-5da2aa8daec3.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>h25vpy9epk</Fingerprint>
+      <Integrity>l0Mn+Y+5yImCvQ9hLUQU7mdtPhpnX6Ks2pABMWZ/vzo=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\a05b2e62-bccd-44c2-9af7-5da2aa8daec3.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\be8cd5c5-6ac6-457c-af2b-77e06850b301.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/interiors/be8cd5c5-6ac6-457c-af2b-77e06850b301.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>i62n1bji42</Fingerprint>
+      <Integrity>ysd5sOf8oNM+qkK03oOhBaYkkG/rdUSbcUGod65mFVc=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\be8cd5c5-6ac6-457c-af2b-77e06850b301.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\c90a4c91-c491-4d3f-b7b9-d1546e846302.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/interiors/c90a4c91-c491-4d3f-b7b9-d1546e846302.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>0tu3qv2kr9</Fingerprint>
+      <Integrity>TOteHTtFi5/LMy1SUJb6bOO1FWWNUffhT8JZCGTvpZk=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\c90a4c91-c491-4d3f-b7b9-d1546e846302.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\ce1301c0-2d16-42e8-b673-cafa1281d73f.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/interiors/ce1301c0-2d16-42e8-b673-cafa1281d73f.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>p59p2uhvdv</Fingerprint>
+      <Integrity>Y7toJtF89bb5r0HuOQTKi2EshUDmwDuPmCH2g9VK8Ro=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\ce1301c0-2d16-42e8-b673-cafa1281d73f.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\dc738ab6-bcb8-4638-bab9-ff2ee27cda61.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/interiors/dc738ab6-bcb8-4638-bab9-ff2ee27cda61.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ync4udmzm5</Fingerprint>
+      <Integrity>4pSJ+GjlQ7qwMH4kpweK4rAr1Dsp6WHB5aysuEJJjFM=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\dc738ab6-bcb8-4638-bab9-ff2ee27cda61.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\dc92c2ea-ba75-4407-9d41-99b3fb4f2401.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/interiors/dc92c2ea-ba75-4407-9d41-99b3fb4f2401.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>h25vpy9epk</Fingerprint>
+      <Integrity>l0Mn+Y+5yImCvQ9hLUQU7mdtPhpnX6Ks2pABMWZ/vzo=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\dc92c2ea-ba75-4407-9d41-99b3fb4f2401.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\e090d369-3128-4240-b319-14c7696e6a5b.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/interiors/e090d369-3128-4240-b319-14c7696e6a5b.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>nw5efglul8</Fingerprint>
+      <Integrity>mWtuE/5nHPqvRd8mrYlyWJFwTFoj2PVS+NxjaGjPvqw=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\e090d369-3128-4240-b319-14c7696e6a5b.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\e346e042-245e-4a20-8d32-f7adcff7361c.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/interiors/e346e042-245e-4a20-8d32-f7adcff7361c.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>vxv8f2d4hd</Fingerprint>
+      <Integrity>TSVyCcBCOOr3rXrERX04KS411me0CNbFZ+yn8cIZuY8=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\e346e042-245e-4a20-8d32-f7adcff7361c.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\e719ef81-4768-4ca1-abb6-f8f250140a87.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/interiors/e719ef81-4768-4ca1-abb6-f8f250140a87.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>zpzm2srtd7</Fingerprint>
+      <Integrity>V4BqDLJA6n06H/uPyz+sShbbcM8j+pHGaPJ+urtPBCg=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\e719ef81-4768-4ca1-abb6-f8f250140a87.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\e9d93ff8-509d-4b01-b1bc-13f55f023771.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/interiors/e9d93ff8-509d-4b01-b1bc-13f55f023771.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>znhxxllsv5</Fingerprint>
+      <Integrity>r1zTSOHLlddYvsOHf+zUoTYQ7pR7Jv3r5BcQZeZlFQA=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\e9d93ff8-509d-4b01-b1bc-13f55f023771.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\eb0a7a45-9b34-4070-998b-ed17be818e55.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/interiors/eb0a7a45-9b34-4070-998b-ed17be818e55.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ieauj9gguc</Fingerprint>
+      <Integrity>1rigLLTAQcClklVk+nmCT8q53LbPQSBToqR248J817U=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\eb0a7a45-9b34-4070-998b-ed17be818e55.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\ef2dbcc9-467e-4069-a00f-7bc2665f812d.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/interiors/ef2dbcc9-467e-4069-a00f-7bc2665f812d.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>9467zi2hzd</Fingerprint>
+      <Integrity>uQUt9XmNta5Vjx2o3Y25xYIz/+H0XpMm4UA3pqCVl4A=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\ef2dbcc9-467e-4069-a00f-7bc2665f812d.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\f24d1b5a-3d43-480c-a8de-77b85e02cd89.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/interiors/f24d1b5a-3d43-480c-a8de-77b85e02cd89.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>erki80wf7j</Fingerprint>
+      <Integrity>Zv6amzTtFWjk8Rx0tPk5EGLpiS+d7RCF5/9Cbwkm/NU=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\f24d1b5a-3d43-480c-a8de-77b85e02cd89.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\f77e08a0-a3e5-44d3-bc4b-3ac71b671cf5.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/interiors/f77e08a0-a3e5-44d3-bc4b-3ac71b671cf5.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>crrwoo7lw4</Fingerprint>
+      <Integrity>iHzClGzeB+gsezD9G7PLi9VQ7G88psPUNfRAFA2/iiY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\f77e08a0-a3e5-44d3-bc4b-3ac71b671cf5.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\fb517665-ba1d-4c83-bf57-fe03798c6c5c.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/interiors/fb517665-ba1d-4c83-bf57-fe03798c6c5c.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>2hrhjgxche</Fingerprint>
+      <Integrity>qhdtHrjSOWKonoOQpFBwDsLrkGKCyfoU1Tj+lLdt7NA=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\interiors\fb517665-ba1d-4c83-bf57-fe03798c6c5c.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\028f81a8-84ff-4d51-b055-61b7ea70477e.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>Nestify</SourceId>
@@ -5525,6 +6029,42 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\028f81a8-84ff-4d51-b055-61b7ea70477e.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\038ef903-f61b-4f1b-9d6b-a5877af6c9dd.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/038ef903-f61b-4f1b-9d6b-a5877af6c9dd.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>y5b0vo26hj</Fingerprint>
+      <Integrity>hrd656GLnuRPsComdB+gCO+Q+MHyFjTAfhE93HjIfW4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\038ef903-f61b-4f1b-9d6b-a5877af6c9dd.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\0822037d-b23d-4cee-8a39-90ce9d86edd7.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/0822037d-b23d-4cee-8a39-90ce9d86edd7.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>73hk2inaz0</Fingerprint>
+      <Integrity>g00dE92ehZEAbKYGc+rwX9wMJJIExoR5js8Zjg/hQOM=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\0822037d-b23d-4cee-8a39-90ce9d86edd7.jpeg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\099fc9d0-f27f-40c8-810e-652c37530c85.jpeg'))">
       <SourceType>Package</SourceType>
@@ -5562,23 +6102,293 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\1006489d-5c07-4a07-82fe-f40c44d11354.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\10c69eaa-d9ee-4e4e-8ea7-59132221deca.png'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\101136e2-104c-4e55-b031-8d5a3a9109ea.jpeg'))">
       <SourceType>Package</SourceType>
       <SourceId>Nestify</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Nestify</BasePath>
-      <RelativePath>uploads/properties/10c69eaa-d9ee-4e4e-8ea7-59132221deca.png</RelativePath>
+      <RelativePath>uploads/properties/101136e2-104c-4e55-b031-8d5a3a9109ea.jpeg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>mnefpcpoy0</Fingerprint>
-      <Integrity>Dg8U6kvDkJCMNG4eXerKuCE6VQwhkCIG7u/Y5rAOYrI=</Integrity>
+      <Fingerprint>qlyggbybi4</Fingerprint>
+      <Integrity>Lg+qMUrxRChtD9CPLHBQ1pu3hLsugeVOAHusmdcrrRw=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\10c69eaa-d9ee-4e4e-8ea7-59132221deca.png'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\101136e2-104c-4e55-b031-8d5a3a9109ea.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\106c5272-09c2-4512-af78-eef64d0c2aca.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/106c5272-09c2-4512-af78-eef64d0c2aca.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>m8tzepjynl</Fingerprint>
+      <Integrity>Ov/XSoZhu8m3311GQLAwkU/S5ekjttsSAxKkNaFUPus=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\106c5272-09c2-4512-af78-eef64d0c2aca.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\117dcd87-c76f-4ac6-9142-10d43dfde320.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/117dcd87-c76f-4ac6-9142-10d43dfde320.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ozl5iid5q3</Fingerprint>
+      <Integrity>lOhhhdN2L6F3iYyEvW9oUwsc75z6/Xjm1edUsA0Jn6E=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\117dcd87-c76f-4ac6-9142-10d43dfde320.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\11e51e3e-71b7-4dae-83b8-219ec556d256.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/11e51e3e-71b7-4dae-83b8-219ec556d256.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>6t08j5lewx</Fingerprint>
+      <Integrity>5lJ2XPHcgz3R3arnZhgsLVQFP5LbvLmgZS/lqdclOIU=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\11e51e3e-71b7-4dae-83b8-219ec556d256.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\132c6ed6-d624-4b21-be49-8c2f8c578d80.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/132c6ed6-d624-4b21-be49-8c2f8c578d80.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>lcl4dkm2pm</Fingerprint>
+      <Integrity>693hGGOqXtTmkmnBKMExgxO88Gkg4X3MV7WNh4vW6s8=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\132c6ed6-d624-4b21-be49-8c2f8c578d80.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\14dacde3-6bea-4ba2-8f45-48f86ccc1bc8.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/14dacde3-6bea-4ba2-8f45-48f86ccc1bc8.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>qlyggbybi4</Fingerprint>
+      <Integrity>Lg+qMUrxRChtD9CPLHBQ1pu3hLsugeVOAHusmdcrrRw=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\14dacde3-6bea-4ba2-8f45-48f86ccc1bc8.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\15c86f83-d237-4c02-aa1d-b1ee567837be.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/15c86f83-d237-4c02-aa1d-b1ee567837be.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>r4zivgnzmx</Fingerprint>
+      <Integrity>W3EJTKD9piFriVOoc+m5CHD3XKG04eRxyVINr5tGAE4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\15c86f83-d237-4c02-aa1d-b1ee567837be.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\16e68012-448d-451f-90c1-07a0f62f9527.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/16e68012-448d-451f-90c1-07a0f62f9527.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>cqpz0c7ead</Fingerprint>
+      <Integrity>BA2oCzwPrMsLtgARmgTHKe0jYA03FzywU4nmW/UZNT4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\16e68012-448d-451f-90c1-07a0f62f9527.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\177c679e-4cd8-4c9a-b527-3555383416a8.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/177c679e-4cd8-4c9a-b527-3555383416a8.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>lcl4dkm2pm</Fingerprint>
+      <Integrity>693hGGOqXtTmkmnBKMExgxO88Gkg4X3MV7WNh4vW6s8=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\177c679e-4cd8-4c9a-b527-3555383416a8.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\191052c3-9902-4ae9-a94c-4e640636357f.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/191052c3-9902-4ae9-a94c-4e640636357f.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>6q7s11oolj</Fingerprint>
+      <Integrity>4iRHGWCPZGb81bVK4KWS91J9D7BwyVe7BLCXpNYf5ag=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\191052c3-9902-4ae9-a94c-4e640636357f.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\1b694516-f30e-4e4c-ac66-8ee6f1dff004.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/1b694516-f30e-4e4c-ac66-8ee6f1dff004.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>tsq29nzagl</Fingerprint>
+      <Integrity>0/bAurjxCjj4/zI3kr4N/eYdMCMoWMlxActMUnLe7yA=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\1b694516-f30e-4e4c-ac66-8ee6f1dff004.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\1bb0f8a1-d317-4c25-b599-8c962f916bce.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/1bb0f8a1-d317-4c25-b599-8c962f916bce.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>0tu3qv2kr9</Fingerprint>
+      <Integrity>TOteHTtFi5/LMy1SUJb6bOO1FWWNUffhT8JZCGTvpZk=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\1bb0f8a1-d317-4c25-b599-8c962f916bce.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\1db8f2d9-822b-464d-a14e-678dd8c97ba2.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/1db8f2d9-822b-464d-a14e-678dd8c97ba2.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>qlyggbybi4</Fingerprint>
+      <Integrity>Lg+qMUrxRChtD9CPLHBQ1pu3hLsugeVOAHusmdcrrRw=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\1db8f2d9-822b-464d-a14e-678dd8c97ba2.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\1e618c81-5fce-4cd6-8797-c052ac934b04.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/1e618c81-5fce-4cd6-8797-c052ac934b04.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>telk5lme15</Fingerprint>
+      <Integrity>m91ZLYjTeeDwA3bM8QL5yG+J2QHBjfg3YBtIeHKBXrQ=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\1e618c81-5fce-4cd6-8797-c052ac934b04.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\202faad7-c2fa-4687-b1b0-eaaf3f644ec5.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/202faad7-c2fa-4687-b1b0-eaaf3f644ec5.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>fd30d2yh20</Fingerprint>
+      <Integrity>E+ZWFnnv5AkAo7V53nID9cqfY+De/XP3yjRwWqGrLnQ=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\202faad7-c2fa-4687-b1b0-eaaf3f644ec5.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\2077c0be-2517-43e6-87f4-010bea9e86cb.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/2077c0be-2517-43e6-87f4-010bea9e86cb.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>g3c84basyj</Fingerprint>
+      <Integrity>xODa+Lr1jKy6IzrPrqg8ZMHmEACp3KAzqqQcGOs5sKw=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\2077c0be-2517-43e6-87f4-010bea9e86cb.jpeg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\239896c2-62ef-4acc-99fb-d1b581017ed4.jpeg'))">
       <SourceType>Package</SourceType>
@@ -5598,6 +6408,42 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\239896c2-62ef-4acc-99fb-d1b581017ed4.jpeg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\2400f5b0-14a0-4293-b454-6958006c7bbf.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/2400f5b0-14a0-4293-b454-6958006c7bbf.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>aeqxsxftxa</Fingerprint>
+      <Integrity>Hgyzqk4rPnKSErO03FwET03GAd/Lix4iCbNGyuKkZds=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\2400f5b0-14a0-4293-b454-6958006c7bbf.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\2422c2f4-3616-479a-b9df-8a4cb2e2c76e.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/2422c2f4-3616-479a-b9df-8a4cb2e2c76e.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>lckvwpgaxd</Fingerprint>
+      <Integrity>O+NGpA4rhC231TNHoKSzgfdTWGNJsAXgzjqrdq5UN5I=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\2422c2f4-3616-479a-b9df-8a4cb2e2c76e.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\2704790a-1e05-4e42-8b3e-20cde013480b.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>Nestify</SourceId>
@@ -5615,6 +6461,78 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\2704790a-1e05-4e42-8b3e-20cde013480b.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\2738cfab-ec9a-45a2-999d-b063175d4175.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/2738cfab-ec9a-45a2-999d-b063175d4175.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ojjlqexy2u</Fingerprint>
+      <Integrity>zMeBYoBbFK2KOSII0qvmDUJY34+ltNDq7cNOCRYNMVI=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\2738cfab-ec9a-45a2-999d-b063175d4175.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\27509e7b-7f40-45ea-a64f-66f4dd414840.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/27509e7b-7f40-45ea-a64f-66f4dd414840.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>hs5izd8i40</Fingerprint>
+      <Integrity>L7vaQu57GeuTOpGmHui11fx50S/8dL/4hy3mmBMNAvM=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\27509e7b-7f40-45ea-a64f-66f4dd414840.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\2bb22e12-c5dd-4769-bbf0-657269c20c65.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/2bb22e12-c5dd-4769-bbf0-657269c20c65.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>hnlp776met</Fingerprint>
+      <Integrity>IwP6IXoKxK7ZOgvOgbO9R1Up/lS+qlfpfDTZZec5U8Y=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\2bb22e12-c5dd-4769-bbf0-657269c20c65.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\2d71d69d-2995-4f5f-9b36-f6f5f9f187d2.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/2d71d69d-2995-4f5f-9b36-f6f5f9f187d2.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>t0n3n5sfhw</Fingerprint>
+      <Integrity>TcJB742qVBJeVkeMMDbja6CVaa1lYHrK7mi0Ejk4v0c=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\2d71d69d-2995-4f5f-9b36-f6f5f9f187d2.jpeg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\2de96731-df47-4d30-94b6-4eb00d6f3b35.jpg'))">
       <SourceType>Package</SourceType>
@@ -5634,6 +6552,42 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\2de96731-df47-4d30-94b6-4eb00d6f3b35.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\2e72e5d5-2fc1-4752-a4c8-b3121524b364.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/2e72e5d5-2fc1-4752-a4c8-b3121524b364.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>1uss321lsb</Fingerprint>
+      <Integrity>BwTnr+su2kSWkXxh/xOwE9mQ1Ezi4rRyooj5a9Lzbr4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\2e72e5d5-2fc1-4752-a4c8-b3121524b364.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\2f2e358f-28b1-404b-ac9f-37c16d0f6fcb.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/2f2e358f-28b1-404b-ac9f-37c16d0f6fcb.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>943u4tt04n</Fingerprint>
+      <Integrity>SVPFQLnYYz1UShZNc5jhtOCQR12bhVU/Q3Bmd0L3nwI=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\2f2e358f-28b1-404b-ac9f-37c16d0f6fcb.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\30377fe3-8418-46ac-aef3-87d9f0afc0bd.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>Nestify</SourceId>
@@ -5651,6 +6605,186 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\30377fe3-8418-46ac-aef3-87d9f0afc0bd.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\3115e7a2-af55-4e3d-b200-015dcc64b3bf.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/3115e7a2-af55-4e3d-b200-015dcc64b3bf.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>0elsw9sd6l</Fingerprint>
+      <Integrity>SD9xt3rvoPNfdIZl4EOm5jqY0QADBZoy8FWZGNfUync=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\3115e7a2-af55-4e3d-b200-015dcc64b3bf.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\3402935f-790f-46bd-8b1d-9789d751a03f.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/3402935f-790f-46bd-8b1d-9789d751a03f.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>tsq29nzagl</Fingerprint>
+      <Integrity>0/bAurjxCjj4/zI3kr4N/eYdMCMoWMlxActMUnLe7yA=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\3402935f-790f-46bd-8b1d-9789d751a03f.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\38fc2a41-c608-4cb3-bd90-2b29976010dc.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/38fc2a41-c608-4cb3-bd90-2b29976010dc.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>jz8vedfz90</Fingerprint>
+      <Integrity>PxFVUSpy8GBt3c9w25mgoWsEKGtm/3b+O0qwq2k1XD8=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\38fc2a41-c608-4cb3-bd90-2b29976010dc.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\3a1823f3-5540-4a07-9e61-8a7945b43c2b.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/3a1823f3-5540-4a07-9e61-8a7945b43c2b.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>46se2l75ez</Fingerprint>
+      <Integrity>5BPYVLNvr9quyaUakieYf5HvG9E1WTs3OEnY82zYJxU=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\3a1823f3-5540-4a07-9e61-8a7945b43c2b.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\3afff455-e5f8-40da-8deb-183454168ffb.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/3afff455-e5f8-40da-8deb-183454168ffb.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ozl5iid5q3</Fingerprint>
+      <Integrity>lOhhhdN2L6F3iYyEvW9oUwsc75z6/Xjm1edUsA0Jn6E=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\3afff455-e5f8-40da-8deb-183454168ffb.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\3c502329-3617-4f92-9047-a85443587097.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/3c502329-3617-4f92-9047-a85443587097.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>jz8vedfz90</Fingerprint>
+      <Integrity>PxFVUSpy8GBt3c9w25mgoWsEKGtm/3b+O0qwq2k1XD8=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\3c502329-3617-4f92-9047-a85443587097.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\3e83e030-a5bb-4035-aef1-a999b2690cc1.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/3e83e030-a5bb-4035-aef1-a999b2690cc1.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>0tu3qv2kr9</Fingerprint>
+      <Integrity>TOteHTtFi5/LMy1SUJb6bOO1FWWNUffhT8JZCGTvpZk=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\3e83e030-a5bb-4035-aef1-a999b2690cc1.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\413c5462-23ac-4b2f-8b45-065c554f30cc.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/413c5462-23ac-4b2f-8b45-065c554f30cc.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>943u4tt04n</Fingerprint>
+      <Integrity>SVPFQLnYYz1UShZNc5jhtOCQR12bhVU/Q3Bmd0L3nwI=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\413c5462-23ac-4b2f-8b45-065c554f30cc.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\41b323be-eeed-4353-a83a-202d1d2c6122.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/41b323be-eeed-4353-a83a-202d1d2c6122.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>0tu3qv2kr9</Fingerprint>
+      <Integrity>TOteHTtFi5/LMy1SUJb6bOO1FWWNUffhT8JZCGTvpZk=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\41b323be-eeed-4353-a83a-202d1d2c6122.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\447486ca-34c9-4004-8b84-c702bf2a93db.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/447486ca-34c9-4004-8b84-c702bf2a93db.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>lcl4dkm2pm</Fingerprint>
+      <Integrity>693hGGOqXtTmkmnBKMExgxO88Gkg4X3MV7WNh4vW6s8=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\447486ca-34c9-4004-8b84-c702bf2a93db.png'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\45ab68c1-0f65-4262-9786-d5c0b3de92ad.jpeg'))">
       <SourceType>Package</SourceType>
@@ -5688,6 +6822,60 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\470b64a1-a144-48a1-9cac-0679935703c8.jpeg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\4bf763ac-ab0f-4608-898d-97166df95722.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/4bf763ac-ab0f-4608-898d-97166df95722.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>lckvwpgaxd</Fingerprint>
+      <Integrity>O+NGpA4rhC231TNHoKSzgfdTWGNJsAXgzjqrdq5UN5I=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\4bf763ac-ab0f-4608-898d-97166df95722.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\4e1cbed2-ec37-44ab-ab2d-b1b2ab2814ae.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/4e1cbed2-ec37-44ab-ab2d-b1b2ab2814ae.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>telk5lme15</Fingerprint>
+      <Integrity>m91ZLYjTeeDwA3bM8QL5yG+J2QHBjfg3YBtIeHKBXrQ=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\4e1cbed2-ec37-44ab-ab2d-b1b2ab2814ae.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\4e898ac6-dddb-41ce-918e-c6f66c4fd493.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/4e898ac6-dddb-41ce-918e-c6f66c4fd493.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>eltardc2v1</Fingerprint>
+      <Integrity>UkP6n9RQQNYgF6XtHEQJzB+ZT6/lSOHXuPVAaK5tCM0=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\4e898ac6-dddb-41ce-918e-c6f66c4fd493.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\50ea1fef-9fdf-42b0-a3ac-9de9e625f545.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>Nestify</SourceId>
@@ -5705,6 +6893,186 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\50ea1fef-9fdf-42b0-a3ac-9de9e625f545.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\52007f05-3620-46e4-990b-089d02289bfd.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/52007f05-3620-46e4-990b-089d02289bfd.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>bg9mo2gg4e</Fingerprint>
+      <Integrity>Wzld9244iYkruSLG30FSMpCM+qgKdSh6OfYHAm+8pjI=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\52007f05-3620-46e4-990b-089d02289bfd.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\5218d6f2-145c-4244-9e7b-9b11917ad28b.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/5218d6f2-145c-4244-9e7b-9b11917ad28b.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>tsq29nzagl</Fingerprint>
+      <Integrity>0/bAurjxCjj4/zI3kr4N/eYdMCMoWMlxActMUnLe7yA=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\5218d6f2-145c-4244-9e7b-9b11917ad28b.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\5293f271-c4d9-45b8-9591-0fd3ee29b303.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/5293f271-c4d9-45b8-9591-0fd3ee29b303.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>943u4tt04n</Fingerprint>
+      <Integrity>SVPFQLnYYz1UShZNc5jhtOCQR12bhVU/Q3Bmd0L3nwI=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\5293f271-c4d9-45b8-9591-0fd3ee29b303.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\52f8be17-164f-4e4c-b173-c628e80aea4d.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/52f8be17-164f-4e4c-b173-c628e80aea4d.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>z0gf40p3ag</Fingerprint>
+      <Integrity>49J+qSV7wW5MdesQ3+wCGZcJ0037aK3UWwfKMEBSxmA=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\52f8be17-164f-4e4c-b173-c628e80aea4d.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\5592c659-39e8-4a8f-a4a3-8828444c50ae.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/5592c659-39e8-4a8f-a4a3-8828444c50ae.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>0tu3qv2kr9</Fingerprint>
+      <Integrity>TOteHTtFi5/LMy1SUJb6bOO1FWWNUffhT8JZCGTvpZk=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\5592c659-39e8-4a8f-a4a3-8828444c50ae.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\58a75c2c-8232-4f9d-8e31-873ab9e1f611.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/58a75c2c-8232-4f9d-8e31-873ab9e1f611.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>jz8vedfz90</Fingerprint>
+      <Integrity>PxFVUSpy8GBt3c9w25mgoWsEKGtm/3b+O0qwq2k1XD8=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\58a75c2c-8232-4f9d-8e31-873ab9e1f611.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\594fb2e1-45ec-48e1-9cbc-b79bfd2150be.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/594fb2e1-45ec-48e1-9cbc-b79bfd2150be.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>0tu3qv2kr9</Fingerprint>
+      <Integrity>TOteHTtFi5/LMy1SUJb6bOO1FWWNUffhT8JZCGTvpZk=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\594fb2e1-45ec-48e1-9cbc-b79bfd2150be.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\5d0ca1fe-83ba-4fca-bdcd-4ad889993690.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/5d0ca1fe-83ba-4fca-bdcd-4ad889993690.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>lcl4dkm2pm</Fingerprint>
+      <Integrity>693hGGOqXtTmkmnBKMExgxO88Gkg4X3MV7WNh4vW6s8=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\5d0ca1fe-83ba-4fca-bdcd-4ad889993690.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\5fa73f14-8dcd-45a4-bd65-70a4d7a3ecd4.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/5fa73f14-8dcd-45a4-bd65-70a4d7a3ecd4.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>sx9og5qfs4</Fingerprint>
+      <Integrity>UOzprB8gkMELL19EZUOkyCY7lApjeyt1gY+MwZDHK98=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\5fa73f14-8dcd-45a4-bd65-70a4d7a3ecd4.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\6003b696-a54f-4e0a-a7cd-6dcabc90ead1.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/6003b696-a54f-4e0a-a7cd-6dcabc90ead1.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ojjlqexy2u</Fingerprint>
+      <Integrity>zMeBYoBbFK2KOSII0qvmDUJY34+ltNDq7cNOCRYNMVI=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\6003b696-a54f-4e0a-a7cd-6dcabc90ead1.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\639d2230-03bc-4a41-bc8e-743d7d49dc71.jpeg'))">
       <SourceType>Package</SourceType>
@@ -5724,6 +7092,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\639d2230-03bc-4a41-bc8e-743d7d49dc71.jpeg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\648e5873-ce7b-49b4-bddd-ed71d3991173.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/648e5873-ce7b-49b4-bddd-ed71d3991173.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>fdoj34egdz</Fingerprint>
+      <Integrity>I1X1n+MRhadgYj/mrK4WTQKRATP+yI9wHzk19e/vW0g=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\648e5873-ce7b-49b4-bddd-ed71d3991173.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\65fe6504-15c8-419e-9ab7-eb1620656f85.jpeg'))">
       <SourceType>Package</SourceType>
       <SourceId>Nestify</SourceId>
@@ -5741,6 +7127,42 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\65fe6504-15c8-419e-9ab7-eb1620656f85.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\67e29a41-a156-4007-9a62-2753ae6a19d2.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/67e29a41-a156-4007-9a62-2753ae6a19d2.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>hxrpt5w7kg</Fingerprint>
+      <Integrity>W3WnihMxraXQgwyqvARyhWb6cAZq7ty4QKSzJKSxbVM=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\67e29a41-a156-4007-9a62-2753ae6a19d2.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\68d9716d-44de-4e1e-a7a3-65764676f684.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/68d9716d-44de-4e1e-a7a3-65764676f684.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>pcllwbyxll</Fingerprint>
+      <Integrity>WeuHp9f2RiY5/PCI8GeMvl3dwcCLGU2Dw98ZRdl0zuM=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\68d9716d-44de-4e1e-a7a3-65764676f684.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\6913c2ee-3c48-4698-abe1-d53363d5607a.jpeg'))">
       <SourceType>Package</SourceType>
@@ -5760,6 +7182,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\6913c2ee-3c48-4698-abe1-d53363d5607a.jpeg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\69c8112d-64c3-4809-be2e-5cf9327d6f99.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/69c8112d-64c3-4809-be2e-5cf9327d6f99.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>v7fk6w4yqp</Fingerprint>
+      <Integrity>C5Cb/HoCHENswXo2PiF/XX/vNau2ZS7OaUwDa9nYGUE=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\69c8112d-64c3-4809-be2e-5cf9327d6f99.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\6b1a1b21-f8b4-4ee4-9a64-8241186f46e7.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>Nestify</SourceId>
@@ -5777,6 +7217,42 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\6b1a1b21-f8b4-4ee4-9a64-8241186f46e7.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\6bdc2842-97da-42e4-8d2b-c201c242172e.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/6bdc2842-97da-42e4-8d2b-c201c242172e.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ssbei42far</Fingerprint>
+      <Integrity>xAokxcKqlS7NOklhW/K4+BrSTtRiM/YdW+4aeLLuFQ4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\6bdc2842-97da-42e4-8d2b-c201c242172e.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\6cc653b2-fe29-40c1-8765-98ee9788cc0d.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/6cc653b2-fe29-40c1-8765-98ee9788cc0d.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>hxrpt5w7kg</Fingerprint>
+      <Integrity>W3WnihMxraXQgwyqvARyhWb6cAZq7ty4QKSzJKSxbVM=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\6cc653b2-fe29-40c1-8765-98ee9788cc0d.jpeg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\6edc5069-4650-42da-8351-17944cdf775d.jpeg'))">
       <SourceType>Package</SourceType>
@@ -5796,6 +7272,42 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\6edc5069-4650-42da-8351-17944cdf775d.jpeg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\6efc6ae2-d9aa-4ef6-a907-2171d090a15b.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/6efc6ae2-d9aa-4ef6-a907-2171d090a15b.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ifi3942aio</Fingerprint>
+      <Integrity>8qZtnslR+PCkMxL1iD0uY11/k3Dx3tlHDXcgGkT/o3Y=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\6efc6ae2-d9aa-4ef6-a907-2171d090a15b.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\766a81d7-d850-4d12-866e-c083d9fde000.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/766a81d7-d850-4d12-866e-c083d9fde000.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>telk5lme15</Fingerprint>
+      <Integrity>m91ZLYjTeeDwA3bM8QL5yG+J2QHBjfg3YBtIeHKBXrQ=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\766a81d7-d850-4d12-866e-c083d9fde000.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\7a05fcdb-67e4-40e3-97f2-9569e4ffd0ce.jpeg'))">
       <SourceType>Package</SourceType>
       <SourceId>Nestify</SourceId>
@@ -5813,6 +7325,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\7a05fcdb-67e4-40e3-97f2-9569e4ffd0ce.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\7beb15d8-8254-4300-b7e3-5a2e74787ea2.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/7beb15d8-8254-4300-b7e3-5a2e74787ea2.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>jz8vedfz90</Fingerprint>
+      <Integrity>PxFVUSpy8GBt3c9w25mgoWsEKGtm/3b+O0qwq2k1XD8=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\7beb15d8-8254-4300-b7e3-5a2e74787ea2.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\7e344b5c-2cab-4603-9c4d-d65c601c2646.jpg'))">
       <SourceType>Package</SourceType>
@@ -5832,6 +7362,78 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\7e344b5c-2cab-4603-9c4d-d65c601c2646.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\7eb0d437-f560-4e53-960d-e21d4add3a4f.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/7eb0d437-f560-4e53-960d-e21d4add3a4f.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>dkbim01vko</Fingerprint>
+      <Integrity>807CzhIop+mQnNRvarnoYcYX3LjfRGHwn/NvxUA8Ilw=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\7eb0d437-f560-4e53-960d-e21d4add3a4f.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\7ffcfccb-bcd7-4607-91ef-d47a57e29df0.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/7ffcfccb-bcd7-4607-91ef-d47a57e29df0.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ozl5iid5q3</Fingerprint>
+      <Integrity>lOhhhdN2L6F3iYyEvW9oUwsc75z6/Xjm1edUsA0Jn6E=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\7ffcfccb-bcd7-4607-91ef-d47a57e29df0.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\843f17be-4741-4a85-91a2-351038dc1222.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/843f17be-4741-4a85-91a2-351038dc1222.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>iwcl1dljty</Fingerprint>
+      <Integrity>kjkzGHIQhWcZdeQ1MUMs1CtocMqA8stOsMZfaQndEks=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\843f17be-4741-4a85-91a2-351038dc1222.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\89243c8c-2d49-43b5-9cb7-6535f713dc24.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/89243c8c-2d49-43b5-9cb7-6535f713dc24.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ozl5iid5q3</Fingerprint>
+      <Integrity>lOhhhdN2L6F3iYyEvW9oUwsc75z6/Xjm1edUsA0Jn6E=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\89243c8c-2d49-43b5-9cb7-6535f713dc24.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\8b07687f-4ca4-4888-bd35-9011faa9a458.jpeg'))">
       <SourceType>Package</SourceType>
       <SourceId>Nestify</SourceId>
@@ -5849,6 +7451,42 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\8b07687f-4ca4-4888-bd35-9011faa9a458.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\8c5eecb9-5f1e-4ca7-8d56-d814f34cece6.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/8c5eecb9-5f1e-4ca7-8d56-d814f34cece6.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>k8wxc5v1c3</Fingerprint>
+      <Integrity>dBGqeRIS8+kLACBjDHzAacnhKGIPFG3U3WEGdHRAuME=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\8c5eecb9-5f1e-4ca7-8d56-d814f34cece6.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\8cc1017a-eda5-4337-a2d8-d43d6814d1af.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/8cc1017a-eda5-4337-a2d8-d43d6814d1af.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>fdoj34egdz</Fingerprint>
+      <Integrity>I1X1n+MRhadgYj/mrK4WTQKRATP+yI9wHzk19e/vW0g=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\8cc1017a-eda5-4337-a2d8-d43d6814d1af.jpeg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\8cca2a0f-4b69-4142-af2f-50e35908e50f.jpeg'))">
       <SourceType>Package</SourceType>
@@ -5886,6 +7524,42 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\94be7511-b865-408e-a575-146972a8defe.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\95cc6772-4b8a-4bcc-be42-df2f6b75da35.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/95cc6772-4b8a-4bcc-be42-df2f6b75da35.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>hxrpt5w7kg</Fingerprint>
+      <Integrity>W3WnihMxraXQgwyqvARyhWb6cAZq7ty4QKSzJKSxbVM=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\95cc6772-4b8a-4bcc-be42-df2f6b75da35.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\95daaafa-4b52-4bce-929c-f91b5a2014fa.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/95daaafa-4b52-4bce-929c-f91b5a2014fa.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ck0f5mvox9</Fingerprint>
+      <Integrity>nN1ydJzKxdYlUFTCYY2YDMyIvdREYQfC3B6bpliyx1Y=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\95daaafa-4b52-4bce-929c-f91b5a2014fa.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\9799a1b1-4e2b-4c23-b96a-044abb1a893e.jpeg'))">
       <SourceType>Package</SourceType>
       <SourceId>Nestify</SourceId>
@@ -5903,6 +7577,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\9799a1b1-4e2b-4c23-b96a-044abb1a893e.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\98639eee-918b-4a8d-8f6f-6acf174208b0.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/98639eee-918b-4a8d-8f6f-6acf174208b0.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>3i3wqktewp</Fingerprint>
+      <Integrity>u1OmJR1852Q2yEtFaj9v/hCkYefQGv/GnFNzrVh7+sk=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\98639eee-918b-4a8d-8f6f-6acf174208b0.jpeg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\9b6e6fdf-a70e-40a4-9c46-6246e98bdca3.jpeg'))">
       <SourceType>Package</SourceType>
@@ -5922,6 +7614,78 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\9b6e6fdf-a70e-40a4-9c46-6246e98bdca3.jpeg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\9be46259-e3f3-4a93-81d7-b86c3dffd7ce.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/9be46259-e3f3-4a93-81d7-b86c3dffd7ce.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>jz8vedfz90</Fingerprint>
+      <Integrity>PxFVUSpy8GBt3c9w25mgoWsEKGtm/3b+O0qwq2k1XD8=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\9be46259-e3f3-4a93-81d7-b86c3dffd7ce.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\9dde4d65-8566-40a3-bf52-e1d018242950.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/9dde4d65-8566-40a3-bf52-e1d018242950.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>0tu3qv2kr9</Fingerprint>
+      <Integrity>TOteHTtFi5/LMy1SUJb6bOO1FWWNUffhT8JZCGTvpZk=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\9dde4d65-8566-40a3-bf52-e1d018242950.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\9e7b9a38-4c6c-405e-8987-aad1026a0867.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/9e7b9a38-4c6c-405e-8987-aad1026a0867.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>xvypt5yjjg</Fingerprint>
+      <Integrity>IzIvWwYyKavs3BynwDcwwPyPdW5Futftby/6MTE/oLw=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\9e7b9a38-4c6c-405e-8987-aad1026a0867.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\9e8656bd-21cd-43f9-9a7e-2fdf22a0d9fe.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/9e8656bd-21cd-43f9-9a7e-2fdf22a0d9fe.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>pcllwbyxll</Fingerprint>
+      <Integrity>WeuHp9f2RiY5/PCI8GeMvl3dwcCLGU2Dw98ZRdl0zuM=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\9e8656bd-21cd-43f9-9a7e-2fdf22a0d9fe.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\a0b25a3e-33e6-428a-98dc-9683cea70462.jpeg'))">
       <SourceType>Package</SourceType>
       <SourceId>Nestify</SourceId>
@@ -5939,6 +7703,42 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\a0b25a3e-33e6-428a-98dc-9683cea70462.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\a284a96b-e9d9-462c-9582-e2f1b1c66024.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/a284a96b-e9d9-462c-9582-e2f1b1c66024.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>kefcvypztx</Fingerprint>
+      <Integrity>BJC2CJ40cI3OnpkVcrCgD0vmjX/v+7W0YHDUIOieYCs=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\a284a96b-e9d9-462c-9582-e2f1b1c66024.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\a7e69bfd-9198-4f0b-adb4-9e6597d32287.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/a7e69bfd-9198-4f0b-adb4-9e6597d32287.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>1639bbomot</Fingerprint>
+      <Integrity>SW/EHsZrfjxjZLGOB3vpu0P6pthmnJKgNIf28OCziZY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\a7e69bfd-9198-4f0b-adb4-9e6597d32287.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\a8c9e6d0-1162-4b42-b435-fd29112afd3c.jpeg'))">
       <SourceType>Package</SourceType>
@@ -5958,6 +7758,240 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\a8c9e6d0-1162-4b42-b435-fd29112afd3c.jpeg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\aba9165c-6451-488a-94df-ca512ce1986a.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/aba9165c-6451-488a-94df-ca512ce1986a.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ozl5iid5q3</Fingerprint>
+      <Integrity>lOhhhdN2L6F3iYyEvW9oUwsc75z6/Xjm1edUsA0Jn6E=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\aba9165c-6451-488a-94df-ca512ce1986a.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\abec4477-b001-4755-a7dc-b95f20727232.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/abec4477-b001-4755-a7dc-b95f20727232.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>hnlp776met</Fingerprint>
+      <Integrity>IwP6IXoKxK7ZOgvOgbO9R1Up/lS+qlfpfDTZZec5U8Y=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\abec4477-b001-4755-a7dc-b95f20727232.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\af88ca48-c603-4a00-8f84-4608d006adab.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/af88ca48-c603-4a00-8f84-4608d006adab.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>hs5izd8i40</Fingerprint>
+      <Integrity>L7vaQu57GeuTOpGmHui11fx50S/8dL/4hy3mmBMNAvM=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\af88ca48-c603-4a00-8f84-4608d006adab.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\b260440b-fb68-4a7f-8ce0-6238696bbd39.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/b260440b-fb68-4a7f-8ce0-6238696bbd39.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>4potpy4vd8</Fingerprint>
+      <Integrity>uFw921iO7X6fF+H3iwUuup4bCdDI9SEd83p0C7JoU5E=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\b260440b-fb68-4a7f-8ce0-6238696bbd39.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\b5a3ef0e-406d-4e98-bdc3-9df2d648537e.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/b5a3ef0e-406d-4e98-bdc3-9df2d648537e.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>0bccb36jwa</Fingerprint>
+      <Integrity>tD+sQ6I55UTmEOO3MVjBRYFiGXKxQRkBbwPulcxJteo=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\b5a3ef0e-406d-4e98-bdc3-9df2d648537e.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\b5b4ff25-8e56-4ee6-87b5-99567ff157f8.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/b5b4ff25-8e56-4ee6-87b5-99567ff157f8.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>lcl4dkm2pm</Fingerprint>
+      <Integrity>693hGGOqXtTmkmnBKMExgxO88Gkg4X3MV7WNh4vW6s8=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\b5b4ff25-8e56-4ee6-87b5-99567ff157f8.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\b785bc8c-c36c-437f-a4e0-72f08fef5919.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/b785bc8c-c36c-437f-a4e0-72f08fef5919.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>x9tuao1w5u</Fingerprint>
+      <Integrity>tan5Zueo1q8vPfOjyWzdkcuD0GXyNwZEoRsHPVTSQwg=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\b785bc8c-c36c-437f-a4e0-72f08fef5919.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\b8d47fc7-a903-4e13-b769-02a93a962451.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/b8d47fc7-a903-4e13-b769-02a93a962451.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>y5b0vo26hj</Fingerprint>
+      <Integrity>hrd656GLnuRPsComdB+gCO+Q+MHyFjTAfhE93HjIfW4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\b8d47fc7-a903-4e13-b769-02a93a962451.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\ba0e6c54-9b51-4cbc-a32e-5f972b52bc80.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/ba0e6c54-9b51-4cbc-a32e-5f972b52bc80.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>qlyggbybi4</Fingerprint>
+      <Integrity>Lg+qMUrxRChtD9CPLHBQ1pu3hLsugeVOAHusmdcrrRw=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\ba0e6c54-9b51-4cbc-a32e-5f972b52bc80.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\bb3b857e-615b-49c4-9f78-c251c3823182.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/bb3b857e-615b-49c4-9f78-c251c3823182.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>duslv4iyu6</Fingerprint>
+      <Integrity>u8uREDE5ngHhZy5iKGySoo9otA7mWMe7X+wDzGkbf0c=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\bb3b857e-615b-49c4-9f78-c251c3823182.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\be133772-0899-4bf8-a192-26417517db52.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/be133772-0899-4bf8-a192-26417517db52.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>telk5lme15</Fingerprint>
+      <Integrity>m91ZLYjTeeDwA3bM8QL5yG+J2QHBjfg3YBtIeHKBXrQ=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\be133772-0899-4bf8-a192-26417517db52.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\c0663171-5bd8-4363-9ccd-9f1a7057af59.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/c0663171-5bd8-4363-9ccd-9f1a7057af59.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>3i3wqktewp</Fingerprint>
+      <Integrity>u1OmJR1852Q2yEtFaj9v/hCkYefQGv/GnFNzrVh7+sk=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\c0663171-5bd8-4363-9ccd-9f1a7057af59.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\c5419e28-ef8e-4a05-86e3-467c80b6a6a7.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/c5419e28-ef8e-4a05-86e3-467c80b6a6a7.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>943u4tt04n</Fingerprint>
+      <Integrity>SVPFQLnYYz1UShZNc5jhtOCQR12bhVU/Q3Bmd0L3nwI=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\c5419e28-ef8e-4a05-86e3-467c80b6a6a7.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\ca979c4e-8324-4aee-8bbb-c7c9f99955e4.jpeg'))">
       <SourceType>Package</SourceType>
       <SourceId>Nestify</SourceId>
@@ -5975,6 +8009,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\ca979c4e-8324-4aee-8bbb-c7c9f99955e4.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\ccfcc0c9-8b8e-43d0-a7fb-4d7e8c8ffac9.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/ccfcc0c9-8b8e-43d0-a7fb-4d7e8c8ffac9.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>qlyggbybi4</Fingerprint>
+      <Integrity>Lg+qMUrxRChtD9CPLHBQ1pu3hLsugeVOAHusmdcrrRw=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\ccfcc0c9-8b8e-43d0-a7fb-4d7e8c8ffac9.jpeg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\ce621dbd-3185-4dd7-975a-9d28f1712396.jpeg'))">
       <SourceType>Package</SourceType>
@@ -5994,6 +8046,132 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\ce621dbd-3185-4dd7-975a-9d28f1712396.jpeg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\d4465103-b9e1-4666-a6a9-6c504ea13801.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/d4465103-b9e1-4666-a6a9-6c504ea13801.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>aeqxsxftxa</Fingerprint>
+      <Integrity>Hgyzqk4rPnKSErO03FwET03GAd/Lix4iCbNGyuKkZds=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\d4465103-b9e1-4666-a6a9-6c504ea13801.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\d9438887-ef08-49d1-91aa-1271b31682b1.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/d9438887-ef08-49d1-91aa-1271b31682b1.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>z0gf40p3ag</Fingerprint>
+      <Integrity>49J+qSV7wW5MdesQ3+wCGZcJ0037aK3UWwfKMEBSxmA=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\d9438887-ef08-49d1-91aa-1271b31682b1.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\d9e99ee9-15fc-46d3-8291-3c4c3a9703b5.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/d9e99ee9-15fc-46d3-8291-3c4c3a9703b5.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>943u4tt04n</Fingerprint>
+      <Integrity>SVPFQLnYYz1UShZNc5jhtOCQR12bhVU/Q3Bmd0L3nwI=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\d9e99ee9-15fc-46d3-8291-3c4c3a9703b5.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\dbc920d8-5c3d-437e-a696-08462acbe2ab.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/dbc920d8-5c3d-437e-a696-08462acbe2ab.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>hs5izd8i40</Fingerprint>
+      <Integrity>L7vaQu57GeuTOpGmHui11fx50S/8dL/4hy3mmBMNAvM=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\dbc920d8-5c3d-437e-a696-08462acbe2ab.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\e1fc5143-cc4d-466c-8ee4-e31811468675.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/e1fc5143-cc4d-466c-8ee4-e31811468675.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>pcllwbyxll</Fingerprint>
+      <Integrity>WeuHp9f2RiY5/PCI8GeMvl3dwcCLGU2Dw98ZRdl0zuM=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\e1fc5143-cc4d-466c-8ee4-e31811468675.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\e395cd9a-970d-4845-b84b-8044003e9fc3.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/e395cd9a-970d-4845-b84b-8044003e9fc3.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>telk5lme15</Fingerprint>
+      <Integrity>m91ZLYjTeeDwA3bM8QL5yG+J2QHBjfg3YBtIeHKBXrQ=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\e395cd9a-970d-4845-b84b-8044003e9fc3.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\efb8aefe-83f7-4f8b-bf8b-90f19bf018ca.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/efb8aefe-83f7-4f8b-bf8b-90f19bf018ca.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>hxrpt5w7kg</Fingerprint>
+      <Integrity>W3WnihMxraXQgwyqvARyhWb6cAZq7ty4QKSzJKSxbVM=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\efb8aefe-83f7-4f8b-bf8b-90f19bf018ca.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\f1c4f15b-98ce-4be6-9851-5e30ce23428d.jpeg'))">
       <SourceType>Package</SourceType>
       <SourceId>Nestify</SourceId>
@@ -6012,6 +8190,114 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\f1c4f15b-98ce-4be6-9851-5e30ce23428d.jpeg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\f490020f-0f77-45fc-a9f7-5b4ec63150d2.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/f490020f-0f77-45fc-a9f7-5b4ec63150d2.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>g6yiisl4qg</Fingerprint>
+      <Integrity>iA+EROlHowt+yC/Ze8QndeC7UQr/t8F6oHPdbewIQNk=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\f490020f-0f77-45fc-a9f7-5b4ec63150d2.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\f63c1412-df66-416e-acca-f3b2b707bf10.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/f63c1412-df66-416e-acca-f3b2b707bf10.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>0tu3qv2kr9</Fingerprint>
+      <Integrity>TOteHTtFi5/LMy1SUJb6bOO1FWWNUffhT8JZCGTvpZk=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\f63c1412-df66-416e-acca-f3b2b707bf10.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\f87d02d4-d91d-40a3-b91a-3538d332df8a.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/f87d02d4-d91d-40a3-b91a-3538d332df8a.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>i3qdk8z40i</Fingerprint>
+      <Integrity>olaANHi/Y2fCIcoX/sKlr+XfYcMEcMZVZtaAMP74LCI=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\f87d02d4-d91d-40a3-b91a-3538d332df8a.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\f9f4fa15-ba11-4018-a67f-d83a850c2ed6.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/f9f4fa15-ba11-4018-a67f-d83a850c2ed6.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ugvcxalbuf</Fingerprint>
+      <Integrity>TmPEY6++QrR4CR1z+4CQ2U31llnuwkJsYKIn5bgl+OA=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\f9f4fa15-ba11-4018-a67f-d83a850c2ed6.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\fa6ce300-c666-43be-aebf-8a6e022b79be.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/fa6ce300-c666-43be-aebf-8a6e022b79be.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>0vzd6jc4hf</Fingerprint>
+      <Integrity>NFeXOLLltnquwOlc0BDbKQnzoXWM+N7ZX0LGPzreqH8=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\fa6ce300-c666-43be-aebf-8a6e022b79be.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\faa3d724-f1a6-48f9-a01d-9998cd5e520d.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/faa3d724-f1a6-48f9-a01d-9998cd5e520d.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>6t08j5lewx</Fingerprint>
+      <Integrity>5lJ2XPHcgz3R3arnZhgsLVQFP5LbvLmgZS/lqdclOIU=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\faa3d724-f1a6-48f9-a01d-9998cd5e520d.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\fdcdd72e-4e1e-4844-a433-7748ccaa68f1.png'))">
       <SourceType>Package</SourceType>
       <SourceId>Nestify</SourceId>
@@ -6029,6 +8315,60 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\fdcdd72e-4e1e-4844-a433-7748ccaa68f1.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\fe7abdf4-8844-42dc-a1e6-5692014dd3ea.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/fe7abdf4-8844-42dc-a1e6-5692014dd3ea.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>sx9og5qfs4</Fingerprint>
+      <Integrity>UOzprB8gkMELL19EZUOkyCY7lApjeyt1gY+MwZDHK98=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\fe7abdf4-8844-42dc-a1e6-5692014dd3ea.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\ff1c2e70-b6f4-40cf-93b7-2debf1d3f5e3.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/ff1c2e70-b6f4-40cf-93b7-2debf1d3f5e3.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>dkbim01vko</Fingerprint>
+      <Integrity>807CzhIop+mQnNRvarnoYcYX3LjfRGHwn/NvxUA8Ilw=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\ff1c2e70-b6f4-40cf-93b7-2debf1d3f5e3.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\ff66b39a-ed6d-4f62-b900-985a3999bef2.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Nestify</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Nestify</BasePath>
+      <RelativePath>uploads/properties/ff66b39a-ed6d-4f62-b900-985a3999bef2.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>hxrpt5w7kg</Fingerprint>
+      <Integrity>W3WnihMxraXQgwyqvARyhWb6cAZq7ty4QKSzJKSxbVM=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\ff66b39a-ed6d-4f62-b900-985a3999bef2.jpeg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\webfonts\fa-brands-400.ttf'))">
       <SourceType>Package</SourceType>

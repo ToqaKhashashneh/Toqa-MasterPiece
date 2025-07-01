@@ -1,58 +1,118 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\",
+  "WorkspaceRootPath": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\source\\repos\\toqa-masterpiece\\nestify\\nestify\\views\\user\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\views\\user\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\toqa backup\\toqa-masterpiece\\nestify\\nestify\\views\\properties\\properties.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\views\\properties\\properties.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\source\\repos\\toqa-masterpiece\\nestify\\nestify\\views\\admin\\contactinquiries.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\views\\admin\\contactinquiries.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\toqa backup\\toqa-masterpiece\\nestify\\nestify\\views\\admin\\properties.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\views\\admin\\properties.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\source\\repos\\toqa-masterpiece\\nestify\\nestify\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\toqa backup\\toqa-masterpiece\\nestify\\nestify\\views\\admin\\propertydetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\views\\admin\\propertydetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\source\\repos\\toqa-masterpiece\\nestify\\nestify\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\toqa backup\\toqa-masterpiece\\nestify\\nestify\\controllers\\interiordesigncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\controllers\\interiordesigncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\source\\repos\\toqa-masterpiece\\nestify\\nestify\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\toqa backup\\toqa-masterpiece\\nestify\\nestify\\views\\admin\\interiorgallery.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\views\\admin\\interiorgallery.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\source\\repos\\toqa-masterpiece\\nestify\\nestify\\views\\admin\\users.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\views\\admin\\users.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\toqa backup\\toqa-masterpiece\\nestify\\nestify\\wwwroot\\css\\gallery.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\wwwroot\\css\\gallery.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\source\\repos\\toqa-masterpiece\\nestify\\nestify\\views\\shared\\interiordesignlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\views\\shared\\interiordesignlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\source\\repos\\toqa-masterpiece\\nestify\\nestify\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\source\\repos\\toqa-masterpiece\\nestify\\nestify\\views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\toqa backup\\toqa-masterpiece\\nestify\\nestify\\views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\source\\repos\\toqa-masterpiece\\nestify\\nestify\\models\\viewmodels\\propertyviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\models\\viewmodels\\propertyviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\toqa backup\\toqa-masterpiece\\nestify\\nestify\\views\\interiordesign\\gallery.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\views\\interiordesign\\gallery.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\source\\repos\\toqa-masterpiece\\nestify\\nestify\\views\\user\\editproperty.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\views\\user\\editproperty.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\toqa backup\\toqa-masterpiece\\nestify\\nestify\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\source\\repos\\toqa-masterpiece\\nestify\\nestify\\models\\propertyfeature.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\models\\propertyfeature.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\toqa backup\\toqa-masterpiece\\nestify\\nestify\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\source\\repos\\toqa-masterpiece\\nestify\\nestify\\views\\properties\\properties.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\views\\properties\\properties.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\toqa backup\\toqa-masterpiece\\nestify\\nestify\\views\\admin\\locations.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\views\\admin\\locations.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\toqa backup\\toqa-masterpiece\\nestify\\nestify\\views\\admin\\sublocations.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\views\\admin\\sublocations.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\toqa backup\\toqa-masterpiece\\nestify\\nestify\\models\\sublocation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\models\\sublocation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\toqa backup\\toqa-masterpiece\\nestify\\nestify\\views\\admin\\addinterior.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\views\\admin\\addinterior.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\toqa backup\\toqa-masterpiece\\nestify\\nestify\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\toqa backup\\toqa-masterpiece\\nestify\\nestify\\controllers\\propertiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\controllers\\propertiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\toqa backup\\toqa-masterpiece\\nestify\\nestify\\views\\admin\\propertyinquiries.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\views\\admin\\propertyinquiries.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\toqa backup\\toqa-masterpiece\\nestify\\nestify\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\toqa backup\\toqa-masterpiece\\nestify\\nestify\\views\\admin\\packages.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\views\\admin\\packages.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\toqa backup\\toqa-masterpiece\\nestify\\nestify\\models\\package.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\models\\package.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\toqa backup\\toqa-masterpiece\\nestify\\nestify\\views\\user\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\views\\user\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\toqa backup\\toqa-masterpiece\\nestify\\nestify\\views\\admin\\interiordesign.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\views\\admin\\interiordesign.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\toqa backup\\toqa-masterpiece\\nestify\\nestify\\views\\admin\\contactinquiries.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\views\\admin\\contactinquiries.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\toqa backup\\toqa-masterpiece\\nestify\\nestify\\views\\admin\\payments.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\views\\admin\\payments.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\toqa backup\\toqa-masterpiece\\nestify\\nestify\\views\\admin\\users.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\views\\admin\\users.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\toqa backup\\toqa-masterpiece\\nestify\\nestify\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\toqa backup\\toqa-masterpiece\\nestify\\nestify\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|c:\\users\\user\\desktop\\toqa backup\\toqa-masterpiece\\nestify\\nestify\\models\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69DDEA32-1E87-4A59-98D1-A5D179CFC710}|Nestify\\Nestify.csproj|solutionrelative:nestify\\models\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,173 +122,345 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Users.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\Admin\\Users.cshtml",
-              "RelativeDocumentMoniker": "Nestify\\Views\\Admin\\Users.cshtml",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\Admin\\Users.cshtml",
-              "RelativeToolTip": "Nestify\\Views\\Admin\\Users.cshtml",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAACcAAABcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-28T06:37:01.183Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "Nestify\\Controllers\\AdminController.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "Nestify\\Controllers\\AdminController.cs",
-              "ViewState": "AgIAANQBAAAAAAAAAAAewOYBAAAAAAAAAAAAAA==",
+              "DocumentIndex": 14,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Nestify\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Nestify\\Controllers\\UserController.cs",
+              "ViewState": "AgIAABUBAAAAAAAAAAAuwBwBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T06:31:05.716Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-14T13:14:17.539Z",
+              "IsPinned": true
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "_AdminLayout.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\Shared\\_AdminLayout.cshtml",
-              "RelativeDocumentMoniker": "Nestify\\Views\\Shared\\_AdminLayout.cshtml",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\Shared\\_AdminLayout.cshtml",
-              "RelativeToolTip": "Nestify\\Views\\Shared\\_AdminLayout.cshtml",
-              "ViewState": "AgIAADwAAAAAAAAAAAAAAFQAAAA/AAAAAAAAAA==",
+              "Title": "InteriorGallery.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\Admin\\InteriorGallery.cshtml",
+              "RelativeDocumentMoniker": "Nestify\\Views\\Admin\\InteriorGallery.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\Admin\\InteriorGallery.cshtml",
+              "RelativeToolTip": "Nestify\\Views\\Admin\\InteriorGallery.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-28T06:30:58.387Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-17T14:54:06.089Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "InteriorDesignController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Controllers\\InteriorDesignController.cs",
+              "RelativeDocumentMoniker": "Nestify\\Controllers\\InteriorDesignController.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Controllers\\InteriorDesignController.cs",
+              "RelativeToolTip": "Nestify\\Controllers\\InteriorDesignController.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAAAE8AAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T22:05:36.957Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PropertyDetails.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\Admin\\PropertyDetails.cshtml",
+              "RelativeDocumentMoniker": "Nestify\\Views\\Admin\\PropertyDetails.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\Admin\\PropertyDetails.cshtml",
+              "RelativeToolTip": "Nestify\\Views\\Admin\\PropertyDetails.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACAAAABxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-17T10:42:18.369Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Gallery.css",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\css\\Gallery.css",
+              "RelativeDocumentMoniker": "Nestify\\wwwroot\\css\\Gallery.css",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\wwwroot\\css\\Gallery.css",
+              "RelativeToolTip": "Nestify\\wwwroot\\css\\Gallery.css",
+              "ViewState": "AgIAACsAAAAAAAAAAAAqwDcAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-05-17T14:19:30.6Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ContactInquiries.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\Admin\\ContactInquiries.cshtml",
-              "RelativeDocumentMoniker": "Nestify\\Views\\Admin\\ContactInquiries.cshtml",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\Admin\\ContactInquiries.cshtml",
-              "RelativeToolTip": "Nestify\\Views\\Admin\\ContactInquiries.cshtml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABEAAAAlAAAAAAAAAA==",
+              "Title": "Properties.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\Admin\\Properties.cshtml",
+              "RelativeDocumentMoniker": "Nestify\\Views\\Admin\\Properties.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\Admin\\Properties.cshtml",
+              "RelativeToolTip": "Nestify\\Views\\Admin\\Properties.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAACEAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-28T06:17:05.818Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-17T10:43:27.322Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Profile.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\User\\Profile.cshtml",
-              "RelativeDocumentMoniker": "Nestify\\Views\\User\\Profile.cshtml",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\User\\Profile.cshtml",
-              "RelativeToolTip": "Nestify\\Views\\User\\Profile.cshtml",
-              "ViewState": "AgIAANUAAAAAAAAAAAAAAOcAAABrAAAAAAAAAA==",
+              "Title": "Properties.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\Properties\\Properties.cshtml",
+              "RelativeDocumentMoniker": "Nestify\\Views\\Properties\\Properties.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\Properties\\Properties.cshtml",
+              "RelativeToolTip": "Nestify\\Views\\Properties\\Properties.cshtml",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAYwE4AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-26T17:54:19.452Z",
+              "WhenOpened": "2025-05-14T22:21:53.714Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "InteriorDesignLayout.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\Shared\\InteriorDesignLayout.cshtml",
-              "RelativeDocumentMoniker": "Nestify\\Views\\Shared\\InteriorDesignLayout.cshtml",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\Shared\\InteriorDesignLayout.cshtml",
-              "RelativeToolTip": "Nestify\\Views\\Shared\\InteriorDesignLayout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAABjAAAAAAAAAA==",
+              "Title": "Dashboard.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\Admin\\Dashboard.cshtml",
+              "RelativeDocumentMoniker": "Nestify\\Views\\Admin\\Dashboard.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\Admin\\Dashboard.cshtml",
+              "RelativeToolTip": "Nestify\\Views\\Admin\\Dashboard.cshtml",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAEgAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-28T06:16:06.925Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "Nestify\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\Controllers\\UserController.cs",
-              "RelativeToolTip": "Nestify\\Controllers\\UserController.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAgwGwAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T18:06:13.787Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-17T10:40:46.59Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Nestify\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Nestify\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAK0DAAAAAAAAAAAAAL4DAAAGAAAAAAAAAA==",
+              "Title": "Gallery.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\InteriorDesign\\Gallery.cshtml",
+              "RelativeDocumentMoniker": "Nestify\\Views\\InteriorDesign\\Gallery.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\InteriorDesign\\Gallery.cshtml",
+              "RelativeToolTip": "Nestify\\Views\\InteriorDesign\\Gallery.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-28T06:13:52.658Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "EditProperty.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\User\\EditProperty.cshtml",
-              "RelativeDocumentMoniker": "Nestify\\Views\\User\\EditProperty.cshtml",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\User\\EditProperty.cshtml",
-              "RelativeToolTip": "Nestify\\Views\\User\\EditProperty.cshtml",
-              "ViewState": "AgIAAPEBAAAAAAAAAAAmwPIBAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-26T19:18:41.202Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "PropertyFeature.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\Models\\PropertyFeature.cs",
-              "RelativeDocumentMoniker": "Nestify\\Models\\PropertyFeature.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\Models\\PropertyFeature.cs",
-              "RelativeToolTip": "Nestify\\Models\\PropertyFeature.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAxwAkAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T20:56:57.065Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "PropertyViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\Models\\ViewModels\\PropertyViewModel.cs",
-              "RelativeDocumentMoniker": "Nestify\\Models\\ViewModels\\PropertyViewModel.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\Models\\ViewModels\\PropertyViewModel.cs",
-              "RelativeToolTip": "Nestify\\Models\\ViewModels\\PropertyViewModel.cs",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAowHMAAABXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T18:16:42.042Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-17T14:13:57.099Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "Dashboard.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\Admin\\Dashboard.cshtml",
-              "RelativeDocumentMoniker": "Nestify\\Views\\Admin\\Dashboard.cshtml",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\Admin\\Dashboard.cshtml",
-              "RelativeToolTip": "Nestify\\Views\\Admin\\Dashboard.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Nestify\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Nestify\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T10:39:32.628Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "_AdminLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeDocumentMoniker": "Nestify\\Views\\Shared\\_AdminLayout.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeToolTip": "Nestify\\Views\\Shared\\_AdminLayout.cshtml",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAAEQAAABdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-26T18:09:26.92Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-17T14:54:40.13Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Locations.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\Admin\\Locations.cshtml",
+              "RelativeDocumentMoniker": "Nestify\\Views\\Admin\\Locations.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\Admin\\Locations.cshtml",
+              "RelativeToolTip": "Nestify\\Views\\Admin\\Locations.cshtml",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAcwIcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-17T10:51:46.545Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Sublocations.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\Admin\\Sublocations.cshtml",
+              "RelativeDocumentMoniker": "Nestify\\Views\\Admin\\Sublocations.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\Admin\\Sublocations.cshtml",
+              "RelativeToolTip": "Nestify\\Views\\Admin\\Sublocations.cshtml",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAAEoAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-17T15:03:23.174Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "Properties.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\Properties\\Properties.cshtml",
-              "RelativeDocumentMoniker": "Nestify\\Views\\Properties\\Properties.cshtml",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\Properties\\Properties.cshtml",
-              "RelativeToolTip": "Nestify\\Views\\Properties\\Properties.cshtml",
-              "ViewState": "AgIAAGwAAAAAAAAAAAAAAF4AAABEAAAAAAAAAA==",
+              "Title": "Sublocation.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Models\\Sublocation.cs",
+              "RelativeDocumentMoniker": "Nestify\\Models\\Sublocation.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Models\\Sublocation.cs",
+              "RelativeToolTip": "Nestify\\Models\\Sublocation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T15:03:16.997Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AddInterior.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\Admin\\AddInterior.cshtml",
+              "RelativeDocumentMoniker": "Nestify\\Views\\Admin\\AddInterior.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\Admin\\AddInterior.cshtml",
+              "RelativeToolTip": "Nestify\\Views\\Admin\\AddInterior.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-26T17:56:31.201Z"
+              "WhenOpened": "2025-05-17T15:00:13.134Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "PropertiesController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Controllers\\PropertiesController.cs",
+              "RelativeDocumentMoniker": "Nestify\\Controllers\\PropertiesController.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Controllers\\PropertiesController.cs",
+              "RelativeToolTip": "Nestify\\Controllers\\PropertiesController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAA6wBkAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T22:05:43.21Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Nestify\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Nestify\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAAAGkAAAB4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-17T14:14:33.131Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Packages.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\Admin\\Packages.cshtml",
+              "RelativeDocumentMoniker": "Nestify\\Views\\Admin\\Packages.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\Admin\\Packages.cshtml",
+              "RelativeToolTip": "Nestify\\Views\\Admin\\Packages.cshtml",
+              "ViewState": "AgIAAIwAAAAAAAAAAAAwwKsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-17T10:45:37.981Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Package.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Models\\Package.cs",
+              "RelativeDocumentMoniker": "Nestify\\Models\\Package.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Models\\Package.cs",
+              "RelativeToolTip": "Nestify\\Models\\Package.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T12:00:03.23Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "PropertyInquiries.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\Admin\\PropertyInquiries.cshtml",
+              "RelativeDocumentMoniker": "Nestify\\Views\\Admin\\PropertyInquiries.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\Admin\\PropertyInquiries.cshtml",
+              "RelativeToolTip": "Nestify\\Views\\Admin\\PropertyInquiries.cshtml",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAwwIIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-17T10:47:49.55Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Profile.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\User\\Profile.cshtml",
+              "RelativeDocumentMoniker": "Nestify\\Views\\User\\Profile.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\User\\Profile.cshtml",
+              "RelativeToolTip": "Nestify\\Views\\User\\Profile.cshtml",
+              "ViewState": "AgIAAJUCAAAAAAAAAAAwwJ0CAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-14T21:14:31.519Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "InteriorDesign.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\Admin\\InteriorDesign.cshtml",
+              "RelativeDocumentMoniker": "Nestify\\Views\\Admin\\InteriorDesign.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\Admin\\InteriorDesign.cshtml",
+              "RelativeToolTip": "Nestify\\Views\\Admin\\InteriorDesign.cshtml",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAuwFcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-17T10:46:56.68Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ContactInquiries.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\Admin\\ContactInquiries.cshtml",
+              "RelativeDocumentMoniker": "Nestify\\Views\\Admin\\ContactInquiries.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\Admin\\ContactInquiries.cshtml",
+              "RelativeToolTip": "Nestify\\Views\\Admin\\ContactInquiries.cshtml",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAuwFkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-17T10:46:15.812Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Users.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\Admin\\Users.cshtml",
+              "RelativeDocumentMoniker": "Nestify\\Views\\Admin\\Users.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\Admin\\Users.cshtml",
+              "RelativeToolTip": "Nestify\\Views\\Admin\\Users.cshtml",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAACUAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-17T10:48:17.154Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Payments.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\Admin\\Payments.cshtml",
+              "RelativeDocumentMoniker": "Nestify\\Views\\Admin\\Payments.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\Admin\\Payments.cshtml",
+              "RelativeToolTip": "Nestify\\Views\\Admin\\Payments.cshtml",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAEgAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-17T10:37:49.399Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Nestify\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Nestify\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-14T22:19:47.438Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Nestify\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Nestify\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T22:05:25.67Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "RegisterViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Models\\ViewModels\\RegisterViewModel.cs",
+              "RelativeDocumentMoniker": "Nestify\\Models\\ViewModels\\RegisterViewModel.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Toqa Backup\\Toqa-MasterPiece\\Nestify\\Nestify\\Models\\ViewModels\\RegisterViewModel.cs",
+              "RelativeToolTip": "Nestify\\Models\\ViewModels\\RegisterViewModel.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBcAAAChAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T21:31:31.653Z"
             }
           ]
         }

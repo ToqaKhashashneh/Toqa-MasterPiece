@@ -10,14 +10,15 @@ namespace Nestify.Models.ViewModels
         public PropertyViewModel propertyViewModel { get; set; } = new PropertyViewModel();
 
 
-        //public List<Property>? MyProperties { get; set; }
-        //public List<Property>? FavoriteProperties { get; set; }
-        //public ChangePasswordModel? ChangePassword { get; set; }
-        //public List<Payment>? Payments { get; set; }
+
+        public ChangePasswordViewModel ChangePassword { get; set; } = new ChangePasswordViewModel();
+
         public SubscriptionInputModel Subscription { get; set; } = new SubscriptionInputModel();
 
         public List<Property>? MyProperties { get; set; }
         public bool CanAddProperty { get; set; }
+        public List<Property>? FavoriteProperties { get; set; }
+
     }
     public class PropertyViewModel
     {
@@ -25,14 +26,13 @@ namespace Nestify.Models.ViewModels
         [Required(ErrorMessage = "Property name is required.")]
         public string PropertyName { get; set; } = null!;
 
-        public int UserId { get; set; } // Will be set in controller from session
-
+        public int UserId { get; set; } 
         [Required(ErrorMessage = "Number of bedrooms is required.")]
-        [Range(1, 30, ErrorMessage = "Bedrooms must be between 1 and 30.")]
+        [Range(1, 10, ErrorMessage = "Bedrooms must be between 1 and 10.")]
         public int Bedrooms { get; set; }
 
         [Required(ErrorMessage = "Number of bathrooms is required.")]
-        [Range(1, 30, ErrorMessage = "Bathrooms must be between 1 and 30.")]
+        [Range(1, 10, ErrorMessage = "Bathrooms must be between 1 and 10.")]
         public int Bathrooms { get; set; }
 
         [Required(ErrorMessage = "Size is required.")]
@@ -43,7 +43,7 @@ namespace Nestify.Models.ViewModels
         [Range(1, 100000000, ErrorMessage = "Price must be a positive number.")]
         public decimal Price { get; set; }
 
-        public bool? IsFeatured { get; set; }
+        public bool IsFeatured { get; set; }
 
         public string? Description { get; set; }
 
@@ -116,7 +116,7 @@ namespace Nestify.Models.ViewModels
         [StringLength(100, ErrorMessage = "Feature name can't exceed 100 characters.")]
         public string FeatureName { get; set; } = null!;
 
-        [RegularExpression(@"^\d+(\.\d+)?x\d+(\.\d+)?$", ErrorMessage = "Size must be in format like 5x7 or 3.5x4.")]
+        //[RegularExpression(@"^\d+(\.\d+)?x\d+(\.\d+)?$", ErrorMessage = "Size must be in format like 5x7 or 3.5x4.")]
 
         public string? Size { get; set; }
     }
@@ -132,20 +132,43 @@ namespace Nestify.Models.ViewModels
         public int PackageId { get; set; }
 
         [Required]
+
         public string PaymentMethod { get; set; } = string.Empty;
 
         public string? BusinessName { get; set; }
         public string? BusinessAddress { get; set; }
 
         public string? CardHolderName { get; set; }
+        [Required]
+        [StringLength(16, MinimumLength = 13, ErrorMessage = "Card number must be between 13 and 16 digits.")]
         public string? CardNumber { get; set; }
+        [Required]
+        [RegularExpression(@"^(0[1-9]|1[0-2])/[0-9]{2}$", ErrorMessage = "Expiry date must be in MM/YY format.")]
         public string? ExpiryDate { get; set; }
+        [StringLength(4, MinimumLength = 3, ErrorMessage = "CVV must be 3 or 4 digits.")]
         public string? CVV { get; set; }
     }
 
 
 
+    public class ChangePasswordViewModel
+    {
+        [Required]
+        [DataType(DataType.Password)]
+        public string CurrentPassword { get; set; } = null!;
 
+        [Required]
+        [DataType(DataType.Password)]
+        [StringLength(100, MinimumLength = 8, ErrorMessage = "Password must be at least 8 characters.")]
+        [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$",
+            ErrorMessage = "Password must contain at least one uppercase letter, one lowercase letter, one digit, and one special character.")]
+        public string NewPassword { get; set; } = null!;
+
+        [Required]
+        [DataType(DataType.Password)]
+        [Compare("NewPassword", ErrorMessage = "Passwords do not match.")]
+        public string ConfirmPassword { get; set; } = null!;
+    }
 
 
 
